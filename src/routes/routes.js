@@ -2,9 +2,11 @@
 
 // Layouts
 // import { HeaderOnly } from '@/layouts';
+import { PrivateLayout } from '@/Layout';
 
 // Pages
 import Home from '@/pages/Home';
+import Login from '@/pages/Login';
 // import Following from '@/pages/Following';
 // import Profile from '@/pages/Profile';
 // import Upload from '@/pages/Upload';
@@ -14,6 +16,7 @@ import Home from '@/pages/Home';
 // Public routes
 const publicRoutes = [
     { path: '/', component: Home },
+    { path: '/login', component: Login, layout: PrivateLayout },
     // { path: config.routes.following, component: Following },
     // { path: config.routes.live, component: Live },
     // { path: config.routes.profile, component: Profile },

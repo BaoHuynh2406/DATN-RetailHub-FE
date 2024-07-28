@@ -3,11 +3,13 @@ import Sidebar from '@/Layout/components/Sidebar';
 
 function DefaultLayout({ children }) {
     return (
-        <div>
-            <div className="container">
+        <div className="flex h-screen">
+            <Sidebar />
+            <div className="w-full">
                 <Header />
-                <Sidebar />
-                <div className="content">{children}</div>
+                <div className="overflow-auto">
+                    <div className="content">{children}</div>
+                </div>
             </div>
         </div>
     );
