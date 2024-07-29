@@ -7,6 +7,7 @@ import { PrivateLayout } from '@/Layout';
 // Pages
 import Home from '@/pages/Home';
 import Login from '@/pages/Login';
+import ThongKe from '@/pages/ThongKe';
 // import Following from '@/pages/Following';
 // import Profile from '@/pages/Profile';
 // import Upload from '@/pages/Upload';
@@ -16,6 +17,7 @@ import Login from '@/pages/Login';
 // Public routes
 const publicRoutes = [
     { path: '/', component: Home },
+    { path: '/thongke', component: ThongKe },
     { path: '/login', component: Login, layout: PrivateLayout },
     // { path: config.routes.following, component: Following },
     // { path: config.routes.live, component: Live },

@@ -4,7 +4,7 @@ import App from '@/App.jsx';
 import GlobalStyles from '@/components/GlobalStyles';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
+    <React.StrictMode> 
         <GlobalStyles>
             <App />
         </GlobalStyles>

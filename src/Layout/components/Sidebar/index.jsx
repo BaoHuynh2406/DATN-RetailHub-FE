@@ -1,8 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import './style.module.scss';
 
 function Sidebar() {
     const [isCollapsed, setIsCollapsed] = useState(false);
+
+    const changePath = () => {
+        navigate('/'); // Thay đổi '/new-path' bằng path bạn muốn chuyển đến
+      };
 
     return (
         <div
@@ -19,9 +24,9 @@ function Sidebar() {
             <nav className="mt-16">
                 <ul className="space-y-4">
                     <li className="px-4 py-2 hover:bg-gray-600">
-                        <a href="#home" className={`block ${isCollapsed ? 'text-center' : ''}`}>
+                        <div onClick={changePath} className={`block ${isCollapsed ? 'text-center' : ''}`}>
                             Trang chủ
-                        </a>
+                        </div>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-600">
                         <a href="/login" className={`block ${isCollapsed ? 'text-center' : ''}`}>
