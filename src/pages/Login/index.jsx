@@ -1,62 +1,77 @@
-import React from 'react';
-
-function Login() {
+export default function Example() {
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                <h1 className="text-2xl font-bold mb-6 text-center">Đăng nhập</h1>
-                <form>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Nhập email của bạn"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-2">
-                            Mật khẩu
-                        </label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Nhập mật khẩu của bạn"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
-                    </div>
-                    <div className="flex items-center mb-6">
-                        <input type="checkbox" id="remember" name="remember" className="mr-2 leading-tight" />
-                        <label htmlFor="remember" className="text-gray-700 text-sm">
-                            Lưu mật khẩu
-                        </label>
-                    </div>
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        Đăng nhập
-                    </button>
-                    <div className="flex items-center justify-center my-4">
-                        <span className="text-gray-500 text-sm">hoặc</span>
-                    </div>
-                    <button
-                        type="button"
-                        className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md flex items-center justify-center hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                    >
-                        Đăng nhập bằng Google
-                    </button>
-                </form>
+        <>
+            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <img
+                        alt="Your Company"
+                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        className="mx-auto h-10 w-auto"
+                    />
+                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                        Sign in to your account
+                    </h2>
+                </div>
+
+                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    <form action="#" method="POST" className="space-y-6">
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                                Email address
+                            </label>
+                            <div className="mt-2">
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                    autoComplete="email"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="flex items-center justify-between">
+                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                                    Password
+                                </label>
+                                <div className="text-sm">
+                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                        Forgot password?
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="mt-2">
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    required
+                                    autoComplete="current-password"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <button
+                                type="submit"
+                                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+                    </form>
+
+                    <p className="mt-10 text-center text-sm text-gray-500">
+                        Not a member?{' '}
+                        <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                            Start a 14 day free trial
+                        </a>
+                    </p>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
-
-export default Login;

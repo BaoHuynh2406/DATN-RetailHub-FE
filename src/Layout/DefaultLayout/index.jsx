@@ -1,5 +1,5 @@
-import Header from '@/Layout/components/Header';
-import Sidebar from '@/Layout/components/Sidebar';
+import Header from '@/components/Header';
+import Sidebar from '@/components/Sidebar';
 
 function DefaultLayout({ children }) {
     return (
