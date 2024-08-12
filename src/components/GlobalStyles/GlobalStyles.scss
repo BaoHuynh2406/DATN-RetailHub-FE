@@ -1,11 +1,12 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 :root {
+    --main-color: #2A3042;
+    --secondary-color: #556EE6;
 }
 
 *{
@@ -22,3 +23,4 @@ body {
     font-size: 1.6 rem;
     line-height: 1.5;
 }
+
