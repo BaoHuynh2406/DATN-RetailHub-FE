@@ -1,6 +1,5 @@
 # Giao Diện Trang ADMIN sử dụng ReactJS + Material UI + Tailwindcss
 
-- git fetch
 - git pull
 - git pull origin main
 
