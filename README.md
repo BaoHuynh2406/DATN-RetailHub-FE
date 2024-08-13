@@ -5,3 +5,5 @@ npm i
 
 # chạy
 npm run dev
+#hello
+baibaobao
