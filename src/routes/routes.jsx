@@ -24,6 +24,15 @@ const privateRoutes = [
         path: '/dashboard',
         component: lazy(() => import('@/pages/Dashboard')),
     },
+
+    {
+        path: '/details',
+        component: lazy(() => import('@/pages/ProductDetail')),
+        children: [
+            { path: 'details', component: lazy(() => import('@/pages/ProductDetail')) },
+        ],
+    },
+
     {
         path: '/inventory',
         component: lazy(() => import('@/pages/Inventory')),
