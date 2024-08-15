@@ -7,7 +7,7 @@ function DefaultLayout({ children }) {
             <Sidebar />
             <div className="flex flex-col flex-grow min-w-0">
                 <Header className="flex-initial" />
-                <div className="p-4 flex-auto">{children}</div>
+                <div className="flex-auto">{children}</div>
             </div>
         </div>
     );
