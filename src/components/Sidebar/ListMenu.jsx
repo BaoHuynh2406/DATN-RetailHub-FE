@@ -12,6 +12,7 @@ import DoneAllRoundedIcon from '@mui/icons-material/DoneAllRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
 import CardGiftcardRoundedIcon from '@mui/icons-material/CardGiftcardRounded';
+
 export const sidebarItems = [
     {
         sidebarProps: { displayText: 'Báo cáo', icon: <SpaceDashboardRoundedIcon /> },
