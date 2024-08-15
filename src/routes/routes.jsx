@@ -42,6 +42,11 @@ const privateRoutes = [
             { path: 'settings', component: lazy(() => import('@/pages/Home')) },
         ],
     },
+    // Chi tiết nhân viên
+    {
+        path: '/Detail',
+        component: lazy(() => import('@/pages/Employee/Detail')),
+    },
 ];
 
 const renderRoutes = (routes, isPrivate) => {
