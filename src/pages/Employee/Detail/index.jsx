@@ -43,7 +43,7 @@ function EmployeeDetail() {
         phone: '',
         address: '',
         startDate: '',
-        endDate: ''
+        endDate: '',
     });
 
     const handleAddNewClick = () => {
@@ -57,7 +57,7 @@ function EmployeeDetail() {
             phone: '',
             address: '',
             startDate: '',
-            endDate: ''
+            endDate: '',
         });
     };
 
@@ -71,9 +71,9 @@ function EmployeeDetail() {
 
     const handleChange = (event) => {
         const { name, value, type, files } = event.target;
-        setFormData(prevData => ({
+        setFormData((prevData) => ({
             ...prevData,
-            [name]: type === 'file' ? files[0] : value
+            [name]: type === 'file' ? files[0] : value,
         }));
     };
 
@@ -97,7 +97,7 @@ function EmployeeDetail() {
             phone: '',
             address: '',
             startDate: '',
-            endDate: ''
+            endDate: '',
         });
     };
 
@@ -106,10 +106,8 @@ function EmployeeDetail() {
     };
 
     return (
-        <div>
-            <label>
-                {isEditing ? 'Thay đổi thông tin' : 'Thêm mới nhân viên'}
-            </label>
+        <>
+            <label>{isEditing ? 'Thay đổi thông tin' : 'Thêm mới nhân viên'}</label>
             <div>
                 <button onClick={handleAddNewClick}>Thêm mới</button>
                 <button onClick={handleEditClick}>Sửa</button>
@@ -122,8 +120,8 @@ function EmployeeDetail() {
                         {/* Hàng 1 */}
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Mã nhân viên:</label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 name="employeeId"
                                 value={formData.employeeId}
                                 onChange={handleChange}
@@ -132,8 +130,8 @@ function EmployeeDetail() {
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>SĐT:</label>
-                            <input 
-                                type="number" 
+                            <input
+                                type="number"
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
@@ -143,8 +141,8 @@ function EmployeeDetail() {
                         {/* Hàng 2 */}
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Họ và tên:</label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
@@ -153,8 +151,8 @@ function EmployeeDetail() {
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Địa chỉ:</label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 name="address"
                                 value={formData.address}
                                 onChange={handleChange}
@@ -164,8 +162,8 @@ function EmployeeDetail() {
                         {/* Hàng 3 */}
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Email:</label>
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
@@ -174,8 +172,8 @@ function EmployeeDetail() {
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Mật khẩu:</label>
-                            <input 
-                                type="password" 
+                            <input
+                                type="password"
                                 name="password"
                                 value={formData.password}
                                 onChange={handleChange}
@@ -209,14 +207,14 @@ function EmployeeDetail() {
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Ảnh:</label>
                             <ImageWrapper onClick={handleImageClick}>
-                                <StyledImage 
-                                    src={formData.image ? URL.createObjectURL(formData.image) : defaultImage} 
-                                    alt="Ảnh nhân viên" 
-                                    onError={(e) => e.target.src = defaultImage}
+                                <StyledImage
+                                    src={formData.image ? URL.createObjectURL(formData.image) : defaultImage}
+                                    alt="Ảnh nhân viên"
+                                    onError={(e) => (e.target.src = defaultImage)}
                                 />
-                                <HiddenInput 
-                                    type="file" 
-                                    id="image-upload" 
+                                <HiddenInput
+                                    type="file"
+                                    id="image-upload"
                                     name="image"
                                     accept="image/*"
                                     onChange={handleChange}
@@ -226,8 +224,8 @@ function EmployeeDetail() {
                         {/* Hàng 2 */}
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Ngày vào làm:</label>
-                            <input 
-                                type="date" 
+                            <input
+                                type="date"
                                 name="startDate"
                                 value={formData.startDate}
                                 onChange={handleChange}
@@ -236,8 +234,8 @@ function EmployeeDetail() {
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Ngày nghỉ:</label>
-                            <input 
-                                type="date" 
+                            <input
+                                type="date"
                                 name="endDate"
                                 value={formData.endDate}
                                 onChange={handleChange}
@@ -258,7 +256,7 @@ function EmployeeDetail() {
                     Làm Mới
                 </Button>
             </div>
-        </div>
+        </>
     );
 }
 

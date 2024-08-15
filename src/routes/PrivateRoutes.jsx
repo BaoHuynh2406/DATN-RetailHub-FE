@@ -14,6 +14,25 @@ const privateRouter = [
         layout: DefaultLayout,
     },
     {
+        path: '/employee',
+        children: [
+            {
+                path: '',
+                loader: () => redirect('/employee/list'),
+            },
+            {
+                path: 'list',
+                element: lazy(() => import('@/pages/Employee/List')),
+                layout: DefaultLayout,
+            },
+            {
+                path: 'detail',
+                element: lazy(() => import('@/pages/Employee/Detail')),
+                layout: DefaultLayout,
+            },
+        ],
+    },
+    {
         //Lưu ý nếu có children thì chỉ khai báo path không khai báo gì thêm, khai báo thêm sẽ khai báo bên trong
         path: '/inventory', //Nếu có children thì /inventory sẽ được khai báo bên trong
         children: [
