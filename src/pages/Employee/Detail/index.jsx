@@ -199,7 +199,7 @@ function EmployeeDetail() {
                         </div>
                     </div>
                 </div>
-
+{/* V du nhu m thay doiôcde  */}
                 {/* Cột 2 */}
                 <div style={{ flex: 1, minWidth: '300px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
