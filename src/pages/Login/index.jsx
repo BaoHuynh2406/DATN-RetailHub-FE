@@ -26,7 +26,7 @@ export default function SignInSide() {
             email: email,
             password: password,
         });
-        navigate('/u/home');
+        navigate('/dashboard');
     };
 
     return (

@@ -137,7 +137,7 @@ const Sidebar = () => {
                     <SidebarItem
                         item={{
                             sidebarProps: { displayText: 'Thiết lập', icon: <SettingsRoundedIcon /> },
-                            path: '/u/settings',
+                            path: '/settings',
                             state: 'settings',
                         }}
                     />
