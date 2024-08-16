@@ -51,17 +51,17 @@ const privateRouter = [
     },
     {
         //Lưu ý nếu có children thì chỉ khai báo path không khai báo gì thêm, khai báo thêm sẽ khai báo bên trong
-        path: '/product', //Nếu có children thì /inventory sẽ được khai báo bên trong
+        path: '/goods', //Nếu có children thì /inventory sẽ được khai báo bên trong
         children: [
             {
                 // "/inventory" sẽ chạy ở đây
                 path: '',
                 //Chuyển hướng qua cái path khác
-                loader: () => redirect('/product/detail'),
+                loader: () => redirect('/goods/detail'),
             },
             {
                 path: 'detail',
-                element: lazy(() => import('@/pages/ProductDetail')),
+                element: lazy(() => import('@/pages/Goods/Detail')),
                 layout: DefaultLayout,
             },
         ],
