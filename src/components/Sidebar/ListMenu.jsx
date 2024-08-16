@@ -12,6 +12,7 @@ import DoneAllRoundedIcon from '@mui/icons-material/DoneAllRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
 import CardGiftcardRoundedIcon from '@mui/icons-material/CardGiftcardRounded';
+
 export const sidebarItems = [
     {
         sidebarProps: { displayText: 'Báo cáo', icon: <SpaceDashboardRoundedIcon /> },
@@ -25,8 +26,8 @@ export const sidebarItems = [
         child: [
             {
                 sidebarProps: { displayText: 'Danh sách nhân viên', icon: <TableChartRoundedIcon /> },
-                path: '/u/employee',
-                state: 'employee/list',
+                path: '/employee/EmployeeList',
+                state: 'employee/EmployeeList',
             },
             {
                 sidebarProps: { displayText: 'Chấm công', icon: <DomainVerificationRoundedIcon /> },

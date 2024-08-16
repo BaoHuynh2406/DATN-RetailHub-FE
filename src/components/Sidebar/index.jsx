@@ -70,13 +70,13 @@ const Sidebar = () => {
     const [openStates, setOpenStates] = React.useState({});
     const nagative = useNavigate();
     //Tự động chọn mục đầu tiên
-    React.useEffect(() => {
-        if (sidebarItems.length > 0 && !menuSelected) {
-            const defaultMenuItem = sidebarItems[0];
-            setMenuSelected(defaultMenuItem);
-            nagative(defaultMenuItem.path);
-        }
-    }, [setMenuSelected]);
+    // React.useEffect(() => {
+    //     if (sidebarItems.length > 0 && !menuSelected) {
+    //         const defaultMenuItem = sidebarItems[0];
+    //         setMenuSelected(defaultMenuItem);
+    //         nagative(defaultMenuItem.path);
+    //     }
+    // }, [setMenuSelected]);
 
     const handleSidebarToggle = () => {
         setOpen(!open);
@@ -137,7 +137,7 @@ const Sidebar = () => {
                     <SidebarItem
                         item={{
                             sidebarProps: { displayText: 'Thiết lập', icon: <SettingsRoundedIcon /> },
-                            path: '/u/settings',
+                            path: '/settings',
                             state: 'settings',
                         }}
                     />

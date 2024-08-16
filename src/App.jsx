@@ -1,13 +1,16 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import RouterComponent from '@/routes/routes.jsx';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Suspense } from 'react';
+import PendingLoad from '@/pages/PendingLoad';
+import routes from '@/routes';
+
+
+const router = createBrowserRouter(routes);
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <RouterComponent />
-            </div>
-        </Router>
+        <Suspense fallback={<PendingLoad />}>
+            <RouterProvider router={router} />
+        </Suspense>
     );
 }
 
