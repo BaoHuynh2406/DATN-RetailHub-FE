@@ -23,7 +23,6 @@ import { visuallyHidden } from '@mui/utils';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Margin } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import EmployeeDetail from '@/pages/Employee/EmployeeDetail';
 
 // import avtvu from './avtvu.jpg'
 function createData(id, code, name, phone, image, role, startingdate) {
@@ -198,10 +197,11 @@ export default function EnhancedTable() {
     const handleChangeDense = (event) => {
         setDense(event.target.checked);
     };
+    const navigate = useNavigate()
 //chuyentrang qua trang employeesdetail
     const handleRowClick = (id) => {
         console.log(`Row clicked with ID: ${id}`); // Debugging
-        navigate('@/pages/Employee/EmployeeDetail');
+        navigate(`/Employee/EmployeeDetail/${id}`);
     };
 
     // Avoid a layout jump when reaching the last page with empty rows.

@@ -6,8 +6,41 @@ import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 
-// Ảnh mặc định
 const defaultImage = 'https://via.placeholder.com/150';
+
+const employees = [
+    {
+        employeeId: '1',
+        name: 'John Doe',
+        email: 'john.doe@example.com',
+        password: '123456',
+        image: null,
+        phone: '123456789',
+        address: '123 Main St',
+        startDate: '2023-01-01',
+        endDate: '2024-01-01',
+        position: 'developer',
+        department: 'IT',
+        salary: 50000,
+        supervisor: 'Jane Smith'
+    },
+    {
+        employeeId: '2',
+        name: 'Alice Johnson',
+        email: 'alice.johnson@example.com',
+        password: 'abcdef',
+        image: null,
+        phone: '987654321',
+        address: '456 Market St',
+        startDate: '2022-05-15',
+        endDate: '',
+        position: 'manager',
+        department: 'HR',
+        salary: 60000,
+        supervisor: 'John Doe'
+    },
+    // Add more employees as needed...
+];
 
 const ImageWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -44,6 +77,7 @@ function EmployeeDetail() {
         address: '',
         startDate: '',
         endDate: '',
+        status: true,
     });
 
     const handleAddNewClick = () => {
@@ -79,14 +113,15 @@ function EmployeeDetail() {
 
     const handleSave = () => {
         console.log('Saving data:', formData);
-        // Thực hiện lưu dữ liệu ở đây
     };
 
     const handleDelete = () => {
-        console.log('Deleting data:', formData);
-        // Thực hiện xóa dữ liệu ở đây
+        setFormData((prevData) => ({
+            ...prevData,
+            status: false, 
+        }));
     };
-
+    
     const handleReset = () => {
         setFormData({
             employeeId: '',
@@ -98,8 +133,10 @@ function EmployeeDetail() {
             address: '',
             startDate: '',
             endDate: '',
+            status: true,
         });
     };
+    
 
     const handleImageClick = () => {
         document.getElementById('image-upload').click();
@@ -114,10 +151,10 @@ function EmployeeDetail() {
             </div>
             <br />
             <div style={{ display: 'flex', gap: '16px' }}>
-                {/* Cột 1 */}
+
                 <div style={{ flex: 1, minWidth: '300px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                        {/* Hàng 1 */}
+
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Mã nhân viên:</label>
                             <input
@@ -138,7 +175,7 @@ function EmployeeDetail() {
                                 style={{ width: '50%' }}
                             />
                         </div>
-                        {/* Hàng 2 */}
+
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Họ và tên:</label>
                             <input
@@ -159,8 +196,8 @@ function EmployeeDetail() {
                                 style={{ width: '50%' }}
                             />
                         </div>
-                        {/* Hàng 3 */}
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+ 
+                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Email:</label>
                             <input
                                 type="email"
@@ -191,19 +228,17 @@ function EmployeeDetail() {
                                     label="Chức vụ"
                                     onChange={handlePositionChange}
                                 >
-                                    <MenuItem value="manager">Nhân viên</MenuItem>
-                                    <MenuItem value="developer">Thu ngân</MenuItem>
-                                    <MenuItem value="designer">Quản lý</MenuItem>
+                                    <MenuItem value="manager">User</MenuItem>
+                                    <MenuItem value="developer">Admin</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>
                     </div>
                 </div>
 
-                {/* Cột 2 */}
                 <div style={{ flex: 1, minWidth: '300px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                        {/* Hàng Ảnh */}
+
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Ảnh:</label>
                             <ImageWrapper onClick={handleImageClick}>
@@ -221,7 +256,7 @@ function EmployeeDetail() {
                                 />
                             </ImageWrapper>
                         </div>
-                        {/* Hàng 2 */}
+
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <label style={{ width: '150px' }}>Ngày vào làm:</label>
                             <input
