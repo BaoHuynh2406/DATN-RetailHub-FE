@@ -76,7 +76,6 @@ function stableSort(array, comparator) {
     return stabilizedThis.map((el) => el[0]);
 }
 
-
 const headCells = [
     {
         id: 'code',
@@ -113,18 +112,18 @@ const headCells = [
         numeric: true,
         disablePadding: false,
         label: 'Ngày vào làm',
-    }
-    ,
+    },
     {
         id: 'tools',
-        label: 'Công cụ'
-    }
+        label: 'Công cụ',
+    },
 ];
 
 function EnhancedTableHead(props) {
     const { order, orderBy, onRequestSort } = props;
     const createSortHandler = (property) => (event) => {
-        if (property !== 'image' && property !== 'tools') { // Bỏ qua cột hình ảnh và công cụ
+        if (property !== 'image' && property !== 'tools') {
+            // Bỏ qua cột hình ảnh và công cụ
             onRequestSort(event, property);
         }
     };
@@ -132,7 +131,6 @@ function EnhancedTableHead(props) {
     return (
         <TableHead>
             <TableRow>
-
                 {headCells.map((headCell) => (
                     <TableCell
                         key={headCell.id}
@@ -156,7 +154,6 @@ function EnhancedTableHead(props) {
                                 ) : null}
                             </TableSortLabel>
                         )}
-
                     </TableCell>
                 ))}
             </TableRow>
@@ -169,8 +166,6 @@ EnhancedTableHead.propTypes = {
     orderBy: PropTypes.string.isRequired,
     onRequestSort: PropTypes.func.isRequired,
 };
-
-
 
 export default function EnhancedTable() {
     const [order, setOrder] = React.useState('asc');
@@ -197,36 +192,33 @@ export default function EnhancedTable() {
     const handleChangeDense = (event) => {
         setDense(event.target.checked);
     };
-    const navigate = useNavigate()
-//chuyentrang qua trang employeesdetail
+    const navigate = useNavigate();
+    //chuyentrang qua trang employeesdetail
     const handleRowClick = (id) => {
         console.log(`Row clicked with ID: ${id}`); // Debugging
-        navigate(`/Employee/EmployeeDetail/${id}`);
+        navigate(`/employee/EmployeeDetail/${id}`);
     };
 
     // Avoid a layout jump when reaching the last page with empty rows.
-    const emptyRows =
-        page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+    const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
     const visibleRows = React.useMemo(
         () =>
-            stableSort(rows, getComparator(order, orderBy)).slice(
-                page * rowsPerPage,
-                page * rowsPerPage + rowsPerPage,
-            ),
+            stableSort(rows, getComparator(order, orderBy)).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage),
         [order, orderBy, page, rowsPerPage],
     );
 
     return (
-        <Box sx={{
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'space-between',  // Căn chỉnh các phần tử ở hai đầu
-            alignItems: 'center',  // Căn chỉnh các phần tử theo chiều dọc
-            padding: ' 16px',  // Padding xung quanh Box, có thể điều chỉnh theo nhu cầu
-        }}>
+        <Box
+            sx={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'space-between', // Căn chỉnh các phần tử ở hai đầu
+                alignItems: 'center', // Căn chỉnh các phần tử theo chiều dọc
+                padding: ' 16px', // Padding xung quanh Box, có thể điều chỉnh theo nhu cầu
+            }}
+        >
             <Paper sx={{ width: '100%', mb: 2, paddingLeft: 5 }}>
-
                 <Typography
                     variant="h4"
                     sx={{ textAlign: 'center', mb: 2, mt: 2 }} // Căn giữa và thêm margin dưới
@@ -236,7 +228,7 @@ export default function EnhancedTable() {
 
                 <TableContainer sx={{ maxHeight: 450 }}>
                     <Table
-                        stickyHeader  // Tùy chọn này sẽ giữ cố định header của bảng khi cuộn
+                        stickyHeader // Tùy chọn này sẽ giữ cố định header của bảng khi cuộn
                         sx={{ minWidth: 750 }}
                         aria-labelledby="tableTitle"
                         size={dense ? 'small' : 'medium'}
@@ -260,7 +252,11 @@ export default function EnhancedTable() {
                                         <TableCell align="left">{row.name}</TableCell>
                                         <TableCell align="left">{row.phone}</TableCell>
                                         <TableCell align="left">
-                                            <img src={row.image} alt="avatar" style={{ width: '50px', height: 'auto' }} />
+                                            <img
+                                                src={row.image}
+                                                alt="avatar"
+                                                style={{ width: '50px', height: 'auto' }}
+                                            />
                                         </TableCell>
                                         <TableCell align="left">{row.role}</TableCell>
                                         <TableCell align="left">{row.startingdate}</TableCell>
@@ -268,7 +264,6 @@ export default function EnhancedTable() {
                                             <EditNoteIcon />
                                         </TableCell>
                                     </TableRow>
-
                                 );
                             })}
                         </TableBody>
@@ -295,12 +290,9 @@ export default function EnhancedTable() {
                         onRowsPerPageChange={handleChangeRowsPerPage}
                         labelRowsPerPage="Xem" // Thêm thuộc tính này để hiển thị nhãn
                         labelDisplayedRows={({ from, to, count }) => ` Hiển thị ${from} - ${to} của ${count}`} // Tùy chỉnh cách hiển thị số hàng
-
                     />
                 </Box>
-
             </Paper>
-
         </Box>
     );
 }
