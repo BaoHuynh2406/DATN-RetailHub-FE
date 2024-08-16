@@ -57,25 +57,17 @@ const privateRouter = [
             {
                 // /test sẽ vào chỗ này
                 path: '',
-                element: lazy(() => import('@/pages/PageNotFound')),
+                loader: () => redirect('/test/list'),
+            },
+            {
+                path: 'list',
+                element: lazy(() => import('@/pages/Test/DanhSach')),
                 layout: DefaultLayout,
             },
             {
-                path: 'danhsach',
-                children: [
-                    // /test/danhsach sẽ vào chỗ này
-                    {
-                        path: '',
-                        element: lazy(() => import('@/pages/Test/DanhSach')),
-                        layout: DefaultLayout,
-                    },
-                    //chỗ này sẽ là /test/danhsach/chitiet
-                    {
-                        path: 'chitiet',
-                        element: lazy(() => import('@/pages/Test/ChiTiet')),
-                        layout: DefaultLayout,
-                    },
-                ],
+                path: 'detail/:id',
+                element: lazy(() => import('@/pages/Test/ChiTiet')),
+                layout: DefaultLayout,
             },
         ],
     },
