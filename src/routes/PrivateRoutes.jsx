@@ -49,6 +49,23 @@ const privateRouter = [
             },
         ],
     },
+    {
+        //Lưu ý nếu có children thì chỉ khai báo path không khai báo gì thêm, khai báo thêm sẽ khai báo bên trong
+        path: '/product', //Nếu có children thì /inventory sẽ được khai báo bên trong
+        children: [
+            {
+                // "/inventory" sẽ chạy ở đây
+                path: '',
+                //Chuyển hướng qua cái path khác
+                loader: () => redirect('/product/detail'),
+            },
+            {
+                path: 'detail',
+                element: lazy(() => import('@/pages/ProductDetail')),
+                layout: DefaultLayout,
+            },
+        ],
+    },
     //Tương tự vậy, đây là children trong children cứ thế làm tới
     //Test children trong children
     {

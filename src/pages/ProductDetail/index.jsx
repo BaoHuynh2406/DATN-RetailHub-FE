@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'tailwindcss/tailwind.css';
 
 const ProductDetail = () => {
   const [product, setProduct] = useState({
@@ -70,7 +69,7 @@ const ProductDetail = () => {
   const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
   return (
-    <div className="max-w-8xl mx-auto p-6 bg-white shadow-2xl rounded-lg">
+    <div className="max-w-8xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6 text-center">Chi tiết hàng hóa</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="space-y-4">
@@ -81,7 +80,7 @@ const ProductDetail = () => {
               name="productId"
               value={product.productId}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="mt-1 block w-full border h-8 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               disabled
             />
           </div>
