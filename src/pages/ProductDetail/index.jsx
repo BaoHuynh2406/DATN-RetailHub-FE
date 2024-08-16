@@ -70,9 +70,9 @@ const ProductDetail = () => {
   const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-8xl mx-auto p-6 bg-white shadow-2xl rounded-lg">
       <h1 className="text-3xl font-bold mb-6 text-center">Chi tiết hàng hóa</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">Mã sản phẩm</label>
@@ -106,23 +106,25 @@ const ProductDetail = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Loại</label>
+            <label className="block text-sm font-medium text-gray-700">Đơn vị tính</label>
             <input
               type="text"
-              name="category"
-              value={product.category}
+              name="unit"
+              value={product.unit}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
+
+          
           <div>
-            <label className="block text-sm font-medium text-gray-700">Mô tả</label>
-            <textarea
-              name="description"
-              value={product.description}
+            <label className="block text-sm font-medium text-gray-700">Số tồn kho</label>
+            <input
+              type="number"
+              name="stockQuantity"
+              value={product.stockQuantity}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              rows="3"
             />
           </div>
           <div>
@@ -135,10 +137,13 @@ const ProductDetail = () => {
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
+        </div>
+
+        <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Ngày gia nhập</label>
+            <label className="block text-sm font-medium text-gray-700">Giá nhập</label>
             <input
-              type="date"
+              type="text"
               name="entryDate"
               value={product.entryDate}
               onChange={handleChange}
@@ -155,66 +160,70 @@ const ProductDetail = () => {
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <label className="block text-sm font-medium text-gray-700 h-12">Ảnh sản phẩm</label>
-          <label className="cursor-pointer">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Tỉ lệ thuế</label>
             <input
-              type="file"
-              onChange={handleImageUpload}
-              className="hidden"
+              type="text"
+              name="taxRate"
+              value={product.taxRate}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            <img
-              src={product.imageUrl || defaultImage}
-              alt="Product"
-              className="mt-4 w-full h-64 object-cover rounded-md"
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Vị trí</label>
+            <input
+              type="text"
+              name="location"
+              value={product.location}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-          </label>
-          <div className="space-y-4 mt-4 w-full">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Tỉ lệ thuế</label>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Loại</label>
+            <input
+              type="text"
+              name="category"
+              value={product.category}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+
+        </div>
+
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Ảnh sản phẩm</label>
+            <label className="cursor-pointer">
               <input
-                type="text"
-                name="taxRate"
-                value={product.taxRate}
-                onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                type="file"
+                onChange={handleImageUpload}
+                className="hidden"
               />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Vị trí</label>
-              <input
-                type="text"
-                name="location"
-                value={product.location}
-                onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              <img
+                src={product.imageUrl || defaultImage}
+                alt="Product"
+                className="mt-4 w-full h-64 object-cover rounded-md"
               />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Đơn vị tính</label>
-              <input
-                type="text"
-                name="unit"
-                value={product.unit}
-                onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Số tồn kho</label>
-              <input
-                type="number"
-                name="stockQuantity"
-                value={product.stockQuantity}
-                onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </div>
+            </label>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Mô tả</label>
+            <textarea
+              name="description"
+              value={product.description}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              rows="5"
+            />
           </div>
         </div>
       </div>
-      <div className="mt-6 flex justify-center space-x-5">
+
+      <div className="m-3 flex justify-center space-x-8">
         <button
           onClick={handleSave}
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
@@ -241,6 +250,8 @@ const ProductDetail = () => {
         </button>
       </div>
     </div>
+
+
   );
 };
 
