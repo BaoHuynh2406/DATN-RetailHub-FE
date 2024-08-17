@@ -11,9 +11,7 @@ import SidebarItemCollapse from './SidebarItemCollapse';
 import SidebarItem from './SidebarItem';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 
-import { useAppContext } from '@/store/AppContext.jsx';
 import { sidebarItems } from './ListMenu.jsx';
-import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -64,18 +62,11 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 }));
 
 const Sidebar = () => {
-    const [open, setOpen] = React.useState(true);
-    const { menuSelected, setMenuSelected } = useAppContext();
+    const [open, setOpen] = React.useState(() => {
+        const savedOpen = localStorage.getItem('sidebarOpen');
+        return savedOpen !== null ? JSON.parse(savedOpen) : true;
+    });
     const [openStates, setOpenStates] = React.useState({});
-    const nagative = useNavigate();
-    //Tự động chọn mục đầu tiên
-    // React.useEffect(() => {
-    //     if (sidebarItems.length > 0 && !menuSelected) {
-    //         const defaultMenuItem = sidebarItems[0];
-    //         setMenuSelected(defaultMenuItem);
-    //         nagative(defaultMenuItem.path);
-    //     }
-    // }, [setMenuSelected]);
 
     const handleSidebarToggle = () => {
         setOpen(!open);
@@ -89,7 +80,10 @@ const Sidebar = () => {
             setOpen(true);
         }
     };
-
+    React.useEffect(() => {
+        localStorage.setItem('sidebarOpen', JSON.stringify(open));
+    }, [open]);
+    
     return (
         <Box sx={{ display: 'flex' }}>
             <Drawer variant="permanent" open={open}>
