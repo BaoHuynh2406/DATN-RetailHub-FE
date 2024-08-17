@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-    TextField,
-    Button,
-    Grid,
-    Typography,
-    Container,
-    Box,
-} from '@mui/material';
+import { TextField, Button, Grid, Typography, Container, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -224,7 +217,7 @@ const ProductDetail = () => {
                     </Box>
                 </Grid>
             </Grid>
-            <StyledBox display="flex" justifyContent="space-between" marginTop="20px">
+            <StyledBox display="flex" justifyContent="space-evenly" marginTop="20px" padding="0px 100px">
                 <Button
                     variant="contained"
                     color="primary"
