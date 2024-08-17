@@ -203,7 +203,6 @@ const ProductDetail = () => {
                             style={{
                                 width: '100%',
                                 height: 'auto',
-                                maxHeight: '300px', // Limiting the height of the image
                                 marginBottom: '20px',
                                 borderRadius: '8px',
                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
