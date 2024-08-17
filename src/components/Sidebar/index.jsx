@@ -64,8 +64,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 }));
 
 const Sidebar = () => {
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
     const { menuSelected, setMenuSelected } = useAppContext();
     const [openStates, setOpenStates] = React.useState({});
     const nagative = useNavigate();
