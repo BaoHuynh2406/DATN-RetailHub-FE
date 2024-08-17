@@ -6,6 +6,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
 import { DataGrid } from '@mui/x-data-grid';
 import EmployeeData from '../EmployeeData'; // Import your employee data
+import TextField from '@mui/material/TextField';
+import { useState } from 'react';
 
 // Define the columns for the DataGrid
 const columns = [
@@ -57,8 +59,35 @@ const handleDelete = (row) => {
     console.log('Xóa:', row);
 };
 
+function QuickSearchToolbar({ value, onChange }) {
+    return (
+        <div className="py-2 ps-1">
+            <TextField
+                variant="outlined"
+                size="small"
+                value={value}
+                onChange={onChange}
+                placeholder="Tìm kiếm..."
+            />
+        </div>
+    );
+}
+
 // Main component
 export default function DataTable() {
+    const [searchText, setSearchText] = useState('');
+
+    const handleSearchChange = (event) => {
+        setSearchText(event.target.value);
+    };
+
+    // Filter rows based on search text
+    const filteredRows = EmployeeData.filter(row =>
+        Object.values(row).some(value =>
+            String(value).toLowerCase().includes(searchText.toLowerCase())
+        )
+    );
+
     return (
         <div className="p-4">
             <h2>Danh sách nhân viên</h2>
@@ -69,13 +98,19 @@ export default function DataTable() {
             {/* Scrollable container for the table */}
             <div style={{ height: '400px', width: '100%' }}>
                 <DataGrid
-                    rows={EmployeeData}
+                    autoHeight
                     columns={columns}
-                    pageSize={5}
-                    rowsPerPageOptions={[5, 10]}
-                    disableColumnFilter
-                    disableColumnSelector
-                    disableDensitySelector
+                    rows={filteredRows}
+                    rowHeight={60}
+                    initialState={{
+                        pagination: {
+                            paginationModel: { page: 0, pageSize: 5 },
+                        },
+                    }}
+                    pageSizeOptions={[5, 10]}
+                    components={{
+                        Toolbar: () => <QuickSearchToolbar value={searchText} onChange={handleSearchChange} />,
+                    }}
                 />
             </div>
         </div>

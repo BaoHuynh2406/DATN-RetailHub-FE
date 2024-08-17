@@ -51,26 +51,26 @@ const privateRouter = [
     },
     //Tương tự vậy, đây là children trong children cứ thế làm tới
     //Test children trong children
-    {
-        path: '/test',
-        children: [
-            {
-                // /test sẽ vào chỗ này
-                path: '',
-                loader: () => redirect('/test/list'),
-            },
-            {
-                path: 'list',
-                element: lazy(() => import('@/pages/Test/DanhSach')),
-                layout: DefaultLayout,
-            },
-            {
-                path: 'detail/:id',
-                element: lazy(() => import('@/pages/Test/ChiTiet')),
-                layout: DefaultLayout,
-            },
-        ],
-    },
+    // {
+    //     path: '/test',
+    //     children: [
+    //         {
+    //             // /test sẽ vào chỗ này
+    //             path: '',
+    //             loader: () => redirect('/test/list'),
+    //         },
+    //         {
+    //             path: 'list',
+    //             element: lazy(() => import('@/pages/Test/DanhSach')),
+    //             layout: DefaultLayout,
+    //         },
+    //         {
+    //             path: 'detail/:id',
+    //             element: lazy(() => import('@/pages/Test/ChiTiet')),
+    //             layout: DefaultLayout,
+    //         },
+    //     ],
+    // },
 ];
 
 export default privateRouter;
