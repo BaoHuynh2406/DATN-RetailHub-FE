@@ -11,7 +11,6 @@ import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-
 function CustomToolbar() {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 20px' }}>
@@ -22,17 +21,14 @@ function CustomToolbar() {
         </div>
     );
 }
-
 function CustomPagination() {
     const apiRef = useGridApiContext();
     const page = useGridSelector(apiRef, gridPageSelector);
     const pageCount = useGridSelector(apiRef, gridPageCountSelector);
     const pageSize = useGridSelector(apiRef, gridPageSizeSelector);
-
     const handlePageSizeChange = (event) => {
         apiRef.current.setPageSize(event.target.value);
     };
-
     return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <span>Hàng mỗi trang:</span>
@@ -69,20 +65,19 @@ function CustomPagination() {
         </div>
     );
 }
-
-function TableCustom({ columns, rows }) {
+function TableCustom({ columns, rows, id='id', rowHeight = 60}) {
     return (
         <DataGrid
             autoHeight
-            className="w-fit"
             columns={columns}
             rows={rows}
+            rowHeight={rowHeight}
+            getRowId={(row) => row[id]}
             initialState={{
                 pagination: {
                     paginationModel: { page: 0, pageSize: 5 },
                 },
             }}
-            pageSizeOptions={[5, 10]}
             slots={{
                 toolbar: CustomToolbar,
                 pagination: CustomPagination,
@@ -140,5 +135,4 @@ function TableCustom({ columns, rows }) {
         />
     );
 }
-
 export default TableCustom;
