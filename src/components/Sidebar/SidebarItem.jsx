@@ -1,13 +1,25 @@
 // SidebarItem.js
-import React from 'react';
+import { useEffect } from 'react';
 import { ListItemButton, ListItemIcon } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { useAppContext } from '@/store/AppContext.jsx'; // Import context
+import { Link, useLocation  } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { setMenuSelected } from '@/redux/menu/menuSelected.js';
 
 const SidebarItem = ({ item, isSub }) => {
-    const { menuSelected, setMenuSelected } = useAppContext();
+    const dispatch = useDispatch();
+    const menuSelected = useSelector((state) => state.menu.menuSelected);
+
+    const location = useLocation();
+
+    // Tự động chọn mục khi URL khớp với path của item
+    useEffect(() => {
+        if (location.pathname === item.path) {
+            dispatch(setMenuSelected(item));
+        }
+    }, [location.pathname, item, dispatch]);
+
     const handleClick = () => {
-        setMenuSelected(item);
+        dispatch(setMenuSelected(item));
     };
 
     return item.sidebarProps && item.path ? (
@@ -22,7 +34,7 @@ const SidebarItem = ({ item, isSub }) => {
                 backgroundColor: menuSelected?.state === item.state ? '#556EE6 !important' : 'unset',
                 color: 'white',
                 paddingLeft: isSub ? '30px' : 'auto',
-                fontSize: isSub ? '14px' : '16px'
+                fontSize: isSub ? '14px' : '16px',
             }}
         >
             <ListItemIcon

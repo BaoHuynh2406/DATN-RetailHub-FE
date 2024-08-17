@@ -4,11 +4,11 @@ import { Collapse, List, ListItemButton, ListItemIcon, ListItemText, Typography 
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import SidebarItem from './SidebarItem';
-import { useAppContext } from '@/store/AppContext.jsx';
+import { useSelector } from 'react-redux';
 
 const SidebarItemCollapse = ({ item, open, openStates, setOpenStates, setSidebarOpen }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { menuSelected } = useAppContext();
+    const menuSelected = useSelector((state) => state.menu.menuSelected);
 
     useEffect(() => {
         if (menuSelected?.state === item.state) {
