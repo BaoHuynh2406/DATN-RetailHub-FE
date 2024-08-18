@@ -1,12 +1,34 @@
-import React, { useState } from 'react';
-import { TextField, Button, Grid, Typography, Container, Box } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+
+// compoment by mui
+import { TextField, Button, Grid, Typography, Container, Box, InputAdornment } from '@mui/material';
 import { styled } from '@mui/material/styles';
+
+// icon by mui
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import BarcodeIcon from '@mui/icons-material/QrCode';
+import CategoryIcon from '@mui/icons-material/Category';
+import DescriptionIcon from '@mui/icons-material/Description';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import StoreIcon from '@mui/icons-material/Store';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import TypeSpecimenIcon from '@mui/icons-material/TypeSpecimen';
+
+import { useNavigate, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addGoods, removeGoods, updateGoods } from '@/redux/Goods/Actions';
 
 const StyledBox = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(3),
 }));
 
-const ProductDetail = () => {
+const ProductDetails = () => {
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.goods); // Đảm bảo khớp với cấu trúc Redux store
+    const { productId } = useParams();
+    const navigate = useNavigate();
+
     const [product, setProduct] = useState({
         productId: '',
         productName: '',
@@ -22,6 +44,17 @@ const ProductDetail = () => {
         stockQuantity: '',
         imageUrl: '',
     });
+
+    // Tải dữ liệu sản phẩm nếu productId khác '0'
+    useEffect(() => {
+        if (productId !== '0') {
+            const foundProduct = products.find((item) => item.productId === productId);
+            if (foundProduct) {
+                setProduct(foundProduct);
+            }
+        }
+    }, [productId, products]);
+    // Phụ thuộc vào productId và danh sách sản phẩm
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -40,15 +73,24 @@ const ProductDetail = () => {
     };
 
     const handleSave = () => {
-        console.log('Lưu sản phẩm', product);
+        if (productId === '0') {
+            dispatch(addGoods(product));
+            console.log('Thêm sản phẩm:', product);
+        } else {
+            dispatch(updateGoods(product));
+            console.log('Cập nhật sản phẩm:', product);
+        }
+        alert('Lưu thành công');
+        handleBack();
     };
 
     const handleDelete = () => {
-        console.log('Xóa sản phẩm', product.productId);
-    };
-
-    const handleRestore = () => {
-        console.log('Khôi phục sản phẩm', product.productId);
+        if (productId !== '0') {
+            dispatch(removeGoods(productId));
+            console.log('Xóa sản phẩm với ID:', productId);
+            alert('Xóa thành công');
+            handleBack();
+        }
     };
 
     const handleReset = () => {
@@ -71,11 +113,16 @@ const ProductDetail = () => {
 
     const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
+    const handleBack = () => navigate('/home');
+
     return (
         <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
-            <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: 'bold', marginTop: '30px' }}>
-                Chi tiết hàng hóa
+            <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold', marginTop: '30px' }}>
+                {productId === '0' ? 'Tạo Mới' : 'Chi Tiết'}
             </Typography>
+            <Button variant="contained" onClick={handleBack} sx={{ marginBottom: 2 }}>
+                Quay lại
+            </Button>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={4}>
                     <TextField
@@ -85,7 +132,14 @@ const ProductDetail = () => {
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
-                        InputProps={{ readOnly: true }}
+                        InputProps={{
+                            readOnly: productId !== '0',
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <StoreIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                         margin="normal"
                     />
                     <TextField
@@ -96,6 +150,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LocalOfferIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Bar Code"
@@ -105,6 +166,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <BarcodeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Đơn vị tính"
@@ -114,6 +182,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <CategoryIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Số tồn kho"
@@ -124,6 +199,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <InventoryIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Ngày hết hạn"
@@ -147,6 +229,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <AttachMoneyIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Giá bán"
@@ -156,6 +245,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <AttachMoneyIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Thuế suất"
@@ -165,6 +261,13 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LocalOfferIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Vị trí"
@@ -174,6 +277,29 @@ const ProductDetail = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LocationOnIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Loại"
+                        name="category"
+                        value={product.category}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <TypeSpecimenIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Mô tả"
@@ -184,95 +310,58 @@ const ProductDetail = () => {
                         variant="outlined"
                         margin="normal"
                         multiline
-                        rows={4}
+                        rows={1}
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <DescriptionIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                 </Grid>
 
                 <Grid item xs={12} md={4}>
-                    <Box display="flex" flexDirection="column" alignItems="center">
+                    <Box display="flex" flexDirection="column" alignItems="center" paddingTop="20px">
                         <img
                             src={product.imageUrl || defaultImage}
                             alt="Product"
                             style={{
                                 width: '100%',
-                                height: 'auto',
-                                marginBottom: '20px',
+                                height: '250px',
+                                objectFit: 'cover',
                                 borderRadius: '8px',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                             }}
                         />
-                        <Button
-                            variant="contained"
-                            component="label"
-                            sx={{
-                                marginTop: '10px',
-                                '&:hover': {
-                                    backgroundColor: '#1565C0',
-                                },
-                            }}
-                        >
+                        <Button variant="contained" component="label" sx={{ marginTop: 2 }}>
                             Tải ảnh lên
                             <input type="file" hidden onChange={handleImageUpload} />
                         </Button>
                     </Box>
                 </Grid>
             </Grid>
-            <StyledBox display="flex" justifyContent="space-evenly" marginTop="20px" padding="0px 100px">
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleSave}
-                    sx={{
-                        minWidth: '120px',
-                        '&:hover': {
-                            backgroundColor: '#2e7d32',
-                        },
-                    }}
-                >
-                    Lưu
-                </Button>
-                <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={handleDelete}
-                    sx={{
-                        minWidth: '120px',
-                        '&:hover': {
-                            backgroundColor: '#d32f2f',
-                        },
-                    }}
-                >
-                    Xóa
-                </Button>
-                <Button
-                    variant="contained"
-                    onClick={handleRestore}
-                    sx={{
-                        minWidth: '120px',
-                        backgroundColor: '#FFB74D',
-                        '&:hover': {
-                            backgroundColor: '#F57C00',
-                        },
-                    }}
-                >
-                    Khôi phục
-                </Button>
-                <Button
-                    variant="contained"
-                    onClick={handleReset}
-                    sx={{
-                        minWidth: '120px',
-                        backgroundColor: '#757575',
-                        '&:hover': {
-                            backgroundColor: '#424242',
-                        },
-                    }}
-                >
-                    Đặt lại
-                </Button>
-            </StyledBox>
+
+            <Grid container spacing={2} sx={{ marginTop: 3 }}>
+                <Grid item xs={12} sm={4}>
+                    <Button variant="contained" color="primary" fullWidth onClick={handleSave}>
+                        {productId === '0' ? 'Tạo mới' : 'Lưu'}
+                    </Button>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Button variant="outlined" color="secondary" fullWidth onClick={handleReset}>
+                        Đặt lại
+                    </Button>
+                </Grid>
+                {productId !== '0' && (
+                    <Grid item xs={12} sm={4}>
+                        <Button variant="contained" color="error" fullWidth onClick={handleDelete}>
+                            Xóa sản phẩm
+                        </Button>
+                    </Grid>
+                )}
+            </Grid>
         </Container>
     );
 };
 
-export default ProductDetail;
+export default ProductDetails;

@@ -60,7 +60,7 @@ const privateRouter = [
                 loader: () => redirect('/goods/detail'),
             },
             {
-                path: 'detail',
+                path: 'detail/:productId',
                 element: lazy(() => import('@/pages/Goods/Detail')),
                 layout: DefaultLayout,
             },
