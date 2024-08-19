@@ -45,16 +45,24 @@ const ProductDetails = () => {
         imageUrl: '',
     });
 
-    // Tải dữ liệu sản phẩm nếu productId khác '0'
+    const createProduct = 'create';
+
+    // Tải dữ liệu sản phẩm nếu productId khác createProduct
     useEffect(() => {
-        if (productId !== '0') {
+        if (productId !== createProduct) {
             const foundProduct = products.find((item) => item.productId === productId);
             if (foundProduct) {
                 setProduct(foundProduct);
+            } else {
+                alert('Sản phẩm không tồn tại !');
+                navigate('/not-fund');
             }
         }
-    }, [productId, products]);
-    // Phụ thuộc vào productId và danh sách sản phẩm
+    }, [productId]);
+
+    useEffect(() => {
+        console.log('Danh sách sản phẩm đã cập nhật:', products);
+    }, [products]); // Mỗi khi `products` thay đổi, console.log sẽ được gọi
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -75,21 +83,21 @@ const ProductDetails = () => {
     const handleSave = () => {
         if (productId === '0') {
             dispatch(addGoods(product));
-            console.log('Thêm sản phẩm:', product);
+            console.log('Thêm sản phẩm:', products);
         } else {
             dispatch(updateGoods(product));
-            console.log('Cập nhật sản phẩm:', product);
+            console.log('Cập nhật sản phẩm:', products);
         }
         alert('Lưu thành công');
-        handleBack();
+        // handleBack();
     };
 
     const handleDelete = () => {
         if (productId !== '0') {
             dispatch(removeGoods(productId));
-            console.log('Xóa sản phẩm với ID:', productId);
+            console.log('Xóa sản phẩm với ID:', products);
             alert('Xóa thành công');
-            handleBack();
+            // handleBack();
         }
     };
 
@@ -118,7 +126,7 @@ const ProductDetails = () => {
     return (
         <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
             <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold', marginTop: '30px' }}>
-                {productId === '0' ? 'Tạo Mới' : 'Chi Tiết'}
+                {productId === createProduct ? 'Tạo Mới' : 'Chi Tiết'}
             </Typography>
             <Button variant="contained" onClick={handleBack} sx={{ marginBottom: 2 }}>
                 Quay lại
@@ -344,7 +352,7 @@ const ProductDetails = () => {
             <Grid container spacing={2} sx={{ marginTop: 3 }}>
                 <Grid item xs={12} sm={4}>
                     <Button variant="contained" color="primary" fullWidth onClick={handleSave}>
-                        {productId === '0' ? 'Tạo mới' : 'Lưu'}
+                        {productId === createProduct ? 'Tạo mới' : 'Lưu'}
                     </Button>
                 </Grid>
                 <Grid item xs={12} sm={4}>
@@ -352,7 +360,7 @@ const ProductDetails = () => {
                         Đặt lại
                     </Button>
                 </Grid>
-                {productId !== '0' && (
+                {productId !== createProduct && (
                     <Grid item xs={12} sm={4}>
                         <Button variant="contained" color="error" fullWidth onClick={handleDelete}>
                             Xóa sản phẩm
