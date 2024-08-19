@@ -60,8 +60,8 @@ export const sidebarItems = [
             },
             {
                 sidebarProps: { displayText: 'Chi tiết hàng hóa', icon: <ManageAccountsIcon /> },
-                path: '/goods/detail',
-                state: 'goods/detail',
+                path: '/product/detail/create',
+                state: 'product/detail',
             },
             {
                 sidebarProps: { displayText: 'QL Nhập hàng', icon: <InputRoundedIcon /> },

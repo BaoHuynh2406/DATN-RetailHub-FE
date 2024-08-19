@@ -50,18 +50,15 @@ const privateRouter = [
         ],
     },
     {
-        //Lưu ý nếu có children thì chỉ khai báo path không khai báo gì thêm, khai báo thêm sẽ khai báo bên trong
-        path: '/goods', //Nếu có children thì /inventory sẽ được khai báo bên trong
+        path: '/product',
         children: [
             {
-                // "/inventory" sẽ chạy ở đây
                 path: '',
-                //Chuyển hướng qua cái path khác
-                loader: () => redirect('/goods/detail'),
+                loader: () => redirect('/product/detail'),
             },
             {
                 path: 'detail/:productId',
-                element: lazy(() => import('@/pages/Goods/Detail')),
+                element: lazy(() => import('@/pages/Product/Detail')),
                 layout: DefaultLayout,
             },
         ],
