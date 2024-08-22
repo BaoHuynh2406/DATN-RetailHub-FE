@@ -54,15 +54,20 @@ const privateRouter = [
         children: [
             {
                 path: '',
-                loader: () => redirect('/product/detail'),
+                loader: () => redirect('/product/ListProduct'), // Chuyển hướng đến trang danh sách sản phẩm
+            },
+            {
+                path: 'ListProduct',
+                element: lazy(() => import('@/pages/Product/ListProduct')), // Lazy load trang danh sách sản phẩm
             },
             {
                 path: 'detail/:productId',
-                element: lazy(() => import('@/pages/Product/Detail')),
-                layout: DefaultLayout,
+                element: lazy(() => import('@/pages/Product/Detail')), // Lazy load trang chi tiết sản phẩm
             },
         ],
     },
+    
+    
     //Tương tự vậy, đây là children trong children cứ thế làm tới
     //Test children trong children
     {
@@ -85,6 +90,7 @@ const privateRouter = [
             },
         ],
     },
+   
 ];
 
 export default privateRouter;
