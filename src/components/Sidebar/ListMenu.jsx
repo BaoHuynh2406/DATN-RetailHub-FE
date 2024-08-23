@@ -13,6 +13,7 @@ import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
 import CardGiftcardRoundedIcon from '@mui/icons-material/CardGiftcardRounded';
 import BugReportRoundedIcon from '@mui/icons-material/BugReportRounded';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 
 export const sidebarItems = [
     {
@@ -56,6 +57,11 @@ export const sidebarItems = [
                 sidebarProps: { displayText: 'Danh sách hàng hóa', icon: <BallotRoundedIcon /> },
                 path: '/inventory/list',
                 state: 'inventory/list',
+            },
+            {
+                sidebarProps: { displayText: 'Chi tiết hàng hóa', icon: <ManageAccountsIcon /> },
+                path: '/product/detail/create',
+                state: 'product/detail',
             },
             {
                 sidebarProps: { displayText: 'QL Nhập hàng', icon: <InputRoundedIcon /> },

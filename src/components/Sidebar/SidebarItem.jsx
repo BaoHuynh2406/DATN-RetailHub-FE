@@ -1,7 +1,7 @@
 // SidebarItem.js
 import { useEffect } from 'react';
 import { ListItemButton, ListItemIcon } from '@mui/material';
-import { Link, useLocation  } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMenuSelected } from '@/redux/menu/menuSelected.js';
 
@@ -11,15 +11,29 @@ const SidebarItem = ({ item, isSub }) => {
 
     const location = useLocation();
 
-    // Tự động chọn mục khi URL khớp với path của item
+    // useEffect để tự động chọn mục khi URL khớp với path của item
     useEffect(() => {
         if (location.pathname === item.path) {
-            dispatch(setMenuSelected(item));
+            const selected = prepareSelectedItem(item);
+            dispatch(setMenuSelected(selected));
         }
     }, [location.pathname, item, dispatch]);
 
+    // Xử lý sự kiện khi nhấp vào mục sidebar
     const handleClick = () => {
-        dispatch(setMenuSelected(item));
+        const selected = prepareSelectedItem(item);
+        dispatch(setMenuSelected(selected));
+    };
+
+    const prepareSelectedItem = (item) => {
+        const { sidebarProps, ...rest } = item;
+        return {
+            ...rest,
+            sidebarProps: {
+                ...sidebarProps,
+                icon: undefined,
+            },
+        };
     };
 
     return item.sidebarProps && item.path ? (
