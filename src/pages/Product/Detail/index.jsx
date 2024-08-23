@@ -134,7 +134,7 @@ const ProductDetails = () => {
 
     const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
-    const handleBack = () => navigate('/home');
+    const handleBack = () => navigate('/product');
 
     return (
         <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>

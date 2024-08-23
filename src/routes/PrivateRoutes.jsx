@@ -59,15 +59,16 @@ const privateRouter = [
             {
                 path: 'ListProduct',
                 element: lazy(() => import('@/pages/Product/ListProduct')), // Lazy load trang danh sách sản phẩm
+                layout: DefaultLayout,
             },
             {
                 path: 'detail/:productId',
                 element: lazy(() => import('@/pages/Product/Detail')), // Lazy load trang chi tiết sản phẩm
+                layout: DefaultLayout,
             },
         ],
     },
-    
-    
+
     //Tương tự vậy, đây là children trong children cứ thế làm tới
     //Test children trong children
     {
@@ -90,7 +91,6 @@ const privateRouter = [
             },
         ],
     },
-   
 ];
 
 export default privateRouter;
