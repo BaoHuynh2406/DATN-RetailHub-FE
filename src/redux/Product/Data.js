@@ -77,7 +77,7 @@ const productsData = [
         unit: "Tuýp",
         inventoryCount: 120,
         image: "https://via.placeholder.com/400x300?text=Colgate",
-        status: true,  // Cột trạng thái
+        status: false,  // Cột trạng thái
     },
 ];
 
