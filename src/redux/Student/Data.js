@@ -1,0 +1,60 @@
+const dataTest = [
+    {
+        id: 'PS001',
+        fullName: 'Huỳnh Thiên Bảo',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 30,
+        gender: 'Nam',
+        address: '123 Lê Văn Thái, Quận 1, TP. HCM',
+    },
+    {
+        id: 'PS002',
+        fullName: 'Trần Thị Hương',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 28,
+        gender: 'Nữ',
+        address: '456 Phan Văn Trị, Quận 3, TP. HCM',
+    },
+    {
+        id: 'PS003',
+        fullName: 'Lê Thị Minh Huyền',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 32,
+        gender: 'Nữ',
+        address: '789 Lý Thường Kiệt, Quận 4, TP. HCM',
+    },
+    {
+        id: 'PS004',
+        fullName: 'Võ Thị Hà',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 35,
+        gender: 'Nữ',
+        address: '123 Lê Văn Thái, Quận 1, TP. HCM',
+    },
+    {
+        id: 'PS005',
+        fullName: 'Phan Thị Thanh Hoa',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 31,
+        gender: 'Nữ',
+        address: '456 Phan Văn Trị, Quận 3, TP. HCM',
+    },
+    {
+        id: 'PS006',
+        fullName: 'Lê Thị Minh Huyền',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 32,
+        gender: 'Nữ',
+        address: '789 Lý Thường Kiệt, Quận 4, TP. HCM',
+    },
+    {
+        id: 'PS007',
+        fullName: 'Nguyễn Thị Thanh Hoa',
+        photoUrl: 'https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+        age: 33,
+        gender: 'Nữ',
+        address: '123 Lê Văn Thái, Quận 1, TP. HCM',
+    },
+];
+
+export default dataTest;

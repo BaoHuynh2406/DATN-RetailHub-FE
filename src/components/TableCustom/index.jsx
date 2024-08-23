@@ -11,6 +11,7 @@ import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+
 function CustomToolbar() {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 20px' }}>
@@ -21,6 +22,7 @@ function CustomToolbar() {
         </div>
     );
 }
+
 function CustomPagination() {
     const apiRef = useGridApiContext();
     const page = useGridSelector(apiRef, gridPageSelector);
@@ -65,11 +67,26 @@ function CustomPagination() {
         </div>
     );
 }
-function TableCustom({ columns, rows, id='id', rowHeight = 60}) {
+function TableCustom({ columns, rows, id = 'id', rowHeight = 60, stt = false }) {
+    const sttColumns = stt
+        ? [
+              {
+                  field: 'STT',
+                  headerName: 'STT',
+                  width: 70,
+                  sortable: false,
+                  disableColumnMenu: true,
+                  resizable: false,
+                  renderCell: (params) => params.api.getAllRowIds().indexOf(params.id) + 1,
+              },
+          ]
+        : [];
+
+    const allColumns = [...sttColumns, ...columns];
+
     return (
         <DataGrid
-            autoHeight
-            columns={columns}
+            columns={allColumns}
             rows={rows}
             rowHeight={rowHeight}
             getRowId={(row) => row[id]}
@@ -118,7 +135,6 @@ function TableCustom({ columns, rows, id='id', rowHeight = 60}) {
                 '& .MuiDataGrid-columnHeaders': {
                     backgroundColor: '#f5f5f5',
                     fontWeight: 'bold',
-                    textAlign: 'center',
                 },
                 '& .MuiDataGrid-columnHeaderTitle': {
                     fontWeight: 'bold',
@@ -131,8 +147,21 @@ function TableCustom({ columns, rows, id='id', rowHeight = 60}) {
                 '& .MuiDataGrid-cell:focus-within': {
                     outline: 'none',
                 },
+                '& .MuiDataGrid-columnHeader:focus-within': {
+                    outline: 'none',
+                },
+                '& .MuiDataGrid-columnHeader:focus': {
+                    outline: 'none',
+                },
+                '& .MuiDataGrid-columnHeader--sortable:focus': {
+                    outline: 'none',
+                },
+                '& .MuiDataGrid-columnHeader:focus-visible': {
+                    outline: 'none',
+                },
             }}
         />
     );
 }
+
 export default TableCustom;

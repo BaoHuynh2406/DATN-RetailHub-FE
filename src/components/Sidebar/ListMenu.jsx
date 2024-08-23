@@ -12,10 +12,11 @@ import DoneAllRoundedIcon from '@mui/icons-material/DoneAllRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
 import CardGiftcardRoundedIcon from '@mui/icons-material/CardGiftcardRounded';
+import BugReportRoundedIcon from '@mui/icons-material/BugReportRounded';
 
 export const sidebarItems = [
     {
-        sidebarProps: { displayText: 'Báo cáo', icon: <SpaceDashboardRoundedIcon /> },
+        sidebarProps: { displayText: 'Trang tổng quan', icon: <SpaceDashboardRoundedIcon /> },
         path: '/dashboard',
         state: 'dashboard',
     },
@@ -90,4 +91,9 @@ export const sidebarItems = [
             },
         ],
     },
+    {
+        sidebarProps: { displayText: 'Test', icon: <BugReportRoundedIcon /> },
+        path: '/test',
+        state:'test',
+    }
 ];

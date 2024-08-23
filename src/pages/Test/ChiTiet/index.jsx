@@ -3,48 +3,46 @@ import { Button, TextField, Grid, Box } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addEmployee, removeEmployee, updateEmployee } from '@/redux/EmployeeController/EmployeeAction';
+import { addStudent, removeStudent, updateStudent } from '@/redux/Student/Actions';
 
-function EmployeeDetail() {
+function ChiTiet() {
     const dispatch = useDispatch();
-    const employees = useSelector((state) => state.employee);
+    const students = useSelector((state) => state.student);
 
     const { id } = useParams();
     const navigate = useNavigate();
 
-    const [employee, setEmployee] = useState({
+    const [student, setStudent] = useState({
         id: '',
         fullName: '',
         photoUrl: '',
         age: '',
         gender: '',
         address: '',
-        roleId: '',
     });
 
     useEffect(() => {
         if (id !== '0') {
-            const foundEmployee = employees.find((item) => item.id === id);
-            if (foundEmployee) {
-                setEmployee(foundEmployee);
+            const foundStudent = students.find((item) => item.id === id);
+            if (foundStudent) {
+                setStudent(foundStudent);
             }
         } else {
-            // Initialize a new employee object for creating new entry
-            setEmployee({
+            // Initialize a new person object for creating new entry
+            setStudent({
                 id: '',
                 fullName: '',
                 photoUrl: '',
                 age: '',
                 gender: '',
                 address: '',
-                roleId: '',
             });
         }
     }, [id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEmployee((prev) => ({
+        setStudent((prev) => ({
             ...prev,
             [name]: value,
         }));
@@ -53,10 +51,10 @@ function EmployeeDetail() {
     const handleSave = () => {
         if (id === '0') {
             // Handle save new entry
-            dispatch(addEmployee(employee));
+            dispatch(addStudent(student));
         } else {
             // Handle update existing entry
-            dispatch(updateEmployee(employee));
+            dispatch(updateStudent(student));
         }
         alert('Thành công');
         handleBack();
@@ -64,17 +62,17 @@ function EmployeeDetail() {
 
     const handleDelete = () => {
         if (id !== '0') {
-            dispatch(removeEmployee(id));
-            alert('Xóa thành công');
+            dispatch(removeStudent(id));
+            alert('xóa thành công');
             handleBack();
         }
     };
 
-    const handleBack = () => navigate('/employees'); // Quay về trang danh sách nhân viên
+    const handleBack = () => navigate('/test'); // Quay về trang trước
 
     return (
         <Box sx={{ padding: 2 }}>
-            <h1>{id === '0' ? 'Tạo Mới Nhân Viên' : 'Chi Tiết Nhân Viên'}</h1>
+            <h1>{id === '0' ? 'Tạo Mới' : 'Chi Tiết'}</h1>
             <Button variant="contained" onClick={handleBack} sx={{ marginBottom: 2 }}>
                 Quay lại
             </Button>
@@ -85,7 +83,7 @@ function EmployeeDetail() {
                         fullWidth
                         label="ID"
                         name="id"
-                        value={employee.id}
+                        value={student.id}
                         onChange={handleChange}
                         InputProps={{ readOnly: id !== '0' }}
                     />
@@ -95,7 +93,7 @@ function EmployeeDetail() {
                         fullWidth
                         label="Họ và tên"
                         name="fullName"
-                        value={employee.fullName}
+                        value={student.fullName}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -105,7 +103,7 @@ function EmployeeDetail() {
                         label="Tuổi"
                         name="age"
                         type="number"
-                        value={employee.age}
+                        value={student.age}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -114,7 +112,7 @@ function EmployeeDetail() {
                         fullWidth
                         label="Giới tính"
                         name="gender"
-                        value={employee.gender}
+                        value={student.gender}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -123,7 +121,7 @@ function EmployeeDetail() {
                         fullWidth
                         label="Địa chỉ"
                         name="address"
-                        value={employee.address}
+                        value={student.address}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -132,13 +130,13 @@ function EmployeeDetail() {
                         fullWidth
                         label="Ảnh URL"
                         name="photoUrl"
-                        value={employee.photoUrl}
+                        value={student.photoUrl}
                         onChange={handleChange}
                     />
                 </Grid>
-                {employee.photoUrl && (
+                {student.photoUrl && (
                     <Grid item xs={12}>
-                        <img src={employee.photoUrl} alt="Avatar" style={{ width: '100px', borderRadius: '8px' }} />
+                        <img src={student.photoUrl} alt="Avatar" style={{ width: '100px', borderRadius: '8px' }} />
                     </Grid>
                 )}
             </Grid>
@@ -164,4 +162,4 @@ function EmployeeDetail() {
     );
 }
 
-export default EmployeeDetail;
+export default ChiTiet;

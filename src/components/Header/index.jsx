@@ -18,10 +18,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import theme from '@/Theme';
 
 import { useNavigate } from 'react-router-dom';
-import { useAppContext } from '@/store/AppContext.jsx';
-
-
-
+import { useSelector } from 'react-redux';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -72,8 +69,7 @@ export default function Header() {
 
     const navigate = useNavigate();
     //Lấy phần được chọn
-    const { menuSelected } = useAppContext();
-    
+    const menuSelected = useSelector((state) => state.menu.menuSelected);
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -94,7 +90,7 @@ export default function Header() {
 
     const handleSignOut = () => {
         // Implement sign out logic here
-             navigate('/login');
+        navigate('/login');
     };
 
     const menuId = 'primary-search-account-menu';
@@ -172,15 +168,11 @@ export default function Header() {
         <Box>
             <AppBar position="static" className="bg-slate-50">
                 <Toolbar>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' } }}
-                        className="font-bold me-3 text-gray-950"
+                    <p
+                        className="hidden md:block text-nowrap font-bold text-lg me-3 uppercase text-slate-800"
                     >
-                        {menuSelected ? menuSelected.sidebarProps.displayText : ''}
-                    </Typography>
+                        {menuSelected ? menuSelected.sidebarProps.displayText : 'Xin chào'}
+                    </p>
                     <Search>
                         <SearchIconWrapper>
                             <SearchIcon sx={{ color: 'text.primary' }} />
@@ -191,12 +183,12 @@ export default function Header() {
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={4} color="error">
-                                <MailIcon sx={{color: theme.palette.primary.main}} />
+                                <MailIcon sx={{ color: theme.palette.primary.main }} />
                             </Badge>
                         </IconButton>
                         <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
                             <Badge badgeContent={17} color="error">
-                                <NotificationsIcon sx={{color: theme.palette.primary.main}} />
+                                <NotificationsIcon sx={{ color: theme.palette.primary.main }} />
                             </Badge>
                         </IconButton>
                         <IconButton
@@ -208,7 +200,7 @@ export default function Header() {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircle sx={{color: theme.palette.primary.main}}/>
+                            <AccountCircle sx={{ color: theme.palette.primary.main }} />
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -220,7 +212,7 @@ export default function Header() {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
-                            <MoreIcon  sx={{color: theme.palette.primary.main}}/>
+                            <MoreIcon sx={{ color: theme.palette.primary.main }} />
                         </IconButton>
                     </Box>
                 </Toolbar>

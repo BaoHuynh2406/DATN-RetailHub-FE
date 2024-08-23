@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import IconButton from '@mui/material/IconButton';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import EditIcon from '@mui/icons-material/Edit';
@@ -6,21 +7,21 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
 import TableCustom from '@/components/TableCustom';
 import { useNavigate } from 'react-router-dom';
-// Redux
+//Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { addEmployee, removeEmployee, updateEmployee } from '@/redux/EmployeeController/EmployeeAction';
+import { addStudent, removeStudent, updateStudent } from '@/redux/Student/Actions';
 
 export default function DataTable() {
     const navigate = useNavigate();
 
     const columns = [
-        { field: 'userId', headerName: 'Mã nhân viên', width: 150 },
-        { field: 'fullName', headerName: 'Họ và tên', width: 180 },
-        { field: 'phoneNumber', headerName: 'Số điện thoại', width: 170 },
-        { field: 'roleId', headerName: 'Chức vụ', width: 150 },
-        { field: 'startDate', headerName: 'Ngày vào làm', width: 180 },
+        { field: 'id', headerName: 'Mã sinh viên', width: 100 },
+        { field: 'fullName', headerName: 'Họ và tên', width: 200 },
+        { field: 'age', headerName: 'Tuổi', width: 130 },
+        { field: 'gender', headerName: 'Giới tính', width: 90 },
+        { field: 'address', headerName: 'Địa chỉ', width: 300 },
         {
-            field: 'image',
+            field: 'photoUrl',
             headerName: 'Ảnh',
             width: 150,
             renderCell: (params) => <img src={params.value} alt="Ảnh" className="h-15 w-12" />,
@@ -43,29 +44,29 @@ export default function DataTable() {
     ];
 
     const dispatch = useDispatch();
-    const dataEmployees = useSelector((state) => state.employee);  // Cập nhật cho đúng state
+    const dataStudents = useSelector((state) => state.student);
 
     const handleEdit = (row) => {
-        navigate(`/employees/EmployeeDetail/${row.id}`);
+        navigate(`/test/detail/${row.id}`);
     };
 
-    const handleAdd = () => {
-        navigate('/employees/EmployeeDetail/0');
+    const handleAdd = (row) => {
+        navigate('/test/detail/0');
     };
 
     const handleDelete = (row) => {
-        dispatch(removeEmployee(row.id));
+        dispatch(removeStudent(row.id));
     };
 
     return (
         <div className="p-4">
-            <h2>Danh sách nhân viên</h2>
-            <Button onClick={handleAdd} className="my-3 bg-green-600" variant="contained" endIcon={<AddCircleIcon />}>
+            <h2>Danh sách sinh viên</h2>
+            <Button onClick={handleAdd} className="my-3 bg-green-   600" variant="contained" endIcon={<AddCircleIcon />}>
                 Thêm mới
             </Button>
 
-            <div className='w-full' style={{ height: '500px' }}>
-                <TableCustom columns={columns} rows={dataEmployees} stt={true} />
+            <div className='w-max' style={{ height: '500px' }}>
+                <TableCustom columns={columns} rows={dataStudents} stt={true} />
             </div>
         </div>
     );
