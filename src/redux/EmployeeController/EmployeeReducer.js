@@ -8,15 +8,15 @@ const employeeReducer = (state = initialState, action) => {
             return [...state, action.payload];
         case REMOVE_EMPLOYEE:
             return state.map((employee) =>
-                employee.id === action.payload ? { ...employee, status: false } : employee
+                employee.userId === action.payload ? { ...employee, status: false } : employee
             );
         case UPDATE_EMPLOYEE:
             return state.map((employee) =>
-                employee.id === action.payload.id ? { ...employee, ...action.payload } : employee
+                employee.userId === action.payload.userId ? { ...employee, ...action.payload } : employee
             );
         case RESTORE_EMPLOYEE:
             return state.map((employee) =>
-                employee.id === action.payload ? { ...employee, status: true } : employee
+                employee.userId === action.payload ? { ...employee, status: true } : employee
             );
         default:
             return state;

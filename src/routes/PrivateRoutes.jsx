@@ -26,7 +26,7 @@ const privateRouter = [
                 layout: DefaultLayout,
             },
             {
-                path: 'EmployeeDetail/:id',
+                path: 'EmployeeDetail/:userId',
                 element: lazy(() => import('@/pages/Employee/EmployeeDetail')),
                 layout: DefaultLayout,
             },

@@ -8,7 +8,7 @@ import ExplicitIcon from '@mui/icons-material/Explicit';
 
 export default function EmployeeTable() {
     const navigate = useNavigate();
-    const allEmployees = useSelector((state) => state.employee || []); // Bảo vệ để allEmployees không phải undefined
+    const allEmployees = useSelector((state) => state.employee); // Bảo vệ để allEmployees không phải undefined
 
     const [employees, setEmployees] = useState(allEmployees);
     const [showDeleted, setShowDeleted] = useState(false);
@@ -64,7 +64,7 @@ export default function EmployeeTable() {
     }, [showDeleted, allEmployees]);
 
     const handleEdit = (row) => {
-        navigate(`/employee/EmployeeDetail/${row.id}`);
+        navigate(`/employee/EmployeeDetail/${row.userId}`);
     };
 
     const handleAdd = () => {

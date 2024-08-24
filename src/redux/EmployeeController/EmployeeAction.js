@@ -10,13 +10,13 @@ export const addEmployee = (employee) => ({
 });
 
 
-export const removeEmployee = (id) => ({
+export const removeEmployee = (userId) => ({
     type: REMOVE_EMPLOYEE,
-    payload: id,
+    payload: userId,
 });
-export const restoreEmployee = (id) => ({
+export const restoreEmployee = (userId) => ({
     type: RESTORE_EMPLOYEE,
-    payload: id,
+    payload: userId,
 });
 
 export const updateEmployee = (employee) => ({

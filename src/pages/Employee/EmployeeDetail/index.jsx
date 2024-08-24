@@ -8,7 +8,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import BadgeIcon from '@mui/icons-material/Badge';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
-
+import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addEmployee, removeEmployee, updateEmployee, restoreEmployee } from '@/redux/EmployeeController/EmployeeAction';
@@ -17,17 +17,19 @@ const StyledBox = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(3),
 }));
 
+const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
+
 const EmployeeDetails = () => {
     const dispatch = useDispatch();
-    const employees = useSelector((state) => state.employees || []);
-    const { id } = useParams();
+    const employees = useSelector((state) => state.employee);
+    const { userId } = useParams();
     const navigate = useNavigate();
 
     const [employee, setEmployee] = useState({
-        id: '',
         userId: '',
         fullName: '',
         password: '',
+        confirmPassword: '',
         email: '',
         phoneNumber: '',
         address: '',
@@ -36,15 +38,16 @@ const EmployeeDetails = () => {
         endDate: '',
         status: true,
         roleId: '',
+        image: '',
     });
 
     useEffect(() => {
-        if (id === 'create') {
+        if (userId === 'create') {
             setEmployee({
-                id: '',
                 userId: '',
                 fullName: '',
                 password: '',
+                confirmPassword: '',
                 email: '',
                 phoneNumber: '',
                 address: '',
@@ -53,12 +56,17 @@ const EmployeeDetails = () => {
                 endDate: '',
                 status: true,
                 roleId: '',
+                image: '',
             });
         } else {
             if (Array.isArray(employees)) {
-                const foundEmployee = employees.find((item) => item.id === id);
+                const foundEmployee = employees.find((item) => item.userId === userId);
                 if (foundEmployee) {
-                    setEmployee(foundEmployee);
+                    setEmployee({
+                        ...foundEmployee,
+                        password: '', // Đặt mật khẩu và xác nhận mật khẩu là rỗng khi chỉnh sửa
+                        confirmPassword: '', // Điều này cho phép người dùng nhập mật khẩu mới
+                    });
                 } else {
                     alert('Nhân viên không tồn tại!');
                     navigate('/not-found');
@@ -68,48 +76,67 @@ const EmployeeDetails = () => {
                 navigate('/not-found');
             }
         }
-    }, [id, employees, navigate]);
+    }, [userId, employees, navigate]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEmployee((prev) => ({ ...prev, [name]: value }));
+        setEmployee({ ...employee, [name]: value });
+    };
+
+    const handleImageUpload = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setEmployee({ ...employee, image: reader.result });
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
     };
 
     const handleSave = () => {
-        if (id === 'create') {
-            dispatch(addEmployee(employee));
-        } else {
-            dispatch(updateEmployee(employee));
+        if (employee.password !== employee.confirmPassword) {
+            alert('Mật khẩu và xác nhận mật khẩu không khớp!');
+            return;
         }
+
+        const { password, confirmPassword, ...employeeData } = employee;
+
+        if (userId === 'create') {
+            dispatch(addEmployee(employeeData));
+        } else {
+            dispatch(updateEmployee( employeeData ));
+        }
+        navigate('/employee');
         alert('Lưu thành công');
     };
 
     const handleDelete = () => {
-        if (id !== '0') {
-            dispatch(removeEmployee(id));
+        if (userId !== '0') {
+            dispatch(removeEmployee(userId));
             alert('Nhân viên đã được xóa');
             navigate('/employee');
         } else {
-            console.log('Lỗi khi xóa nhân viên có id: ', id);
+            console.log('Lỗi khi xóa nhân viên có userId: ', userId);
         }
     };
 
     const handleRestore = () => {
-        if (id !== '0') {
-            dispatch(restoreEmployee(id));
+        if (userId !== '0') {
+            dispatch(restoreEmployee(userId));
             alert('Nhân viên đã được khôi phục');
             navigate('/employee');
         } else {
-            console.log('Lỗi khi khôi phục nhân viên có id: ', id);
+            console.log('Lỗi khi khôi phục nhân viên có userId: ', userId);
         }
     };
 
     const handleReset = () => {
         setEmployee({
-            id: '',
             userId: '',
             fullName: '',
             password: '',
+            confirmPassword: '',
             email: '',
             phoneNumber: '',
             address: '',
@@ -118,6 +145,7 @@ const EmployeeDetails = () => {
             endDate: '',
             status: true,
             roleId: '',
+            image: '',
         });
     };
 
@@ -125,22 +153,16 @@ const EmployeeDetails = () => {
 
     return (
         <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
-            <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="space-between"
-                sx={{ marginBottom: 2 }}
-                marginTop="20px"
-            >
+            <Box display="flex" alignItems="center" justifyContent="space-between" sx={{ marginBottom: 2 }} marginTop="20px">
                 <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
-                    {id === 'create' ? 'Tạo Mới' : 'Chi Tiết'}
+                    {userId === 'create' ? 'Tạo Mới' : 'Chi Tiết'}
                 </Typography>
                 <Button variant="contained" onClick={handleBack}>
                     <ReplyAllIcon />
                 </Button>
             </Box>
             <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={4}>
                     <TextField
                         label="Mã nhân viên"
                         name="userId"
@@ -149,7 +171,7 @@ const EmployeeDetails = () => {
                         fullWidth
                         variant="outlined"
                         InputProps={{
-                            readOnly: id !== 'create',
+                            readOnly: userId !== 'create',
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <BadgeIcon />
@@ -206,9 +228,6 @@ const EmployeeDetails = () => {
                             ),
                         }}
                     />
-                </Grid>
-
-                <Grid item xs={12} md={6}>
                     <TextField
                         label="Địa chỉ"
                         name="address"
@@ -225,10 +244,63 @@ const EmployeeDetails = () => {
                             ),
                         }}
                     />
+                </Grid>
+
+                <Grid item xs={12} md={4}>
                     <TextField
                         label="CCCD/ID"
                         name="cccd"
                         value={employee.cccd}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <BadgeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Mật khẩu"
+                        name="password"
+                        type="password"
+                        value={employee.password}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LockIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Nhập lại mật khẩu"
+                        name="confirmPassword"
+                        type="password"
+                        value={employee.confirmPassword}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LockIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Vai trò"
+                        name="roleId"
+                        value={employee.roleId}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -251,6 +323,13 @@ const EmployeeDetails = () => {
                         variant="outlined"
                         margin="normal"
                         InputLabelProps={{ shrink: true }}
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <DateRangeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     <TextField
                         label="Ngày kết thúc"
@@ -262,35 +341,56 @@ const EmployeeDetails = () => {
                         variant="outlined"
                         margin="normal"
                         InputLabelProps={{ shrink: true }}
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <DateRangeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                    <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                        style={{ marginBottom: '16px' }}
+                    />
+                    <img
+                        src={employee.image || defaultImage}
+                        alt="Employee"
+                        style={{ width: '100%', borderRadius: '8px' }}
                     />
                 </Grid>
             </Grid>
 
-            <Grid container spacing={2} sx={{ marginTop: 3 }}>
-                <Grid item xs={12} sm={4}>
-                    <Button variant="contained" color="primary" fullWidth onClick={handleSave}>
-                        {id === 'create' ? 'Tạo mới' : 'Lưu'}
+            <StyledBox display="flex" justifyContent="flex-end" marginTop={4}>
+                {userId === 'create' ? (
+                    <Button variant="contained" color="primary" onClick={handleSave} sx={{ marginRight: 2 }}>
+                        Lưu
                     </Button>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Button variant="outlined" color="secondary" fullWidth onClick={handleReset}>
-                        Đặt lại
-                    </Button>
-                </Grid>
-                {id !== 'create' && (
-                    <Grid item xs={12} sm={4}>
+                ) : (
+                    <>
                         {employee.status ? (
-                            <Button variant="contained" color="error" fullWidth onClick={handleDelete}>
-                                Xóa nhân viên
+                            <Button variant="outlined" color="error" onClick={handleDelete} sx={{ marginRight: 2 }}>
+                                Xóa
                             </Button>
                         ) : (
-                            <Button variant="contained" color="success" fullWidth onClick={handleRestore}>
-                                Khôi phục nhân viên
+                            <Button variant="outlined" color="info" onClick={handleRestore} sx={{ marginRight: 2 }}>
+                                Khôi phục
                             </Button>
                         )}
-                    </Grid>
+                        <Button variant="contained" color="success" onClick={handleSave} sx={{ marginRight: 2 }}>
+                            Cập nhật
+                        </Button>
+                    </>
                 )}
-            </Grid>
+                <Button variant="outlined" onClick={handleReset}>
+                    Làm lại
+                </Button>
+            </StyledBox>
         </Container>
     );
 };
