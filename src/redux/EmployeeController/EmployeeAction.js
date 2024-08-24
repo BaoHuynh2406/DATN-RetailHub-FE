@@ -9,6 +9,7 @@ export const addEmployee = (employee) => ({
     payload: employee,
 });
 
+
 export const removeEmployee = (id) => ({
     type: REMOVE_EMPLOYEE,
     payload: id,

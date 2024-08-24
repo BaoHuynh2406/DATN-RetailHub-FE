@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Box, Button, Container, Typography, IconButton, Switch } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
 import TableCustom from '@/components/TableCustom';
@@ -8,13 +8,12 @@ import ExplicitIcon from '@mui/icons-material/Explicit';
 
 export default function EmployeeTable() {
     const navigate = useNavigate();
-    const allEmployees = useSelector((state) => state.employee);
+    const allEmployees = useSelector((state) => state.employee || []); // Bảo vệ để allEmployees không phải undefined
 
-    // State for employees and switch to show deleted employees
     const [employees, setEmployees] = useState(allEmployees);
     const [showDeleted, setShowDeleted] = useState(false);
 
-    // Define columns using useMemo for better performance
+    // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
     const columns = useMemo(() => [
         { field: 'userId', headerName: 'Mã nhân viên', width: 150 },
         { field: 'fullName', headerName: 'Họ và tên', width: 210 },
@@ -46,18 +45,21 @@ export default function EmployeeTable() {
                     >
                         <EditIcon />
                     </IconButton>
-
                 </Box>
             ),
         },
     ], []);
 
-    // Filter employees based on the switch state (showDeleted)
+    // Lọc nhân viên dựa trên trạng thái của switch (showDeleted)
     useEffect(() => {
-        if (showDeleted) {
-            setEmployees(allEmployees.filter((row) => row.status === false));
+        if (Array.isArray(allEmployees)) {
+            if (showDeleted) {
+                setEmployees(allEmployees.filter((row) => row.status === false));
+            } else {
+                setEmployees(allEmployees.filter((row) => row.status !== false));
+            }
         } else {
-            setEmployees(allEmployees.filter((row) => row.status !== false));
+            console.error('Dữ liệu nhân viên không hợp lệ');
         }
     }, [showDeleted, allEmployees]);
 
@@ -66,7 +68,7 @@ export default function EmployeeTable() {
     };
 
     const handleAdd = () => {
-        navigate('/employee/EmployeeDetail/0');
+        navigate('/employee/EmployeeDetail/create');
     };
 
     const handleShowDeletedToggle = (event) => {
@@ -76,7 +78,6 @@ export default function EmployeeTable() {
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
-                {/* Title changes based on switch state */}
                 <Typography variant="h4" component="h2" fontWeight="bold" color={showDeleted ? "#ab003c" : "inherit"}>
                     {showDeleted ? 'DANH SÁCH NHÂN VIÊN ĐÃ XÓA' : 'DANH SÁCH NHÂN VIÊN'}
                 </Typography>

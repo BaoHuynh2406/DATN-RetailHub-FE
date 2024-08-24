@@ -11,7 +11,7 @@ import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addEmployee, removeEmployee, updateEmployee, restoreEmployee } from '@/redux/EmployeeController/EmployeeAction'; // Ensure these actions exist in your Redux setup
+import { addEmployee, removeEmployee, updateEmployee, restoreEmployee } from '@/redux/EmployeeController/EmployeeAction';
 
 const StyledBox = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(3),
@@ -19,7 +19,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 const EmployeeDetails = () => {
     const dispatch = useDispatch();
-    const employees = useSelector((state) => state.employees);
+    const employees = useSelector((state) => state.employees || []);
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -38,10 +38,23 @@ const EmployeeDetails = () => {
         roleId: '',
     });
 
-    const createEmployee = 'create';
-
     useEffect(() => {
-        if (id !== createEmployee) {
+        if (id === 'create') {
+            setEmployee({
+                id: '',
+                userId: '',
+                fullName: '',
+                password: '',
+                email: '',
+                phoneNumber: '',
+                address: '',
+                cccd: '',
+                startDate: '',
+                endDate: '',
+                status: true,
+                roleId: '',
+            });
+        } else {
             if (Array.isArray(employees)) {
                 const foundEmployee = employees.find((item) => item.id === id);
                 if (foundEmployee) {
@@ -50,22 +63,23 @@ const EmployeeDetails = () => {
                     alert('Nhân viên không tồn tại!');
                     navigate('/not-found');
                 }
+            } else {
+                console.error('Danh sách nhân viên không hợp lệ');
+                navigate('/not-found');
             }
         }
     }, [id, employees, navigate]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEmployee({ ...employee, [name]: value });
+        setEmployee((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleSave = () => {
         if (id === 'create') {
-            dispatch(addEmployee(employee)); // Thêm nhân viên vào redux
-            console.log('Thêm nhân viên:', employee);
+            dispatch(addEmployee(employee));
         } else {
-            dispatch(updateEmployee(employee)); // Cập nhật nhân viên
-            console.log('Cập nhật nhân viên:', employee);
+            dispatch(updateEmployee(employee));
         }
         alert('Lưu thành công');
     };
@@ -73,7 +87,6 @@ const EmployeeDetails = () => {
     const handleDelete = () => {
         if (id !== '0') {
             dispatch(removeEmployee(id));
-            console.log('Xóa nhân viên với ID:', id);
             alert('Nhân viên đã được xóa');
             navigate('/employee');
         } else {
@@ -84,7 +97,6 @@ const EmployeeDetails = () => {
     const handleRestore = () => {
         if (id !== '0') {
             dispatch(restoreEmployee(id));
-            console.log('Khôi phục nhân viên với ID:', id);
             alert('Nhân viên đã được khôi phục');
             navigate('/employee');
         } else {
@@ -121,7 +133,7 @@ const EmployeeDetails = () => {
                 marginTop="20px"
             >
                 <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
-                    {id === createEmployee ? 'Tạo Mới' : 'Chi Tiết'}
+                    {id === 'create' ? 'Tạo Mới' : 'Chi Tiết'}
                 </Typography>
                 <Button variant="contained" onClick={handleBack}>
                     <ReplyAllIcon />
@@ -257,7 +269,7 @@ const EmployeeDetails = () => {
             <Grid container spacing={2} sx={{ marginTop: 3 }}>
                 <Grid item xs={12} sm={4}>
                     <Button variant="contained" color="primary" fullWidth onClick={handleSave}>
-                        {id === createEmployee ? 'Tạo mới' : 'Lưu'}
+                        {id === 'create' ? 'Tạo mới' : 'Lưu'}
                     </Button>
                 </Grid>
                 <Grid item xs={12} sm={4}>
@@ -265,7 +277,7 @@ const EmployeeDetails = () => {
                         Đặt lại
                     </Button>
                 </Grid>
-                {id !== createEmployee && (
+                {id !== 'create' && (
                     <Grid item xs={12} sm={4}>
                         {employee.status ? (
                             <Button variant="contained" color="error" fullWidth onClick={handleDelete}>
