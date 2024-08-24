@@ -1,167 +1,286 @@
 import React, { useState, useEffect } from 'react';
-import { Button, TextField, Grid, Box } from '@mui/material';
-import { useParams, useNavigate } from 'react-router-dom';
+import { TextField, Button, Grid, Typography, Container, Box, InputAdornment } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import EmailIcon from '@mui/icons-material/Email';
+import PersonIcon from '@mui/icons-material/Person';
+import PhoneIcon from '@mui/icons-material/Phone';
+import HomeIcon from '@mui/icons-material/Home';
+import BadgeIcon from '@mui/icons-material/Badge';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addEmployee, removeEmployee, updateEmployee } from '@/redux/EmployeeController/EmployeeAction';
+import { addEmployee, removeEmployee, updateEmployee, restoreEmployee } from '@/redux/EmployeeController/EmployeeAction'; // Ensure these actions exist in your Redux setup
 
-function EmployeeDetail() {
+const StyledBox = styled(Box)(({ theme }) => ({
+    marginTop: theme.spacing(3),
+}));
+
+const EmployeeDetails = () => {
     const dispatch = useDispatch();
-    const employees = useSelector((state) => state.employee);
-
+    const employees = useSelector((state) => state.employees);
     const { id } = useParams();
     const navigate = useNavigate();
 
     const [employee, setEmployee] = useState({
         id: '',
+        userId: '',
         fullName: '',
-        photoUrl: '',
-        age: '',
-        gender: '',
+        password: '',
+        email: '',
+        phoneNumber: '',
         address: '',
+        cccd: '',
+        startDate: '',
+        endDate: '',
+        status: true,
         roleId: '',
     });
 
+    const createEmployee = 'create';
+
     useEffect(() => {
-        if (id !== '0') {
-            const foundEmployee = employees.find((item) => item.id === id);
-            if (foundEmployee) {
-                setEmployee(foundEmployee);
+        if (id !== createEmployee) {
+            if (Array.isArray(employees)) {
+                const foundEmployee = employees.find((item) => item.id === id);
+                if (foundEmployee) {
+                    setEmployee(foundEmployee);
+                } else {
+                    alert('Nhân viên không tồn tại!');
+                    navigate('/not-found');
+                }
             }
-        } else {
-            // Initialize a new employee object for creating new entry
-            setEmployee({
-                id: '',
-                fullName: '',
-                photoUrl: '',
-                age: '',
-                gender: '',
-                address: '',
-                roleId: '',
-            });
         }
-    }, [id]);
+    }, [id, employees, navigate]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEmployee((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
+        setEmployee({ ...employee, [name]: value });
     };
 
     const handleSave = () => {
-        if (id === '0') {
-            // Handle save new entry
-            dispatch(addEmployee(employee));
+        if (id === 'create') {
+            dispatch(addEmployee(employee)); // Thêm nhân viên vào redux
+            console.log('Thêm nhân viên:', employee);
         } else {
-            // Handle update existing entry
-            dispatch(updateEmployee(employee));
+            dispatch(updateEmployee(employee)); // Cập nhật nhân viên
+            console.log('Cập nhật nhân viên:', employee);
         }
-        alert('Thành công');
-        handleBack();
+        alert('Lưu thành công');
     };
 
     const handleDelete = () => {
         if (id !== '0') {
             dispatch(removeEmployee(id));
-            alert('Xóa thành công');
-            handleBack();
+            console.log('Xóa nhân viên với ID:', id);
+            alert('Nhân viên đã được xóa');
+            navigate('/employee');
+        } else {
+            console.log('Lỗi khi xóa nhân viên có id: ', id);
         }
     };
 
-    const handleBack = () => navigate('/employees'); // Quay về trang danh sách nhân viên
+    const handleRestore = () => {
+        if (id !== '0') {
+            dispatch(restoreEmployee(id));
+            console.log('Khôi phục nhân viên với ID:', id);
+            alert('Nhân viên đã được khôi phục');
+            navigate('/employee');
+        } else {
+            console.log('Lỗi khi khôi phục nhân viên có id: ', id);
+        }
+    };
+
+    const handleReset = () => {
+        setEmployee({
+            id: '',
+            userId: '',
+            fullName: '',
+            password: '',
+            email: '',
+            phoneNumber: '',
+            address: '',
+            cccd: '',
+            startDate: '',
+            endDate: '',
+            status: true,
+            roleId: '',
+        });
+    };
+
+    const handleBack = () => navigate('/employee');
 
     return (
-        <Box sx={{ padding: 2 }}>
-            <h1>{id === '0' ? 'Tạo Mới Nhân Viên' : 'Chi Tiết Nhân Viên'}</h1>
-            <Button variant="contained" onClick={handleBack} sx={{ marginBottom: 2 }}>
-                Quay lại
-            </Button>
-
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+        <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
+            <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="space-between"
+                sx={{ marginBottom: 2 }}
+                marginTop="20px"
+            >
+                <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
+                    {id === createEmployee ? 'Tạo Mới' : 'Chi Tiết'}
+                </Typography>
+                <Button variant="contained" onClick={handleBack}>
+                    <ReplyAllIcon />
+                </Button>
+            </Box>
+            <Grid container spacing={4}>
+                <Grid item xs={12} md={6}>
                     <TextField
-                        fullWidth
-                        label="ID"
-                        name="id"
-                        value={employee.id}
+                        label="Mã nhân viên"
+                        name="userId"
+                        value={employee.userId}
                         onChange={handleChange}
-                        InputProps={{ readOnly: id !== '0' }}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
                         fullWidth
+                        variant="outlined"
+                        InputProps={{
+                            readOnly: id !== 'create',
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <BadgeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                        margin="normal"
+                    />
+                    <TextField
                         label="Họ và tên"
                         name="fullName"
                         value={employee.fullName}
                         onChange={handleChange}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
                         fullWidth
-                        label="Tuổi"
-                        name="age"
-                        type="number"
-                        value={employee.age}
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <PersonIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Email"
+                        name="email"
+                        value={employee.email}
                         onChange={handleChange}
-                    />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <TextField
                         fullWidth
-                        label="Giới tính"
-                        name="gender"
-                        value={employee.gender}
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <EmailIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Số điện thoại"
+                        name="phoneNumber"
+                        value={employee.phoneNumber}
                         onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <PhoneIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                 </Grid>
-                <Grid item xs={12}>
+
+                <Grid item xs={12} md={6}>
                     <TextField
-                        fullWidth
                         label="Địa chỉ"
                         name="address"
                         value={employee.address}
                         onChange={handleChange}
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <TextField
                         fullWidth
-                        label="Ảnh URL"
-                        name="photoUrl"
-                        value={employee.photoUrl}
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <HomeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="CCCD/ID"
+                        name="cccd"
+                        value={employee.cccd}
                         onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <BadgeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Ngày bắt đầu"
+                        name="startDate"
+                        type="date"
+                        value={employee.startDate}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputLabelProps={{ shrink: true }}
+                    />
+                    <TextField
+                        label="Ngày kết thúc"
+                        name="endDate"
+                        type="date"
+                        value={employee.endDate}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputLabelProps={{ shrink: true }}
                     />
                 </Grid>
-                {employee.photoUrl && (
-                    <Grid item xs={12}>
-                        <img src={employee.photoUrl} alt="Avatar" style={{ width: '100px', borderRadius: '8px' }} />
+            </Grid>
+
+            <Grid container spacing={2} sx={{ marginTop: 3 }}>
+                <Grid item xs={12} sm={4}>
+                    <Button variant="contained" color="primary" fullWidth onClick={handleSave}>
+                        {id === createEmployee ? 'Tạo mới' : 'Lưu'}
+                    </Button>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Button variant="outlined" color="secondary" fullWidth onClick={handleReset}>
+                        Đặt lại
+                    </Button>
+                </Grid>
+                {id !== createEmployee && (
+                    <Grid item xs={12} sm={4}>
+                        {employee.status ? (
+                            <Button variant="contained" color="error" fullWidth onClick={handleDelete}>
+                                Xóa nhân viên
+                            </Button>
+                        ) : (
+                            <Button variant="contained" color="success" fullWidth onClick={handleRestore}>
+                                Khôi phục nhân viên
+                            </Button>
+                        )}
                     </Grid>
                 )}
             </Grid>
-            <Button
-                variant="contained"
-                color="success"
-                onClick={handleSave}
-                sx={{ marginBottom: 2, marginLeft: 1, marginTop: 3 }}
-            >
-                Lưu
-            </Button>
-            {id !== '0' && (
-                <Button
-                    variant="contained"
-                    color="error"
-                    onClick={handleDelete}
-                    sx={{ marginBottom: 2, marginLeft: 1, marginTop: 3 }}
-                >
-                    Xóa
-                </Button>
-            )}
-        </Box>
+        </Container>
     );
-}
+};
 
-export default EmployeeDetail;
+export default EmployeeDetails;

@@ -1,6 +1,8 @@
 export const ADD_EMPLOYEE = 'ADD_EMPLOYEE';
 export const REMOVE_EMPLOYEE = 'REMOVE_EMPLOYEE';
 export const UPDATE_EMPLOYEE = 'UPDATE_EMPLOYEE';
+export const RESTORE_EMPLOYEE = 'RESTORE_EMPLOYEE';
+
 
 export const addEmployee = (employee) => ({
     type: ADD_EMPLOYEE,
@@ -9,6 +11,10 @@ export const addEmployee = (employee) => ({
 
 export const removeEmployee = (id) => ({
     type: REMOVE_EMPLOYEE,
+    payload: id,
+});
+export const restoreEmployee = (id) => ({
+    type: RESTORE_EMPLOYEE,
     payload: id,
 });
 
