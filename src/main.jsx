@@ -6,7 +6,7 @@ import { StyledEngineProvider } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
+import {thunk} from 'redux-thunk';
 
 import rootReducer from '@/redux';
 import App from '@/App.jsx';
