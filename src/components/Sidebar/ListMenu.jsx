@@ -23,7 +23,7 @@ export const sidebarItems = [
     },
     {
         sidebarProps: { displayText: 'Nhân viên', icon: <PeopleRoundedIcon /> },
-        path: '/u',
+        path: '/employee',
         state: 'employee',
         child: [
             {
@@ -50,13 +50,13 @@ export const sidebarItems = [
     },
     {
         sidebarProps: { displayText: 'Quản lý kho', icon: <Inventory2RoundedIcon /> },
-        path: '/inventory',
-        state: 'inventory',
+        path: '/product',
+        state: 'product',
         child: [
             {
                 sidebarProps: { displayText: 'Danh sách hàng hóa', icon: <BallotRoundedIcon /> },
-                path: '/inventory/list',
-                state: 'inventory/list',
+                path: '/product/ListProduct',
+                state: '/product/ListProduct',
             },
             {
                 sidebarProps: { displayText: 'Chi tiết hàng hóa', icon: <ManageAccountsIcon /> },
