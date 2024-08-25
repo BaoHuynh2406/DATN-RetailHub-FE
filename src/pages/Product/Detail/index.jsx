@@ -157,7 +157,7 @@ const ProductDetails = () => {
                     <TextField
                         label={
                             <>
-                                Mã sản phẩm<span style={{ color: 'red' }}> *</span>
+                                Mã sản phẩm
                             </>
                         }
                         name="productId"
