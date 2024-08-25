@@ -11,7 +11,12 @@ import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addEmployee, removeEmployee, updateEmployee, restoreEmployee } from '@/redux/EmployeeController/EmployeeAction';
+import {
+    addEmployee,
+    removeEmployee,
+    updateEmployee,
+    restoreEmployee,
+} from '@/redux/EmployeeController/EmployeeAction';
 
 const StyledBox = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(3),
@@ -105,7 +110,7 @@ const EmployeeDetails = () => {
         if (userId === 'create') {
             dispatch(addEmployee(employeeData));
         } else {
-            dispatch(updateEmployee( employeeData ));
+            dispatch(updateEmployee(employeeData));
         }
         navigate('/employee');
         alert('Lưu thành công');
@@ -152,8 +157,14 @@ const EmployeeDetails = () => {
     const handleBack = () => navigate('/employee');
 
     return (
-        <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
-            <Box display="flex" alignItems="center" justifyContent="space-between" sx={{ marginBottom: 2 }} marginTop="20px">
+        <Container maxWidth="xl">
+            <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="space-between"
+                sx={{ marginBottom: 2 }}
+                marginTop="20px"
+            >
                 <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
                     {userId === 'create' ? 'Tạo Mới' : 'Chi Tiết'}
                 </Typography>
@@ -281,23 +292,6 @@ const EmployeeDetails = () => {
                         }}
                     />
                     <TextField
-                        label="Nhập lại mật khẩu"
-                        name="confirmPassword"
-                        type="password"
-                        value={employee.confirmPassword}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <LockIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
-                    <TextField
                         label="Vai trò"
                         name="roleId"
                         value={employee.roleId}
@@ -352,21 +346,35 @@ const EmployeeDetails = () => {
                 </Grid>
 
                 <Grid item xs={12} md={4}>
-                    <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handleImageUpload}
-                        style={{ marginBottom: '16px' }}
-                    />
-                    <img
-                        src={employee.image || defaultImage}
-                        alt="Employee"
-                        style={{ width: '100%', borderRadius: '8px' }}
-                    />
+                    <Box display="flex" flexDirection="column" alignItems="center" paddingTop="20px">
+                        <img
+                            src={employee.image || defaultImage}
+                            alt="Employee"
+                            style={{ width: '100%', borderRadius: '8px' }}
+                        />
+                        <Typography
+                            variant="caption"
+                            color="textSecondary"
+                            sx={{
+                                marginTop: 1,
+                                textOverflow: 'ellipsis',
+                                overflow: 'hidden',
+                                whiteSpace: 'nowrap',
+                                width: '100%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            {employee.image ? 'Tên ảnh: ' + employee.image.split('/').pop() : 'Chưa có ảnh'}
+                        </Typography>
+                        <Button variant="contained" component="label" sx={{ marginTop: 2 }}>
+                            Tải ảnh lên
+                            <input type="file" hidden onChange={handleImageUpload} />
+                        </Button>
+                    </Box>
                 </Grid>
             </Grid>
 
-            <StyledBox display="flex" justifyContent="flex-end" marginTop={4}>
+            <Box display="flex" justifyContent="flex-end" marginTop={5}>
                 {userId === 'create' ? (
                     <Button variant="contained" color="primary" onClick={handleSave} sx={{ marginRight: 2 }}>
                         Lưu
@@ -390,7 +398,7 @@ const EmployeeDetails = () => {
                 <Button variant="outlined" onClick={handleReset}>
                     Làm lại
                 </Button>
-            </StyledBox>
+            </Box>
         </Container>
     );
 };

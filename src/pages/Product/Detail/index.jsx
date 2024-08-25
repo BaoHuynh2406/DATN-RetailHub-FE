@@ -137,7 +137,7 @@ const ProductDetails = () => {
     const handleBack = () => navigate('/product');
 
     return (
-        <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
+        <Container maxWidth="xl">
             <Box
                 display="flex"
                 alignItems="center"
