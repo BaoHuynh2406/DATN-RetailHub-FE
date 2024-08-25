@@ -89,7 +89,6 @@ const ProductDetails = () => {
         }
         alert('Lưu thành công');
     };
-    
 
     const handleDelete = () => {
         if (productId !== '0') {
