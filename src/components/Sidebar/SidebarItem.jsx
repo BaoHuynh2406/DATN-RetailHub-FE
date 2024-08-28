@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { ListItemButton, ListItemIcon } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { setMenuSelected } from '@/redux/menu/menuSelected.js';
+import { setMenuSelected } from '@/redux/Menu/MenuSlice.js';
 
 const SidebarItem = ({ item, isSub }) => {
     const dispatch = useDispatch();
