@@ -14,18 +14,27 @@ import Typography from '@mui/material/Typography';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { postUserLogin } from '@/redux/userCurrent';
+
 export default function SignInSide() {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const navigate = useNavigate();
 
+    const dispatch = useDispatch();
+
+    const user = {
+        email: 'admin@retailhub.com',
+        password: 'admin123',
+    };
+
+    const handleLogin = () => {
+        dispatch(postUserLogin(user));
+    };
+
     const handleSubmit = (event) => {
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
-        console.log({
-            email: email,
-            password: password,
-        });
+        handleLogin();
         navigate('/dashboard');
     };
 

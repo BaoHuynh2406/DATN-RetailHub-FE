@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import { Button, Typography } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
@@ -13,19 +11,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import theme from '@/Theme';
 
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUserCurrent } from '@/redux/userCurrent';
 
 export default function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const [notiOpen, setNotiOpen] = React.useState(null);
 
     const isMenuOpen = Boolean(anchorEl);
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    const isNotiOpen = Boolean(notiOpen);
 
     const navigate = useNavigate();
     //Lấy phần được chọn
@@ -35,17 +33,16 @@ export default function Header() {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleMobileMenuClose = () => {
-        setMobileMoreAnchorEl(null);
+    const handleNotiMenuOpen = (event) => {
+        setNotiOpen(event.currentTarget);
     };
 
     const handleMenuClose = () => {
         setAnchorEl(null);
-        handleMobileMenuClose();
     };
 
-    const handleMobileMenuOpen = (event) => {
-        setMobileMoreAnchorEl(event.currentTarget);
+    const handleNotiMenuClose = () => {
+        setNotiOpen(null);
     };
 
     const handleSignOut = () => {
@@ -54,11 +51,12 @@ export default function Header() {
     };
 
     const menuId = 'primary-search-account-menu';
+    const notiMenuId = 'primary-search-noti-menu';
     const renderMenu = (
         <Menu
             anchorEl={anchorEl}
             anchorOrigin={{
-                vertical: 'top',
+                vertical: 'bottom',
                 horizontal: 'right',
             }}
             id={menuId}
@@ -70,82 +68,75 @@ export default function Header() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-            <MenuItem onClick={handleSignOut}>Đăng xuất</MenuItem>
+            <MenuItem onClick={handleMenuClose}>Thông tin cá nhân</MenuItem>
+            <MenuItem onClick={handleMenuClose}>Hỗ trợ</MenuItem>
+            <MenuItem onClick={handleSignOut}>
+                <Typography display="flex" alignItems="center" color="red">
+                    <LogoutRoundedIcon sx={{ mr: 1 }} />
+                    Đăng xuất
+                </Typography>
+            </MenuItem>
         </Menu>
     );
 
-    const mobileMenuId = 'primary-search-account-menu-mobile';
-    const renderMobileMenu = (
+    const renderNotifications = (
         <Menu
-            anchorEl={mobileMoreAnchorEl}
+            anchorEl={notiOpen}
             anchorOrigin={{
-                vertical: 'top',
+                vertical: 'bottom',
                 horizontal: 'right',
             }}
-            id={mobileMenuId}
+            id={notiMenuId}
             keepMounted
             transformOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
             }}
-            open={isMobileMenuOpen}
-            onClose={handleMobileMenuClose}
+            open={isNotiOpen}
+            onClose={handleNotiMenuClose}
         >
-            <MenuItem>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
-                        <MailIcon />
-                    </Badge>
-                </IconButton>
-                <p>Messages</p>
-            </MenuItem>
-            <MenuItem>
-                <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
-                    <Badge badgeContent={17} color="error">
-                        <NotificationsIcon />
-                    </Badge>
-                </IconButton>
-                <p>Notifications</p>
-            </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
-                <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
-                    <AccountCircle />
-                </IconButton>
-                <p>Profile</p>
+            <MenuItem onClick={handleNotiMenuClose} sx={{my: 2}}>
+                <Typography display="flex" alignItems="center" color="black">
+                    Không có thông báo!
+                </Typography>
             </MenuItem>
         </Menu>
     );
+
+
+    const dispatch = useDispatch();
+    const { loading, data, error } = useSelector((state) => state.userCurrent);
+
+    React.useEffect(() => {
+        if (!loading &&!data &&!error) {
+            dispatch(fetchUserCurrent());
+            
+        }
+        console.log(data);
+        
+    }, [dispatch, loading, data, error]);
 
     return (
         <Box>
             <AppBar position="static" className="bg-slate-50">
                 <Toolbar>
-                    <p
-                        className="hidden md:block text-nowrap font-bold text-lg me-3 uppercase text-slate-800"
-                    >
+                    <p className="hidden md:block text-nowrap font-bold text-lg me-3 uppercase text-slate-800">
                         {menuSelected ? menuSelected.sidebarProps.displayText : 'Xin chào'}
                     </p>
                     <Box sx={{ flexGrow: 1 }} />
-                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <MailIcon sx={{ color: theme.palette.primary.main }} />
-                            </Badge>
-                        </IconButton>
-                        <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="error">
+                    <Box sx={{ display: { md: 'flex' } }}>
+                        <IconButton
+                            onClick={handleNotiMenuOpen}
+                            aria-controls={notiMenuId}
+                            aria-haspopup="true"
+                            size="large"
+                            color="inherit"
+                        >
+                            <Badge badgeContent={0} color="error">
                                 <NotificationsIcon sx={{ color: theme.palette.primary.main }} />
                             </Badge>
                         </IconButton>
-                        <IconButton
+                        <Button
                             size="large"
                             edge="end"
                             aria-label="account of current user"
@@ -154,25 +145,16 @@ export default function Header() {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
+                            <Typography variant="h7" color="black" sx={{ ml: 2, mr: 1 }}>
+                                {data ? data.fullName : "?"}
+                            </Typography>
                             <AccountCircle sx={{ color: theme.palette.primary.main }} />
-                        </IconButton>
-                    </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            size="large"
-                            aria-label="show more"
-                            aria-controls={mobileMenuId}
-                            aria-haspopup="true"
-                            onClick={handleMobileMenuOpen}
-                            color="inherit"
-                        >
-                            <MoreIcon sx={{ color: theme.palette.primary.main }} />
-                        </IconButton>
+                        </Button>
                     </Box>
                 </Toolbar>
             </AppBar>
-            {renderMobileMenu}
             {renderMenu}
+            {renderNotifications}
         </Box>
     );
 }
