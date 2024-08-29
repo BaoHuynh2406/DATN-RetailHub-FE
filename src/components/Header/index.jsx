@@ -1,7 +1,7 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import { Button, Typography } from '@mui/material';
+import { Button, Typography, Skeleton } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
@@ -16,7 +16,7 @@ import theme from '@/Theme';
 
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserCurrent } from '@/redux/userCurrent';
+import { fetchUserCurrent } from '@/redux/UserCurrent';
 
 export default function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -95,7 +95,7 @@ export default function Header() {
             open={isNotiOpen}
             onClose={handleNotiMenuClose}
         >
-            <MenuItem onClick={handleNotiMenuClose} sx={{my: 2}}>
+            <MenuItem onClick={handleNotiMenuClose} sx={{ my: 2 }}>
                 <Typography display="flex" alignItems="center" color="black">
                     Không có thông báo!
                 </Typography>
@@ -103,17 +103,14 @@ export default function Header() {
         </Menu>
     );
 
-
     const dispatch = useDispatch();
     const { loading, data, error } = useSelector((state) => state.userCurrent);
 
     React.useEffect(() => {
-        if (!loading &&!data &&!error) {
+        if (!loading && !data && !error) {
             dispatch(fetchUserCurrent());
-            
         }
         console.log(data);
-        
     }, [dispatch, loading, data, error]);
 
     return (
@@ -146,7 +143,13 @@ export default function Header() {
                             color="inherit"
                         >
                             <Typography variant="h7" color="black" sx={{ ml: 2, mr: 1 }}>
-                                {data ? data.fullName : "?"}
+                                {data && !loading && data.fullName}
+                                {loading && <Skeleton variant="rounded" width={60} height={30} />}
+                                {error && (
+                                    <Typography variant="h7" color="red" sx={{ fontWeight: 'bold' }}>
+                                        Lỗi, vui lòng đăng nhập lại
+                                    </Typography>
+                                )}
                             </Typography>
                             <AccountCircle sx={{ color: theme.palette.primary.main }} />
                         </Button>

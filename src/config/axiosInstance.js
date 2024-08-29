@@ -27,11 +27,18 @@ axiosSecure.interceptors.request.use(
     (error) => Promise.reject(error),
 );
 
-// Response interceptor
+// Response interceptor cho axiosSecure
 axiosSecure.interceptors.response.use(
     (response) => response,
     async (error) => {
         const originalRequest = error.config;
+
+        if (!error.response) {
+            // Kiểm tra lỗi mạng
+            alert('Có lỗi khi kết nối đến server!. Vui lòng thử lại sau.');
+            window.location.href = '/error-code-500';
+            return Promise.reject('Lỗi mạng');
+        }
 
         if (error.response && error.response.status === 401 && !originalRequest._retry) {
             originalRequest._retry = true;
@@ -61,6 +68,22 @@ axiosSecure.interceptors.response.use(
             }
         }
 
+        return Promise.reject(error);
+    },
+);
+
+// Response interceptor cho axiosPublic
+axiosPublic.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (!error.response) {
+            // Kiểm tra lỗi mạng
+            alert('Có lỗi khi kết nối đến server!. Vui lòng thử lại sau.');
+            window.location.href = '/error-code-500';
+            return Promise.reject('Lỗi mạng');
+        }
+
+        console.error('Error:', error.message);
         return Promise.reject(error);
     },
 );

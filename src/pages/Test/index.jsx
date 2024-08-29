@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, CircularProgress, Typography } from '@mui/material';
-import { fetchUserCurrent, postUserLogin } from '@/redux/userCurrent';
+import { fetchUserCurrent, postUserLogin } from '@/redux/UserCurrent';
 
 function Test() {
     const dispatch = useDispatch();

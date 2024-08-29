@@ -15,7 +15,7 @@ import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { postUserLogin } from '@/redux/userCurrent';
+import { postUserLogin } from '@/redux/UserCurrent';
 
 export default function SignInSide() {
     const emailRef = useRef(null);
@@ -29,13 +29,17 @@ export default function SignInSide() {
         password: 'admin123',
     };
 
-    const handleLogin = () => {
-        dispatch(postUserLogin(user));
+    const handleLogin = async () => {
+        try {
+            await dispatch(postUserLogin(user)).unwrap();
+            navigate('/dashboard');
+        } catch (error) {
+            console.error('Login failed:', error);
+            // Xử lý lỗi nếu cần
+        }
     };
-
     const handleSubmit = (event) => {
         handleLogin();
-        navigate('/dashboard');
     };
 
     return (
@@ -45,8 +49,8 @@ export default function SignInSide() {
                 xs={false}
                 sm={4}
                 md={7}
-                style={{ backgroundImage: 'url(src/assets/images/background.png)' }}
                 sx={{
+                    backgroundImage: 'url(/assets/images/background.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'left',
                 }}
