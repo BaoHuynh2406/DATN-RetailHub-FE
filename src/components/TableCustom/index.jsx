@@ -67,7 +67,7 @@ function CustomPagination() {
         </div>
     );
 }
-function TableCustom({ columns, rows, id = 'id', rowHeight = 60, stt = false }) {
+function TableCustom({ columns, rows, id = 'id', rowHeight = 60, stt = false , loading= false}) {
     const sttColumns = stt
         ? [
               {
@@ -87,6 +87,7 @@ function TableCustom({ columns, rows, id = 'id', rowHeight = 60, stt = false }) 
     return (
         <DataGrid
             columns={allColumns}
+            loading={loading}
             rows={rows}
             rowHeight={rowHeight}
             getRowId={(row) => row[id]}

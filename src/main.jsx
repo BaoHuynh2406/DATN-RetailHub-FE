@@ -8,18 +8,16 @@ import { Provider } from 'react-redux';
 
 import App from '@/App.jsx';
 import theme from '@/Theme';
-import {store} from '@/redux/Store.js'
+import { store } from '@/redux/Store.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <StyledEngineProvider injectFirst>
-            <GlobalStyles>
-                <ThemeProvider theme={theme}>
-                    <Provider store={store}>
-                        <App />
-                    </Provider>
-                </ThemeProvider>
-            </GlobalStyles>
-        </StyledEngineProvider>
-    </React.StrictMode>,
+    <StyledEngineProvider injectFirst>
+        <GlobalStyles>
+            <ThemeProvider theme={theme}>
+                <Provider store={store}>
+                    <App />
+                </Provider>
+            </ThemeProvider>
+        </GlobalStyles>
+    </StyledEngineProvider>,
 );

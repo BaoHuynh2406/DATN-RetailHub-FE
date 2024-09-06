@@ -110,7 +110,6 @@ export default function Header() {
         if (!loading && !data && !error) {
             dispatch(fetchUserCurrent());
         }
-        console.log(data);
     }, [dispatch, loading, data, error]);
 
     return (

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Grid, Typography, Container, Box, InputAdornment } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { TextField, Button, Grid, Typography, Container, Box, InputAdornment, Skeleton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import PersonIcon from '@mui/icons-material/Person';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -18,70 +17,58 @@ import {
     restoreEmployee,
 } from '@/redux/EmployeeController/EmployeeAction';
 
-const StyledBox = styled(Box)(({ theme }) => ({
-    marginTop: theme.spacing(3),
-}));
+import { fetchEmployeeByIdAsync } from '@/redux/Employee/employeeSlice';
 
 const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
 const EmployeeDetails = () => {
     const dispatch = useDispatch();
-    const employees = useSelector((state) => state.employee);
+    const { data, currentData, loading, error } = useSelector((state) => state.employeeNew);
     const { userId } = useParams();
     const navigate = useNavigate();
-
-    const [employee, setEmployee] = useState({
+    const employeeNull = {
         userId: '',
         fullName: '',
-        password: '',
-        confirmPassword: '',
         email: '',
         phoneNumber: '',
         address: '',
-        cccd: '',
+        image: '',
         startDate: '',
         endDate: '',
-        status: true,
-        roleId: '',
-        image: '',
-    });
+        birthday: '',
+        isActive: true,
+        isDelete: false,
+        role: {
+            roleId: '',
+            roleDescription: '',
+        },
+    };
+
+    const [employee, setEmployee] = useState(employeeNull);
 
     useEffect(() => {
         if (userId === 'create') {
-            setEmployee({
-                userId: '',
-                fullName: '',
-                password: '',
-                confirmPassword: '',
-                email: '',
-                phoneNumber: '',
-                address: '',
-                cccd: '',
-                startDate: '',
-                endDate: '',
-                status: true,
-                roleId: '',
-                image: '',
-            });
+            setEmployee(employeeNull);
         } else {
-            if (Array.isArray(employees)) {
-                const foundEmployee = employees.find((item) => item.userId === userId);
+            if (data.length) {
+                const foundEmployee = data.find((item) => item.userId == userId);
                 if (foundEmployee) {
-                    setEmployee({
-                        ...foundEmployee,
-                        password: '', // Đặt mật khẩu và xác nhận mật khẩu là rỗng khi chỉnh sửa
-                        confirmPassword: '', // Điều này cho phép người dùng nhập mật khẩu mới
-                    });
+                    setEmployee(foundEmployee);
                 } else {
                     alert('Nhân viên không tồn tại!');
-                    navigate('/not-found');
+                    // navigate('/not-found');
                 }
             } else {
-                console.error('Danh sách nhân viên không hợp lệ');
-                navigate('/not-found');
+                dispatch(fetchEmployeeByIdAsync(userId));
             }
         }
-    }, [userId, employees, navigate]);
+    }, [userId, data, navigate]);
+
+    useEffect(() => {
+        if (currentData && userId != 'create') {
+            setEmployee(currentData);
+        }
+    }, [currentData]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -137,24 +124,45 @@ const EmployeeDetails = () => {
     };
 
     const handleReset = () => {
-        setEmployee({
-            userId: '',
-            fullName: '',
-            password: '',
-            confirmPassword: '',
-            email: '',
-            phoneNumber: '',
-            address: '',
-            cccd: '',
-            startDate: '',
-            endDate: '',
-            status: true,
-            roleId: '',
-            image: '',
-        });
+        setEmployee(employeeNull);
     };
 
     const handleBack = () => navigate('/employee');
+
+    if (loading) {
+        return (
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-around',
+                    height: '100%',
+                }}
+            >
+                <Skeleton
+                    animation="wave"
+                    sx={{
+                        height: 700,
+                        width: '30%',
+                    }}
+                />
+                <Skeleton
+                    animation="wave"
+                    sx={{
+                        height: 700,
+                        width: '30%',
+                    }}
+                />
+                <Skeleton
+                    animation="wave"
+                    sx={{
+                        height: 700,
+                        width: '30%',
+                    }}
+                />
+            </Box>
+        );
+    }
 
     return (
         <Container maxWidth="xl">
@@ -177,7 +185,7 @@ const EmployeeDetails = () => {
                     <TextField
                         label="Mã nhân viên"
                         name="userId"
-                        value={employee.userId}
+                        value={employee.userId || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -194,7 +202,7 @@ const EmployeeDetails = () => {
                     <TextField
                         label="Họ và tên"
                         name="fullName"
-                        value={employee.fullName}
+                        value={employee.fullName || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -210,7 +218,7 @@ const EmployeeDetails = () => {
                     <TextField
                         label="Email"
                         name="email"
-                        value={employee.email}
+                        value={employee.email || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -226,9 +234,10 @@ const EmployeeDetails = () => {
                     <TextField
                         label="Số điện thoại"
                         name="phoneNumber"
-                        value={employee.phoneNumber}
+                        value={employee.phoneNumber || ''}
                         onChange={handleChange}
                         fullWidth
+                        type="number"
                         variant="outlined"
                         margin="normal"
                         InputProps={{
@@ -242,7 +251,7 @@ const EmployeeDetails = () => {
                     <TextField
                         label="Địa chỉ"
                         name="address"
-                        value={employee.address}
+                        value={employee.address || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -259,9 +268,9 @@ const EmployeeDetails = () => {
 
                 <Grid item xs={12} md={4}>
                     <TextField
-                        label="CCCD/ID"
+                        label="CCCD"
                         name="cccd"
-                        value={employee.cccd}
+                        value="Chưa hỗ trợ"
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -278,7 +287,7 @@ const EmployeeDetails = () => {
                         label="Mật khẩu"
                         name="password"
                         type="password"
-                        value={employee.password}
+                        value="********"
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -294,7 +303,7 @@ const EmployeeDetails = () => {
                     <TextField
                         label="Vai trò"
                         name="roleId"
-                        value={employee.roleId}
+                        value={employee.role.roleId || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -311,7 +320,7 @@ const EmployeeDetails = () => {
                         label="Ngày bắt đầu"
                         name="startDate"
                         type="date"
-                        value={employee.startDate}
+                        value={employee.startDate || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -329,7 +338,7 @@ const EmployeeDetails = () => {
                         label="Ngày kết thúc"
                         name="endDate"
                         type="date"
-                        value={employee.endDate}
+                        value={employee.endDate || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"

@@ -5,16 +5,29 @@ import { axiosSecure } from '@/config/axiosInstance';
 const extractErrorMessage = (error) => error.response?.data?.message || error.message;
 
 // Define thunks
-export const fetchEmployeesAsync = createAsyncThunk(
-    'employees/fetchEmployeesAsync',
-    async (_, { rejectWithValue }) => {
+
+//Fetch
+export const fetchEmployeesAsync = createAsyncThunk('employees/fetchEmployeesAsync', async (_, { rejectWithValue }) => {
+    try {
+        const response = await axiosSecure.get('/api/user/getAll');
+        console.log(response.data.data);
+        return response.data.data;
+    } catch (error) {
+        return rejectWithValue(extractErrorMessage(error));
+    }
+});
+
+// fetch by id
+export const fetchEmployeeByIdAsync = createAsyncThunk(
+    'employees/fetchEmployeeByIdAsync',
+    async (userId, { rejectWithValue }) => {
         try {
-            const response = await axiosSecure.get('/api/employees');
+            const response = await axiosSecure.get(`/api/user/${userId}`);
             return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
         }
-    }
+    },
 );
 
 export const addEmployeeAsync = createAsyncThunk(
@@ -29,7 +42,7 @@ export const addEmployeeAsync = createAsyncThunk(
             dispatch(removeEmployee(employee.userId)); // Revert update
             return rejectWithValue(extractErrorMessage(error));
         }
-    }
+    },
 );
 
 export const removeEmployeeAsync = createAsyncThunk(
@@ -43,13 +56,13 @@ export const removeEmployeeAsync = createAsyncThunk(
             dispatch(restoreEmployee(userId)); // Revert update
             return rejectWithValue(extractErrorMessage(error));
         }
-    }
+    },
 );
 
 export const updateEmployeeAsync = createAsyncThunk(
     'employees/updateEmployeeAsync',
     async (employee, { dispatch, getState, rejectWithValue }) => {
-        const currentEmployee = getState().employees.list.find(emp => emp.userId === employee.userId);
+        const currentEmployee = getState().employees.data.find((emp) => emp.userId === employee.userId);
         dispatch(updateEmployee(employee)); // Optimistic update
 
         try {
@@ -59,7 +72,7 @@ export const updateEmployeeAsync = createAsyncThunk(
             dispatch(updateEmployee(currentEmployee)); // Revert update
             return rejectWithValue(extractErrorMessage(error));
         }
-    }
+    },
 );
 
 export const restoreEmployeeAsync = createAsyncThunk(
@@ -73,34 +86,35 @@ export const restoreEmployeeAsync = createAsyncThunk(
             dispatch(removeEmployee(userId)); // Revert update
             return rejectWithValue(extractErrorMessage(error));
         }
-    }
+    },
 );
 
 // Define slice
 const employeesSlice = createSlice({
     name: 'employees',
     initialState: {
-        list: [],
+        data: [],
+        currentData: null,
         loading: false,
         error: null,
     },
     reducers: {
         addEmployee: (state, action) => {
-            state.list.push(action.payload);
+            state.data.push(action.payload);
         },
         removeEmployee: (state, action) => {
-            state.list = state.list.map(employee =>
-                employee.userId === action.payload ? { ...employee, status: false } : employee
+            state.data = state.data.map((employee) =>
+                employee.userId === action.payload ? { ...employee, status: false } : employee,
             );
         },
         updateEmployee: (state, action) => {
-            state.list = state.list.map(emp =>
-                emp.userId === action.payload.userId ? { ...emp, ...action.payload } : emp
+            state.data = state.data.map((emp) =>
+                emp.userId === action.payload.userId ? { ...emp, ...action.payload } : emp,
             );
         },
         restoreEmployee: (state, action) => {
-            state.list = state.list.map(employee =>
-                employee.userId === action.payload ? { ...employee, status: true } : employee
+            state.data = state.data.map((employee) =>
+                employee.userId === action.payload ? { ...employee, status: true } : employee,
             );
         },
         setError: (state, action) => {
@@ -109,40 +123,54 @@ const employeesSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
+            // fetch all
             .addCase(fetchEmployeesAsync.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
             .addCase(fetchEmployeesAsync.fulfilled, (state, action) => {
-                state.list = action.payload;
+                state.data = action.payload; // Changed from list to data
                 state.loading = false;
             })
             .addCase(fetchEmployeesAsync.rejected, (state, action) => {
                 state.error = action.payload;
                 state.loading = false;
             })
-
+            // fetch by id
+            .addCase(fetchEmployeeByIdAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(fetchEmployeeByIdAsync.fulfilled, (state, action) => {
+                state.currentData = action.payload;
+                state.loading = false;
+            })
+            .addCase(fetchEmployeeByIdAsync.rejected, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
+            })
+            // add
             .addCase(addEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
             })
             .addCase(addEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
             })
-
+            // remove
             .addCase(removeEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
             })
             .addCase(removeEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
             })
-
+            // update
             .addCase(updateEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
             })
             .addCase(updateEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
             })
-
+            // restore
             .addCase(restoreEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
             })
