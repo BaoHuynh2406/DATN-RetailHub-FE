@@ -33,13 +33,14 @@ export const fetchEmployeeByIdAsync = createAsyncThunk(
 export const addEmployeeAsync = createAsyncThunk(
     'employees/addEmployeeAsync',
     async (employee, { dispatch, rejectWithValue }) => {
-        dispatch(addEmployee(employee)); // Optimistic update
-
+        dispatch(addEmployee(employee)); //Cập nhật ngay lập tức
+        // Xử lý bất đồng bộ
         try {
-            const response = await axiosSecure.post('/api/employees', employee);
+            const response = await axiosSecure.post('/api/user/create', employee);
             return response.data.data;
         } catch (error) {
-            dispatch(removeEmployee(employee.userId)); // Revert update
+            //Nếu có lỗi thì xóa thằng nhân viên vừa thêm vào
+            dispatch(removeEmployee(employee.userId));
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -62,14 +63,17 @@ export const removeEmployeeAsync = createAsyncThunk(
 export const updateEmployeeAsync = createAsyncThunk(
     'employees/updateEmployeeAsync',
     async (employee, { dispatch, getState, rejectWithValue }) => {
+        debugger;
+        //Lấy ra thằng nhân viên muốn sửa để lưu tạm lại, phòng có lỗi
         const currentEmployee = getState().employees.data.find((emp) => emp.userId === employee.userId);
-        dispatch(updateEmployee(employee)); // Optimistic update
+        dispatch(updateEmployee(employee)); // Cập nhật ngay lập tức
+        console.log('update ');
 
         try {
-            const response = await axiosSecure.put(`/api/employees/${employee.userId}`, employee);
+            const response = await axiosSecure.put('/api/user/update', employee);
             return response.data.data;
         } catch (error) {
-            dispatch(updateEmployee(currentEmployee)); // Revert update
+            dispatch(updateEmployee(currentEmployee)); // Có lỗi thì hoàn tác việc sửa lúc nảy
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -112,6 +116,17 @@ const employeesSlice = createSlice({
                 emp.userId === action.payload.userId ? { ...emp, ...action.payload } : emp,
             );
         },
+        findEmployee: (state, action) => {
+            const employee = state.data.find((item) => item.userId == action.payload);
+            if (employee) {
+                state.currentData = employee;
+                state.error = null;
+            } else {
+                state.currentData = null;
+                state.error = `Employee with ID ${action.payload.userId} not found`;
+            }
+        },
+
         restoreEmployee: (state, action) => {
             state.data = state.data.map((employee) =>
                 employee.userId === action.payload ? { ...employee, status: true } : employee,
@@ -180,6 +195,7 @@ const employeesSlice = createSlice({
     },
 });
 
-export const { addEmployee, removeEmployee, updateEmployee, restoreEmployee, setError } = employeesSlice.actions;
+export const { addEmployee, removeEmployee, updateEmployee, restoreEmployee, setError, findEmployee } =
+    employeesSlice.actions;
 
 export default employeesSlice.reducer;
