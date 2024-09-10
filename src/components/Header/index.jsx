@@ -17,6 +17,7 @@ import theme from '@/Theme';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUserCurrent } from '@/redux/UserCurrent';
+import { postUserLogout } from '../../redux/UserCurrent';
 
 export default function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,10 +46,18 @@ export default function Header() {
         setNotiOpen(null);
     };
 
-    const handleSignOut = () => {
-        // Implement sign out logic here
-        navigate('/login');
+    const handleSignOut = async () => {
+        try {
+            await dispatch(postUserLogout()).unwrap();
+            console.log('Logged out successfully');
+            navigate('/login');
+        } catch (error) {
+            console.error("Đăng xuất thất bại: ", error);
+            alert("Đăng xuất thất bại: " + error);
+        }
     };
+    
+    
 
     const menuId = 'primary-search-account-menu';
     const notiMenuId = 'primary-search-noti-menu';
