@@ -40,7 +40,7 @@ export const sidebarItems = [
     },
     {
         sidebarProps: { displayText: 'Khách hàng', icon: <ContactsRoundedIcon /> },
-        path: '/u/customer',
+        path: '/customer',
         state: 'customer',
     },
     {
