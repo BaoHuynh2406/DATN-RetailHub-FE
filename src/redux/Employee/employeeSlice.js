@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit';
 import { axiosSecure } from '@/config/axiosInstance';
 
 // Utility function for error extraction
@@ -62,10 +62,11 @@ export const removeEmployeeAsync = createAsyncThunk(
 
 export const updateEmployeeAsync = createAsyncThunk(
     'employees/updateEmployeeAsync',
-    async (employee, { dispatch, getState, rejectWithValue }) => {
+    async (employee, { dispatch, rejectWithValue }) => {
         debugger;
         //Lấy ra thằng nhân viên muốn sửa để lưu tạm lại, phòng có lỗi
-        const currentEmployee = getState().employees.data.find((emp) => emp.userId === employee.userId);
+        dispatch(findEmployee(employee.userId));
+        const currentEmployee = currentData;
         dispatch(updateEmployee(employee)); // Cập nhật ngay lập tức
         console.log('update ');
 
