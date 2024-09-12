@@ -24,23 +24,25 @@ export default function SignInSide() {
 
     const dispatch = useDispatch();
 
-    const user = {
-        email: 'admin@retailhub.com',
-        password: 'admin123',
-    };
-
     const handleLogin = async () => {
+        const user = {
+            email: emailRef.current.value, // Lấy email từ input
+            password: passwordRef.current.value, // Lấy password từ input
+        };
+
         try {
-            await dispatch(postUserLogin(user)).unwrap();
-            navigate('/dashboard');
+            await dispatch(postUserLogin(user)).unwrap(); // Gửi thông tin đăng nhập
+            navigate('/dashboard'); 
         } catch (error) {
-            console.error('Login failed:', error);
-            // Xử lý lỗi nếu cần
+            alert("Sai thông tin ! " + error.message);
         }
     };
+
     const handleSubmit = (event) => {
+        event.preventDefault(); // Ngăn form submit mặc định để không reload trang
         handleLogin();
     };
+
 
     return (
         <Grid container component="main" sx={{ height: '100vh' }}>
