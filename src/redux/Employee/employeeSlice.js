@@ -30,6 +30,7 @@ export const fetchEmployeeByIdAsync = createAsyncThunk(
     },
 );
 
+// add employee
 export const addEmployeeAsync = createAsyncThunk(
     'employees/addEmployeeAsync',
     async (employee, { dispatch, rejectWithValue }) => {
@@ -46,6 +47,7 @@ export const addEmployeeAsync = createAsyncThunk(
     },
 );
 
+// remove employee
 export const removeEmployeeAsync = createAsyncThunk(
     'employees/removeEmployeeAsync',
     async (userId, { dispatch, rejectWithValue }) => {
@@ -60,18 +62,19 @@ export const removeEmployeeAsync = createAsyncThunk(
     },
 );
 
+// update employee
 export const updateEmployeeAsync = createAsyncThunk(
     'employees/updateEmployeeAsync',
-    async (employee, { dispatch, getState, rejectWithValue }) => {   
+    async (employee, { dispatch, rejectWithValue }) => {
         let employeeBackup;
         //Lấy ra thằng nhân viên muốn sửa để lưu tạm lại, phòng có lỗi
-       try {
-        const response = await axiosSecure.get(`/api/user/${employee.userId}`);
-        employeeBackup = response.data.data;
-       } catch (error) {
+        try {
+            const response = await axiosSecure.get(`/api/user/${employee.userId}`);
+            employeeBackup = response.data.data;
+        } catch (error) {
             alert('Mã nhân viên lỗi');
             return rejectWithValue(extractErrorMessage(error));
-       }
+        }
         dispatch(updateEmployee(employee)); // Cập nhật ngay lập tức
         try {
             const response = await axiosSecure.put('/api/user/update', employee);
@@ -83,6 +86,34 @@ export const updateEmployeeAsync = createAsyncThunk(
     },
 );
 
+export const toggleActiveEmployee = createAsyncThunk(
+    'employee/toggleActiveEmployee',
+    async (userId, { dispatch, getState, rejectWithValue }) => {
+        const currentEmployee = getState().employeeNew.data.find((employee) => employee.userId === userId);
+        if (!currentEmployee) {
+            return rejectWithValue('Employee not found');
+        }
+        const updatedEmployee = {
+            ...currentEmployee,
+            isActive: !currentEmployee.isActive,
+            roleId: currentEmployee.role.roleId,
+        };
+        // Đồng bộ ngay
+        console.log(updatedEmployee);
+
+        dispatch(updateEmployee(updatedEmployee));
+        try {
+            await axiosSecure.put(`/api/user/update`, updatedEmployee);
+        } catch (error) {
+            // Hoàn tác lại nếu có lỗi
+            const revertedEmployee = { ...updatedEmployee, isActive: !updatedEmployee.isActive };
+            dispatch(updateEmployee(revertedEmployee));
+            return rejectWithValue(extractErrorMessage(error));
+        }
+    },
+);
+
+// restore employee
 export const restoreEmployeeAsync = createAsyncThunk(
     'employees/restoreEmployeeAsync',
     async (userId, { dispatch, rejectWithValue }) => {
@@ -187,6 +218,13 @@ const employeesSlice = createSlice({
                 state.error = null;
             })
             .addCase(updateEmployeeAsync.rejected, (state, action) => {
+                state.error = action.payload;
+            })
+            // toggle active
+            .addCase(toggleActiveEmployee.fulfilled, (state) => {
+                state.error = null;
+            })
+            .addCase(toggleActiveEmployee.rejected, (state, action) => {
                 state.error = action.payload;
             })
             // restore

@@ -5,7 +5,7 @@ import TableCustom from '@/components/TableCustom';
 import { useNavigate } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchEmployeesAsync, findEmployee } from '@/redux/Employee/employeeSlice';
+import { fetchEmployeesAsync, findEmployee, toggleActiveEmployee } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 
@@ -76,7 +76,7 @@ export default function EmployeeTable() {
 
     useEffect(() => {
         dispatch(fetchEmployeesAsync());
-    }, [dispatch]);
+    }, []);
 
     // Lọc nhân viên dựa trên trạng thái của switch (showDeleted)
     useEffect(() => {
@@ -89,7 +89,7 @@ export default function EmployeeTable() {
         } else {
             console.error('Dữ liệu nhân viên không hợp lệ');
         }
-    }, [showDeleted, data]);
+    }, [showDeleted, data, dispatch]);
 
     const handleEdit = (row) => {
         navigate(`/employee/EmployeeDetail/${row.userId}`);
@@ -104,9 +104,7 @@ export default function EmployeeTable() {
     };
 
     const handleToggleActive = async (userId) => {
-        console.log(`Toggle active state for userId: ${userId}`);
-        let data = await dispatch(findEmployee(userId));
-        console.log(data);
+      dispatch(toggleActiveEmployee(userId));
     };
 
     return (
