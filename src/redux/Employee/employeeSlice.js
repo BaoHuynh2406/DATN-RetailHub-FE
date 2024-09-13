@@ -62,19 +62,22 @@ export const removeEmployeeAsync = createAsyncThunk(
 
 export const updateEmployeeAsync = createAsyncThunk(
     'employees/updateEmployeeAsync',
-    async (employee, { dispatch, rejectWithValue }) => {
-        debugger;
+    async (employee, { dispatch, getState, rejectWithValue }) => {   
+        let employeeBackup;
         //Lấy ra thằng nhân viên muốn sửa để lưu tạm lại, phòng có lỗi
-        dispatch(findEmployee(employee.userId));
-        const currentEmployee = currentData;
+       try {
+        const response = await axiosSecure.get(`/api/user/${employee.userId}`);
+        employeeBackup = response.data.data;
+       } catch (error) {
+            alert('Mã nhân viên lỗi');
+            return rejectWithValue(extractErrorMessage(error));
+       }
         dispatch(updateEmployee(employee)); // Cập nhật ngay lập tức
-        console.log('update ');
-
         try {
             const response = await axiosSecure.put('/api/user/update', employee);
             return response.data.data;
         } catch (error) {
-            dispatch(updateEmployee(currentEmployee)); // Có lỗi thì hoàn tác việc sửa lúc nảy
+            dispatch(updateEmployee(employeeBackup)); // Có lỗi thì hoàn tác việc sửa lúc nảy
             return rejectWithValue(extractErrorMessage(error));
         }
     },

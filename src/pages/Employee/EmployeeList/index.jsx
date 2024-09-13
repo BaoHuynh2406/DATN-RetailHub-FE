@@ -5,14 +5,14 @@ import TableCustom from '@/components/TableCustom';
 import { useNavigate } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchEmployeesAsync } from '@/redux/Employee/employeeSlice';
+import { fetchEmployeesAsync, findEmployee } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 
 export default function EmployeeTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { loading, data, error } = useSelector((state) => state.employeeNew);
+    const { loading, data, error, currentData } = useSelector((state) => state.employeeNew);
 
     const [employees, setEmployees] = useState(data);
     const [showDeleted, setShowDeleted] = useState(false);
@@ -103,10 +103,10 @@ export default function EmployeeTable() {
         setShowDeleted(event.target.checked);
     };
 
-    const handleToggleActive = (userId) => {
-        // Thực hiện hành động để thay đổi trạng thái active của nhân viên với userId
+    const handleToggleActive = async (userId) => {
         console.log(`Toggle active state for userId: ${userId}`);
-        // Bạn có thể cập nhật trạng thái trong redux hoặc thực hiện cập nhật qua API
+        let data = await dispatch(findEmployee(userId));
+        console.log(data);
     };
 
     return (
@@ -120,7 +120,6 @@ export default function EmployeeTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-               
                 <TableCustom columns={columns} rows={employees} stt={true} id="userId" loading={loading} />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
