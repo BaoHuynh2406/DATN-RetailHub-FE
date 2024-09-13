@@ -5,14 +5,14 @@ import TableCustom from '@/components/TableCustom';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ExplicitIcon from '@mui/icons-material/Explicit';
+// import { addaddCustomer, removeCustomer, restoreCustomer, updateCustomer } from '@/redux/Customer/CustomerAction';
 
 export default function CustomerTable() {
     const navigate = useNavigate();
     const allCustomers = useSelector((state) => state.customer); // Change to access customers
-
+    const [customer, setCustomers] = useState(allCustomers);
     const [showDeleted, setShowDeleted] = useState(false);
 
-    const [customers, setCustomers] = useState(allCustomers);
 
     // Define columns for the customer table using useMemo to optimize performance
     const columns = useMemo(() => [
@@ -67,8 +67,10 @@ export default function CustomerTable() {
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
     };
+    console.log(allCustomers);
 
     return (
+        
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
                 <Typography variant="h4" component="h2" fontWeight="bold" color={showDeleted ? "#ab003c" : "inherit"}>
@@ -79,7 +81,7 @@ export default function CustomerTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-                <TableCustom columns={columns} rows={allCustomers} stt={true} id="customerId" />
+                <TableCustom columns={columns} rows={customer} stt={true} id="customerId" />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
                 <Box display="flex" alignItems="center">

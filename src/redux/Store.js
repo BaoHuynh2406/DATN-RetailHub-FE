@@ -6,7 +6,7 @@ import employeeReducer from './EmployeeController/EmployeeReducer.js';
 import productReducer from './Product/Reducer.js';
 import UserCurrent from './UserCurrent';
 import employeeNew from './Employee/employeeSlice.js';
-
+import customerReducer from './Customer/CustomerReducer.js';
 
 export const store = configureStore({
     reducer: {
@@ -16,6 +16,7 @@ export const store = configureStore({
         employeeNew: employeeNew,
         products: productReducer,
         userCurrent: UserCurrent,
+        customer: customerReducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
