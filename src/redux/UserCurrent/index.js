@@ -10,7 +10,7 @@ const initialState = {
 
 // END POINT GET USER CURRENT STATE
 export const fetchUserCurrent = createAsyncThunk('userCurrent/fetchUserCurrent', async () => {
-    const response = await axiosSecure.get('/api/user/my-info').catch(function (err) {        
+    const response = await axiosSecure.get('/api/user/my-info').catch(function (err) {
         throw new Error(err);
     });
 
@@ -32,6 +32,29 @@ export const postUserLogin = createAsyncThunk('userCurrent/login', async (user, 
     } catch (error) {
         localStorage.removeItem('token');
         throw error.response.data.message;
+    }
+});
+
+// LOG OUT
+export const postUserLogout = createAsyncThunk('userCurrent/logout', async (_, { rejectWithValue }) => {
+    try {
+        // Lấy token từ localStorage
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            throw new Error('No token found');
+        }
+
+        // Gửi token trong request body
+        await axiosSecure.post('/api-public/auth/logout', { token });
+
+        // Xóa token khỏi localStorage
+        localStorage.removeItem('token');
+
+        // Trả về trạng thái thành công
+        return 'User logged out successfully';
+    } catch (error) {
+        return rejectWithValue(error.response?.data?.message || 'Logout failed');
     }
 });
 
