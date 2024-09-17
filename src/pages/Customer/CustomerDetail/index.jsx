@@ -1,113 +1,193 @@
-import React, { useState, useEffect } from 'react';
-import { TextField, Button, Grid, Typography, Container, Box, InputAdornment, FormControl, FormControlLabel, Checkbox } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import DescriptionIcon from '@mui/icons-material/Description';
+import { useState, useEffect } from 'react';
+import {
+    TextField,
+    Button,
+    Grid,
+    Typography,
+    Container,
+    Box,
+    InputAdornment,
+    Skeleton,
+    Switch,
+    Tooltip,
+} from '@mui/material';
+
+// Icons
+import PersonIcon from '@mui/icons-material/Person';
 import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import BadgeIcon from '@mui/icons-material/Badge';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+import LockIcon from '@mui/icons-material/Lock';
+// End Icons
 
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addCustomer, removeCustomer, restoreCustomer, updateCustomer } from '@/redux/Customer/CustomerAction';
 
-const StyledBox = styled(Box)(({ theme }) => ({
-    marginTop: theme.spacing(3),
-}));
+import {
+    fetchCustomerByIdAsync,
+    setError,
+    removeCustomerAsync,
+    restoreCustomerAsync,
+    updateCustomerAsync,
+    addCustomerAsync,
+} from '@/redux/Customer/customerSlice';
 
 const CustomerDetails = () => {
     const dispatch = useDispatch();
-    const customers = useSelector((state) => state.customer);
+    const { data, currentData, loading, error } = useSelector((state) => state.customer);
     const { customerId } = useParams();
     const navigate = useNavigate();
 
-    const [customer, setCustomer] = useState({
+    const customerNull = {
         customerId: '',
         fullName: '',
         phoneNumber: '',
         points: '',
-        isActive: true, // Default value for new customers
-        isDelete: true,
-    });
+        isActive: true,
+        isDelete: false,
+    };
 
-    const createCustomer = 'create';
+    const [customer, setCustomer] = useState(customerNull);
 
     useEffect(() => {
-        console.log('CustomerId:', customerId);
-        console.log('Customers:', customers);
-        if (customerId !== createCustomer) {
-            if (Array.isArray(customers)) {
-                const foundCustomer = customers.find((item) => item.customerId === customerId);
-                console.log('Found Customer:', foundCustomer);
-                if (foundCustomer) {
-                    setCustomer(foundCustomer);
-                } else {
-                    alert('Khách hàng không tồn tại!');
-                    navigate('/not-found');
-                }
-            }
+        if (customerId === 'create') {
+            setCustomer(customerNull);
+            return;
         }
-    }, [customerId, customers, navigate]);
+
+        // If data is available, find customer from it
+        const foundCustomer = data.find(cust => cust.customerId === customerId);
+        if (foundCustomer) {
+            setCustomer(foundCustomer);
+        } else {
+            // Otherwise, fetch customer data
+            dispatch(fetchCustomerByIdAsync(customerId));
+        }
+    }, [customerId, data, dispatch]);
 
     useEffect(() => {
-        console.log('Danh sách khách hàng đã cập nhật:', customers);
-    }, [customers]);
+        if (currentData && customerId !== 'create') {
+            setCustomer(currentData);
+        }
+    }, [currentData, customerId]);
+
+    useEffect(() => {
+        if (error) {
+            alert(error);
+            dispatch(setError(null));
+            navigate('/customer');
+        }
+    }, [error, dispatch, navigate]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setCustomer({ ...customer, [name]: value });
     };
 
-    const handleCheckboxChange = (e) => {
-        const { checked } = e.target;
-        setCustomer({ ...customer, isActive: checked });
-    };
-
-    const handleSave = () => {
-        if (customerId === createCustomer) {
-            dispatch(addCustomer(customer)); // Thêm khách hàng vào redux
-            console.log('Thêm khách hàng:', customer);
-        } else {
-            dispatch(updateCustomer(customer)); // Cập nhật khách hàng
-            console.log('Cập nhật khách hàng:', customer);
-        }
-        alert('Lưu thành công');
-    };
-
     const handleDelete = () => {
         if (customerId !== '0') {
-            dispatch(removeCustomer(customerId));
-            console.log('Xóa khách hàng với ID:', customerId);
+            dispatch(removeCustomerAsync(customerId));
             alert('Khách hàng đã được xóa');
+            navigate('/customer');
         } else {
-            console.log('Lỗi khi xóa khách hàng có id: ', customerId);
+            console.log('Lỗi khi xóa khách hàng với customerId: ', customerId);
+        }
+    };
+    const handleSave = () => {
+        if (customerId === 'create') {
+            // Thêm mới khách hàng
+            dispatch(addCustomerAsync(customer))
+                .unwrap()
+                .then((data) => {
+                    console.log('Customer added successfully', data);
+                    alert('Khách hàng đã được thêm thành công!'); // Thông báo thành công
+                    navigate('/customer'); // Chuyển hướng về danh sách khách hàng
+                })
+                .catch((error) => {
+                    console.error('Failed to add customer:', error.message);
+                    alert('Lỗi: Khách hàng đã tồn tại.'); // Hiển thị thông báo lỗi cho người dùng
+                });
+        } else {
+            // Cập nhật thông tin khách hàng
+            dispatch(updateCustomerAsync(customer))
+                .unwrap()
+                .then((data) => {
+                    console.log('Customer updated successfully', data);
+                    alert('Khách hàng đã được cập nhật thành công!'); // Thông báo thành công
+                    navigate('/customer'); // Chuyển hướng về danh sách khách hàng
+                })
+                .catch((error) => {
+                    console.error('Failed to update customer:', error.message);
+                    alert('Lỗi: Không thể cập nhật khách hàng.'); // Hiển thị thông báo lỗi cho người dùng
+                });
         }
     };
 
     const handleRestore = () => {
-        if (customerId !== '0') {
-            dispatch(restoreCustomer(customerId));
-            console.log('Khôi phục khách hàng với ID:', customerId);
+        if (customerId !== 'create') {
+            dispatch(restoreCustomerAsync(customerId)); const handleSave = () => {
+                if (customerId === 'create') {
+                    // Thêm mới khách hàng
+                    dispatch(addCustomerAsync(customer))
+                        .unwrap()
+                        .then((data) => {
+                            console.log('Customer added successfully', data);
+                            alert('Khách hàng đã được thêm thành công!'); // Thông báo thành công
+                            navigate('/customer'); // Chuyển hướng về danh sách khách hàng
+                        })
+                        .catch((error) => {
+                            console.error('Failed to add customer:', error.message);
+                            alert('Lỗi: Khách hàng đã tồn tại.'); // Hiển thị thông báo lỗi cho người dùng
+                        });
+                } else {
+                    // Cập nhật thông tin khách hàng
+                    dispatch(updateCustomerAsync(customer))
+                        .unwrap()
+                        .then((data) => {
+                            console.log('Customer updated successfully', data);
+                            alert('Khách hàng đã được cập nhật thành công!'); // Thông báo thành công
+                            navigate('/customer'); // Chuyển hướng về danh sách khách hàng
+                        })
+                        .catch((error) => {
+                            console.error('Failed to update customer:', error.message);
+                            alert('Lỗi: Không thể cập nhật khách hàng.'); // Hiển thị thông báo lỗi cho người dùng
+                        });
+                }
+            };
+
             alert('Khách hàng đã được khôi phục');
+            navigate('/customer');
         } else {
-            console.log('Lỗi khi khôi phục khách hàng có id: ', customerId);
+            console.log('Lỗi khi khôi phục khách hàng với customerId: ', customerId);
         }
     };
 
     const handleReset = () => {
-        setCustomer({
-            customerId: '',
-            fullName: '',
-            phoneNumber: '',
-            points: '',
-            isActive: true, // Reset to default value
-            isDelete: true,
-        });
+        if (customerId === 'create') {
+            setCustomer(customerNull); // Reset for new customer
+        } else {
+            setCustomer(currentData); // Reset to current data
+        }
     };
 
     const handleBack = () => navigate('/customer');
+
+    if (loading) {
+        return (
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-around',
+                    height: '100%',
+                }}
+            >
+                <Skeleton animation="wave" sx={{ height: 700, width: '30%' }} />
+                <Skeleton animation="wave" sx={{ height: 700, width: '30%' }} />
+                <Skeleton animation="wave" sx={{ height: 700, width: '30%' }} />
+            </Box>
+        );
+    }
 
     return (
         <Container maxWidth="xl">
@@ -119,46 +199,72 @@ const CustomerDetails = () => {
                 marginTop="20px"
             >
                 <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
-                    {customerId === createCustomer ? 'Tạo Mới' : 'Chi Tiết'}
+                    {customerId === 'create' ? 'Tạo Mới' : `Khách Hàng: ${customer.fullName}`}
                 </Typography>
                 <Button variant="contained" onClick={handleBack}>
                     <ReplyAllIcon />
                 </Button>
             </Box>
             <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={6} md={4}>
                     <TextField
-                        label="Mã khách hàng"
+                        label="Mã Khách Hàng"
                         name="customerId"
-                        value={customer.customerId}
+                        value={customer.customerId || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
+                        disabled
                         InputProps={{
-                            readOnly: customerId !== createCustomer, // Chỉ đọc nếu không phải trang tạo mới
+                            readOnly: customerId !== 'create',
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <PermIdentityIcon />
+                                    <BadgeIcon />
                                 </InputAdornment>
                             ),
                         }}
                         margin="normal"
                     />
+
                     <TextField
-                        label="Họ và tên"
+                        label="Tên Đầy Đủ"
                         name="fullName"
-                        value={customer.fullName}
+                        value={customer.fullName || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <PersonIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
+
+                    <Box className="mt-2 ms-1" display="flex" alignItems="center">
+                        <Typography sx={{ marginRight: 2, fontWeight: 'bold' }}>Trạng Thái Kích Hoạt:</Typography>
+                        <Tooltip
+                            title={
+                                customer.isActive ? 'Tài khoản này đang hoạt động' : 'Tài khoản này đã bị vô hiệu hóa'
+                            }
+                            placement="top"
+                        >
+                            <Switch
+                                checked={customer.isActive}
+                                onChange={(e) => setCustomer({ ...customer, isActive: e.target.checked })}
+                                color="secondary"
+                                name="active"
+                            />
+                        </Tooltip>
+                    </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={6} md={4}>
                     <TextField
-                        label="Số điện thoại"
+                        label="Số Điện Thoại"
                         name="phoneNumber"
-                        value={customer.phoneNumber}
+                        value={customer.phoneNumber || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -173,55 +279,49 @@ const CustomerDetails = () => {
                     />
                     <TextField
                         label="Điểm"
-                        type="number"
                         name="points"
-                        value={customer.points}
+                        value={customer.points || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <BadgeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
-                    <FormControl margin="normal">
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={customer.isActive}
-                                    onChange={handleCheckboxChange}
-                                    color="primary"
-                                />
-                            }
-                            label="Trạng thái hoạt động"
-                        />
-                    </FormControl>
                 </Grid>
+
             </Grid>
 
-            <Grid container spacing={2} sx={{ marginTop: 3 }}>
-                <Grid item xs={12} sm={4}>
-                    <Button variant="contained" color="primary" fullWidth onClick={handleSave}>
-                        {customerId === createCustomer ? 'Tạo mới' : 'Lưu'}
+            <Box display="flex" justifyContent="flex-end" marginTop={5}>
+                {customerId === 'create' ? (
+                    <Button variant="contained" color="primary" onClick={handleSave} sx={{ marginRight: 2 }}>
+                        Lưu
                     </Button>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Button variant="outlined" color="secondary" fullWidth onClick={handleReset}>
-                        Đặt lại
-                    </Button>
-                </Grid>
-                {customerId !== createCustomer && (
-                    <Grid item xs={12} sm={4}>
-                        {customer.isDelete ? (
-                            <Button variant="contained" color="success" fullWidth onClick={handleRestore}>
-                                Khôi phục khách hàng
+                ) : (
+                    <>
+                        {!customer.isDelete ? (
+                            <Button variant="outlined" color="error" onClick={handleDelete} sx={{ marginRight: 2 }}>
+                                Xóa
                             </Button>
                         ) : (
-                            <Button variant="contained" color="error" fullWidth onClick={handleDelete}>
-                                Xóa khách hàng
+                            <Button variant="outlined" color="info" onClick={handleRestore} sx={{ marginRight: 2 }}>
+                                Khôi Phục
                             </Button>
-
                         )}
-                    </Grid>
+                        <Button variant="contained" color="success" onClick={handleSave} sx={{ marginRight: 2 }}>
+                            Cập Nhật
+                        </Button>
+                    </>
                 )}
-            </Grid>
+                <Button variant="outlined" onClick={handleReset}>
+                    Đặt Lại
+                </Button>
+            </Box>
         </Container>
     );
 };
