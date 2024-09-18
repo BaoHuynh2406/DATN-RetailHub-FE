@@ -3,19 +3,20 @@ import { configureStore } from '@reduxjs/toolkit';
 import menuReducer from './Menu/MenuSlice.js';
 import studentReducer from './Student/Reducer.js';
 import employeeReducer from './EmployeeController/EmployeeReducer.js';
-import productReducer from './Product/Reducer.js';
 import UserCurrent from './UserCurrent';
 import employeeNew from './Employee/employeeSlice.js';
 import CustomerSlice from './Customer/CustomerSlice.js';
+import ProductSlice from './Product/ProductSlice.js';
 export const store = configureStore({
     reducer: {
         menu: menuReducer,
         student: studentReducer,
         employee: employeeReducer,
         employeeNew: employeeNew,
-        products: productReducer,
+        ProductSlice: ProductSlice,
         userCurrent: UserCurrent,
-        customer: CustomerSlice
+        customer: CustomerSlice,
+
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
