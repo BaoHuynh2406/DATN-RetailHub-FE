@@ -99,13 +99,13 @@ const CustomerDetails = () => {
             dispatch(addCustomerAsync(customer))
                 .unwrap()
                 .then((data) => {
-                    console.log('Customer added successfully', data);
+                    // console.log('Customer added successfully', data);
                     alert('Khách hàng đã được thêm thành công!'); // Thông báo thành công
                     navigate('/customer'); // Chuyển hướng về danh sách khách hàng
                 })
                 .catch((error) => {
-                    console.error('Failed to add customer:', error.message);
-                    alert('Lỗi: Khách hàng đã tồn tại.'); // Hiển thị thông báo lỗi cho người dùng
+                    // console.error('Failed to add customer:', error.message);
+                    alert('Lỗi: Khách hàng đã tồn tại dựa tên số điên thoại.'); // Hiển thị thông báo lỗi cho người dùng
                 });
         } else {
             // Cập nhật thông tin khách hàng
