@@ -68,7 +68,7 @@ export default function EmployeeTable() {
                 width: 120,
                 renderCell: (params) => (
                     <Switch
-                        disabled={params.row.userId === userLogged.data.userId || false}
+                        disabled={params.row.userId === userLogged.data.userId || false || showDeleted}
                         checked={params.row.isActive}
                         onChange={() => handleToggleActive(params.row.userId)}
                         color="secondary"

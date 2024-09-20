@@ -236,7 +236,7 @@ const employeesSlice = createSlice({
             })
             // toggle active
             .addCase(toggleActiveEmployeeAsync.pending, (state) => {
-                state.loading = true;
+                state.loading = false;
                 state.error = null;
             })
             .addCase(toggleActiveEmployeeAsync.fulfilled, (state) => {
