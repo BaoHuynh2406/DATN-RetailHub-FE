@@ -73,16 +73,16 @@ const privateRouter = [
         children: [
             {
                 path: '',
-                loader: () => redirect('/product/ListProduct'), // Chuyển hướng đến trang danh sách sản phẩm
+                loader: () => redirect('/product/ProductList'), // Chuyển hướng đến trang danh sách sản phẩm
             },
             {
-                path: 'ListProduct',
-                element: lazy(() => import('@/pages/Product/ListProduct')), // Lazy load trang danh sách sản phẩm
+                path: 'ProductList',
+                element: lazy(() => import('@/pages/Product/ProductList')), // Lazy load trang danh sách sản phẩm
                 layout: DefaultLayout,
             },
             {
-                path: 'detail/:productId',
-                element: lazy(() => import('@/pages/Product/Detail')), // Lazy load trang chi tiết sản phẩm
+                path: 'ProductDetail/:productId',
+                element: lazy(() => import('@/pages/Product/ProductDetail')), // Lazy load trang chi tiết sản phẩm
                 layout: DefaultLayout,
             },
         ],

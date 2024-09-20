@@ -55,13 +55,13 @@ export const sidebarItems = [
         child: [
             {
                 sidebarProps: { displayText: 'Danh sách hàng hóa', icon: <BallotRoundedIcon /> },
-                path: '/product/ListProduct',
-                state: '/product/ListProduct',
+                path: '/product/ProductList',
+                state: '/product/ProductList',
             },
             {
                 sidebarProps: { displayText: 'Chi tiết hàng hóa', icon: <ManageAccountsIcon /> },
-                path: '/product/detail/create',
-                state: 'product/detail',
+                path: '/product/ProductDetail/create',
+                state: 'product/ProductDetail',
             },
             {
                 sidebarProps: { displayText: 'QL Nhập hàng', icon: <InputRoundedIcon /> },
