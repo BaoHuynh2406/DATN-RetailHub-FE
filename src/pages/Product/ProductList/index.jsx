@@ -11,7 +11,7 @@ export default function ProductTable() {
     const dispatch = useDispatch();
     const { loading, data, error, deletedProducts } = useSelector((state) => state.ProductSlice);
     const [showDeleted, setShowDeleted] = useState(false);
-    console.log(data)
+    // console.log(data)
     useEffect(() => {
         dispatch(fetchProductsAsync());
     }, [dispatch]);
@@ -37,11 +37,24 @@ export default function ProductTable() {
             headerName: 'Hình',
             width: 150,
             renderCell: (params) => (
-                <img src={params.value} alt={params.row.productName} style={{ width: '100%', height: 'auto' }} />
+                <img src={params.value} alt={params.row.img} style={{ width: '100%', height: 'auto' }} />
             ),
         },
-        { field: 'productName', headerName: 'Tên sản phẩm', width: 150 },
-        { field: 'category', headerName: 'Loại', width: 120 },
+        {
+            field: 'category',
+            headerName: 'Loại',
+            width: 120,
+            renderCell: (params) => {
+                console.log(params.row);  // Log the entire row to verify the structure
+                return params.row.category?.category_name || 'Không có loại';
+            }
+        },
+        {
+            field: 'tax',
+            headerName: 'Thuế',
+            width: 120,
+            renderCell: (params) => params.row.tax?.tax_name || 'Không có thuế'
+        },
         { field: 'unit', headerName: 'Đơn vị tính', width: 100 },
         { field: 'inventoryCount', headerName: 'Tồn kho', width: 120 },
         { field: 'cost', headerName: 'Giá gốc', width: 120 },
@@ -61,6 +74,8 @@ export default function ProductTable() {
             ),
         },
     ], [showDeleted]);
+
+
 
     const handleEdit = (row) => {
         navigate(`/product/ProductDetail/${row.productId}`);
