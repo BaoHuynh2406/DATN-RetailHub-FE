@@ -33,6 +33,25 @@ const privateRouter = [
         ],
     },
     {
+        path: '/customer',
+        children: [
+            {
+                path: '',
+                loader: () => redirect('/customer/customerList'),
+            },
+            {
+                path: 'customerList',
+                element: lazy(() => import('@/pages/customer/customerList')),
+                layout: DefaultLayout,
+            },
+            {
+                path: 'customerDetail/:customerId',
+                element: lazy(() => import('@/pages/customer/customerDetail')),
+                layout: DefaultLayout,
+            },
+        ],
+    },
+    {
         //Lưu ý nếu có children thì chỉ khai báo path không khai báo gì thêm, khai báo thêm sẽ khai báo bên trong
         path: '/inventory', //Nếu có children thì /inventory sẽ được khai báo bên trong
         children: [
