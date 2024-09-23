@@ -46,14 +46,16 @@ export default function ProductTable() {
             width: 120,
             renderCell: (params) => {
                 console.log(params.row);  // Log the entire row to verify the structure
-                return params.row.category?.category_name || 'Không có loại';
+                return params.row.category?.
+                    categoryName || 'Không có loại';
             }
         },
         {
             field: 'tax',
             headerName: 'Thuế',
             width: 120,
-            renderCell: (params) => params.row.tax?.tax_name || 'Không có thuế'
+            renderCell: (params) => params.row.tax?.
+                taxName || 'Không có thuế'
         },
         { field: 'unit', headerName: 'Đơn vị tính', width: 100 },
         { field: 'inventoryCount', headerName: 'Tồn kho', width: 120 },
