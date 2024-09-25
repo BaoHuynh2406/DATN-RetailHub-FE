@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit';
 import { axiosSecure } from '@/config/axiosInstance';
 
 // Utility function for error extraction
@@ -7,15 +7,20 @@ const extractErrorMessage = (error) => error.response?.data?.message || error.me
 // Define thunks
 
 //Fetch
-export const fetchEmployeesAsync = createAsyncThunk('employees/fetchEmployeesAsync', async (_, { rejectWithValue }) => {
-    try {
-        const response = await axiosSecure.get('/api/user/getAll');
-        console.log(response.data.data);
-        return response.data.data;
-    } catch (error) {
-        return rejectWithValue(extractErrorMessage(error));
-    }
-});
+export const fetchEmployeesAsync = createAsyncThunk(
+    'employees/fetchEmployeesAsync',
+    async (isDelete, { rejectWithValue }) => {
+        try {
+            const response = await axiosSecure.get(
+                `/api/user/${isDelete ? 'getAll-deleted-users' : 'getAll-available-users'}`,
+            );
+            console.log(response.data.data);
+            return response.data.data;
+        } catch (error) {
+            return rejectWithValue(extractErrorMessage(error));
+        }
+    },
+);
 
 // fetch by id
 export const fetchEmployeeByIdAsync = createAsyncThunk(
@@ -30,6 +35,7 @@ export const fetchEmployeeByIdAsync = createAsyncThunk(
     },
 );
 
+// add employee
 export const addEmployeeAsync = createAsyncThunk(
     'employees/addEmployeeAsync',
     async (employee, { dispatch, rejectWithValue }) => {
@@ -46,13 +52,13 @@ export const addEmployeeAsync = createAsyncThunk(
     },
 );
 
+// remove employee
 export const removeEmployeeAsync = createAsyncThunk(
     'employees/removeEmployeeAsync',
     async (userId, { dispatch, rejectWithValue }) => {
-        dispatch(removeEmployee(userId)); // Optimistic update
-
+        dispatch(removeEmployee(userId));
         try {
-            await axiosSecure.delete(`/api/employees/${userId}`);
+            await axiosSecure.delete(`/api/user/delete/${userId}`);
         } catch (error) {
             dispatch(restoreEmployee(userId)); // Revert update
             return rejectWithValue(extractErrorMessage(error));
@@ -60,34 +66,53 @@ export const removeEmployeeAsync = createAsyncThunk(
     },
 );
 
+// update employee
 export const updateEmployeeAsync = createAsyncThunk(
     'employees/updateEmployeeAsync',
-    async (employee, { dispatch, getState, rejectWithValue }) => {
-        debugger;
+    async (employee, { dispatch, rejectWithValue }) => {
+        let employeeBackup;
         //Lấy ra thằng nhân viên muốn sửa để lưu tạm lại, phòng có lỗi
-        const currentEmployee = getState().employees.data.find((emp) => emp.userId === employee.userId);
+        try {
+            const response = await axiosSecure.get(`/api/user/${employee.userId}`);
+            employeeBackup = response.data.data;
+        } catch (error) {
+            alert('Mã nhân viên lỗi');
+            return rejectWithValue(extractErrorMessage(error));
+        }
         dispatch(updateEmployee(employee)); // Cập nhật ngay lập tức
-        console.log('update ');
-
         try {
             const response = await axiosSecure.put('/api/user/update', employee);
             return response.data.data;
         } catch (error) {
-            dispatch(updateEmployee(currentEmployee)); // Có lỗi thì hoàn tác việc sửa lúc nảy
+            dispatch(updateEmployee(employeeBackup)); // Có lỗi thì hoàn tác việc sửa lúc nảy
             return rejectWithValue(extractErrorMessage(error));
         }
     },
 );
 
+export const toggleActiveEmployeeAsync = createAsyncThunk(
+    'employee/toggleActiveEmployee',
+    async (userId, { dispatch, rejectWithValue }) => {
+        dispatch(toggleActiveEmployee(userId));
+        try {
+            await axiosSecure.put(`/api/user/toggle-active/${userId}`);
+        } catch (error) {
+            // Hoàn tác lại nếu có lỗi
+            dispatch(toggleActiveEmployee(userId));
+            return rejectWithValue(extractErrorMessage(error));
+        }
+    },
+);
+
+// restore employee
 export const restoreEmployeeAsync = createAsyncThunk(
     'employees/restoreEmployeeAsync',
     async (userId, { dispatch, rejectWithValue }) => {
-        dispatch(restoreEmployee(userId)); // Optimistic update
-
+        dispatch(restoreEmployee(userId));
         try {
-            await axiosSecure.post(`/api/employees/restore/${userId}`);
+            await axiosSecure.put(`/api/user/restore/${userId}`);
         } catch (error) {
-            dispatch(removeEmployee(userId)); // Revert update
+            dispatch(removeEmployee(userId));
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -108,7 +133,7 @@ const employeesSlice = createSlice({
         },
         removeEmployee: (state, action) => {
             state.data = state.data.map((employee) =>
-                employee.userId === action.payload ? { ...employee, status: false } : employee,
+                employee.userId === action.payload ? { ...employee, isDelete: true } : employee,
             );
         },
         updateEmployee: (state, action) => {
@@ -129,9 +154,15 @@ const employeesSlice = createSlice({
 
         restoreEmployee: (state, action) => {
             state.data = state.data.map((employee) =>
-                employee.userId === action.payload ? { ...employee, status: true } : employee,
+                employee.userId === action.payload ? { ...employee, isDelete: false } : employee,
             );
         },
+        toggleActiveEmployee: (state, action) => {
+            state.data = state.data.map((employee) =>
+                employee.userId === action.payload ? { ...employee, isActive: !employee.isActive } : employee,
+            );
+        },
+
         setError: (state, action) => {
             state.error = action.payload;
         },
@@ -165,37 +196,81 @@ const employeesSlice = createSlice({
                 state.loading = false;
             })
             // add
+            .addCase(addEmployeeAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
             .addCase(addEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
+                state.loading = false;
             })
             .addCase(addEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
+                state.loading = false;
             })
             // remove
+            .addCase(removeEmployeeAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
             .addCase(removeEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
+                state.loading = false;
             })
             .addCase(removeEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
+                state.loading = false;
             })
             // update
+            .addCase(updateEmployeeAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
             .addCase(updateEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
+                state.loading = false;
             })
             .addCase(updateEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
+                state.loading = false;
+            })
+            // toggle active
+            .addCase(toggleActiveEmployeeAsync.pending, (state) => {
+                state.loading = false;
+                state.error = null;
+            })
+            .addCase(toggleActiveEmployeeAsync.fulfilled, (state) => {
+                state.error = null;
+                state.loading = false;
+            })
+            .addCase(toggleActiveEmployeeAsync.rejected, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
             })
             // restore
+            .addCase(restoreEmployeeAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
             .addCase(restoreEmployeeAsync.fulfilled, (state) => {
                 state.error = null;
+                state.loading = false;
             })
             .addCase(restoreEmployeeAsync.rejected, (state, action) => {
                 state.error = action.payload;
+                state.loading = false;
             });
     },
 });
 
-export const { addEmployee, removeEmployee, updateEmployee, restoreEmployee, setError, findEmployee } =
-    employeesSlice.actions;
+export const {
+    addEmployee,
+    removeEmployee,
+    updateEmployee,
+    restoreEmployee,
+    toggleActiveEmployee,
+    setError,
+    findEmployee,
+} = employeesSlice.actions;
 
 export default employeesSlice.reducer;

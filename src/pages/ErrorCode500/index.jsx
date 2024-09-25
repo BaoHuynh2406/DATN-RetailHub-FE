@@ -1,4 +1,6 @@
+import { Button } from '@mui/material';
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -54,6 +56,7 @@ const Link = styled.a`
 `;
 
 const EyeComponent = () => {
+    const navigate = useNavigate();
     useEffect(() => {
         const handleMouseMove = (event) => {
             const eyes = document.querySelectorAll('.eye');
@@ -81,7 +84,14 @@ const EyeComponent = () => {
                 <Eye className="eye" />
             </div>
             <SubText>Oh no! Chúng tôi đã gặp một chút sự cố.</SubText>
-            <Link href="/">Quay lại</Link>
+            <span
+                onClick={() => {
+                    navigate(-1);
+                }}
+                className="cursor-pointer"
+            >
+                Quay lại
+            </span>
         </Container>
     );
 };

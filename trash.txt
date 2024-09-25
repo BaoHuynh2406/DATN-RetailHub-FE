@@ -1,0 +1,36 @@
+// useEffect(() => {
+    //     if (loading) {
+    //         return (
+    //             <Box
+    //                 sx={{
+    //                     display: 'flex',
+    //                     alignItems: 'center',
+    //                     justifyContent: 'space-around',
+    //                     height: '100%',
+    //                 }}
+    //             >
+    //                 <Skeleton
+    //                     animation="wave"
+    //                     sx={{
+    //                         height: 700,
+    //                         width: '30%',
+    //                     }}
+    //                 />
+    //                 <Skeleton
+    //                     animation="wave"
+    //                     sx={{
+    //                         height: 700,
+    //                         width: '30%',
+    //                     }}
+    //                 />
+    //                 <Skeleton
+    //                     animation="wave"
+    //                     sx={{
+    //                         height: 700,
+    //                         width: '30%',
+    //                     }}
+    //                 />
+    //             </Box>
+    //         );
+    //     }
+    // }, [loading]);

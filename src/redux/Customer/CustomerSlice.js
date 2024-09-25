@@ -34,10 +34,10 @@ export const updateCustomerAsync = createAsyncThunk(
     'customers/updateCustomerAsync',
     async (customer, { dispatch, getState, rejectWithValue }) => {
         try {
+            dispatch(updateCustomer(customer));
             const response = await axiosSecure.put('/api/customer/update', customer);
             return response.data.data;
         } catch (error) {
-            dispatch(updateCustomer(currentCustomer)); // Hoàn tác nếu lỗi xảy ra
             return rejectWithValue(extractErrorMessage(error));
         }
     }

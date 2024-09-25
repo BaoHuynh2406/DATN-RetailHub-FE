@@ -34,12 +34,19 @@ axiosSecure.interceptors.response.use(
         const originalRequest = error.config;
 
         if (!error.response) {
-            // Kiểm tra lỗi mạng
-            alert('Có lỗi khi kết nối đến server!. Vui lòng thử lại sau.');
-            window.location.href = '/error-code-500';
+            // Hiển thị hộp thoại xác nhận
+            const userConfirmed = confirm('Có lỗi khi kết nối đến server!\nBạn có muốn thử lại không?');
+
+            if (userConfirmed) {
+                // Thử lại request
+                return axiosSecure(originalRequest); // Gọi lại request
+            } else {
+                // Chuyển đến trang lỗi
+                window.location.href = '/error-code-500';
+            }
+
             return Promise.reject('Lỗi mạng');
         }
-
         if (error.response && error.response.status === 401 && !originalRequest._retry) {
             originalRequest._retry = true;
 
@@ -77,9 +84,18 @@ axiosPublic.interceptors.response.use(
     (response) => response,
     (error) => {
         if (!error.response) {
-            // Kiểm tra lỗi mạng
-            alert('Có lỗi khi kết nối đến server!. Vui lòng thử lại sau.');
-            window.location.href = '/error-code-500';
+            // Hiển thị hộp thoại xác nhận
+            const userConfirmed = confirm('Có lỗi khi kết nối đến server!\nBạn có muốn thử lại không?');
+
+            if (userConfirmed) {
+                // Thử lại request
+                const originalRequest = error.config; // Lấy lại config của request gốc
+                return axiosPublic(originalRequest); // Gọi lại request
+            } else {
+                // Chuyển đến trang lỗi
+                window.location.href = '/error-code-500';
+            }
+
             return Promise.reject('Lỗi mạng');
         }
 
