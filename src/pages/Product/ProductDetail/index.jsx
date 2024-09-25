@@ -58,23 +58,23 @@ const ProductDetails = () => {
         expiryDate: '',
         isActive: true,
         isDelete: false,
-        image: null,  // Add an image property to store the uploaded image
+        image: null, // Add an image property to store the uploaded image
     };
 
     const [product, setProduct] = useState(productNull);
-    const [imagePreview, setImagePreview] = useState(null);  // State for the image preview
+    const [imagePreview, setImagePreview] = useState(null); // State for the image preview
 
     useEffect(() => {
         if (productId === 'create') {
             setProduct(productNull);
-            setImagePreview(null);  // Reset image preview for new product
+            setImagePreview(null); // Reset image preview for new product
             return;
         }
 
-        const foundProduct = data.find(prod => prod.productId === productId);
+        const foundProduct = data.find((prod) => prod.productId === productId);
         if (foundProduct) {
             setProduct(foundProduct);
-            setImagePreview(foundProduct.image);  // Set the image preview if available
+            setImagePreview(foundProduct.image); // Set the image preview if available
         } else {
             dispatch(fetchProductByIdAsync(productId));
         }
@@ -83,7 +83,7 @@ const ProductDetails = () => {
     useEffect(() => {
         if (currentData && productId !== 'create') {
             setProduct(currentData);
-            setImagePreview(currentData.image);  // Set the image preview if available
+            setImagePreview(currentData.image); // Set the image preview if available
         }
     }, [currentData, productId]);
 
@@ -103,9 +103,9 @@ const ProductDetails = () => {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            const imageUrl = URL.createObjectURL(file);  // Create a URL for the selected file
-            setImagePreview(imageUrl);  // Set the image preview
-            setProduct({ ...product, image: file });  // Store the file in the product state
+            const imageUrl = URL.createObjectURL(file); // Create a URL for the selected file
+            setImagePreview(imageUrl); // Set the image preview
+            setProduct({ ...product, image: file }); // Store the file in the product state
         }
     };
 
@@ -142,13 +142,12 @@ const ProductDetails = () => {
     };
 
     const handleSave = () => {
-        const formData = new FormData(); // Create a FormData object to handle file uploads
-        Object.entries(product).forEach(([key, value]) => {
-            formData.append(key, value);
-        });
+        let data = product;
+        //bổ sung thêm trường role
+        data = { ...data,  categoryId: 1, taxId: 'THUE' };
 
         if (productId === 'create') {
-            dispatch(addProductAsync(formData))
+            dispatch(addProductAsync(data))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được thêm thành công!');
@@ -158,7 +157,7 @@ const ProductDetails = () => {
                     alert('Lỗi: Sản phẩm đã tồn tại.');
                 });
         } else {
-            dispatch(updateProductAsync(formData))
+            dispatch(updateProductAsync(data))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được cập nhật thành công!');
@@ -173,10 +172,10 @@ const ProductDetails = () => {
     const handleReset = () => {
         if (productId === 'create') {
             setProduct(productNull);
-            setImagePreview(null);  // Reset image preview
+            setImagePreview(null); // Reset image preview
         } else {
             setProduct(currentData);
-            setImagePreview(currentData.image);  // Set the image preview if available
+            setImagePreview(currentData.image); // Set the image preview if available
         }
     };
 
@@ -242,7 +241,10 @@ const ProductDetails = () => {
                         <Typography marginRight={2} fontWeight="bold">
                             Trạng Thái Kích Hoạt:
                         </Typography>
-                        <Tooltip title={product.isActive ? 'Sản phẩm này đang hoạt động' : 'Sản phẩm này đã bị vô hiệu hóa'} placement="top">
+                        <Tooltip
+                            title={product.isActive ? 'Sản phẩm này đang hoạt động' : 'Sản phẩm này đã bị vô hiệu hóa'}
+                            placement="top"
+                        >
                             <Switch
                                 checked={product.isActive}
                                 onChange={(e) => setProduct({ ...product, isActive: e.target.checked })}
@@ -261,7 +263,7 @@ const ProductDetails = () => {
                             value={product.categoryId || ''}
                             onChange={handleChange}
                         >
-                            {categories.map(category => (
+                            {categories.map((category) => (
                                 <MenuItem key={category.categoryId} value={category.categoryId}>
                                     {category.categoryName}
                                 </MenuItem>
@@ -345,13 +347,8 @@ const ProductDetails = () => {
                     />
                     <FormControl fullWidth variant="outlined" margin="normal">
                         <InputLabel id="tax-label">Loại Thuế</InputLabel>
-                        <Select
-                            labelId="tax-label"
-                            name="taxId"
-                            value={product.taxId || ''}
-                            onChange={handleChange}
-                        >
-                            {taxes.map(tax => (
+                        <Select labelId="tax-label" name="taxId" value={product.taxId || ''} onChange={handleChange}>
+                            {taxes.map((tax) => (
                                 <MenuItem key={tax.taxId} value={tax.taxId}>
                                     {tax.taxName}
                                 </MenuItem>
@@ -373,7 +370,11 @@ const ProductDetails = () => {
                     {imagePreview && (
                         <Box mt={2}>
                             <Typography variant="h6">Ảnh đã tải lên:</Typography>
-                            <img src={imagePreview} alt="Product Preview" style={{ width: '100%', height: 'auto', marginTop: '10px' }} />
+                            <img
+                                src={imagePreview}
+                                alt="Product Preview"
+                                style={{ width: '100%', height: 'auto', marginTop: '10px' }}
+                            />
                         </Box>
                     )}
                 </Grid>

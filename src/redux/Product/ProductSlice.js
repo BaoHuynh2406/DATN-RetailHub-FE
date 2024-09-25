@@ -90,15 +90,13 @@ export const removeProductAsync = createAsyncThunk(
 // Cập nhật sản phẩm
 export const updateProductAsync = createAsyncThunk(
   'products/updateProductAsync',
-  async (product, { dispatch, getState, rejectWithValue }) => {
-    const currentProduct = getState().products.data.find((prod) => prod.productId === product.productId);
-    dispatch(updateProduct(product)); // Cập nhật lạc quan
-
+  async (product, { dispatch, rejectWithValue }) => {
+    dispatch(updateProduct(product));
     try {
       const response = await axiosSecure.put('/api/product/update', product);
       return response.data.data;
     } catch (error) {
-      dispatch(updateProduct(currentProduct)); // Hoàn tác nếu có lỗi xảy ra
+      // dispatch(updateProduct(currentProduct)); // Hoàn tác nếu có lỗi xảy ra
       return rejectWithValue(extractErrorMessage(error));
     }
   }
