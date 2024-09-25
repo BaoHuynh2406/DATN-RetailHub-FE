@@ -14,6 +14,7 @@ import {
     MenuItem,
     FormControl,
     InputLabel,
+    IconButton,
 } from '@mui/material';
 
 // Icons
@@ -22,6 +23,7 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import EventIcon from '@mui/icons-material/Event';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+import ImageIcon from '@mui/icons-material/Image';
 
 // Redux
 import { useNavigate, useParams } from 'react-router-dom';
@@ -56,18 +58,23 @@ const ProductDetails = () => {
         expiryDate: '',
         isActive: true,
         isDelete: false,
+        image: null,  // Add an image property to store the uploaded image
     };
+
     const [product, setProduct] = useState(productNull);
+    const [imagePreview, setImagePreview] = useState(null);  // State for the image preview
 
     useEffect(() => {
         if (productId === 'create') {
             setProduct(productNull);
+            setImagePreview(null);  // Reset image preview for new product
             return;
         }
 
         const foundProduct = data.find(prod => prod.productId === productId);
         if (foundProduct) {
             setProduct(foundProduct);
+            setImagePreview(foundProduct.image);  // Set the image preview if available
         } else {
             dispatch(fetchProductByIdAsync(productId));
         }
@@ -76,6 +83,7 @@ const ProductDetails = () => {
     useEffect(() => {
         if (currentData && productId !== 'create') {
             setProduct(currentData);
+            setImagePreview(currentData.image);  // Set the image preview if available
         }
     }, [currentData, productId]);
 
@@ -92,13 +100,21 @@ const ProductDetails = () => {
         setProduct({ ...product, [name]: value });
     };
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const imageUrl = URL.createObjectURL(file);  // Create a URL for the selected file
+            setImagePreview(imageUrl);  // Set the image preview
+            setProduct({ ...product, image: file });  // Store the file in the product state
+        }
+    };
+
     const handleDelete = () => {
         if (productId !== '0') {
             dispatch(removeProductAsync(productId))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được xóa');
-                    // Bạn có thể lấy lại danh sách sản phẩm ở đây hoặc điều hướng đến danh sách
                     navigate('/Product/ProductList');
                 })
                 .catch(() => {
@@ -115,7 +131,6 @@ const ProductDetails = () => {
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được khôi phục');
-                    // Cũng có thể điều hướng hoặc làm mới danh sách sản phẩm
                     navigate('/Product/ProductList');
                 })
                 .catch(() => {
@@ -126,10 +141,14 @@ const ProductDetails = () => {
         }
     };
 
-
     const handleSave = () => {
+        const formData = new FormData(); // Create a FormData object to handle file uploads
+        Object.entries(product).forEach(([key, value]) => {
+            formData.append(key, value);
+        });
+
         if (productId === 'create') {
-            dispatch(addProductAsync(product))
+            dispatch(addProductAsync(formData))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được thêm thành công!');
@@ -139,7 +158,7 @@ const ProductDetails = () => {
                     alert('Lỗi: Sản phẩm đã tồn tại.');
                 });
         } else {
-            dispatch(updateProductAsync(product))
+            dispatch(updateProductAsync(formData))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được cập nhật thành công!');
@@ -154,8 +173,10 @@ const ProductDetails = () => {
     const handleReset = () => {
         if (productId === 'create') {
             setProduct(productNull);
+            setImagePreview(null);  // Reset image preview
         } else {
             setProduct(currentData);
+            setImagePreview(currentData.image);  // Set the image preview if available
         }
     };
 
@@ -257,16 +278,15 @@ const ProductDetails = () => {
                         variant="outlined"
                         margin="normal"
                         InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
+                            startAdornment: (
+                                <InputAdornment position="start">
                                     <PriceCheckIcon />
                                 </InputAdornment>
                             ),
                         }}
                     />
-                   
                     <TextField
-                        label="Giá Gốc"
+                        label="Giá Vốn"
                         name="cost"
                         type="number"
                         value={product.cost || ''}
@@ -274,33 +294,18 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <PriceCheckIcon />
-                                </InputAdornment>
-                            ),
-                        }}
                     />
-                </Grid>
-                <Grid item xs={6} md={4}>
-                    <FormControl fullWidth variant="outlined" margin="normal">
-                        <InputLabel id="tax-label">Mức Thuế</InputLabel>
-                        <Select
-                            labelId="tax-label"
-                            name="taxId"
-                            value={product.taxId || ''}
-                            onChange={handleChange}
-                        >
-                            {taxes.map(tax => (
-                                <MenuItem key={tax.taxId} value={tax.taxId}>
-                                    {tax.taxName}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
                     <TextField
-                        label="Số Lượng Tồn Kho"
+                        label="Đơn Vị Tính"
+                        name="unit"
+                        value={product.unit || ''}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                    />
+                    <TextField
+                        label="Số Lượng Tồn"
                         name="inventoryCount"
                         type="number"
                         value={product.inventoryCount || ''}
@@ -309,18 +314,20 @@ const ProductDetails = () => {
                         variant="outlined"
                         margin="normal"
                         InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
+                            startAdornment: (
+                                <InputAdornment position="start">
                                     <InventoryIcon />
                                 </InputAdornment>
                             ),
                         }}
                     />
+                </Grid>
+                <Grid item xs={6} md={4}>
                     <TextField
                         label="Ngày Hết Hạn"
                         name="expiryDate"
                         type="date"
-                        value={product.expiryDate ? product.expiryDate.split('T')[0] : ''}
+                        value={product.expiryDate?.split('T')[0] || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -336,7 +343,39 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
-                  
+                    <FormControl fullWidth variant="outlined" margin="normal">
+                        <InputLabel id="tax-label">Loại Thuế</InputLabel>
+                        <Select
+                            labelId="tax-label"
+                            name="taxId"
+                            value={product.taxId || ''}
+                            onChange={handleChange}
+                        >
+                            {taxes.map(tax => (
+                                <MenuItem key={tax.taxId} value={tax.taxId}>
+                                    {tax.taxName}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+                    <input
+                        accept="image/*"
+                        id="upload-image"
+                        type="file"
+                        style={{ display: 'none' }}
+                        onChange={handleImageChange}
+                    />
+                    <label htmlFor="upload-image">
+                        <Button variant="outlined" component="span" startIcon={<ImageIcon />}>
+                            Tải Lên Ảnh
+                        </Button>
+                    </label>
+                    {imagePreview && (
+                        <Box mt={2}>
+                            <Typography variant="h6">Ảnh đã tải lên:</Typography>
+                            <img src={imagePreview} alt="Product Preview" style={{ width: '100%', height: 'auto', marginTop: '10px' }} />
+                        </Box>
+                    )}
                 </Grid>
             </Grid>
             <Box display="flex" justifyContent="flex-end" marginTop={5}>

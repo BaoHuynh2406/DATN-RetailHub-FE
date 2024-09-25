@@ -446,29 +446,29 @@ const EmployeeDetails = () => {
                 </Grid>
             </Grid>
 
-            <Box display="flex" justifyContent="flex-end" marginTop={5}>
-                {userId === 'create' ? (
+       <Box display="flex" justifyContent="flex-end" marginTop={5}>
+                {customerId === 'create' ? (
                     <Button variant="contained" color="primary" onClick={handleSave} sx={{ marginRight: 2 }}>
                         Lưu
                     </Button>
                 ) : (
                     <>
-                        {!employee.isDelete ? (
+                        {!customer.isDelete ? (
                             <Button variant="outlined" color="error" onClick={handleDelete} sx={{ marginRight: 2 }}>
                                 Xóa
                             </Button>
                         ) : (
                             <Button variant="outlined" color="info" onClick={handleRestore} sx={{ marginRight: 2 }}>
-                                Khôi phục
+                                Khôi Phục
                             </Button>
                         )}
                         <Button variant="contained" color="success" onClick={handleSave} sx={{ marginRight: 2 }}>
-                            Cập nhật
+                            Cập Nhật
                         </Button>
                     </>
                 )}
                 <Button variant="outlined" onClick={handleReset}>
-                    Làm lại
+                    Đặt Lại
                 </Button>
             </Box>
         </Container>
