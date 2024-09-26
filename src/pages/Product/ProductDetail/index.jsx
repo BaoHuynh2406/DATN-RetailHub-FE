@@ -52,20 +52,32 @@ const ProductDetails = () => {
         expiryDate: '',
         isActive: true,
         isDelete: false,
-        image: null,  // Add an image property to store the uploaded image
+        image: null, // Add an image property to store the uploaded image
     };
 
     const [product, setProduct] = useState(productNull);
+<<<<<<< HEAD
+=======
+    const [imagePreview, setImagePreview] = useState(null); // State for the image preview
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
 
     useEffect(() => {
         if (productId === 'create') {
             setProduct(productNull);
+<<<<<<< HEAD
+=======
+            setImagePreview(null); // Reset image preview for new product
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
             return;
         }
 
-        const foundProduct = data.find(prod => prod.productId === productId);
+        const foundProduct = data.find((prod) => prod.productId === productId);
         if (foundProduct) {
             setProduct(foundProduct);
+<<<<<<< HEAD
+=======
+            setImagePreview(foundProduct.image); // Set the image preview if available
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
         } else {
             dispatch(fetchProductByIdAsync(productId));
         }
@@ -74,6 +86,10 @@ const ProductDetails = () => {
     useEffect(() => {
         if (currentData && productId !== 'create') {
             setProduct(currentData);
+<<<<<<< HEAD
+=======
+            setImagePreview(currentData.image); // Set the image preview if available
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
         }
     }, [currentData, productId]);
 
@@ -90,7 +106,18 @@ const ProductDetails = () => {
         setProduct({ ...product, [name]: value });
     };
 
+<<<<<<< HEAD
  
+=======
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const imageUrl = URL.createObjectURL(file); // Create a URL for the selected file
+            setImagePreview(imageUrl); // Set the image preview
+            setProduct({ ...product, image: file }); // Store the file in the product state
+        }
+    };
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
 
     const handleDelete = () => {
         if (productId !== '0') {
@@ -125,13 +152,12 @@ const ProductDetails = () => {
     };
 
     const handleSave = () => {
-        const formData = new FormData(); // Create a FormData object to handle file uploads
-        Object.entries(product).forEach(([key, value]) => {
-            formData.append(key, value);
-        });
+        let data = product;
+        //bổ sung thêm trường role
+        data = { ...data,  categoryId: 1, taxId: 'THUE' };
 
         if (productId === 'create') {
-            dispatch(addProductAsync(formData))
+            dispatch(addProductAsync(data))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được thêm thành công!');
@@ -141,7 +167,7 @@ const ProductDetails = () => {
                     alert('Lỗi: Sản phẩm đã tồn tại.');
                 });
         } else {
-            dispatch(updateProductAsync(formData))
+            dispatch(updateProductAsync(data))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được cập nhật thành công!');
@@ -156,8 +182,15 @@ const ProductDetails = () => {
     const handleReset = () => {
         if (productId === 'create') {
             setProduct(productNull);
+<<<<<<< HEAD
         } else {
             setProduct(currentData);
+=======
+            setImagePreview(null); // Reset image preview
+        } else {
+            setProduct(currentData);
+            setImagePreview(currentData.image); // Set the image preview if available
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
         }
     };
     const handleImageUpload = (e) => {
@@ -272,7 +305,63 @@ const ProductDetails = () => {
                         }}
                     />
                     <TextField
+<<<<<<< HEAD
                         label="Số tồn kho"
+=======
+                        label="Tên Sản Phẩm"
+                        name="productName"
+                        value={product.productName || ''}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                    />
+                    <TextField
+                        label="Mô Tả Sản Phẩm"
+                        name="productDescription"
+                        value={product.productDescription || ''}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                    />
+                    <Box display="flex" alignItems="center" className="mt-2 ms-1">
+                        <Typography marginRight={2} fontWeight="bold">
+                            Trạng Thái Kích Hoạt:
+                        </Typography>
+                        <Tooltip
+                            title={product.isActive ? 'Sản phẩm này đang hoạt động' : 'Sản phẩm này đã bị vô hiệu hóa'}
+                            placement="top"
+                        >
+                            <Switch
+                                checked={product.isActive}
+                                onChange={(e) => setProduct({ ...product, isActive: e.target.checked })}
+                                color="secondary"
+                                name="active"
+                            />
+                        </Tooltip>
+                    </Box>
+                </Grid>
+                <Grid item xs={6} md={4}>
+                    <FormControl fullWidth variant="outlined" margin="normal">
+                        <InputLabel id="category-label">Loại Sản Phẩm</InputLabel>
+                        <Select
+                            labelId="category-label"
+                            name="categoryId"
+                            value={product.categoryId || ''}
+                            onChange={handleChange}
+                        >
+                            {categories.map((category) => (
+                                <MenuItem key={category.categoryId} value={category.categoryId}>
+                                    {category.categoryName}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+                    <TextField
+                        label="Giá Bán"
+                        name="price"
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
                         type="number"
                         name="inventoryCount"
                         value={product.inventoryCount}
@@ -432,7 +521,21 @@ const ProductDetails = () => {
                             Tải ảnh lên
                             <input type="file" hidden onChange={handleImageUpload} />
                         </Button>
+<<<<<<< HEAD
                     </Box>
+=======
+                    </label>
+                    {imagePreview && (
+                        <Box mt={2}>
+                            <Typography variant="h6">Ảnh đã tải lên:</Typography>
+                            <img
+                                src={imagePreview}
+                                alt="Product Preview"
+                                style={{ width: '100%', height: 'auto', marginTop: '10px' }}
+                            />
+                        </Box>
+                    )}
+>>>>>>> 0fd90089b2e8bba534e4a29dbd0433b75801339d
                 </Grid>
             </Grid>
 

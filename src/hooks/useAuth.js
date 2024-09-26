@@ -2,7 +2,9 @@
 
 export const useAuth = () => {
     const isAuthenticated = () => {
-        return true; // Giả lập luôn trả về true
+        if (localStorage.getItem('token')) return true;
+        alert('Vui lòng đăng nhập trước');
+        return false;
     };
 
     return { isAuthenticated };

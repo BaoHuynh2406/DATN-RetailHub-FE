@@ -11,34 +11,58 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { postUserLogin } from '@/redux/UserCurrent';
 
 export default function SignInSide() {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const navigate = useNavigate();
-
     const dispatch = useDispatch();
 
-    const user = {
-        email: 'admin@retailhub.com',
-        password: 'admin123',
-    };
+    // State để theo dõi checkbox "Ghi nhớ tài khoản"
+    const [rememberMe, setRememberMe] = useState(false);
+
+    // Tải thông tin từ localStorage khi component được mount
+    useEffect(() => {
+        const savedEmail = localStorage.getItem('userEmail');
+        const savedPassword = localStorage.getItem('userPassword');
+        
+        if (savedEmail && savedPassword) {
+            emailRef.current.value = savedEmail;
+            passwordRef.current.value = savedPassword;
+            setRememberMe(true);
+        }
+    }, []);
 
     const handleLogin = async () => {
+        const user = {
+            email: emailRef.current.value,
+            password: passwordRef.current.value,
+        };
+
         try {
             await dispatch(postUserLogin(user)).unwrap();
-            navigate('/dashboard');
+            // Nếu checkbox "Ghi nhớ tài khoản" được chọn, lưu email và mật khẩu vào localStorage
+            if (rememberMe) {
+                localStorage.setItem('userEmail', user.email);
+                localStorage.setItem('userPassword', user.password);
+            } else {
+                // Xóa dữ liệu trong localStorage nếu không chọn checkbox
+                localStorage.removeItem('userEmail');
+                localStorage.removeItem('userPassword');
+            }
+            navigate('/dashboard'); 
         } catch (error) {
-            console.error('Login failed:', error);
-            // Xử lý lỗi nếu cần
+            alert("Sai thông tin! " + error.message);
         }
     };
+
     const handleSubmit = (event) => {
+        event.preventDefault();
         handleLogin();
     };
 
@@ -95,7 +119,14 @@ export default function SignInSide() {
                             inputRef={passwordRef}
                         />
                         <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
+                            control={
+                                <Checkbox
+                                    value="remember"
+                                    color="primary"
+                                    checked={rememberMe}
+                                    onChange={(e) => setRememberMe(e.target.checked)}
+                                />
+                            }
                             label="Ghi nhớ tài khoản"
                         />
                         <Button

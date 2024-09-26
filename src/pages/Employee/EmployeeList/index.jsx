@@ -1,17 +1,20 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Box, Button, Container, Typography, IconButton, Switch } from '@mui/material';
+import { Box, Button, Container, Typography, IconButton, Switch, Tooltip } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
+import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
 import TableCustom from '@/components/TableCustom';
 import { useNavigate } from 'react-router-dom';
+
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchEmployeesAsync } from '@/redux/Employee/employeeSlice';
+import { fetchEmployeesAsync, restoreEmployeeAsync, toggleActiveEmployeeAsync } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 
 export default function EmployeeTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { loading, data, error } = useSelector((state) => state.employeeNew);
+    const { loading, data, error, currentData } = useSelector((state) => state.employeeNew);
+    const userLogged = useSelector((state) => state.userCurrent);
 
     const [employees, setEmployees] = useState(data);
     const [showDeleted, setShowDeleted] = useState(false);
@@ -19,8 +22,26 @@ export default function EmployeeTable() {
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
     const columns = useMemo(
         () => [
-            { field: 'userId', headerName: 'Mã nhân viên', width: 150 },
-            { field: 'fullName', headerName: 'Họ và tên', width: 210 },
+            {
+                field: 'userId',
+                headerName: 'Mã nhân viên',
+                width: 150,
+                renderCell: (params) => (
+                    <span className={params.row.userId === userLogged.data.userId ? 'text-orange-400 font-bold' : ''}>
+                        {params.value}
+                    </span>
+                ),
+            },
+            {
+                field: 'fullName',
+                headerName: 'Họ và tên',
+                width: 210,
+                renderCell: (params) => (
+                    <span className={params.row.userId === userLogged.data.userId ? 'text-orange-400 font-bold' : ''}>
+                        {params.value}
+                    </span>
+                ),
+            },
             { field: 'phoneNumber', headerName: 'Số điện thoại', width: 170 },
             {
                 field: 'role',
@@ -47,6 +68,7 @@ export default function EmployeeTable() {
                 width: 120,
                 renderCell: (params) => (
                     <Switch
+                        disabled={params.row.userId === userLogged.data.userId || false || showDeleted}
                         checked={params.row.isActive}
                         onChange={() => handleToggleActive(params.row.userId)}
                         color="secondary"
@@ -55,10 +77,12 @@ export default function EmployeeTable() {
             },
             {
                 field: 'actions',
+                headerAlign: 'center',
                 headerName: 'Công cụ',
                 width: 130,
                 renderCell: (params) => (
-                    <Box display="flex" justifyContent="left" alignItems="center">
+                    <Box display="flex" justifyContent="center" alignItems="center" height="100%">
+                        {/* Nút chỉnh sửa */}
                         <IconButton
                             color="primary"
                             onClick={() => handleEdit(params.row)}
@@ -66,29 +90,46 @@ export default function EmployeeTable() {
                         >
                             <EditIcon />
                         </IconButton>
+
+                        {showDeleted && (
+                            <Tooltip title="Khôi phục tài khoản này" placement="bottom">
+                                <IconButton
+                                    color="primary"
+                                    onClick={() => handleRestore(params.row)}
+                                    style={{ textAlign: 'center' }}
+                                >
+                                    <RotateRightRoundedIcon />
+                                </IconButton>
+                            </Tooltip>
+                        )}
                     </Box>
                 ),
             },
         ],
-        [],
+        [showDeleted],
     );
 
-    useEffect(() => {
-        dispatch(fetchEmployeesAsync());
-    }, [dispatch]);
+    // Lấy nhân viên dựa trên trạng thái của switch (showDeleted)
+    useMemo(() => {
+        if (showDeleted) {
+            dispatch(fetchEmployeesAsync(true));
+            return;
+        }
+        dispatch(fetchEmployeesAsync(false));
+    }, [showDeleted]);
 
-    // Lọc nhân viên dựa trên trạng thái của switch (showDeleted)
+    //load dữ liệu từ data ra
     useEffect(() => {
         if (Array.isArray(data)) {
             if (showDeleted) {
-                setEmployees(data.filter((row) => row.status === false));
+                setEmployees(data.filter((row) => row.isDelete === true));
             } else {
-                setEmployees(data.filter((row) => row.status !== false));
+                setEmployees(data.filter((row) => row.isDelete === false));
             }
         } else {
             console.error('Dữ liệu nhân viên không hợp lệ');
         }
-    }, [showDeleted, data]);
+    }, [data]);
 
     const handleEdit = (row) => {
         navigate(`/employee/EmployeeDetail/${row.userId}`);
@@ -103,9 +144,14 @@ export default function EmployeeTable() {
     };
 
     const handleToggleActive = (userId) => {
-        // Thực hiện hành động để thay đổi trạng thái active của nhân viên với userId
-        console.log(`Toggle active state for userId: ${userId}`);
-        // Bạn có thể cập nhật trạng thái trong redux hoặc thực hiện cập nhật qua API
+        dispatch(toggleActiveEmployeeAsync(userId));
+    };
+
+    const handleRestore = (row) => {
+        if (row.userId) {
+            dispatch(restoreEmployeeAsync(row.userId));
+            alert('Nhân viên đã được khôi phục');
+        }
     };
 
     return (
@@ -119,13 +165,12 @@ export default function EmployeeTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-               
                 <TableCustom columns={columns} rows={employees} stt={true} id="userId" loading={loading} />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
                 <Box display="flex" alignItems="center">
                     <Typography variant="body1" marginRight={1} color="red">
-                        Hiển thị nhân viên đã bị xóa
+                        Nhân viên đã xóa:
                     </Typography>
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
