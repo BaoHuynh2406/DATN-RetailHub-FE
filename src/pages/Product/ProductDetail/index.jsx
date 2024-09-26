@@ -1,14 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-    TextField,
-    Button,
-    Grid,
-    Typography,
-    Container,
-    Box,
-    InputAdornment,
-    Skeleton
-} from '@mui/material';
+import { TextField, Button, Grid, Typography, Container, Box, InputAdornment, Skeleton } from '@mui/material';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import BarcodeIcon from '@mui/icons-material/QrCode';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -43,8 +34,15 @@ const ProductDetails = () => {
         productId: '',
         productName: '',
         productDescription: '',
-        categoryId: '',
-        taxId: '',
+        category: {
+            cateroryId: '',
+            categoryName: '',
+        },
+        tax: {
+            taxId: '',
+            taxName: '',
+            taxRate: 0,
+        },
         unit: '',
         inventoryCount: 0,
         cost: 0,
@@ -90,8 +88,6 @@ const ProductDetails = () => {
         setProduct({ ...product, [name]: value });
     };
 
- 
-
     const handleDelete = () => {
         if (productId !== '0') {
             dispatch(removeProductAsync(productId))
@@ -127,7 +123,7 @@ const ProductDetails = () => {
     const handleSave = () => {
         let data = product;
         //bổ sung thêm trường role
-        data = { ...data,  categoryId: 1, taxId: 'THUE' };
+        data = { ...data, categoryId: 1, taxId: 'THUE' };
 
         if (productId === 'create') {
             dispatch(addProductAsync(data))
@@ -192,7 +188,7 @@ const ProductDetails = () => {
                 marginTop="20px"
             >
                 <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
-                    {productId === "create" ? 'Tạo Mới' : 'Chi Tiết'}
+                    {productId === 'create' ? 'Tạo Mới' : 'Chi Tiết'}
                 </Typography>
                 <Button variant="contained" onClick={handleBack}>
                     <ReplyAllIcon />
@@ -212,7 +208,7 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         InputProps={{
-                            readOnly: productId !== 'create', // Chỉ đọc nếu không phải trang tạo mới
+                            readOnly: true, // Chỉ đọc nếu không phải trang tạo mới
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <StoreIcon />
@@ -336,7 +332,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Thuế suất"
                         name="tax"
-                        value={product.tax}
+                        value={product.tax.taxName || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -368,7 +364,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Loại"
                         name="category"
-                        value={product.category}
+                        value={product.category.categoryName || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -434,7 +430,6 @@ const ProductDetails = () => {
                     </Box>
                 </Grid>
             </Grid>
-
 
             <Box display="flex" justifyContent="flex-end" marginTop={5}>
                 {productId === 'create' ? (
