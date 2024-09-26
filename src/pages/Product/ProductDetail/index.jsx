@@ -7,25 +7,19 @@ import {
     Container,
     Box,
     InputAdornment,
-    Skeleton,
-    Switch,
-    Tooltip,
-    Select,
-    MenuItem,
-    FormControl,
-    InputLabel,
-    IconButton,
+    Skeleton
 } from '@mui/material';
-
-// Icons
-import CategoryIcon from '@mui/icons-material/Category';
-import InventoryIcon from '@mui/icons-material/Inventory';
-import PriceCheckIcon from '@mui/icons-material/PriceCheck';
-import EventIcon from '@mui/icons-material/Event';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
-import ImageIcon from '@mui/icons-material/Image';
+import BarcodeIcon from '@mui/icons-material/QrCode';
+import CategoryIcon from '@mui/icons-material/Category';
+import DescriptionIcon from '@mui/icons-material/Description';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import StoreIcon from '@mui/icons-material/Store';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
-// Redux
+import TypeSpecimenIcon from '@mui/icons-material/TypeSpecimen';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -40,8 +34,8 @@ import {
 const ProductDetails = () => {
     const dispatch = useDispatch();
     const { data, currentData, loading, error } = useSelector((state) => state.ProductSlice);
-    const categories = useSelector((state) => state.categories) || [];
-    const taxes = useSelector((state) => state.taxes) || [];
+    // const categories = useSelector((state) => state.categories) || [];
+    // const taxes = useSelector((state) => state.taxes) || [];
     const { productId } = useParams();
     const navigate = useNavigate();
 
@@ -62,19 +56,16 @@ const ProductDetails = () => {
     };
 
     const [product, setProduct] = useState(productNull);
-    const [imagePreview, setImagePreview] = useState(null);  // State for the image preview
 
     useEffect(() => {
         if (productId === 'create') {
             setProduct(productNull);
-            setImagePreview(null);  // Reset image preview for new product
             return;
         }
 
         const foundProduct = data.find(prod => prod.productId === productId);
         if (foundProduct) {
             setProduct(foundProduct);
-            setImagePreview(foundProduct.image);  // Set the image preview if available
         } else {
             dispatch(fetchProductByIdAsync(productId));
         }
@@ -83,7 +74,6 @@ const ProductDetails = () => {
     useEffect(() => {
         if (currentData && productId !== 'create') {
             setProduct(currentData);
-            setImagePreview(currentData.image);  // Set the image preview if available
         }
     }, [currentData, productId]);
 
@@ -100,14 +90,7 @@ const ProductDetails = () => {
         setProduct({ ...product, [name]: value });
     };
 
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const imageUrl = URL.createObjectURL(file);  // Create a URL for the selected file
-            setImagePreview(imageUrl);  // Set the image preview
-            setProduct({ ...product, image: file });  // Store the file in the product state
-        }
-    };
+ 
 
     const handleDelete = () => {
         if (productId !== '0') {
@@ -173,13 +156,20 @@ const ProductDetails = () => {
     const handleReset = () => {
         if (productId === 'create') {
             setProduct(productNull);
-            setImagePreview(null);  // Reset image preview
         } else {
             setProduct(currentData);
-            setImagePreview(currentData.image);  // Set the image preview if available
         }
     };
-
+    const handleImageUpload = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setProduct({ ...product, image: reader.result });
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
     const handleBack = () => navigate('/Product/ProductList');
 
     if (loading) {
@@ -191,24 +181,85 @@ const ProductDetails = () => {
             </Box>
         );
     }
+    const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
     return (
-        <Container maxWidth="xl">
-            <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={2} marginTop="20px">
-                <Typography variant="h4" align="left" gutterBottom fontWeight="bold">
-                    {productId === 'create' ? 'Tạo Mới' : `Sản Phẩm: ${product.productName}`}
+        <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
+            <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="space-between"
+                sx={{ marginBottom: 2 }}
+                marginTop="20px"
+            >
+                <Typography variant="h4" align="left" gutterBottom sx={{ fontWeight: 'bold' }}>
+                    {productId === "create" ? 'Tạo Mới' : 'Chi Tiết'}
                 </Typography>
                 <Button variant="contained" onClick={handleBack}>
                     <ReplyAllIcon />
                 </Button>
             </Box>
             <Grid container spacing={4}>
-                <Grid item xs={6} md={4}>
+                <Grid item xs={12} md={4}>
                     <TextField
-                        label="Mã Sản Phẩm"
+                        label={
+                            <>
+                                Mã sản phẩm<span style={{ color: 'red' }}> *</span>
+                            </>
+                        }
                         name="productId"
-                        value={product.productId || ''}
-                        disabled
+                        value={product.productId}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        InputProps={{
+                            readOnly: productId !== 'create', // Chỉ đọc nếu không phải trang tạo mới
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <StoreIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                        margin="normal"
+                    />
+
+                    <TextField
+                        label="Tên sản phẩm"
+                        name="productName"
+                        value={product.productName}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LocalOfferIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Bar Code"
+                        name="barcode"
+                        value={product.barcode}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <BarcodeIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Đơn vị tính"
+                        name="unit"
+                        value={product.unit}
+                        onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
@@ -221,163 +272,171 @@ const ProductDetails = () => {
                         }}
                     />
                     <TextField
-                        label="Tên Sản Phẩm"
-                        name="productName"
-                        value={product.productName || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Mô Tả Sản Phẩm"
-                        name="productDescription"
-                        value={product.productDescription || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                    />
-                    <Box display="flex" alignItems="center" className="mt-2 ms-1">
-                        <Typography marginRight={2} fontWeight="bold">
-                            Trạng Thái Kích Hoạt:
-                        </Typography>
-                        <Tooltip title={product.isActive ? 'Sản phẩm này đang hoạt động' : 'Sản phẩm này đã bị vô hiệu hóa'} placement="top">
-                            <Switch
-                                checked={product.isActive}
-                                onChange={(e) => setProduct({ ...product, isActive: e.target.checked })}
-                                color="secondary"
-                                name="active"
-                            />
-                        </Tooltip>
-                    </Box>
-                </Grid>
-                <Grid item xs={6} md={4}>
-                    <FormControl fullWidth variant="outlined" margin="normal">
-                        <InputLabel id="category-label">Loại Sản Phẩm</InputLabel>
-                        <Select
-                            labelId="category-label"
-                            name="categoryId"
-                            value={product.categoryId || ''}
-                            onChange={handleChange}
-                        >
-                            {categories.map(category => (
-                                <MenuItem key={category.categoryId} value={category.categoryId}>
-                                    {category.categoryName}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                    <TextField
-                        label="Giá Bán"
-                        name="price"
+                        label="Số tồn kho"
                         type="number"
-                        value={product.price || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                        InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
-                                    <PriceCheckIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
-                    <TextField
-                        label="Giá Vốn"
-                        name="cost"
-                        type="number"
-                        value={product.cost || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Đơn Vị Tính"
-                        name="unit"
-                        value={product.unit || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Số Lượng Tồn"
                         name="inventoryCount"
-                        type="number"
-                        value={product.inventoryCount || ''}
+                        value={product.inventoryCount}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
                         InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
+                            endAdornment: (
+                                <InputAdornment position="end">
                                     <InventoryIcon />
                                 </InputAdornment>
                             ),
                         }}
                     />
-                </Grid>
-                <Grid item xs={6} md={4}>
                     <TextField
-                        label="Ngày Hết Hạn"
-                        name="expiryDate"
+                        label="Ngày hết hạn"
                         type="date"
-                        value={product.expiryDate?.split('T')[0] || ''}
+                        name="expiryDate"
+                        value={product.expiryDate}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
+                        InputLabelProps={{ shrink: true }}
+                    />
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                    <TextField
+                        label="Giá nhập"
+                        name="cost"
+                        value={product.cost}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <EventIcon />
+                                    <AttachMoneyIcon />
                                 </InputAdornment>
                             ),
                         }}
                     />
-                    <FormControl fullWidth variant="outlined" margin="normal">
-                        <InputLabel id="tax-label">Loại Thuế</InputLabel>
-                        <Select
-                            labelId="tax-label"
-                            name="taxId"
-                            value={product.taxId || ''}
-                            onChange={handleChange}
-                        >
-                            {taxes.map(tax => (
-                                <MenuItem key={tax.taxId} value={tax.taxId}>
-                                    {tax.taxName}
-                                </MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                    <input
-                        accept="image/*"
-                        id="upload-image"
-                        type="file"
-                        style={{ display: 'none' }}
-                        onChange={handleImageChange}
+                    <TextField
+                        label="Giá bán"
+                        name="price"
+                        value={product.price}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <AttachMoneyIcon />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
-                    <label htmlFor="upload-image">
-                        <Button variant="outlined" component="span" startIcon={<ImageIcon />}>
-                            Tải Lên Ảnh
+                    <TextField
+                        label="Thuế suất"
+                        name="tax"
+                        value={product.tax}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LocalOfferIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Vị trí"
+                        name="location"
+                        value={product.location}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <LocationOnIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Loại"
+                        name="category"
+                        value={product.category}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <TypeSpecimenIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                    <TextField
+                        label="Mô tả"
+                        name="productDescription"
+                        value={product.productDescription}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        multiline
+                        rows={1}
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <DescriptionIcon />
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                    <Box display="flex" flexDirection="column" alignItems="center" paddingTop="20px">
+                        <img
+                            src={product.image || defaultImage}
+                            alt="Product"
+                            style={{
+                                width: '100%',
+                                height: '250px',
+                                objectFit: 'cover',
+                                borderRadius: '8px',
+                            }}
+                        />
+                        <Typography
+                            variant="caption"
+                            color="textSecondary"
+                            sx={{
+                                marginTop: 1,
+                                textOverflow: 'ellipsis',
+                                overflow: 'hidden',
+                                whiteSpace: 'nowrap',
+                                width: '100%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            {product.image ? 'Tên ảnh: ' + product.image.split('/').pop() : 'Chưa có ảnh'}
+                        </Typography>
+                        <Button variant="contained" component="label" sx={{ marginTop: 2 }}>
+                            Tải ảnh lên
+                            <input type="file" hidden onChange={handleImageUpload} />
                         </Button>
-                    </label>
-                    {imagePreview && (
-                        <Box mt={2}>
-                            <Typography variant="h6">Ảnh đã tải lên:</Typography>
-                            <img src={imagePreview} alt="Product Preview" style={{ width: '100%', height: 'auto', marginTop: '10px' }} />
-                        </Box>
-                    )}
+                    </Box>
                 </Grid>
             </Grid>
+
+
             <Box display="flex" justifyContent="flex-end" marginTop={5}>
                 {productId === 'create' ? (
                     <Button variant="contained" color="primary" onClick={handleSave} sx={{ marginRight: 2 }}>
