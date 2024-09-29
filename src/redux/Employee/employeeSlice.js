@@ -6,15 +6,17 @@ const extractErrorMessage = (error) => error.response?.data?.message || error.me
 
 // Define thunks
 
-//Fetch
-export const fetchEmployeesAsync = createAsyncThunk(
-    'employees/fetchEmployeesAsync',
-    async (isDelete, { rejectWithValue }) => {
+// Chưa xóa
+export const fetchEmployeesAvailableAsync = createAsyncThunk(
+    'employees/fetchEmployeesAvailableAsync',
+    async ({ page, size }, { rejectWithValue }) => {
         try {
-            const response = await axiosSecure.get(
-                `/api/user/${isDelete ? 'getAll-deleted-users' : 'getAll-available-users'}`,
-            );
-            console.log(response.data.data);
+            const response = await axiosSecure.get('/api/v2/user/getAll-available-users', {
+                params: {
+                    page: page,
+                    size: size,
+                },
+            });
             return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
@@ -22,21 +24,24 @@ export const fetchEmployeesAsync = createAsyncThunk(
     },
 );
 
-// export const fetchEmployeesAsync = createAsyncThunk(
-//     'employees/fetchEmployeesAsync',
-//     async ({ page, size, isDelete }, { rejectWithValue }) => {
-//         try {
-//             const response = await axiosSecure.get(
-//                 `/api/v2/user/${isDelete ? `getAll-deleted-users?page=${page}&size=${size}` 
-//                                          : `getAll-available-users?page=${page}&size=${size}`}`,
-//             );
-//             console.log(response.data.data);
-//             return response.data.data;
-//         } catch (error) {
-//             return rejectWithValue(extractErrorMessage(error));
-//         }
-//     },
-// );
+// Đã xóa
+export const fetchEmployeesDeletedAsync = createAsyncThunk(
+    'employees/fetchEmployeesDeletedAsync',
+    async ({ page, size }, { rejectWithValue }) => {
+        try {
+            const response = await axiosSecure.get('/api/v2/user/getAll-deleted-users', {
+                params: {
+                    page: page,
+                    size: size,
+                },
+            });
+            console.log(response.data.data);
+            return response.data.data;
+        } catch (error) {
+            return rejectWithValue(extractErrorMessage(error));
+        }
+    },
+);
 
 // fetch by id
 export const fetchEmployeeByIdAsync = createAsyncThunk(
@@ -145,20 +150,18 @@ const employeesSlice = createSlice({
     },
     reducers: {
         addEmployee: (state, action) => {
-            state.data.push(action.payload);
+            state.data.data.push(action.payload);
         },
         removeEmployee: (state, action) => {
-            state.data = state.data.map((employee) =>
-                employee.userId === action.payload ? { ...employee, isDelete: true } : employee,
-            );
+            state.data.data = state.data.data.filter((employee) => employee.userId !== action.payload);
         },
         updateEmployee: (state, action) => {
-            state.data = state.data.map((emp) =>
+            state.data.data = state.data.data.map((emp) =>
                 emp.userId === action.payload.userId ? { ...emp, ...action.payload } : emp,
             );
         },
         findEmployee: (state, action) => {
-            const employee = state.data.find((item) => item.userId == action.payload);
+            const employee = state.data.data.find((item) => item.userId == action.payload);
             if (employee) {
                 state.currentData = employee;
                 state.error = null;
@@ -169,12 +172,11 @@ const employeesSlice = createSlice({
         },
 
         restoreEmployee: (state, action) => {
-            state.data = state.data.map((employee) =>
-                employee.userId === action.payload ? { ...employee, isDelete: false } : employee,
-            );
+            state.data.data = state.data.data.filter((employee) => employee.userId !== action.payload);
         },
+
         toggleActiveEmployee: (state, action) => {
-            state.data = state.data.map((employee) =>
+            state.data.data = state.data.data.map((employee) =>
                 employee.userId === action.payload ? { ...employee, isActive: !employee.isActive } : employee,
             );
         },
@@ -186,15 +188,28 @@ const employeesSlice = createSlice({
     extraReducers: (builder) => {
         builder
             // fetch all
-            .addCase(fetchEmployeesAsync.pending, (state) => {
+            .addCase(fetchEmployeesAvailableAsync.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchEmployeesAsync.fulfilled, (state, action) => {
+            .addCase(fetchEmployeesAvailableAsync.fulfilled, (state, action) => {
                 state.data = action.payload; // Changed from list to data
                 state.loading = false;
             })
-            .addCase(fetchEmployeesAsync.rejected, (state, action) => {
+            .addCase(fetchEmployeesAvailableAsync.rejected, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
+            })
+            // fetch all deleted
+            .addCase(fetchEmployeesDeletedAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(fetchEmployeesDeletedAsync.fulfilled, (state, action) => {
+                state.data = action.payload; // Changed from list to data
+                state.loading = false;
+            })
+            .addCase(fetchEmployeesDeletedAsync.rejected, (state, action) => {
                 state.error = action.payload;
                 state.loading = false;
             })

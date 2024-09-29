@@ -2,21 +2,21 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Box, Button, Container, Typography, IconButton, Switch, Tooltip } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
 import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
-import TableCustom from '@/components/TableCustom';
+import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchEmployeesAsync, restoreEmployeeAsync, toggleActiveEmployeeAsync } from '@/redux/Employee/employeeSlice';
+import { fetchEmployeesDeletedAsync, fetchEmployeesAvailableAsync, restoreEmployeeAsync, toggleActiveEmployeeAsync } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 
 export default function EmployeeTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { loading, data, error, currentData } = useSelector((state) => state.employeeNew);
+
+    const { data } = useSelector((state) => state.employeeNew);
     const userLogged = useSelector((state) => state.userCurrent);
 
-    const [employees, setEmployees] = useState(data);
     const [showDeleted, setShowDeleted] = useState(false);
 
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
@@ -109,27 +109,6 @@ export default function EmployeeTable() {
         [showDeleted],
     );
 
-    // Lấy nhân viên dựa trên trạng thái của switch (showDeleted)
-    useMemo(() => {
-        if (showDeleted) {
-            dispatch(fetchEmployeesAsync(true));
-            return;
-        }
-        dispatch(fetchEmployeesAsync(false));
-    }, [showDeleted]);
-
-    //load dữ liệu từ data ra
-    useEffect(() => {
-        if (Array.isArray(data)) {
-            if (showDeleted) {
-                setEmployees(data.filter((row) => row.isDelete === true));
-            } else {
-                setEmployees(data.filter((row) => row.isDelete === false));
-            }
-        } else {
-            console.error('Dữ liệu nhân viên không hợp lệ');
-        }
-    }, [data]);
 
     const handleEdit = (row) => {
         navigate(`/employee/EmployeeDetail/${row.userId}`);
@@ -139,9 +118,8 @@ export default function EmployeeTable() {
         navigate('/employee/EmployeeDetail/create');
     };
 
-    const handleShowDeletedToggle = (event) => {
-        setShowDeleted(event.target.checked);
-    };
+
+
 
     const handleToggleActive = (userId) => {
         dispatch(toggleActiveEmployeeAsync(userId));
@@ -154,6 +132,13 @@ export default function EmployeeTable() {
         }
     };
 
+    const handleShowDeletedToggle = (event) => {
+        setShowDeleted(event.target.checked);
+
+    };
+
+
+
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
@@ -165,7 +150,7 @@ export default function EmployeeTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-                <TableCustom columns={columns} rows={employees} stt={true} id="userId" loading={loading} />
+                <TablePagination columns={columns} stt={true} id="userId" dispatchHandle={showDeleted ? fetchEmployeesDeletedAsync : fetchEmployeesAvailableAsync} sliceName='employeeNew' />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
                 <Box display="flex" alignItems="center">

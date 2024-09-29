@@ -151,9 +151,10 @@ const EmployeeDetails = () => {
 
     const handleDelete = () => {
         if (userId !== 'create') {
-            dispatch(removeEmployeeAsync(userId));
-            alert('Nhân viên đã được xóa');
-            navigate('/employee');
+            dispatch(removeEmployeeAsync(userId)).unwrap().then(() => {
+                alert('Nhân viên đã được xóa');
+                navigate('/employee');
+            })
         } else {
             console.log('Lỗi khi xóa nhân viên có userId: ', userId);
         }
