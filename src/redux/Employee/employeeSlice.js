@@ -22,6 +22,22 @@ export const fetchEmployeesAsync = createAsyncThunk(
     },
 );
 
+// export const fetchEmployeesAsync = createAsyncThunk(
+//     'employees/fetchEmployeesAsync',
+//     async ({ page, size, isDelete }, { rejectWithValue }) => {
+//         try {
+//             const response = await axiosSecure.get(
+//                 `/api/v2/user/${isDelete ? `getAll-deleted-users?page=${page}&size=${size}` 
+//                                          : `getAll-available-users?page=${page}&size=${size}`}`,
+//             );
+//             console.log(response.data.data);
+//             return response.data.data;
+//         } catch (error) {
+//             return rejectWithValue(extractErrorMessage(error));
+//         }
+//     },
+// );
+
 // fetch by id
 export const fetchEmployeeByIdAsync = createAsyncThunk(
     'employees/fetchEmployeeByIdAsync',
