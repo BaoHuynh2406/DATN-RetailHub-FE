@@ -12,7 +12,7 @@ const extractErrorMessage = (error) => {
 // Lấy tất cả sản phẩm chưa xóa
 export const fetchProductsAvailableAsync = createAsyncThunk(
     'products/fetchProductsAvailableAsync',
-    async ({ page, size}, { rejectWithValue }) => {
+    async ({ page, size }, { rejectWithValue }) => {
         try {
             const response = await axiosSecure.get('/api/v2/product/getAll-available-product', {
                 params: {
@@ -20,6 +20,7 @@ export const fetchProductsAvailableAsync = createAsyncThunk(
                     size: size,
                 },
             });
+
             return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
@@ -30,7 +31,7 @@ export const fetchProductsAvailableAsync = createAsyncThunk(
 // Lấy tất cả sản phẩm đã xóa
 export const fetchProductsDeletedAsync = createAsyncThunk(
     'products/fetchProductsDeletedAsync',
-    async ({ page, size}, { rejectWithValue }) => {
+    async ({ page, size }, { rejectWithValue }) => {
         try {
             const response = await axiosSecure.get('/api/v2/product/getAll-deleted-product', {
                 params: {
@@ -45,7 +46,6 @@ export const fetchProductsDeletedAsync = createAsyncThunk(
     },
 );
 
-
 // Lấy sản phẩm theo ID
 export const fetchProductByIdAsync = createAsyncThunk(
     'products/fetchProductByIdAsync',
@@ -58,7 +58,6 @@ export const fetchProductByIdAsync = createAsyncThunk(
         }
     },
 );
-
 
 // Thêm sản phẩm mới
 export const addProductAsync = createAsyncThunk(
@@ -124,12 +123,10 @@ export const restoreProductAsync = createAsyncThunk(
 const productSlice = createSlice({
     name: 'products',
     initialState: {
-        data: [], // Danh sách sản phẩm
-        availableProducts: [], // Sản phẩm chưa bị xóa
-        deletedProducts: [], // Sản phẩm đã bị xóa
-        currentData: null, // Dữ liệu của sản phẩm hiện tại
-        loading: false, // Trạng thái tải dữ liệu
-        error: null, // Lưu trữ lỗi nếu có
+        data: [],
+        currentData: null,
+        loading: false,
+        error: null,
     },
     reducers: {
         // Thêm sản phẩm vào danh sách
@@ -167,7 +164,7 @@ const productSlice = createSlice({
                 state.error = null;
             })
             .addCase(fetchProductsAvailableAsync.fulfilled, (state, action) => {
-                state.availableProducts = action.payload;
+                state.data = action.payload;
                 state.loading = false;
             })
             .addCase(fetchProductsAvailableAsync.rejected, (state, action) => {
@@ -180,7 +177,7 @@ const productSlice = createSlice({
                 state.error = null;
             })
             .addCase(fetchProductsDeletedAsync.fulfilled, (state, action) => {
-                state.deletedProducts = action.payload;
+                state.data = action.payload;
                 state.loading = false;
             })
             .addCase(fetchProductsDeletedAsync.rejected, (state, action) => {

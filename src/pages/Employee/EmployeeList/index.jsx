@@ -6,7 +6,12 @@ import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchEmployeesDeletedAsync, fetchEmployeesAvailableAsync, restoreEmployeeAsync, toggleActiveEmployeeAsync } from '@/redux/Employee/employeeSlice';
+import {
+    fetchEmployeesDeletedAsync,
+    fetchEmployeesAvailableAsync,
+    restoreEmployeeAsync,
+    toggleActiveEmployeeAsync,
+} from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
 
@@ -14,7 +19,6 @@ export default function EmployeeTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const { data } = useSelector((state) => state.employeeNew);
     const userLogged = useSelector((state) => state.userCurrent);
 
     const [showDeleted, setShowDeleted] = useState(false);
@@ -109,7 +113,6 @@ export default function EmployeeTable() {
         [showDeleted],
     );
 
-
     const handleEdit = (row) => {
         navigate(`/employee/EmployeeDetail/${row.userId}`);
     };
@@ -117,9 +120,6 @@ export default function EmployeeTable() {
     const handleAdd = () => {
         navigate('/employee/EmployeeDetail/create');
     };
-
-
-
 
     const handleToggleActive = (userId) => {
         dispatch(toggleActiveEmployeeAsync(userId));
@@ -134,10 +134,7 @@ export default function EmployeeTable() {
 
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
-
     };
-
-
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
@@ -150,7 +147,13 @@ export default function EmployeeTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-                <TablePagination columns={columns} stt={true} id="userId" dispatchHandle={showDeleted ? fetchEmployeesDeletedAsync : fetchEmployeesAvailableAsync} sliceName='employeeNew' />
+                <TablePagination
+                    columns={columns}
+                    stt={true}
+                    id="userId"
+                    dispatchHandle={showDeleted ? fetchEmployeesDeletedAsync : fetchEmployeesAvailableAsync}
+                    sliceName="employeeNew"
+                />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
                 <Box display="flex" alignItems="center">
