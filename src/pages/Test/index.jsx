@@ -1,77 +1,119 @@
-import * as React from 'react';
-import TablePagination from '@/components/TableCustom/TablePagination.jsx'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchEmployeesAsync, restoreEmployeeAsync, toggleActiveEmployeeAsync } from '@/redux/Employee/employeeSlice';
-import { fetchProductsAsync, fetchDeletedProductsAsync, updateProductAsync, removeProductAsync } from '@/redux/Product/ProductSlice';
-import { Box, Button, Container, Typography, IconButton, Switch, CircularProgress, Alert } from '@mui/material';
-import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon } from '@mui/icons-material';
+const apiKey = '8801172b6ab089326bcf3ed5b39601d7';
 
+async function uploadImgBB(file, fileName) {
+    const formData = new FormData();
+    formData.append('image', file);
+
+    try {
+        const response = await axios.post(`https://api.imgbb.com/1/upload?name=${fileName}&key=${apiKey}`, formData);
+
+        return response.data.data.url;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+async function fetchImage(fileName) {
+    try {
+        // Giả sử bạn muốn lấy hình ảnh dựa trên URL, hoặc bạn có thể thêm phần xử lý tùy ý ở đây
+        const response = await axios.get(`https://api.imgbb.com/1/upload?name=${fileName}&key=${apiKey}`);
+        return response.data.data.url;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
 
 export default function Test() {
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [imageUrl, setImageUrl] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [fileName, setFileName] = useState(''); // Lưu trữ tên file do người dùng nhập
+    const [fetchedImageUrl, setFetchedImageUrl] = useState(null); // Lưu trữ URL của hình ảnh được gọi
 
-    const dispatch = useDispatch();
+    const handleFileChange = (event) => {
+        setSelectedFile(event.target.files[0]);
+    };
 
-    const showDeleted = false;
+    const handleUpload = async () => {
+        if (selectedFile && fileName) {
+            setLoading(true);
+            const url = await uploadImgBB(selectedFile, fileName);
+            console.log(url);
 
-    const { loading, data, error, currentData } = useSelector((state) => state.employeeNew);
+            setLoading(false);
 
-    const columns =React.useMemo(() => [
-        { field: 'productId', headerName: 'Mã Sản phẩm', width: 150 },
-        {
-            field: 'image',
-            headerName: 'Hình',
-            width: 150,
-            renderCell: (params) => (
-                <img src={params.value} alt={params.row.img} style={{ width: '100%', height: 'auto' }} />
-            ),
-        },
-        {
-            field: 'category',
-            headerName: 'Loại',
-            width: 120,
-            renderCell: (params) => {
-                console.log(params.row);  // Log the entire row to verify the structure
-                return params.row.category?.category_name || 'Không có loại';
+            if (url) {
+                setImageUrl(url);
+            } else {
+                alert('Upload failed. Please try again.');
             }
-        },
-        {
-            field: 'tax',
-            headerName: 'Thuế',
-            width: 120,
-            renderCell: (params) => params.row.tax?.tax_name || 'Không có thuế'
-        },
-        { field: 'unit', headerName: 'Đơn vị tính', width: 100 },
-        { field: 'inventoryCount', headerName: 'Tồn kho', width: 120 },
-        { field: 'cost', headerName: 'Giá gốc', width: 120 },
-        { field: 'price', headerName: 'Giá bán', width: 120 },
-        { field: 'expiryDate', headerName: 'Ngày hết hạn', width: 150 },
-        {
-            field: 'actions',
-            headerName: 'Công cụ',
-            width: 150,
-            align: 'center',
-            renderCell: (params) => (
-                <Box display="flex" justifyContent="left" alignItems="center">
-                    <IconButton color="primary" onClick={() => handleEdit(params.row)}>
-                        <EditIcon />
-                    </IconButton>
-                </Box>
-            ),
-        },
-    ], [showDeleted]);
+        } else {
+            alert('Please select a file and enter a file name.');
+        }
+    };
 
+    const handleFetchImage = async () => {
+        if (fileName) {
+            setLoading(true);
+            const url = await fetchImage(fileName);
+            setLoading(false);
 
+            if (url) {
+                setFetchedImageUrl(url);
+            } else {
+                alert('No image found with this file name.');
+            }
+        } else {
+            alert('Please enter a file name.');
+        }
+    };
 
     return (
-        <div style={{ height: 400, width: '100%' }}>
-            <TablePagination
-                columns={columns}       
-                dispatchHandle={fetchProductsAsync}
-                sliceName="ProductSlice"
-                id="productId"                  
-                stt={true}              
+        <div style={{ textAlign: 'center' }}>
+            <h1>Upload or Fetch Image from ImgBB</h1>
+
+            {/* Upload section */}
+            <input
+                type="text"
+                placeholder="Enter file name"
+                value={fileName}
+                onChange={(e) => setFileName(e.target.value)}
             />
+            <input type="file" onChange={handleFileChange} />
+            <button onClick={handleUpload} disabled={loading}>
+                {loading ? 'Uploading...' : 'Upload'}
+            </button>
+
+            {imageUrl && (
+                <div>
+                    <h2>Uploaded Image:</h2>
+                    <img src={imageUrl} alt="Uploaded" style={{ maxWidth: '100%' }} />
+                </div>
+            )}
+
+            {/* Fetch section */}
+            <h2>Fetch Image by File Name</h2>
+            <input
+                type="text"
+                placeholder="Enter file name to fetch"
+                value={fileName}
+                onChange={(e) => setFileName(e.target.value)}
+            />
+            <button onClick={handleFetchImage} disabled={loading}>
+                {loading ? 'Fetching...' : 'Fetch Image'}
+            </button>
+
+            {fetchedImageUrl && (
+                <div>
+                    <h2>Fetched Image:</h2>
+                    <img src={fetchedImageUrl} alt="Fetched" style={{ maxWidth: '100%' }} />
+                </div>
+            )}
         </div>
     );
 }
