@@ -3,7 +3,7 @@ import { Box, Button, Container, Typography, IconButton, Switch, Tooltip } from 
 import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
 import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
 import TablePagination from '@/components/TableCustom/TablePagination';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -134,7 +134,17 @@ export default function EmployeeTable() {
 
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('showDeleted', event.target.checked);
+        setSearchParams(newParams);
     };
+
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    useEffect(() => {
+        const check = searchParams.get('showDeleted') === 'true';
+        setShowDeleted(check);
+    }, []);
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>

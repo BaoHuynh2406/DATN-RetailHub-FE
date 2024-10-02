@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import {
-    DataGrid,
-    GridToolbarQuickFilter,
-} from '@mui/x-data-grid';
+import { DataGrid, GridToolbarQuickFilter } from '@mui/x-data-grid';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { useSearchParams } from 'react-router-dom';
 
 function CustomToolbar({ onSearchChange }) {
     return (
@@ -59,11 +56,7 @@ function CustomPagination(props) {
                 page={paginationModel.page + 1}
                 count={pageCount}
                 onChange={handlePageChange}
-                renderItem={(item) => (
-                    <PaginationItem
-                        {...item}
-                    />
-                )}
+                renderItem={(item) => <PaginationItem {...item} />}
             />
         </div>
     );
@@ -71,14 +64,18 @@ function CustomPagination(props) {
 
 function TablePagination({ columns, dispatchHandle, sliceName, id = 'id', rowHeight = 60, stt = false }) {
     const dispatch = useDispatch();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const initialPage = parseInt(searchParams.get('page') || '1', 10);
+    const initialPageSize = parseInt(searchParams.get('pageSize') || '5', 10);
+    const initialSearchText = searchParams.get('searchInput') || '';
 
     const { loading, data, error, currentData } = useSelector((state) => state[sliceName]);
 
     const [rows, setRows] = useState(data);
 
     const [paginationModel, setPaginationModel] = React.useState({
-        page: 0,
-        pageSize: 5,
+        page: initialPage - 1,
+        pageSize: initialPageSize,
     });
 
     const [rowCount, setRowCount] = React.useState(0);
@@ -90,7 +87,7 @@ function TablePagination({ columns, dispatchHandle, sliceName, id = 'id', rowHei
         try {
             dispatch(dispatchHandle({ page: page + 1, size: pageSize }));
         } catch (error) {
-            console.error("Error fetching data: ", error);
+            console.error('Error fetching data: ', error);
         }
     }, [paginationModel, searchText, dispatchHandle]);
 
@@ -101,20 +98,31 @@ function TablePagination({ columns, dispatchHandle, sliceName, id = 'id', rowHei
     useEffect(() => {
         setRows(data.data || []);
         setRowCount(data.totalElements || 0);
-    }, [data])
+    }, [data]);
+
+    useEffect(() => {
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('page', paginationModel.page + 1);
+        newParams.set('pageSize', paginationModel.pageSize);
+        newParams.set('searchInput', searchText);
+        setSearchParams(newParams);
+    }, [paginationModel, searchText, setSearchParams]);
 
     const sttColumns = stt
         ? [
-            {
-                field: 'STT',
-                headerName: 'STT',
-                width: 70,
-                sortable: false,
-                disableColumnMenu: true,
-                resizable: false,
-                renderCell: (params) => (paginationModel.pageSize * paginationModel.page) + params.api.getAllRowIds().indexOf(params.id) + 1,
-            },
-        ]
+              {
+                  field: 'STT',
+                  headerName: 'STT',
+                  width: 70,
+                  sortable: false,
+                  disableColumnMenu: true,
+                  resizable: false,
+                  renderCell: (params) =>
+                      paginationModel.pageSize * paginationModel.page +
+                      params.api.getAllRowIds().indexOf(params.id) +
+                      1,
+              },
+          ]
         : [];
 
     const allColumns = [...sttColumns, ...columns];

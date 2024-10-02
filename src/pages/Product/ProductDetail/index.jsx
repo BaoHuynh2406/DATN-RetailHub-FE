@@ -61,10 +61,14 @@ const ProductDetails = () => {
             return;
         }
 
-        const foundProduct = data.find((prod) => prod.productId === productId);
-        if (foundProduct) {
-            setProduct(foundProduct);
-        } else {
+        try {
+            const foundProduct = data?.data.find((prod) => prod.productId == productId);
+            if (foundProduct) {
+                setProduct(foundProduct);
+                return;
+            }
+            navigate('/Product/ProductDetail/create');
+        } catch (error) {
             dispatch(fetchProductByIdAsync(productId));
         }
     }, [productId, data, dispatch]);
@@ -165,7 +169,7 @@ const ProductDetails = () => {
             reader.readAsDataURL(file);
         }
     };
-    const handleBack = () => navigate('/Product/ProductList');
+    const handleBack = () => navigate(-1);
 
     if (loading) {
         return (
@@ -203,7 +207,7 @@ const ProductDetails = () => {
                             </>
                         }
                         name="productId"
-                        value={product.productId}
+                        value={product.productId || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -221,7 +225,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Tên sản phẩm"
                         name="productName"
-                        value={product.productName}
+                        value={product.productName || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -237,7 +241,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Bar Code"
                         name="barcode"
-                        value={product.barcode}
+                        value={product.barcode || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -253,7 +257,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Đơn vị tính"
                         name="unit"
-                        value={product.unit}
+                        value={product.unit || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -270,7 +274,7 @@ const ProductDetails = () => {
                         label="Số tồn kho"
                         type="number"
                         name="inventoryCount"
-                        value={product.inventoryCount}
+                        value={product.inventoryCount || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -287,7 +291,7 @@ const ProductDetails = () => {
                         label="Ngày hết hạn"
                         type="date"
                         name="expiryDate"
-                        value={product.expiryDate}
+                        value={product.expiryDate || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -300,7 +304,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Giá nhập"
                         name="cost"
-                        value={product.cost}
+                        value={product.cost || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -316,7 +320,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Giá bán"
                         name="price"
-                        value={product.price}
+                        value={product.price || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -348,7 +352,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Vị trí"
                         name="location"
-                        value={product.location}
+                        value={product.location || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -380,7 +384,7 @@ const ProductDetails = () => {
                     <TextField
                         label="Mô tả"
                         name="productDescription"
-                        value={product.productDescription}
+                        value={product.productDescription || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"

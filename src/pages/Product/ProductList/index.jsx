@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Box, Button, Container, Typography, IconButton, Switch, CircularProgress, Alert } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon } from '@mui/icons-material';
 import TablePagination from '@/components/TableCustom/TablePagination';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchProductsAvailableAsync,
@@ -16,8 +16,7 @@ export default function ProductTable() {
     const dispatch = useDispatch();
 
     const [showDeleted, setShowDeleted] = useState(false);
-
-
+    const [searchParams, setSearchParams] = useSearchParams();
     const columns = useMemo(
         () => [
             { field: 'productId', headerName: 'Mã Sản phẩm', width: 150 },
@@ -32,14 +31,13 @@ export default function ProductTable() {
             {
                 field: 'productName',
                 headerName: 'Tên sản phẩm',
-                width: 120
+                width: 120,
             },
             {
                 field: 'category',
                 headerName: 'Loại',
                 width: 120,
                 renderCell: (params) => {
-                    console.log(params.row); // Log the entire row to verify the structure
                     return params.row.category?.categoryName || 'Không có loại';
                 },
             },
@@ -48,6 +46,18 @@ export default function ProductTable() {
             { field: 'cost', headerName: 'Giá gốc', width: 120 },
             { field: 'price', headerName: 'Giá bán', width: 120 },
             { field: 'expiryDate', headerName: 'Ngày hết hạn', width: 150 },
+            {
+                field: 'isActive',
+                headerName: 'Trạng thái',
+                width: 120,
+                renderCell: (params) => (
+                    <Switch
+                        checked={params.row.isActive}
+                        onChange={() => handleToggleActive(params.row)}
+                        color="secondary"
+                    />
+                ),
+            },
             {
                 field: 'actions',
                 headerName: 'Công cụ',
@@ -74,7 +84,17 @@ export default function ProductTable() {
     };
 
     const handleToggleActive = (row) => {
-        const updatedProduct = { ...row, isActive: !row.isActive };
+        
+        
+        const updatedProduct = {
+            ...row,
+            taxId: row.tax.taxId,
+            categoryId: row.category.categoryId,
+            isActive: !row.isActive,
+        };
+
+        console.log(updatedProduct);
+        
         dispatch(updateProductAsync(updatedProduct));
     };
 
@@ -84,9 +104,15 @@ export default function ProductTable() {
 
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('showDeleted', event.target.checked);
+        setSearchParams(newParams);
     };
 
-   
+    useEffect(() => {
+        const check = searchParams.get('showDeleted') === 'true';
+        setShowDeleted(check);
+    }, [])
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>

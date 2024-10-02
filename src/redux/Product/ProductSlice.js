@@ -78,11 +78,10 @@ export const addProductAsync = createAsyncThunk(
 export const removeProductAsync = createAsyncThunk(
     'products/removeProductAsync',
     async (productId, { dispatch, rejectWithValue }) => {
-        dispatch(removeProduct(productId)); // Cập nhật lạc quan
+        dispatch(removeProduct(productId)); 
         try {
             await axiosSecure.delete(`/api/product/delete/${productId}`);
         } catch (error) {
-            dispatch(restoreProduct(productId)); // Hoàn tác nếu có lỗi xảy ra
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -91,15 +90,12 @@ export const removeProductAsync = createAsyncThunk(
 // Cập nhật sản phẩm
 export const updateProductAsync = createAsyncThunk(
     'products/updateProductAsync',
-    async (product, { dispatch, getState, rejectWithValue }) => {
-        const currentProduct = getState().products.data.find((prod) => prod.productId === product.productId);
-        dispatch(updateProduct(product)); // Cập nhật lạc quan
-
+    async (product, { dispatch, rejectWithValue }) => {
+        dispatch(updateProduct(product)); 
         try {
             const response = await axiosSecure.put('/api/product/update', product);
             return response.data.data;
         } catch (error) {
-            dispatch(updateProduct(currentProduct)); // Hoàn tác nếu có lỗi xảy ra
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -109,11 +105,10 @@ export const updateProductAsync = createAsyncThunk(
 export const restoreProductAsync = createAsyncThunk(
     'products/restoreProductAsync',
     async (productId, { dispatch, rejectWithValue }) => {
-        dispatch(restoreProduct(productId)); // Cập nhật lạc quan
+        dispatch(removeProduct(productId)); 
         try {
             await axiosSecure.put(`/api/product/restore/${productId}`);
         } catch (error) {
-            dispatch(removeProduct(productId)); // Hoàn tác nếu có lỗi xảy ra
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -131,26 +126,23 @@ const productSlice = createSlice({
     reducers: {
         // Thêm sản phẩm vào danh sách
         addProduct: (state, action) => {
-            state.data.push(action.payload);
+            state.data.data.push(action.payload);
         },
         // Đánh dấu sản phẩm là đã xóa
         removeProduct: (state, action) => {
-            state.data = state.data.map((product) =>
-                product.productId === action.payload ? { ...product, status: false } : product,
-            );
+            if(state.data.data){
+                state.data.data = state.data.data.filter(product => product.productId != action.payload);
+            }
+            state.currentData = null;
         },
         // Cập nhật thông tin sản phẩm
         updateProduct: (state, action) => {
-            state.data = state.data.map((prod) =>
-                prod.productId === action.payload.productId ? { ...prod, ...action.payload } : prod,
+            state.data.data = state.data.data.map((prod) =>
+                prod.productId == action.payload.productId ? { ...prod, ...action.payload } : prod,
             );
+            state.currentData = action.payload;
         },
-        // Khôi phục sản phẩm đã bị đánh dấu xóa
-        restoreProduct: (state, action) => {
-            state.data = state.data.map((product) =>
-                product.productId === action.payload ? { ...product, status: true } : product,
-            );
-        },
+
         // Đặt thông báo lỗi
         setError: (state, action) => {
             state.error = action.payload;
