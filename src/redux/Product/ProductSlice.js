@@ -78,7 +78,7 @@ export const addProductAsync = createAsyncThunk(
 export const removeProductAsync = createAsyncThunk(
     'products/removeProductAsync',
     async (productId, { dispatch, rejectWithValue }) => {
-        dispatch(removeProduct(productId)); 
+        dispatch(removeProduct(productId));
         try {
             await axiosSecure.delete(`/api/product/delete/${productId}`);
         } catch (error) {
@@ -91,7 +91,7 @@ export const removeProductAsync = createAsyncThunk(
 export const updateProductAsync = createAsyncThunk(
     'products/updateProductAsync',
     async (product, { dispatch, rejectWithValue }) => {
-        dispatch(updateProduct(product)); 
+        dispatch(updateProduct(product));
         try {
             const response = await axiosSecure.put('/api/product/update', product);
             return response.data.data;
@@ -105,7 +105,7 @@ export const updateProductAsync = createAsyncThunk(
 export const restoreProductAsync = createAsyncThunk(
     'products/restoreProductAsync',
     async (productId, { dispatch, rejectWithValue }) => {
-        dispatch(removeProduct(productId)); 
+        dispatch(removeProduct(productId));
         try {
             await axiosSecure.put(`/api/product/restore/${productId}`);
         } catch (error) {
@@ -130,16 +130,18 @@ const productSlice = createSlice({
         },
         // Đánh dấu sản phẩm là đã xóa
         removeProduct: (state, action) => {
-            if(state.data.data){
-                state.data.data = state.data.data.filter(product => product.productId != action.payload);
+            if (state.data.data) {
+                state.data.data = state.data.data.filter((product) => product.productId != action.payload);
             }
             state.currentData = null;
         },
         // Cập nhật thông tin sản phẩm
         updateProduct: (state, action) => {
-            state.data.data = state.data.data.map((prod) =>
-                prod.productId == action.payload.productId ? { ...prod, ...action.payload } : prod,
-            );
+            if (state.data.data) {
+                state.data.data = state.data.data.map((prod) =>
+                    prod.productId == action.payload.productId ? { ...prod, ...action.payload } : prod,
+                );
+            }
             state.currentData = action.payload;
         },
 

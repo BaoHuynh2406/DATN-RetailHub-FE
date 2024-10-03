@@ -1,5 +1,15 @@
 import { useState, useEffect } from 'react';
-import { TextField, Button, Grid, Typography, Container, Box, InputAdornment, Skeleton } from '@mui/material';
+import {
+    TextField,
+    Button,
+    Grid,
+    Typography,
+    Container,
+    Box,
+    InputAdornment,
+    Skeleton,
+    CircularProgress,
+} from '@mui/material';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import BarcodeIcon from '@mui/icons-material/QrCode';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -22,15 +32,26 @@ import {
     updateProductAsync,
     addProductAsync,
 } from '@/redux/Product/ProductSlice';
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
+const notyf = new Notyf({
+    position: {
+        x: 'right',
+        y: 'top',
+    },
+    dismissible: true,
+});
 
 const ProductDetails = () => {
     const dispatch = useDispatch();
     const { data, currentData, loading, error } = useSelector((state) => state.ProductSlice);
+    const [isLoading, setIsLoading] = useState(false);
     // const categories = useSelector((state) => state.categories) || [];
     // const taxes = useSelector((state) => state.taxes) || [];
     const { productId } = useParams();
     const navigate = useNavigate();
-    const { ImageLoad, imageUrl, fetchedImageUrl, handleUpload, handleFetchImage } = useImgBB();
+    const { handleUpload } = useImgBB();
 
     const productNull = {
         productId: '',
@@ -63,23 +84,26 @@ const ProductDetails = () => {
             return;
         }
 
-        try {
-            const foundProduct = data?.data.find((prod) => prod.productId == productId);
-            if (foundProduct) {
-                setProduct(foundProduct);
-                return;
-            }
-            navigate('/Product/ProductDetail/create');
-        } catch (error) {
-            dispatch(fetchProductByIdAsync(productId));
+        if (!data.data) {
+            dispatch(fetchProductByIdAsync(productId))
+                .unwrap()
+                .then((result) => {
+                    setProduct(result);
+                    return;
+                })
+                .catch((error) => {
+                    console.error('Failed to fetch product: ', error);
+                    return;
+                });
+            return;
         }
+        const foundProduct = data?.data.find((prod) => prod.productId == productId);
+        if (foundProduct) {
+            setProduct(foundProduct);
+            return;
+        }
+        navigate('/Product/ProductDetail/create');
     }, [productId, data, dispatch]);
-
-    useEffect(() => {
-        if (currentData && productId !== 'create') {
-            setProduct(currentData);
-        }
-    }, [currentData, productId]);
 
     useEffect(() => {
         if (error) {
@@ -99,11 +123,11 @@ const ProductDetails = () => {
             dispatch(removeProductAsync(productId))
                 .unwrap()
                 .then(() => {
-                    alert('Sản phẩm đã được xóa');
+                    notyf.success('Đã xóa!');
                     navigate('/Product/ProductList');
                 })
                 .catch(() => {
-                    alert('Lỗi khi xóa sản phẩm.');
+                    notyf.error('Có lỗi khi xóa sản phẩm!');
                 });
         } else {
             console.log('Lỗi khi xóa sản phẩm với productId: ', productId);
@@ -115,43 +139,79 @@ const ProductDetails = () => {
             dispatch(restoreProductAsync(productId))
                 .unwrap()
                 .then(() => {
-                    alert('Sản phẩm đã được khôi phục');
+                    notyf.success('Khôi phục thành công!');
                     navigate('/Product/ProductList');
                 })
                 .catch(() => {
-                    alert('Lỗi khi khôi phục sản phẩm.');
+                    notyf.error('Lỗi!');
                 });
         } else {
             console.log('Lỗi khi khôi phục sản phẩm với productId: ', productId);
         }
     };
 
-    const handleSave = () => {
+    const handleSave = async () => {
+        setIsLoading(true);
         let data = product;
-        //bổ sung thêm trường role
+        // Bổ sung thêm trường role
         data = { ...data, categoryId: 1, taxId: 'THUE' };
 
+        // Nếu có file ảnh được chọn, tải ảnh lên trước khi lưu
+        if (selectedFile) {
+            try {
+                const url = await handleUploadImage(); // Đợi tải ảnh
+                data = { ...data, image: url }; // Bổ sung URL ảnh vào dữ liệu
+            } catch (error) {
+                alert('Lỗi tải ảnh lên.');
+                return; // Dừng quá trình nếu tải ảnh lỗi
+            }
+        }
+
+        // Sau khi đã có URL ảnh hoặc nếu không có ảnh thì tiếp tục lưu
         if (productId === 'create') {
             dispatch(addProductAsync(data))
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được thêm thành công!');
+                    setIsLoading(false);
+                    notyf.success('Thêm mới thành công!');
                     handleBack();
                 })
                 .catch(() => {
-                    alert('Lỗi: Sản phẩm đã tồn tại.');
+                    notyf.error('Không thể thêm!');
+                    setIsLoading(false);
                 });
         } else {
             dispatch(updateProductAsync(data))
                 .unwrap()
                 .then(() => {
-                    alert('Sản phẩm đã được cập nhật thành công!');
-                    handleBack();
+                    notyf.success('Cập nhật thành công!');
+                    setIsLoading(false);
                 })
                 .catch(() => {
-                    alert('Lỗi: Không thể cập nhật sản phẩm.');
+                    notyf.error('Không thể cập nhật!');
+                    setIsLoading(false);
                 });
         }
+    };
+
+    const handleUploadImage = async () => {
+        if (!selectedFile) throw new Error('No file selected');
+        if (!selectedFile.type.startsWith('image/')) {
+            alert('Chỉ chấp nhận file ảnh.');
+            throw new Error('Invalid file type');
+        }
+
+        const fileName =
+            'ProductImage-' +
+            selectedFile.name
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/\s+/g, '')
+                .toLowerCase();
+
+        const url = await handleUpload(selectedFile, fileName);
+        return url;
     };
 
     const handleReset = () => {
@@ -164,19 +224,16 @@ const ProductDetails = () => {
 
     const [selectedFile, setSelectedFile] = useState(null);
 
-    const handleFileChange = (event) => {
-        setSelectedFile(event.target.files[0]);
-    };
-
-    const handleUploadImage = async () => {
-        if (!selectedFile) return;
-        if (!selectedFile.type.startsWith('image/')) {
-            alert('Chỉ chấp nhận file ảnh.');
-            return;
+    const handleChoseImage = (e) => {
+        const file = e.target.files[0];
+        setSelectedFile(file);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setProduct({ ...product, image: reader.result });
+        };
+        if (file) {
+            reader.readAsDataURL(file);
         }
-        const url = await handleUpload(selectedFile);
-        setProduct({ ...product, image: url });
-        console.log(product);
     };
 
     const handleBack = () => navigate(-1);
@@ -193,7 +250,25 @@ const ProductDetails = () => {
     const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
     return (
-        <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh' }}>
+        <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh', position: 'relative' }}>
+            {isLoading && (
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        zIndex: 10,
+                    }}
+                >
+                    <CircularProgress />
+                </Box>
+            )}
             <Box
                 display="flex"
                 alignItems="center"
@@ -437,9 +512,9 @@ const ProductDetails = () => {
                         >
                             {product.image ? 'Tên ảnh: ' + product.image.split('/').pop() : 'Chưa có ảnh'}
                         </Typography>
-                        <Button  variant="contained" component="label" sx={{ marginTop: 2 }}>
+                        <Button variant="contained" component="label" sx={{ marginTop: 2 }}>
                             Chọn ảnh
-                            <input type="file" hidden onChange={handleFileChange} />
+                            <input type="file" hidden onChange={handleChoseImage} />
                         </Button>
                     </Box>
                 </Grid>

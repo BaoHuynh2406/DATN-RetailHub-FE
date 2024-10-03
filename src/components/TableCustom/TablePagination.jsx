@@ -45,7 +45,7 @@ function CustomPagination(props) {
                     },
                 }}
             >
-                {[5, 10, 20, 50, 100].map((size) => (
+                {[10, 20, 50, 100].map((size) => (
                     <MenuItem key={size} value={size}>
                         {size}
                     </MenuItem>
@@ -66,7 +66,7 @@ function TablePagination({ columns, dispatchHandle, sliceName, id = 'id', rowHei
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
     const initialPage = parseInt(searchParams.get('page') || '1', 10);
-    const initialPageSize = parseInt(searchParams.get('pageSize') || '5', 10);
+    const initialPageSize = parseInt(searchParams.get('pageSize') || '10', 10);
     const initialSearchText = searchParams.get('searchInput') || '';
 
     const { loading, data, error, currentData } = useSelector((state) => state[sliceName]);
