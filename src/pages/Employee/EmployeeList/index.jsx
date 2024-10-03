@@ -60,18 +60,20 @@ export default function EmployeeTable() {
                 field: 'image',
                 headerName: 'Ảnh',
                 width: 150,
-                renderCell: (params) => {
-                    const imageUrl = params.value || defaultImage;
-                    <img
-                        src={imageUrl}
-                        alt={params.row.fullName}
-                        style={{ width: '50%', height: 'auto', borderRadius: '50%' }}
-                        onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src = defaultImage;
-                        }}
-                    />;
-                },
+                renderCell: (params) =>
+                    params.value ? (
+                        <img
+                            src={params.value}
+                            alt={params.row.userId}
+                            style={{ width: '100%', height: 'auto' }}
+                        />
+                    ) : (
+                        <img
+                            src="https://via.placeholder.com/120x60?text=Image+Not+Found"
+                            alt={params.row.userId}
+                            style={{ width: '100%', height: 'auto' }}
+                        />
+                    ),
             },
             {
                 field: 'isActive',

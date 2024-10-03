@@ -150,35 +150,49 @@ const employeesSlice = createSlice({
     },
     reducers: {
         addEmployee: (state, action) => {
-            state.data.data.push(action.payload);
+            if (state.data.data) {
+                state.data.data.push(action.payload);
+            }
         },
         removeEmployee: (state, action) => {
-            state.data.data = state.data.data.filter((employee) => employee.userId !== action.payload);
+            if (state.data.data) {
+                state.data.data = state.data.data.filter((employee) => employee.userId !== action.payload);
+            }
+            state.currentData = null;
         },
         updateEmployee: (state, action) => {
-            state.data.data = state.data.data.map((emp) =>
-                emp.userId === action.payload.userId ? { ...emp, ...action.payload } : emp,
-            );
+            if (state.data.data) {
+                state.data.data = state.data.data.map((emp) =>
+                    emp.userId === action.payload.userId ? { ...emp, ...action.payload } : emp,
+                );
+            }
+            state.currentData = action.payload;
         },
         findEmployee: (state, action) => {
-            const employee = state.data.data.find((item) => item.userId == action.payload);
-            if (employee) {
-                state.currentData = employee;
-                state.error = null;
-            } else {
-                state.currentData = null;
-                state.error = `Employee with ID ${action.payload.userId} not found`;
+            if (state.data.data) {
+                const employee = state.data.data.find((item) => item.userId == action.payload);
+                if (employee) {
+                    state.currentData = employee;
+                    state.error = null;
+                } else {
+                    state.currentData = null;
+                    state.error = `Employee with ID ${action.payload} not found`;
+                }
             }
         },
 
         restoreEmployee: (state, action) => {
-            state.data.data = state.data.data.filter((employee) => employee.userId !== action.payload);
+            if (state.data.data) {
+                state.data.data = state.data.data.filter((employee) => employee.userId !== action.payload);
+            }
         },
 
         toggleActiveEmployee: (state, action) => {
-            state.data.data = state.data.data.map((employee) =>
-                employee.userId === action.payload ? { ...employee, isActive: !employee.isActive } : employee,
-            );
+            if (state.data.data) {
+                state.data.data = state.data.data.map((employee) =>
+                    employee.userId === action.payload ? { ...employee, isActive: !employee.isActive } : employee,
+                );
+            }
         },
 
         setError: (state, action) => {

@@ -24,9 +24,20 @@ export default function ProductTable() {
                 field: 'image',
                 headerName: 'Hình',
                 width: 150,
-                renderCell: (params) => (
-                    <img src={params.value} alt={params.row.productName} style={{ width: '100%', height: 'auto' }} />
-                ),
+                renderCell: (params) =>
+                    params.value ? (
+                        <img
+                            src={params.value}
+                            alt={params.row.productName}
+                            style={{ width: '100%', height: 'auto' }}
+                        />
+                    ) : (
+                        <img
+                            src="https://via.placeholder.com/120x60?text=Image+Not+Found"
+                            alt={params.row.productName}
+                            style={{ width: '100%', height: 'auto' }}
+                        />
+                    ),
             },
             {
                 field: 'productName',
@@ -84,8 +95,6 @@ export default function ProductTable() {
     };
 
     const handleToggleActive = (row) => {
-        
-        
         const updatedProduct = {
             ...row,
             taxId: row.tax.taxId,
@@ -94,7 +103,7 @@ export default function ProductTable() {
         };
 
         console.log(updatedProduct);
-        
+
         dispatch(updateProductAsync(updatedProduct));
     };
 
@@ -112,7 +121,7 @@ export default function ProductTable() {
     useEffect(() => {
         const check = searchParams.get('showDeleted') === 'true';
         setShowDeleted(check);
-    }, [])
+    }, []);
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>

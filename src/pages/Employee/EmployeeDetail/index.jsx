@@ -39,6 +39,18 @@ import {
     toggleActiveEmployeeAsync,
 } from '@/redux/Employee/employeeSlice';
 
+import { useImgBB } from '@/hooks/useImgBB';
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
+const notyf = new Notyf({
+    position: {
+        x: 'right',
+        y: 'top',
+    },
+    dismissible: true,
+});
+
 const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
 const EmployeeDetails = () => {
@@ -46,10 +58,11 @@ const EmployeeDetails = () => {
     const dispatch = useDispatch();
     const { data, currentData, loading, error } = useSelector((state) => state.employeeNew);
     const userLogged = useSelector((state) => state.userCurrent);
-
+    const { handleUpload } = useImgBB();
     const [isLoading, setIsLoading] = useState(false);
     let { userId } = useParams();
     const navigate = useNavigate();
+    const [selectedFile, setSelectedFile] = useState(null);
     const employeeNull = {
         userId: '',
         fullName: '',
@@ -105,7 +118,7 @@ const EmployeeDetails = () => {
 
     useEffect(() => {
         if (error) {
-            alert(error);
+            notyf.error(error);
             console.log(error);
             if (error === 'User not found') {
                 navigate('/employee/EmployeeDetail/create');
@@ -131,30 +144,81 @@ const EmployeeDetails = () => {
         }
     };
 
+    const handleChoseImage = (e) => {
+        const file = e.target.files[0];
+        setSelectedFile(file);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setEmployee({ ...employee, image: reader.result });
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
+    const handleUploadImage = async () => {
+        if (!selectedFile) throw new Error('No file selected');
+        if (!selectedFile.type.startsWith('image/')) {
+            notyf.error('Chỉ nhận file ảnh');
+            throw new Error('Invalid file type');
+        }
+
+        const fileName =
+            'UserImage-' +
+            selectedFile.name
+                .substring(0, selectedFile.name.lastIndexOf('.'))
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/\s+/g, '')
+                .toLowerCase();
+
+        const url = await handleUpload(selectedFile, fileName);
+        return url;
+    };
+
     const handleSave = async () => {
+        setIsLoading(true);
         let data = employee;
         //bổ sung thêm trường role
         data = { ...data, roleId: 'ADMIN' };
+
+        // Nếu có file ảnh được chọn, tải ảnh lên trước khi lưu
+        if (selectedFile) {
+            try {
+                const url = await handleUploadImage(); // Đợi tải ảnh
+                data = { ...data, image: url }; // Bổ sung URL ảnh vào dữ liệu
+            } catch (error) {
+                notyf.error('Lỗi khi tải ảnh lên');
+                return; // Dừng quá trình nếu tải ảnh lỗi
+            }
+        }
+
         try {
             if (userId === 'create') {
                 await dispatch(addEmployeeAsync(data)).unwrap();
-                alert('Thêm mới thành công');
+                notyf.success('Đã thêm!');
+                setIsLoading(false);
                 navigate(0);
                 return;
             }
             await dispatch(updateEmployeeAsync(data)).unwrap();
-            alert('Đã cập nhật');
+            setIsLoading(false);
+            notyf.success('Đã cập nhật!');
         } catch (error) {
-            alert('Lưu thất bại');
+            notyf.error('Lỗi trong quá trình lưu!');
+            setIsLoading(false);
+            console.log(error);
         }
     };
 
     const handleDelete = () => {
         if (userId !== 'create') {
-            dispatch(removeEmployeeAsync(userId)).unwrap().then(() => {
-                alert('Nhân viên đã được xóa');
-                navigate('/employee');
-            })
+            dispatch(removeEmployeeAsync(userId))
+                .unwrap()
+                .then(() => {
+                    alert('Nhân viên đã được xóa');
+                    navigate('/employee');
+                });
         } else {
             console.log('Lỗi khi xóa nhân viên có userId: ', userId);
         }
@@ -421,7 +485,7 @@ const EmployeeDetails = () => {
                                 placement="top"
                             >
                                 <Switch
-                                    disabled={employee.userId === userLogged.data.userId || false}
+                                    disabled={employee?.userId === userLogged?.data?.userId || false}
                                     checked={employee.isActive}
                                     onChange={handleToggleActive}
                                     color="secondary"
@@ -436,7 +500,7 @@ const EmployeeDetails = () => {
                             <img
                                 src={employee.image || defaultImage}
                                 alt="Employee"
-                                style={{ width: '100%', borderRadius: '8px' }}
+                                style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px' }}
                             />
                             <Typography
                                 variant="caption"
@@ -453,8 +517,8 @@ const EmployeeDetails = () => {
                                 {employee.image ? 'Tên ảnh: ' + employee.image.split('/').pop() : 'Chưa có ảnh'}
                             </Typography>
                             <Button variant="contained" component="label" sx={{ marginTop: 2 }}>
-                                Tải ảnh lên
-                                <input type="file" hidden onChange={handleImageUpload} />
+                                Chọn ảnh
+                                <input type="file" hidden onChange={handleChoseImage} />
                             </Button>
                         </Box>
                     </Grid>

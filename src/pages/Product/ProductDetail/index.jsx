@@ -52,6 +52,7 @@ const ProductDetails = () => {
     const { productId } = useParams();
     const navigate = useNavigate();
     const { handleUpload } = useImgBB();
+    const [selectedFile, setSelectedFile] = useState(null);
 
     const productNull = {
         productId: '',
@@ -107,7 +108,7 @@ const ProductDetails = () => {
 
     useEffect(() => {
         if (error) {
-            alert(error);
+            notyf.error('Lỗi khi tải sản phẩm: ', error.message);
             dispatch(setError(null));
             navigate('/Product/ProductList');
         }
@@ -195,16 +196,29 @@ const ProductDetails = () => {
         }
     };
 
+    const handleChoseImage = (e) => {
+        const file = e.target.files[0];
+        setSelectedFile(file);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setProduct({ ...product, image: reader.result });
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
     const handleUploadImage = async () => {
         if (!selectedFile) throw new Error('No file selected');
         if (!selectedFile.type.startsWith('image/')) {
-            alert('Chỉ chấp nhận file ảnh.');
+            notyf.error('Chỉ nhận file ảnh');
             throw new Error('Invalid file type');
         }
 
         const fileName =
             'ProductImage-' +
             selectedFile.name
+                .substring(0, selectedFile.name.lastIndexOf('.'))
                 .normalize('NFD')
                 .replace(/[\u0300-\u036f]/g, '')
                 .replace(/\s+/g, '')
@@ -219,20 +233,6 @@ const ProductDetails = () => {
             setProduct(productNull);
         } else {
             setProduct(currentData);
-        }
-    };
-
-    const [selectedFile, setSelectedFile] = useState(null);
-
-    const handleChoseImage = (e) => {
-        const file = e.target.files[0];
-        setSelectedFile(file);
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setProduct({ ...product, image: reader.result });
-        };
-        if (file) {
-            reader.readAsDataURL(file);
         }
     };
 
