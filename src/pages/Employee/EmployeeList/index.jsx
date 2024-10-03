@@ -21,6 +21,8 @@ export default function EmployeeTable() {
 
     const userLogged = useSelector((state) => state.userCurrent);
 
+    const defaultImage = 'https://via.placeholder.com/100x100?text=No+Image';
+
     const [showDeleted, setShowDeleted] = useState(false);
 
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
@@ -58,13 +60,18 @@ export default function EmployeeTable() {
                 field: 'image',
                 headerName: 'Ảnh',
                 width: 150,
-                renderCell: (params) => (
+                renderCell: (params) => {
+                    const imageUrl = params.value || defaultImage;
                     <img
-                        src={params.value}
+                        src={imageUrl}
                         alt={params.row.fullName}
                         style={{ width: '50%', height: 'auto', borderRadius: '50%' }}
-                    />
-                ),
+                        onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = defaultImage;
+                        }}
+                    />;
+                },
             },
             {
                 field: 'isActive',

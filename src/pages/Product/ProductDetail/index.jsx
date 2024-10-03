@@ -13,6 +13,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import TypeSpecimenIcon from '@mui/icons-material/TypeSpecimen';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useImgBB } from '@/hooks/useImgBB';
 import {
     fetchProductByIdAsync,
     setError,
@@ -29,6 +30,7 @@ const ProductDetails = () => {
     // const taxes = useSelector((state) => state.taxes) || [];
     const { productId } = useParams();
     const navigate = useNavigate();
+    const { ImageLoad, imageUrl, fetchedImageUrl, handleUpload, handleFetchImage } = useImgBB();
 
     const productNull = {
         productId: '',
@@ -50,7 +52,7 @@ const ProductDetails = () => {
         expiryDate: '',
         isActive: true,
         isDelete: false,
-        image: null, // Add an image property to store the uploaded image
+        image: null,
     };
 
     const [product, setProduct] = useState(productNull);
@@ -134,7 +136,7 @@ const ProductDetails = () => {
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được thêm thành công!');
-                    navigate('/Product/ProductList');
+                    handleBack();
                 })
                 .catch(() => {
                     alert('Lỗi: Sản phẩm đã tồn tại.');
@@ -144,7 +146,7 @@ const ProductDetails = () => {
                 .unwrap()
                 .then(() => {
                     alert('Sản phẩm đã được cập nhật thành công!');
-                    navigate('/Product/ProductList');
+                    handleBack();
                 })
                 .catch(() => {
                     alert('Lỗi: Không thể cập nhật sản phẩm.');
@@ -159,16 +161,24 @@ const ProductDetails = () => {
             setProduct(currentData);
         }
     };
-    const handleImageUpload = (e) => {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setProduct({ ...product, image: reader.result });
-        };
-        if (file) {
-            reader.readAsDataURL(file);
-        }
+
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (event) => {
+        setSelectedFile(event.target.files[0]);
     };
+
+    const handleUploadImage = async () => {
+        if (!selectedFile) return;
+        if (!selectedFile.type.startsWith('image/')) {
+            alert('Chỉ chấp nhận file ảnh.');
+            return;
+        }
+        const url = await handleUpload(selectedFile);
+        setProduct({ ...product, image: url });
+        console.log(product);
+    };
+
     const handleBack = () => navigate(-1);
 
     if (loading) {
@@ -212,7 +222,7 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         InputProps={{
-                            readOnly: true, // Chỉ đọc nếu không phải trang tạo mới
+                            readOnly: true,
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <StoreIcon />
@@ -427,9 +437,9 @@ const ProductDetails = () => {
                         >
                             {product.image ? 'Tên ảnh: ' + product.image.split('/').pop() : 'Chưa có ảnh'}
                         </Typography>
-                        <Button variant="contained" component="label" sx={{ marginTop: 2 }}>
-                            Tải ảnh lên
-                            <input type="file" hidden onChange={handleImageUpload} />
+                        <Button  variant="contained" component="label" sx={{ marginTop: 2 }}>
+                            Chọn ảnh
+                            <input type="file" hidden onChange={handleFileChange} />
                         </Button>
                     </Box>
                 </Grid>
