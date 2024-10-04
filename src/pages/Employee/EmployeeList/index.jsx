@@ -13,15 +13,23 @@ import {
     toggleActiveEmployeeAsync,
 } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
-import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
+
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
+const notyf = new Notyf({
+    position: {
+        x: 'right',
+        y: 'top',
+    },
+    dismissible: true,
+});
 
 export default function EmployeeTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const userLogged = useSelector((state) => state.userCurrent);
-
-    const defaultImage = 'https://via.placeholder.com/100x100?text=No+Image';
 
     const [showDeleted, setShowDeleted] = useState(false);
 
@@ -33,7 +41,9 @@ export default function EmployeeTable() {
                 headerName: 'Mã nhân viên',
                 width: 150,
                 renderCell: (params) => (
-                    <span className={params.row.userId === userLogged.data.userId ? 'text-orange-400 font-bold' : ''}>
+                    <span
+                        className={params.row?.userId === userLogged?.data?.userId ? 'text-orange-400 font-bold' : ''}
+                    >
                         {params.value}
                     </span>
                 ),
@@ -43,7 +53,9 @@ export default function EmployeeTable() {
                 headerName: 'Họ và tên',
                 width: 210,
                 renderCell: (params) => (
-                    <span className={params.row.userId === userLogged.data.userId ? 'text-orange-400 font-bold' : ''}>
+                    <span
+                        className={params.row?.userId === userLogged?.data?.userId ? 'text-orange-400 font-bold' : ''}
+                    >
                         {params.value}
                     </span>
                 ),
@@ -62,15 +74,11 @@ export default function EmployeeTable() {
                 width: 150,
                 renderCell: (params) =>
                     params.value ? (
-                        <img
-                            src={params.value}
-                            alt={params.row.userId}
-                            style={{ width: '100%', height: 'auto' }}
-                        />
+                        <img src={params.value} alt={params.row?.userId} style={{ width: '100%', height: 'auto' }} />
                     ) : (
                         <img
                             src="https://via.placeholder.com/120x60?text=Image+Not+Found"
-                            alt={params.row.userId}
+                            alt={params.row?.userId}
                             style={{ width: '100%', height: 'auto' }}
                         />
                     ),
@@ -81,9 +89,9 @@ export default function EmployeeTable() {
                 width: 120,
                 renderCell: (params) => (
                     <Switch
-                        disabled={params.row.userId === userLogged.data.userId || false || showDeleted}
-                        checked={params.row.isActive}
-                        onChange={() => handleToggleActive(params.row.userId)}
+                        disabled={params.row?.userId === userLogged?.data?.userId || false || showDeleted}
+                        checked={params.row?.isActive}
+                        onChange={() => handleToggleActive(params.row?.userId)}
                         color="secondary"
                     />
                 ),
@@ -137,7 +145,7 @@ export default function EmployeeTable() {
     const handleRestore = (row) => {
         if (row.userId) {
             dispatch(restoreEmployeeAsync(row.userId));
-            alert('Nhân viên đã được khôi phục');
+            notyf.success('Khôi phục tài khoản thành công!');
         }
     };
 
@@ -153,7 +161,7 @@ export default function EmployeeTable() {
     useEffect(() => {
         const check = searchParams.get('showDeleted') === 'true';
         setShowDeleted(check);
-    }, []);
+    }, [showDeleted, dispatch]);
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>

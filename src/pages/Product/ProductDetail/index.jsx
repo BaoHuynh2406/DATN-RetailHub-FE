@@ -163,8 +163,8 @@ const ProductDetails = () => {
                 const url = await handleUploadImage(); // Đợi tải ảnh
                 data = { ...data, image: url }; // Bổ sung URL ảnh vào dữ liệu
             } catch (error) {
-                alert('Lỗi tải ảnh lên.');
-                return; // Dừng quá trình nếu tải ảnh lỗi
+                notyf.error('Không thể tải ảnh lên');
+                return; 
             }
         }
 
@@ -173,7 +173,6 @@ const ProductDetails = () => {
             dispatch(addProductAsync(data))
                 .unwrap()
                 .then(() => {
-                    alert('Sản phẩm đã được thêm thành công!');
                     setIsLoading(false);
                     notyf.success('Thêm mới thành công!');
                     handleBack();

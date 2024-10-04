@@ -216,7 +216,7 @@ const EmployeeDetails = () => {
             dispatch(removeEmployeeAsync(userId))
                 .unwrap()
                 .then(() => {
-                    alert('Nhân viên đã được xóa');
+                    notyf.success('Đã xóa!');
                     navigate('/employee');
                 });
         } else {
@@ -227,7 +227,7 @@ const EmployeeDetails = () => {
     const handleRestore = () => {
         if (userId !== 'create') {
             dispatch(restoreEmployeeAsync(userId));
-            alert('Nhân viên đã được khôi phục');
+            notyf.success('Đã khôi phục!');
             navigate('/employee');
         } else {
             console.log('Lỗi khi khôi phục nhân viên có userId: ', userId);
@@ -238,7 +238,7 @@ const EmployeeDetails = () => {
         setEmployee(employeeNull);
     };
 
-    const handleBack = () => navigate('/employee');
+    const handleBack = () => navigate(-1);
 
     const handleToggleActive = () => {
         setEmployee({ ...employee, isActive: !employee.isActive });
@@ -551,7 +551,7 @@ const EmployeeDetails = () => {
                             </Button>
                             {!employee.isDelete ? (
                                 <Button
-                                    disabled={employee.userId === userLogged.data.userId || false}
+                                    disabled={employee.userId === userLogged?.data?.userId || false}
                                     variant="outlined"
                                     color="error"
                                     onClick={handleDelete}
