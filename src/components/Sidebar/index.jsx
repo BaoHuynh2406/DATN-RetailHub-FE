@@ -10,6 +10,9 @@ import List from '@mui/material/List';
 import SidebarItemCollapse from './SidebarItemCollapse';
 import SidebarItem from './SidebarItem';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 import { sidebarItems } from './ListMenu.jsx';
 
@@ -34,6 +37,9 @@ const closedMixin = (theme) => ({
     width: `calc(${theme.spacing(7)} + 1px)`,
     [theme.breakpoints.up('sm')]: {
         width: `calc(${theme.spacing(8)} + 1px)`,
+    },
+    [theme.breakpoints.down('sm')]: {
+        width: 0,
     },
     backgroundColor: theme.palette.primary.main,
 });
@@ -71,7 +77,6 @@ const Sidebar = () => {
     const handleSidebarToggle = () => {
         setOpen(!open);
         if (!open) {
-            // Collapse all child items when closing sidebar
             setOpenStates({});
         }
     };
@@ -83,10 +88,35 @@ const Sidebar = () => {
     React.useEffect(() => {
         localStorage.setItem('sidebarOpen', JSON.stringify(open));
     }, [open]);
-    
+
     return (
         <Box sx={{ display: 'flex' }}>
-            <Drawer variant="permanent" open={open}>
+            <IconButton
+                onClick={handleSidebarToggle}
+                sx={{
+                    display: { xs: 'inline-flex', sm: 'none' },
+                    position: 'fixed',
+                    top: '8px',
+                    left: { xs: open ? `${drawerWidth - 10}px` : '8px' },
+                    backgroundColor: 'var(--secondary-color)',
+                    color: 'white',
+                    zIndex: 1300,
+                    transition: 'left 0.3s ease',
+                    '&:hover': {
+                        backgroundColor: '#556EE660',
+                    },
+                }}
+            >
+                {open ? <MenuOpenIcon /> : <MenuRoundedIcon />}
+            </IconButton>
+
+            <Drawer
+                sx={{
+                    position: { xs: 'absolute', sm: 'relative' },
+                }}
+                variant="permanent"
+                open={open}
+            >
                 <DrawerControl style={{ height: '56px' }}>
                     <span
                         className="font-bold text-2xl me-6 text-slate-50"
@@ -102,6 +132,7 @@ const Sidebar = () => {
                             '&:hover': {
                                 backgroundColor: '#556EE660',
                             },
+                            display: { xs: 'none', sm: 'inline-flex' },
                         }}
                     >
                         {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
