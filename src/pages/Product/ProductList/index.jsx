@@ -21,25 +21,6 @@ export default function ProductTable() {
         () => [
             { field: 'productId', headerName: 'Mã Sản phẩm', width: 150 },
             {
-                field: 'image',
-                headerName: 'Hình',
-                width: 150,
-                renderCell: (params) =>
-                    params.value ? (
-                        <img
-                            src={params.value}
-                            alt={params.row.productName}
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    ) : (
-                        <img
-                            src="https://via.placeholder.com/120x60?text=Image+Not+Found"
-                            alt={params.row.productName}
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    ),
-            },
-            {
                 field: 'productName',
                 headerName: 'Tên sản phẩm',
                 width: 120,

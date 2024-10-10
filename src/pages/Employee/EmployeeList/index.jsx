@@ -69,21 +69,6 @@ export default function EmployeeTable() {
             },
             { field: 'startDate', headerName: 'Ngày vào làm', width: 180 },
             {
-                field: 'image',
-                headerName: 'Ảnh',
-                width: 150,
-                renderCell: (params) =>
-                    params.value ? (
-                        <img src={params.value} alt={params.row?.userId} style={{ width: '100%', height: 'auto' }} />
-                    ) : (
-                        <img
-                            src="https://via.placeholder.com/120x60?text=Image+Not+Found"
-                            alt={params.row?.userId}
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    ),
-            },
-            {
                 field: 'isActive',
                 headerName: 'Trạng thái',
                 width: 120,
