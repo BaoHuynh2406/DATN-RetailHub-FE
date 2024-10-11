@@ -82,13 +82,13 @@ export const sidebarItems = [
     },
     {
         sidebarProps: { displayText: 'Bán hàng', icon: <ShoppingCartRoundedIcon /> },
-        path: '/u',
-        state: 'sell',
+        path: '/sales',
+        state: 'sales',
         child: [
             {
                 sidebarProps: { displayText: 'Đơn hàng', icon: <ReceiptLongRoundedIcon /> },
-                path: '/u/invoice',
-                state: 'sell/invoice',
+                path: '/sales/invoice',
+                state: 'sales/invoice',
             },
             {
                 sidebarProps: { displayText: 'Tạo mã voucher', icon: <CardGiftcardRoundedIcon /> },
