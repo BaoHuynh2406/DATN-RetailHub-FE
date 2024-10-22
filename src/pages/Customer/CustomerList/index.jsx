@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Box, Button, Container, Typography, IconButton, Switch, CircularProgress, Alert } from '@mui/material';
+import { Box, Button, Container, Typography, IconButton, Switch, CircularProgress, Alert, Pagination } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon } from '@mui/icons-material';
 import TableCustom from '@/components/TableCustom';
 import { useNavigate } from 'react-router-dom';
@@ -14,13 +14,15 @@ import {
 export default function CustomerTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { loading, data, error, deletedCustomers } = useSelector((state) => state.customer);
+    const { loading, data, error, deletedCustomers, totalCustomers } = useSelector((state) => state.customer);
 
     const [showDeleted, setShowDeleted] = useState(false);
+    const [page, setPage] = useState(1);
+    const [pageSize, setPageSize] = useState(10); // You can set a default page size
 
     useEffect(() => {
-        dispatch(fetchCustomersAsync());
-    }, [dispatch]);
+        dispatch(fetchCustomersAsync({ page, size: pageSize }));
+    }, [dispatch, page, pageSize]);
 
     useEffect(() => {
         if (showDeleted) {
@@ -32,7 +34,7 @@ export default function CustomerTable() {
         if (Array.isArray(data)) {
             return data.filter((row) => (showDeleted ? row.isDelete === true : row.isDelete === false));
         }
-        console.error('Invalid customer data');
+        console.error('Invalid customer data', data);
         return [];
     }, [showDeleted, data]);
 
@@ -87,6 +89,10 @@ export default function CustomerTable() {
         setShowDeleted(event.target.checked);
     };
 
+    const handlePageChange = (event, value) => {
+        setPage(value);
+    };
+
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
@@ -105,6 +111,8 @@ export default function CustomerTable() {
                     id="customerId"
                     loading={loading}
                 />
+                {loading && <CircularProgress />}
+                {error && <Alert severity="error">{error}</Alert>}
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
                 <Box display="flex" alignItems="center">
@@ -113,9 +121,17 @@ export default function CustomerTable() {
                     </Typography>
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
-                <Button variant="contained" startIcon={<ExplicitIcon />} sx={{ fontSize: 10 }}>
-                    Xuất Excel
+                <Button variant="contained" startIcon={<ExplicitIcon />} onClick={() => handleDelete(customerId)}>
+                    Xóa
                 </Button>
+            </Box>
+            <Box display="flex" justifyContent="center" marginTop={2}>
+                <Pagination
+                    count={Math.ceil(totalCustomers / pageSize)} // Calculate total pages
+                    page={page}
+                    onChange={handlePageChange}
+                    color="primary"
+                />
             </Box>
         </Container>
     );
