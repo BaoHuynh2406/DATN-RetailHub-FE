@@ -1,238 +1,257 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
-  Container, Typography, Tabs, Tab, Box, Paper, TextField, Button, Dialog, DialogActions,
-  DialogContent, DialogTitle, List, ListItem, ListItemText, IconButton
+    Container,
+    Typography,
+    Tabs,
+    Tab,
+    Box,
+    Paper,
+    TextField,
+    Button,
+    IconButton,
+    List,
+    ListItem,
+    ListItemText,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import {
+    fetchSettingsfillTaxAsync,
+    fetchSettingsfillCategoryAsync,
+    addCategoryAsync,
+    updateCategoryAsync,
+    deleteCategoryAsync,
+    addTaxAsync,
+    updateTaxAsync,
+    deleteTaxAsync,
+    clearError,
+} from '../../redux/Settings/SettingSlice';
 
-// Tab Panel Component
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          {children}
-        </Box>
-      )}
-    </div>
-  );
+    const { children, value, index, ...other } = props;
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+        </div>
+    );
 }
 
-// Main Settings Component
 export default function Settings() {
-  const [tabValue, setTabValue] = useState(0);
+    const dispatch = useDispatch();
+    const categories = useSelector((state) => state.settings.categories);
+    const taxes = useSelector((state) => state.settings.taxes);
+    const loading = useSelector((state) => state.settings.loading);
+    const error = useSelector((state) => state.settings.error);
 
-  // Dữ liệu hiện tại
-  const [categories, setCategories] = useState([{ name: "Đồ uống" }, { name: "Thực phẩm" }]);
-  const [taxes, setTaxes] = useState([{ name: "VAT", rate: 10 }]);
-  const [paymentMethods, setPaymentMethods] = useState([{ name: "Tiền mặt" }, { name: "Thẻ tín dụng" }]);
+    const [tabValue, setTabValue] = useState(0);
+    const [openModal, setOpenModal] = useState(false);
+    const [newItem, setNewItem] = useState('');
+    const [newTaxRate, setNewTaxRate] = useState(''); // Trạng thái thuế
+    const [modalType, setModalType] = useState('');
+    const [isEditMode, setIsEditMode] = useState(false);
+    const [editIndex, setEditIndex] = useState(null);
+    const [validationError, setValidationError] = useState('');
 
-  // State để quản lý modal và dữ liệu
-  const [openModal, setOpenModal] = useState(false);
-  const [newItem, setNewItem] = useState('');
-  const [newTax, setNewTax] = useState({ name: '', rate: '' });
-  const [modalType, setModalType] = useState(''); // Loại modal hiện tại: 'category', 'tax', 'payment'
-  const [isEditMode, setIsEditMode] = useState(false);
-  const [editIndex, setEditIndex] = useState(null);
+    // Trạng thái cho mã thuế
+    const [taxId, setTaxId] = useState(''); // Mã thuế
 
-  // Xử lý thay đổi Tab
-  const handleTabChange = (event, newValue) => {
-    setTabValue(newValue);
-  };
+    useEffect(() => {
+        dispatch(fetchSettingsfillCategoryAsync());
+        dispatch(fetchSettingsfillTaxAsync());
+    }, [dispatch]);
 
-  // Mở modal
-  const handleOpenModal = (type, item = null, index = null) => {
-    setModalType(type);
-    setIsEditMode(!!item); // Kiểm tra có đang chỉnh sửa không
-    setEditIndex(index);
+    const handleOpenModal = (type, item = null, index = null) => {
+        setModalType(type);
+        setIsEditMode(!!item);
+        setEditIndex(index);
 
-    if (item) {
-      if (type === 'tax') {
-        setNewTax(item);
-      } else {
-        setNewItem(item.name);
-      }
-    }
-    setOpenModal(true);
-  };
+        if (item) {
+            if (type === 'category') {
+                setNewItem(item.categoryName);
+            } else if (type === 'tax') {
+                setTaxId(item.taxId); // Gán taxId
+                setNewItem(item.taxName);
+                setNewTaxRate(item.taxRate);
+            }
+        } else {
+            // Reset trạng thái khi mở modal cho thêm mới
+            setTaxId(''); // Reset taxId
+        }
+        setOpenModal(true);
+    };
 
-  // Đóng modal
-  const handleCloseModal = () => {
-    setOpenModal(false);
-    setNewItem('');
-    setNewTax({ name: '', rate: '' });
-    setIsEditMode(false);
-    setEditIndex(null);
-  };
+    const handleCloseModal = () => {
+        setOpenModal(false);
+        setNewItem('');
+        setNewTaxRate(''); // Reset thuế
+        setTaxId(''); // Reset taxId
+        setIsEditMode(false);
+        setEditIndex(null);
+        setValidationError('');
+        dispatch(clearError());
+    };
 
-  // Thêm hoặc cập nhật dữ liệu mới
-  const handleAddOrUpdate = () => {
-    if (modalType === 'category') {
-      if (isEditMode && editIndex !== null) {
-        const updatedCategories = [...categories];
-        updatedCategories[editIndex] = { name: newItem };
-        setCategories(updatedCategories);
-      } else {
-        setCategories([...categories, { name: newItem }]);
-      }
-    } else if (modalType === 'tax') {
-      if (isEditMode && editIndex !== null) {
-        const updatedTaxes = [...taxes];
-        updatedTaxes[editIndex] = newTax;
-        setTaxes(updatedTaxes);
-      } else {
-        setTaxes([...taxes, newTax]);
-      }
-    } else if (modalType === 'payment') {
-      if (isEditMode && editIndex !== null) {
-        const updatedPayments = [...paymentMethods];
-        updatedPayments[editIndex] = { name: newItem };
-        setPaymentMethods(updatedPayments);
-      } else {
-        setPaymentMethods([...paymentMethods, { name: newItem }]);
-      }
-    }
+    const handleAddOrUpdate = async () => {
+        if (!newItem.trim()) {
+            setValidationError(modalType === 'category' ? 'Tên loại hàng không được để trống.' : 'Tên thuế không được để trống.');
+            return;
+        }
 
-    handleCloseModal();
-  };
+        if (modalType === 'category') {
+            if (isEditMode && editIndex !== null) {
+                const updatedCategories = {
+                    categoryId: categories[editIndex].categoryId,
+                    categoryName: newItem,
+                    isDelete: false,
+                };
+                await dispatch(updateCategoryAsync({ categoryId: updatedCategories.categoryId, updatedCategory: updatedCategories }));
+            } else {
+                await dispatch(addCategoryAsync({ categoryName: newItem }));
+            }
+        } else if (modalType === 'tax') {
+            if (!newTaxRate || isNaN(newTaxRate)) {
+                setValidationError('Thuế suất phải là một số hợp lệ.');
+                return;
+            }
 
-  // Xóa dữ liệu
-  const handleDelete = (type, index) => {
-    if (type === 'category') {
-      const updatedCategories = categories.filter((_, i) => i !== index);
-      setCategories(updatedCategories);
-    } else if (type === 'tax') {
-      const updatedTaxes = taxes.filter((_, i) => i !== index);
-      setTaxes(updatedTaxes);
-    } else if (type === 'payment') {
-      const updatedPayments = paymentMethods.filter((_, i) => i !== index);
-      setPaymentMethods(updatedPayments);
-    }
-  };
+            if (isEditMode && editIndex !== null) {
+                const updatedTaxes = {
+                    taxId: taxId, // Sử dụng taxId
+                    taxName: newItem,
+                    taxRate: parseFloat(newTaxRate),
+                };
+                await dispatch(updateTaxAsync({ taxId: updatedTaxes.taxId, updatedTax: updatedTaxes }));
+            } else {
+                // Thêm mới thuế
+                await dispatch(addTaxAsync({ taxId: taxId, taxName: newItem, taxRate: parseFloat(newTaxRate) }));
+            }
+        }
+        handleCloseModal();
+    };
 
-  return (
-    <Container maxWidth="md" sx={{ mt: 4 }}>
-      <Typography variant="h4" gutterBottom>
-        Cài đặt hệ thống
-      </Typography>
-      <Paper elevation={3} sx={{ p: 2 }}>
-        <Tabs value={tabValue} onChange={handleTabChange} centered>
-          <Tab label="Loại hàng" />
-          <Tab label="Thuế" />
-          <Tab label="Phương thức thanh toán" />
-        </Tabs>
+    const handleDelete = async (type, id) => {
+        if (type === 'category') {
+            await dispatch(deleteCategoryAsync(id));
+        } else if (type === 'tax') {
+            await dispatch(deleteTaxAsync(id));
+        }
+    };
 
-        {/* Loại hàng */}
-        <TabPanel value={tabValue} index={0}>
-          <Typography variant="h6">Danh sách loại hàng</Typography>
-          <List>
-            {categories.map((category, index) => (
-              <ListItem key={index}>
-                <ListItemText primary={category.name} />
-                <IconButton onClick={() => handleOpenModal('category', category, index)}>
-                  <EditIcon />
-                </IconButton>
-                <IconButton onClick={() => handleDelete('category', index)}>
-                  <DeleteIcon />
-                </IconButton>
-              </ListItem>
-            ))}
-          </List>
-          <Button variant="contained" color="primary" onClick={() => handleOpenModal('category')}>
-            Thêm loại hàng
-          </Button>
-        </TabPanel>
+    return (
+        <Container maxWidth="md" sx={{ mt: 4 }}>
+            <Typography variant="h4" gutterBottom>
+                Cài đặt hệ thống
+            </Typography>
+            {loading && <Typography variant="body1">Đang tải dữ liệu...</Typography>}
+            {error && (
+                <Typography variant="body1" color="error">
+                    {error}
+                </Typography>
+            )}
+            <Paper elevation={3} sx={{ p: 2 }}>
+                <Tabs value={tabValue} onChange={(event, newValue) => setTabValue(newValue)} centered>
+                    <Tab label="Loại hàng" />
+                    <Tab label="Thuế" />
+                </Tabs>
 
-        {/* Thuế */}
-        <TabPanel value={tabValue} index={1}>
-          <Typography variant="h6">Danh sách thuế</Typography>
-          <List>
-            {taxes.map((tax, index) => (
-              <ListItem key={index}>
-                <ListItemText primary={`${tax.name} - ${tax.rate}%`} />
-                <IconButton onClick={() => handleOpenModal('tax', tax, index)}>
-                  <EditIcon />
-                </IconButton>
-                <IconButton onClick={() => handleDelete('tax', index)}>
-                  <DeleteIcon />
-                </IconButton>
-              </ListItem>
-            ))}
-          </List>
-          <Button variant="contained" color="primary" onClick={() => handleOpenModal('tax')}>
-            Thêm thuế
-          </Button>
-        </TabPanel>
+                {/* Loại hàng */}
+                <TabPanel value={tabValue} index={0}>
+                    <Typography variant="h6">Danh sách loại hàng</Typography>
+                    <List>
+                        {categories.map((category, index) => (
+                            <ListItem key={category.categoryId}>
+                                <ListItemText primary={category.categoryName} />
+                                <IconButton onClick={() => handleOpenModal('category', category, index)}>
+                                    <EditIcon />
+                                </IconButton>
+                                <IconButton onClick={() => handleDelete('category', category.categoryId)}>
+                                    <DeleteIcon />
+                                </IconButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                    <Button variant="contained" color="primary" onClick={() => handleOpenModal('category')}>
+                        Thêm loại hàng
+                    </Button>
+                </TabPanel>
 
-        {/* Phương thức thanh toán */}
-        <TabPanel value={tabValue} index={2}>
-          <Typography variant="h6">Danh sách phương thức thanh toán</Typography>
-          <List>
-            {paymentMethods.map((method, index) => (
-              <ListItem key={index}>
-                <ListItemText primary={method.name} />
-                <IconButton onClick={() => handleOpenModal('payment', method, index)}>
-                  <EditIcon />
-                </IconButton>
-                <IconButton onClick={() => handleDelete('payment', index)}>
-                  <DeleteIcon />
-                </IconButton>
-              </ListItem>
-            ))}
-          </List>
-          <Button variant="contained" color="primary" onClick={() => handleOpenModal('payment')}>
-            Thêm phương thức thanh toán
-          </Button>
-        </TabPanel>
-      </Paper>
+                {/* Thuế */}
+                <TabPanel value={tabValue} index={1}>
+                    <Typography variant="h6">Danh sách thuế</Typography>
+                    <List>
+                        {taxes.map((tax, index) => (
+                            <ListItem key={tax.taxId}>
+                                <ListItemText primary={`${tax.taxId}  - ${tax.taxName} - ${tax.taxRate}%`} />
+                                <IconButton onClick={() => handleOpenModal('tax', tax, index)}>
+                                    <EditIcon />
+                                </IconButton>
+                                <IconButton onClick={() => handleDelete('tax', tax.taxId)}>
+                                    <DeleteIcon />
+                                </IconButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                    <Button variant="contained" color="primary" onClick={() => handleOpenModal('tax')}>
+                        Thêm thuế
+                    </Button>
+                </TabPanel>
+            </Paper>
 
-      {/* Modal thêm mới */}
-      <Dialog open={openModal} onClose={handleCloseModal}>
-        <DialogTitle>{isEditMode ? 'Chỉnh sửa' : 'Thêm mới'} {modalType === 'category' ? 'loại hàng' : modalType === 'tax' ? 'thuế' : 'phương thức thanh toán'}</DialogTitle>
-        <DialogContent>
-          {modalType === 'category' || modalType === 'payment' ? (
-            <TextField
-              fullWidth
-              label={modalType === 'category' ? 'Tên loại hàng' : 'Tên phương thức thanh toán'}
-              value={newItem}
-              onChange={(e) => setNewItem(e.target.value)}
-              variant="outlined"
-              sx={{ mt: 2 }}
-            />
-          ) : (
-            <>
-              <TextField
-                fullWidth
-                label="Tên thuế"
-                value={newTax.name}
-                onChange={(e) => setNewTax({ ...newTax, name: e.target.value })}
-                variant="outlined"
-                sx={{ mt: 2 }}
-              />
-              <TextField
-                fullWidth
-                label="Phần trăm thuế (%)"
-                value={newTax.rate}
-                onChange={(e) => setNewTax({ ...newTax, rate: e.target.value })}
-                variant="outlined"
-                sx={{ mt: 2 }}
-              />
-            </>
-          )}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseModal} color="secondary">Hủy</Button>
-          <Button onClick={handleAddOrUpdate} color="primary">{isEditMode ? 'Cập nhật' : 'Thêm'}</Button>
-        </DialogActions>
-      </Dialog>
-    </Container>
-  );
+            {/* Dialog thêm hoặc sửa */}
+            <Dialog open={openModal} onClose={handleCloseModal}>
+                <DialogTitle>{isEditMode ? (modalType === 'category' ? 'Sửa loại hàng' : 'Sửa thuế') : (modalType === 'category' ? 'Thêm loại hàng' : 'Thêm thuế')}</DialogTitle>
+                <DialogContent>
+                    <TextField
+                        label={modalType === 'category' ? 'Tên loại hàng' : 'Tên thuế'}
+                        fullWidth
+                        value={newItem}
+                        onChange={(e) => setNewItem(e.target.value)}
+                        error={!!validationError}
+                        helperText={validationError}
+                    />
+                    {modalType === 'tax' && (
+                        <>
+                            <TextField
+                                label="Mã thuế" // Trường nhập mã thuế
+                                fullWidth
+                                value={taxId} // Sử dụng taxId
+                                onChange={(e) => setTaxId(e.target.value)}
+                                error={!!validationError}
+                                helperText={validationError}
+                                sx={{ mt: 2 }}
+                            />
+                            <TextField
+                                label="Thuế suất (%)"
+                                fullWidth
+                                value={newTaxRate}
+                                onChange={(e) => setNewTaxRate(e.target.value)}
+                                error={!!validationError}
+                                helperText={validationError}
+                                sx={{ mt: 2 }}
+                            />
+                        </>
+                    )}
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseModal} color="secondary">
+                        Hủy
+                    </Button>
+                    <Button onClick={handleAddOrUpdate} color="primary">
+                        {isEditMode ? 'Cập nhật' : 'Thêm'}
+                    </Button>
+                </DialogActions>
+            </Dialog>
+        </Container>
+    );
 }
