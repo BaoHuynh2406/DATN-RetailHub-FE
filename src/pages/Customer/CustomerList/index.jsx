@@ -103,7 +103,7 @@ export default function CustomerTable() {
                     Thêm mới
                 </Button>
             </Box>
-            <Box sx={{ height: 500, overflow: 'auto' }}>
+            <Box sx={{ height: 500, overflow: 'auto', textAlign:'center'}}>
                 <TableCustom
                     columns={columns}
                     rows={showDeleted ? deletedCustomers : customers}
@@ -122,7 +122,7 @@ export default function CustomerTable() {
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
                 <Button variant="contained" startIcon={<ExplicitIcon />} onClick={() => handleDelete(customerId)}>
-                    Xóa
+                    Excel
                 </Button>
             </Box>
             <Box display="flex" justifyContent="center" marginTop={2}>
