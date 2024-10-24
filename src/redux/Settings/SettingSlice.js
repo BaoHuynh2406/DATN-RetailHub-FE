@@ -27,8 +27,8 @@ export const addCategoryAsync = createAsyncThunk(
 // Update a category
 export const updateCategoryAsync = createAsyncThunk(
     'settings/updateCategoryAsync',
-    async ({ categoryId, updatedCategory }) => {
-        const response = await axiosSecure.put(`/api/category/update/${categoryId}`, updatedCategory);
+    async ({ updatedCategory }) => {
+        const response = await axiosSecure.put(`/api/category/update`, updatedCategory);
         return response.data; 
     }
 );
@@ -55,16 +55,22 @@ export const fetchSettingsfillTaxAsync = createAsyncThunk(
 export const addTaxAsync = createAsyncThunk(
     'settings/addTaxAsync',
     async (newTax) => {
-        const response = await axiosSecure.post('/api/tax/create', newTax);
+        const taxWithDefault = {
+            ...newTax,
+            isDelete: false, // Thiết lập trạng thái mặc định cho isActive
+        };
+
+        const response = await axiosSecure.post('/api/tax/create', taxWithDefault);
         return response.data; 
     }
 );
 
+
 // Update a tax
 export const updateTaxAsync = createAsyncThunk(
     'settings/updateTaxAsync',
-    async ({ taxId, updatedTax }) => {
-        const response = await axiosSecure.put(`/api/tax/update/${taxId}`, updatedTax);
+    async ({ updatedTax }) => {
+        const response = await axiosSecure.put(`/api/tax/update`, updatedTax);
         return response.data; 
     }
 );

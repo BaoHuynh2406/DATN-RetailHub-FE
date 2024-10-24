@@ -107,7 +107,7 @@ export default function Settings() {
             setValidationError(modalType === 'category' ? 'Tên loại hàng không được để trống.' : 'Tên thuế không được để trống.');
             return;
         }
-
+    
         if (modalType === 'category') {
             if (isEditMode && editIndex !== null) {
                 const updatedCategories = {
@@ -124,21 +124,24 @@ export default function Settings() {
                 setValidationError('Thuế suất phải là một số hợp lệ.');
                 return;
             }
-
+    
+            const updatedTaxes = {
+                taxId: taxId, 
+                taxName: newItem,
+                taxRate: parseFloat(newTaxRate),
+                isDelete: false, 
+            };
+    
             if (isEditMode && editIndex !== null) {
-                const updatedTaxes = {
-                    taxId: taxId, // Sử dụng taxId
-                    taxName: newItem,
-                    taxRate: parseFloat(newTaxRate),
-                };
                 await dispatch(updateTaxAsync({ taxId: updatedTaxes.taxId, updatedTax: updatedTaxes }));
             } else {
-                // Thêm mới thuế
-                await dispatch(addTaxAsync({ taxId: taxId, taxName: newItem, taxRate: parseFloat(newTaxRate) }));
+                // Thêm mới thuế với trạng thái mặc định
+                await dispatch(addTaxAsync({ taxId: updatedTaxes.taxId, taxName: newItem, taxRate: parseFloat(newTaxRate), isActive: false }));
             }
         }
         handleCloseModal();
     };
+    
 
     const handleDelete = async (type, id) => {
         if (type === 'category') {
@@ -192,7 +195,7 @@ export default function Settings() {
                     <List>
                         {taxes.map((tax, index) => (
                             <ListItem key={tax.taxId}>
-                                <ListItemText primary={`${tax.taxId}  - ${tax.taxName} - ${tax.taxRate}%`} />
+                                <ListItemText primary={`${tax.taxId} - ${tax.taxName} - ${tax.taxRate}%`} />
                                 <IconButton onClick={() => handleOpenModal('tax', tax, index)}>
                                     <EditIcon />
                                 </IconButton>
