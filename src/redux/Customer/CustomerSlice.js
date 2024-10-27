@@ -124,7 +124,7 @@ export const fetchCustomersPaginationAsync = createAsyncThunk(
     'customers/fetchCustomersPaginationAsync',
     async ({ page, size }, { rejectWithValue }) => {
         try {
-            const response = await axiosSecure.get(`/api/v2/customer/getAll?page=${page}&size=${size}`);
+            const response = await axiosSecure.get(`/api/v2/customer/getAll?page=${2}&size=${4}`);
             return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
@@ -137,7 +137,7 @@ export const fetchDeletedCustomersPaginationAsync = createAsyncThunk(
     'customers/fetchDeletedCustomersPaginationAsync',
     async ({ page, size }, { rejectWithValue }) => {
         try {
-            const response = await axiosSecure.get(`/api/v2/customer/deleted?page=${page}&size=${size}`);
+            const response = await axiosSecure.get(`/api/v2/customer/deleted?page=${2}&size=${4}`);
             return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
@@ -183,21 +183,20 @@ const customersSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchCustomersAsync.pending, (state) => {
+           // Xử lý khôi phục khách hàng trong extraReducers
+            .addCase(restoreCustomerAsync.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchCustomersAsync.fulfilled, (state, action) => {
-                state.data = action.payload;
+            .addCase(restoreCustomerAsync.fulfilled, (state, action) => {
+                state.data = state.data.map((customer) =>
+                    customer.customerId === action.payload.customerId ? { ...customer, isDelete: false } : customer
+                );
                 state.loading = false;
             })
-            .addCase(fetchCustomersAsync.rejected, (state, action) => {
+            .addCase(restoreCustomerAsync.rejected, (state, action) => {
                 state.error = action.payload;
                 state.loading = false;
-            })
-            .addCase(fetchCustomerByIdAsync.pending, (state) => {
-                state.loading = true;
-                state.error = null;
             })
             .addCase(fetchCustomerByIdAsync.fulfilled, (state, action) => {
                 state.currentData = action.payload;
