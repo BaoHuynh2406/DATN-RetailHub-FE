@@ -125,7 +125,7 @@ export default function CustomerTable() {
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
                 <Button variant="contained" startIcon={<ExplicitIcon />} onClick={() => handleDelete(customerId)}>
-                    Xóa
+                    Excel
                 </Button>
             </Box>
             <Box display="flex" justifyContent="center" marginTop={2}>
