@@ -1,43 +1,23 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Box, Button, Container, Typography, IconButton, Switch, CircularProgress, Alert, Pagination } from '@mui/material';
+import { Box, Button, Container, Typography, IconButton, Switch } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon } from '@mui/icons-material';
-import TableCustom from '@/components/TableCustom';
+import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-    fetchCustomersPaginationAsync,
-    updateCustomerAsync,
-    removeCustomerAsync,
-    fetchDeletedCustomersPaginationAsync,
-    
-} from '@/redux/Customer/customerSlice';
+import { fetchAllDeletedCustomersAsync, fetchCustomersAsync } from '@/redux/Customer/customerSlice';
 
 export default function CustomerTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { loading, data, error, deletedCustomers, totalCustomers } = useSelector((state) => state.customer);
-
-    const [showDeleted, setShowDeleted] = useState(false);
-    const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState(10);
+    const { data } = useSelector((state) => state.customer);
 
     useEffect(() => {
-        if (showDeleted) {
-            console.log('Fetching deleted customers...');
-            dispatch(fetchDeletedCustomersPaginationAsync({ page, size: pageSize }));
-        } else {
-            console.log('Fetching active customers...');
-            dispatch(fetchCustomersPaginationAsync({ page, size: pageSize }));
-        }
-    }, [dispatch, page, pageSize, showDeleted]);
-    
-    const customers = useMemo(() => {
-        if (Array.isArray(data)) {
-            return data.filter((row) => (showDeleted ? row.isDelete === true : row.isDelete === false));
-        }
-        console.error('Invalid customer data', data);
-        return [];
-    }, [showDeleted, data]);    
+        console.log(
+            'Customer data:',data
+        );
+    }, [data]);
+
+    const [showDeleted, setShowDeleted] = useState(false);
 
     const columns = useMemo(
         () => [
@@ -69,17 +49,14 @@ export default function CustomerTable() {
         [showDeleted],
     );
 
+   
+
     const handleEdit = (row) => {
         navigate(`/customer/CustomerDetail/${row.customerId}`);
     };
 
     const handleAdd = () => {
         navigate('/customer/CustomerDetail/create');
-    };
-
-    const handleToggleActive = (row) => {
-        const updatedCustomer = { ...row, isActive: !row.isActive };
-        dispatch(updateCustomerAsync(updatedCustomer));
     };
 
     const handleDelete = (customerId) => {
@@ -89,12 +66,6 @@ export default function CustomerTable() {
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
     };
-
-    const handlePageChange = (event, value) => {
-        setPage(value);
-    };
-
-    const totalPages = Math.ceil(totalCustomers / pageSize);
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
@@ -107,15 +78,13 @@ export default function CustomerTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-                <TableCustom
+                <TablePagination
                     columns={columns}
-                    rows={showDeleted ? deletedCustomers : customers}
                     stt={true}
                     id="customerId"
-                    loading={loading}
+                    dispatchHandle={showDeleted ? fetchAllDeletedCustomersAsync : fetchCustomersAsync}
+                    sliceName="customer"
                 />
-                {loading && <CircularProgress />}
-                {error && <Alert severity="error">{error}</Alert>}
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
                 <Box display="flex" alignItems="center">
@@ -127,14 +96,6 @@ export default function CustomerTable() {
                 <Button variant="contained" startIcon={<ExplicitIcon />} onClick={() => handleDelete(customerId)}>
                     Excel
                 </Button>
-            </Box>
-            <Box display="flex" justifyContent="center" marginTop={2}>
-                <Pagination
-                    count={totalPages} 
-                    page={page}
-                    onChange={handlePageChange}
-                    color="primary"
-                />
             </Box>
         </Container>
     );
