@@ -86,11 +86,11 @@ const EyeComponent = () => {
             <SubText>Oh no! Chúng tôi đã gặp một chút sự cố.</SubText>
             <span
                 onClick={() => {
-                    navigate(-1);
+                    navigate('/login');
                 }}
                 className="cursor-pointer"
             >
-                Quay lại
+                Thoát
             </span>
         </Container>
     );
