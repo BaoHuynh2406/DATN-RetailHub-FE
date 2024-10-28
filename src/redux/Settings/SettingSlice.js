@@ -2,87 +2,62 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { axiosSecure } from '../../config/axiosInstance';
 
 // Fetch categories
-export const fetchSettingsfillCategoryAsync = createAsyncThunk(
-    'settings/fetchSettingsfillCategoryAsync',
-    async () => {
-        const response = await axiosSecure.get('/api/category/getAllActive');
-        return response.data.data;
-    }
-);
+export const fetchSettingsfillCategoryAsync = createAsyncThunk('settings/fetchSettingsfillCategoryAsync', async () => {
+    const response = await axiosSecure.get('/api/category/getAllActive');
+    return response.data.data;
+});
 
 // Add a category
-export const addCategoryAsync = createAsyncThunk(
-    'settings/addCategoryAsync',
-    async (newCategory) => {
-        const categoryWithDefault = {
-            ...newCategory,
-            isDelete: false, // Gán giá trị mặc định cho isDelete
-        };
+export const addCategoryAsync = createAsyncThunk('settings/addCategoryAsync', async (newCategory) => {
+    const categoryWithDefault = {
+        ...newCategory,
+        isDelete: false, 
+    };
 
-        const response = await axiosSecure.post('/api/category/create', categoryWithDefault);
-        return response.data; 
-    }
-);
+    const response = await axiosSecure.post('/api/category/create', categoryWithDefault);
+    return response.data;
+});
 
 // Update a category
-export const updateCategoryAsync = createAsyncThunk(
-    'settings/updateCategoryAsync',
-    async ({ updatedCategory }) => {
-        const response = await axiosSecure.put(`/api/category/update`, updatedCategory);
-        return response.data; 
-    }
-);
+export const updateCategoryAsync = createAsyncThunk('settings/updateCategoryAsync', async ({ updatedCategory }) => {
+    const response = await axiosSecure.put(`/api/category/update`, updatedCategory);
+    return response.data;
+});
 
 // Delete a category
-export const deleteCategoryAsync = createAsyncThunk(
-    'settings/deleteCategoryAsync',
-    async (categoryId) => {
-        await axiosSecure.delete(`/api/category/delete/${categoryId}`);
-        return categoryId; // Trả về ID đã xóa
-    }
-);
+export const deleteCategoryAsync = createAsyncThunk('settings/deleteCategoryAsync', async (categoryId) => {
+    await axiosSecure.delete(`/api/category/delete/${categoryId}`);
+    return categoryId; // Trả về ID đã xóa
+});
 
 // Fetch taxes
-export const fetchSettingsfillTaxAsync = createAsyncThunk(
-    'settings/fetchSettingsfillTaxAsync',
-    async () => {
-        const response = await axiosSecure.get('/api/tax/getAllActive');
-        return response.data.data;
-    }
-);
+export const fetchSettingsfillTaxAsync = createAsyncThunk('settings/fetchSettingsfillTaxAsync', async () => {
+    const response = await axiosSecure.get('/api/tax/getAllActive');
+    return response.data.data;
+});
 
 // Add a tax
-export const addTaxAsync = createAsyncThunk(
-    'settings/addTaxAsync',
-    async (newTax) => {
-        const taxWithDefault = {
-            ...newTax,
-            isDelete: false, // Thiết lập trạng thái mặc định cho isActive
-        };
+export const addTaxAsync = createAsyncThunk('settings/addTaxAsync', async (newTax) => {
+    const taxWithDefault = {
+        ...newTax,
+        isDelete: false,
+    };
 
-        const response = await axiosSecure.post('/api/tax/create', taxWithDefault);
-        return response.data; 
-    }
-);
-
+    const response = await axiosSecure.post('/api/tax/create', taxWithDefault);
+    return response.data;
+});
 
 // Update a tax
-export const updateTaxAsync = createAsyncThunk(
-    'settings/updateTaxAsync',
-    async ({ updatedTax }) => {
-        const response = await axiosSecure.put(`/api/tax/update`, updatedTax);
-        return response.data; 
-    }
-);
+export const updateTaxAsync = createAsyncThunk('settings/updateTaxAsync', async ({ updatedTax }) => {
+    const response = await axiosSecure.put(`/api/tax/update`, updatedTax);
+    return response.data;
+});
 
 // Delete a tax
-export const deleteTaxAsync = createAsyncThunk(
-    'settings/deleteTaxAsync',
-    async (taxId) => {
-        await axiosSecure.delete(`/api/tax/delete/${taxId}`);
-        return taxId; // Trả về ID đã xóa
-    }
-);
+export const deleteTaxAsync = createAsyncThunk('settings/deleteTaxAsync', async (taxId) => {
+    await axiosSecure.delete(`/api/tax/delete/${taxId}`);
+    return taxId; // Trả về ID đã xóa
+});
 
 const settingsSlice = createSlice({
     name: 'settings',
@@ -122,7 +97,7 @@ const settingsSlice = createSlice({
             })
             .addCase(updateCategoryAsync.fulfilled, (state, action) => {
                 state.loading = false;
-                const index = state.categories.findIndex(cat => cat.categoryId === action.payload.categoryId);
+                const index = state.categories.findIndex((cat) => cat.categoryId === action.payload.categoryId);
                 if (index !== -1) {
                     state.categories[index] = action.payload; // Cập nhật category
                 }
@@ -132,7 +107,7 @@ const settingsSlice = createSlice({
                 state.error = action.error.message; // Xử lý lỗi
             })
             .addCase(deleteCategoryAsync.fulfilled, (state, action) => {
-                state.categories = state.categories.filter(cat => cat.categoryId !== action.payload); // Xóa category
+                state.categories = state.categories.filter((cat) => cat.categoryId !== action.payload); // Xóa category
             })
 
             // Fetch taxes
@@ -160,7 +135,7 @@ const settingsSlice = createSlice({
             // Update tax
             .addCase(updateTaxAsync.fulfilled, (state, action) => {
                 state.loading = false;
-                const index = state.taxes.findIndex(tax => tax.taxId === action.payload.taxId);
+                const index = state.taxes.findIndex((tax) => tax.taxId === action.payload.taxId);
                 if (index !== -1) {
                     state.taxes[index] = action.payload; // Cập nhật thuế
                 }
@@ -171,7 +146,7 @@ const settingsSlice = createSlice({
             })
             // Delete tax
             .addCase(deleteTaxAsync.fulfilled, (state, action) => {
-                state.taxes = state.taxes.filter(tax => tax.taxId !== action.payload); // Xóa thuế
+                state.taxes = state.taxes.filter((tax) => tax.taxId !== action.payload); // Xóa thuế
             });
     },
 });

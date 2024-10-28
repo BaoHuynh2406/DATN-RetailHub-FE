@@ -87,27 +87,43 @@ export default function Settings() {
         } else {
             newData.taxId = ''; // Reset taxId
         }
-        setModalData(prev => ({ ...prev, ...newData }));
+        setModalData((prev) => ({ ...prev, ...newData }));
         setOpenModal(true);
     };
 
     const handleCloseModal = () => {
         setOpenModal(false);
-        setModalData({ newItem: '', newTaxRate: '', taxId: '', modalType: '', isEditMode: false, editIndex: null, validationError: '' });
+        setModalData({
+            newItem: '',
+            newTaxRate: '',
+            taxId: '',
+            modalType: '',
+            isEditMode: false,
+            editIndex: null,
+            validationError: '',
+        });
         dispatch(clearError());
     };
 
     const handleAddOrUpdate = async () => {
         const { newItem, newTaxRate, taxId, modalType, isEditMode, editIndex } = modalData;
-    
+
         if (!newItem.trim()) {
-            setModalData(prev => ({ ...prev, validationError: modalType === 'category' ? 'Tên loại hàng không được để trống.' : 'Tên thuế không được để trống.' }));
+            setModalData((prev) => ({
+                ...prev,
+                validationError:
+                    modalType === 'category' ? 'Tên loại hàng không được để trống.' : 'Tên thuế không được để trống.',
+            }));
             return;
         }
-    
+
         if (modalType === 'category') {
-            const updatedCategory = { categoryId: categories[editIndex]?.categoryId, categoryName: newItem, isDelete: false };
-    
+            const updatedCategory = {
+                categoryId: categories[editIndex]?.categoryId,
+                categoryName: newItem,
+                isDelete: false,
+            };
+
             if (isEditMode && editIndex !== null) {
                 // Gọi hàm cập nhật
                 await dispatch(updateCategoryAsync({ categoryId: updatedCategory.categoryId, updatedCategory }));
@@ -117,37 +133,38 @@ export default function Settings() {
             }
         } else if (modalType === 'tax') {
             if (!newTaxRate || isNaN(newTaxRate)) {
-                setModalData(prev => ({ ...prev, validationError: 'Thuế suất phải là một số hợp lệ.' }));
+                setModalData((prev) => ({ ...prev, validationError: 'Thuế suất phải là một số hợp lệ.' }));
                 return;
             }
-    
+
             const updatedTax = {
                 taxId, // Sử dụng taxId từ trạng thái modal
                 taxName: newItem,
                 taxRate: parseFloat(newTaxRate),
                 isDelete: false,
             };
-    
+
             if (isEditMode && editIndex !== null) {
                 // Gọi hàm cập nhật
                 await dispatch(updateTaxAsync({ taxId: updatedTax.taxId, updatedTax }));
             } else {
                 // Chỉ gọi hàm thêm mới nếu không ở chế độ chỉnh sửa
-                await dispatch(addTaxAsync({ 
-                    taxId: updatedTax.taxId || '', // Chỉ thêm taxId nếu có
-                    taxName: newItem, 
-                    taxRate: parseFloat(newTaxRate), 
-                    isActive: false 
-                }));
+                await dispatch(
+                    addTaxAsync({
+                        taxId: updatedTax.taxId || '', // Chỉ thêm taxId nếu có
+                        taxName: newItem,
+                        taxRate: parseFloat(newTaxRate),
+                        isActive: false,
+                    }),
+                );
             }
         }
-    
+
         // Tải lại danh sách sau khi thêm hoặc cập nhật
         dispatch(fetchSettingsfillCategoryAsync());
         dispatch(fetchSettingsfillTaxAsync());
         handleCloseModal();
     };
-    
 
     const handleDelete = async (type, id) => {
         if (type === 'category') {
@@ -158,7 +175,7 @@ export default function Settings() {
     };
 
     return (
-        <Container maxWidth="md" sx={{ mt: 4 }}>
+        <Container maxWidth="lg" sx={{ mt: 4 }}>
             <Typography variant="h4" gutterBottom>
                 Cài đặt hệ thống
             </Typography>
@@ -219,13 +236,21 @@ export default function Settings() {
 
             {/* Dialog thêm hoặc sửa */}
             <Dialog open={openModal} onClose={handleCloseModal}>
-                <DialogTitle>{modalData.isEditMode ? (modalData.modalType === 'category' ? 'Sửa loại hàng' : 'Sửa thuế') : (modalData.modalType === 'category' ? 'Thêm loại hàng' : 'Thêm thuế')}</DialogTitle>
+                <DialogTitle>
+                    {modalData.isEditMode
+                        ? modalData.modalType === 'category'
+                            ? 'Sửa loại hàng'
+                            : 'Sửa thuế'
+                        : modalData.modalType === 'category'
+                        ? 'Thêm loại hàng'
+                        : 'Thêm thuế'}
+                </DialogTitle>
                 <DialogContent>
                     <TextField
                         label={modalData.modalType === 'category' ? 'Tên loại hàng' : 'Tên thuế'}
                         fullWidth
                         value={modalData.newItem}
-                        onChange={(e) => setModalData(prev => ({ ...prev, newItem: e.target.value }))}
+                        onChange={(e) => setModalData((prev) => ({ ...prev, newItem: e.target.value }))}
                         error={!!modalData.validationError}
                         helperText={modalData.validationError}
                     />
@@ -235,7 +260,7 @@ export default function Settings() {
                                 label="Mã thuế"
                                 fullWidth
                                 value={modalData.taxId}
-                                onChange={(e) => setModalData(prev => ({ ...prev, taxId: e.target.value }))}
+                                onChange={(e) => setModalData((prev) => ({ ...prev, taxId: e.target.value }))}
                                 error={!!modalData.validationError}
                                 helperText={modalData.validationError}
                                 sx={{ mt: 2 }}
@@ -244,7 +269,7 @@ export default function Settings() {
                                 label="Thuế suất (%)"
                                 fullWidth
                                 value={modalData.newTaxRate}
-                                onChange={(e) => setModalData(prev => ({ ...prev, newTaxRate: e.target.value }))}
+                                onChange={(e) => setModalData((prev) => ({ ...prev, newTaxRate: e.target.value }))}
                                 error={!!modalData.validationError}
                                 helperText={modalData.validationError}
                                 sx={{ mt: 2 }}
