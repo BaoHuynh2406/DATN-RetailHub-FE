@@ -1,40 +1,23 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Box, Button, Container, Typography, IconButton, Switch, CircularProgress, Alert } from '@mui/material';
+import { Box, Button, Container, Typography, IconButton, Switch } from '@mui/material';
 import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon } from '@mui/icons-material';
-import TableCustom from '@/components/TableCustom';
+import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-    fetchCustomersAsync,
-    updateCustomerAsync,
-    removeCustomerAsync,
-    fetchAllDeletedCustomersAsync,
-} from '@/redux/Customer/customerSlice';
+import { fetchAllDeletedCustomersAsync, fetchCustomersAsync } from '@/redux/Customer/customerSlice';
 
 export default function CustomerTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { loading, data, error, deletedCustomers } = useSelector((state) => state.customer);
+    const { data } = useSelector((state) => state.customer);
+
+    useEffect(() => {
+        console.log(
+            'Customer data:',data
+        );
+    }, [data]);
 
     const [showDeleted, setShowDeleted] = useState(false);
-
-    useEffect(() => {
-        dispatch(fetchCustomersAsync());
-    }, [dispatch]);
-
-    useEffect(() => {
-        if (showDeleted) {
-            dispatch(fetchAllDeletedCustomersAsync());
-        }
-    }, [dispatch, showDeleted]);
-
-    const customers = useMemo(() => {
-        if (Array.isArray(data)) {
-            return data.filter((row) => (showDeleted ? row.isDelete === true : row.isDelete === false));
-        }
-        console.error('Invalid customer data');
-        return [];
-    }, [showDeleted, data]);
 
     const columns = useMemo(
         () => [
@@ -66,17 +49,14 @@ export default function CustomerTable() {
         [showDeleted],
     );
 
+   
+
     const handleEdit = (row) => {
         navigate(`/customer/CustomerDetail/${row.customerId}`);
     };
 
     const handleAdd = () => {
         navigate('/customer/CustomerDetail/create');
-    };
-
-    const handleToggleActive = (row) => {
-        const updatedCustomer = { ...row, isActive: !row.isActive };
-        dispatch(updateCustomerAsync(updatedCustomer));
     };
 
     const handleDelete = (customerId) => {
@@ -98,12 +78,12 @@ export default function CustomerTable() {
                 </Button>
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
-                <TableCustom
+                <TablePagination
                     columns={columns}
-                    rows={showDeleted ? deletedCustomers : customers}
                     stt={true}
                     id="customerId"
-                    loading={loading}
+                    dispatchHandle={showDeleted ? fetchAllDeletedCustomersAsync : fetchCustomersAsync}
+                    sliceName="customer"
                 />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
@@ -113,8 +93,8 @@ export default function CustomerTable() {
                     </Typography>
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
-                <Button variant="contained" startIcon={<ExplicitIcon />} sx={{ fontSize: 10 }}>
-                    Xuất Excel
+                <Button variant="contained" startIcon={<ExplicitIcon />} onClick={() => handleDelete(customerId)}>
+                    Excel
                 </Button>
             </Box>
         </Container>
