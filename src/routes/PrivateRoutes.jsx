@@ -10,7 +10,7 @@ const privateRouter = [
     },
     {
         path: '/settings',
-        element: lazy(() => import('@/pages/Home')),
+        element: lazy(() => import('@/pages/Settings')),
         layout: DefaultLayout,
     },
     {

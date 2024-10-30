@@ -6,6 +6,7 @@ import UserCurrent from './UserCurrent';
 import employeeNew from './Employee/employeeSlice.js';
 import CustomerSlice from './Customer/CustomerSlice.js';
 import ProductSlice from './Product/ProductSlice.js';
+import SettingSlice from './Settings/SettingSlice.js';
 export const store = configureStore({
     reducer: {
         menu: menuReducer,
@@ -14,6 +15,7 @@ export const store = configureStore({
         ProductSlice: ProductSlice,
         userCurrent: UserCurrent,
         customer: CustomerSlice,
+        settings: SettingSlice
 
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
