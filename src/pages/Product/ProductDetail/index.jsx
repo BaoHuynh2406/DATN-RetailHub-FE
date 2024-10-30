@@ -19,11 +19,14 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import StoreIcon from '@mui/icons-material/Store';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-
-import TypeSpecimenIcon from '@mui/icons-material/TypeSpecimen';
+import MenuItem from '@mui/material/MenuItem';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useImgBB } from '@/hooks/useImgBB';
+import { fetchSettingsfillCategoryAsync 
+    ,fetchSettingsfillTaxAsync
+} from '@/redux/Settings/SettingSlice';
+
 import {
     fetchProductByIdAsync,
     setError,
@@ -44,16 +47,28 @@ const notyf = new Notyf({
 });
 
 const ProductDetails = () => {
-    const dispatch = useDispatch();
+     const dispatch = useDispatch();
+    const categories = useSelector((state) => state.settings.categories);
+    const taxes = useSelector((state) => state.settings.taxes);
+useEffect(() => {
+    dispatch(fetchSettingsfillCategoryAsync());
+    dispatch(fetchSettingsfillTaxAsync());
+}, [dispatch]);
+
+useEffect(() => {
+    console.log("Categories:", categories);
+    console.log("Taxes:", taxes);
+}, [categories, taxes]);
+
+
+
+
     const { data, currentData, loading, error } = useSelector((state) => state.ProductSlice);
     const [isLoading, setIsLoading] = useState(false);
-    // const categories = useSelector((state) => state.categories) || [];
-    // const taxes = useSelector((state) => state.taxes) || [];
     const { productId } = useParams();
     const navigate = useNavigate();
     const { handleUpload } = useImgBB();
     const [selectedFile, setSelectedFile] = useState(null);
-
     const productNull = {
         productId: '',
         productName: '',
@@ -77,7 +92,7 @@ const ProductDetails = () => {
         image: null,
     };
 
-    const [product, setProduct] = useState(productNull);
+    const [product, setProduct] = useState(productNull );
 
     useEffect(() => {
         if (productId === 'create') {
@@ -115,9 +130,10 @@ const ProductDetails = () => {
     }, [error, dispatch, navigate]);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setProduct({ ...product, [name]: value });
+        const { name,categories, value } = e.target;
+        setProduct({ ...product, categories,[name]: value });
     };
+
 
     const handleDelete = () => {
         if (productId !== '0') {
@@ -417,22 +433,41 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
+              <TextField
+    select
+    label="Loại"
+    name="categoryId"
+    value={product.category.categoryId || ''}
+    onChange={handleChange}
+    fullWidth
+    variant="outlined"
+    margin="normal"
+>
+    {categories.map((cat) => (
+        <MenuItem key={cat.categoryId} value={cat.categoryId}>
+            {cat.categoryName}
+        </MenuItem>
+    ))}
+</TextField>
+
+
                     <TextField
+                        select
                         label="Thuế suất"
-                        name="tax"
-                        value={product.tax.taxName || ''}
+                        name="taxId"
+                        value={product.tax.taxId || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <LocalOfferIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
+                        InputProps={{ endAdornment: <InputAdornment position="end"><LocalOfferIcon /></InputAdornment> }}
+                    >
+                        {taxes.map((tax) => (
+                            <MenuItem key={tax.taxId} value={tax.taxId}>
+                                {tax.taxName} ({tax.taxRate}%)
+                            </MenuItem>
+                        ))}
+                    </TextField>
                     <TextField
                         label="Vị trí"
                         name="location"
@@ -449,22 +484,7 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
-                    <TextField
-                        label="Loại"
-                        name="category"
-                        value={product.category.categoryName || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <TypeSpecimenIcon />
-                                </InputAdornment>
-                            ),
-                        }}
-                    />
+                    
                     <TextField
                         label="Mô tả"
                         name="productDescription"
