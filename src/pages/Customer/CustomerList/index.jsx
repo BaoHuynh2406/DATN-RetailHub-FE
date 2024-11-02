@@ -7,17 +7,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllDeletedCustomersAsync, fetchCustomersAsync } from '@/redux/Customer/customerSlice';
 
 export default function CustomerTable() {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const { data } = useSelector((state) => state.customer);
+    const navigate = useNavigate(); // Hook to navigate programmatically
+    const dispatch = useDispatch(); // Hook to dispatch actions to the Redux store
+    const { data } = useSelector((state) => state.customer); // Selector to get customer data from the Redux store
 
     useEffect(() => {
-        console.log(
-            'Customer data:',data
-        );
+        console.log('Customer data:', data); // Log customer data whenever it changes
     }, [data]);
 
-    const [showDeleted, setShowDeleted] = useState(false);
+    const [showDeleted, setShowDeleted] = useState(false); // State to toggle between showing deleted customers or not
 
     const columns = useMemo(
         () => [
@@ -49,22 +47,20 @@ export default function CustomerTable() {
         [showDeleted],
     );
 
-   
-
     const handleEdit = (row) => {
-        navigate(`/customer/CustomerDetail/${row.customerId}`);
+        navigate(`/customer/CustomerDetail/${row.customerId}`); // Navigate to the customer detail page for editing
     };
 
     const handleAdd = () => {
-        navigate('/customer/CustomerDetail/create');
+        navigate('/customer/CustomerDetail/create'); // Navigate to the customer creation page
     };
 
     const handleDelete = (customerId) => {
-        dispatch(removeCustomerAsync(customerId));
+        dispatch(removeCustomerAsync(customerId)); // Dispatch action to delete a customer
     };
 
     const handleShowDeletedToggle = (event) => {
-        setShowDeleted(event.target.checked);
+        setShowDeleted(event.target.checked); // Toggle the state to show/hide deleted customers
     };
 
     return (
@@ -79,11 +75,11 @@ export default function CustomerTable() {
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
                 <TablePagination
-                    columns={columns}
-                    stt={true}
-                    id="customerId"
-                    dispatchHandle={showDeleted ? fetchAllDeletedCustomersAsync : fetchCustomersAsync}
-                    sliceName="customer"
+                    columns={columns} // Pass the columns configuration
+                    stt={true} // Enable row numbering
+                    id="customerId" // Set the unique identifier for rows
+                    dispatchHandle={showDeleted ? fetchAllDeletedCustomersAsync : fetchCustomersAsync} // Fetch either deleted or active customers based on the state
+                    sliceName="customer" // Specify the slice name for the Redux store
                 />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
