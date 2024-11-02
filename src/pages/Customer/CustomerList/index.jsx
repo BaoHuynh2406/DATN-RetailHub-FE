@@ -7,15 +7,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllDeletedCustomersAsync, fetchCustomersAsync } from '@/redux/Customer/customerSlice';
 
 export default function CustomerTable() {
-    const navigate = useNavigate(); // Hook to navigate programmatically
-    const dispatch = useDispatch(); // Hook to dispatch actions to the Redux store
-    const { data } = useSelector((state) => state.customer); // Selector to get customer data from the Redux store
+    const navigate = useNavigate(); // Hook để điều hướng chương trình
+    const dispatch = useDispatch(); // Hook để dispatch các hành động tới Redux store
+    const { data } = useSelector((state) => state.customer); // Selector để lấy dữ liệu khách hàng từ Redux store
 
     useEffect(() => {
-        console.log('Customer data:', data); // Log customer data whenever it changes
+        console.log('Customer data:', data); // Log dữ liệu khách hàng mỗi khi nó thay đổi
     }, [data]);
 
-    const [showDeleted, setShowDeleted] = useState(false); // State to toggle between showing deleted customers or not
+    const [showDeleted, setShowDeleted] = useState(false); // State để chuyển đổi giữa hiển thị khách hàng đã xóa hoặc không
 
     const columns = useMemo(
         () => [
@@ -48,19 +48,19 @@ export default function CustomerTable() {
     );
 
     const handleEdit = (row) => {
-        navigate(`/customer/CustomerDetail/${row.customerId}`); // Navigate to the customer detail page for editing
+        navigate(`/customer/CustomerDetail/${row.customerId}`); // Điều hướng tới trang chi tiết khách hàng để chỉnh sửa
     };
 
     const handleAdd = () => {
-        navigate('/customer/CustomerDetail/create'); // Navigate to the customer creation page
+        navigate('/customer/CustomerDetail/create'); // Điều hướng tới trang tạo khách hàng mới
     };
 
     const handleDelete = (customerId) => {
-        dispatch(removeCustomerAsync(customerId)); // Dispatch action to delete a customer
+        dispatch(removeCustomerAsync(customerId)); // Dispatch hành động xóa khách hàng
     };
 
     const handleShowDeletedToggle = (event) => {
-        setShowDeleted(event.target.checked); // Toggle the state to show/hide deleted customers
+        setShowDeleted(event.target.checked); // Chuyển đổi state để hiển thị/ẩn khách hàng đã xóa
     };
 
     return (
@@ -75,11 +75,11 @@ export default function CustomerTable() {
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
                 <TablePagination
-                    columns={columns} // Pass the columns configuration
-                    stt={true} // Enable row numbering
-                    id="customerId" // Set the unique identifier for rows
-                    dispatchHandle={showDeleted ? fetchAllDeletedCustomersAsync : fetchCustomersAsync} // Fetch either deleted or active customers based on the state
-                    sliceName="customer" // Specify the slice name for the Redux store
+                    columns={columns} // Truyền cấu hình các cột
+                    stt={true} // Bật đánh số thứ tự hàng
+                    id="customerId" // Đặt định danh duy nhất cho các hàng
+                    dispatchHandle={showDeleted ? fetchAllDeletedCustomersAsync : fetchCustomersAsync} // Lấy dữ liệu khách hàng đã xóa hoặc đang hoạt động dựa trên state
+                    sliceName="customer" // Chỉ định tên slice cho Redux store
                 />
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
