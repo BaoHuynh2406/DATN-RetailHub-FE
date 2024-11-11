@@ -56,7 +56,7 @@ const CustomerDetails = () => {
         }
 
         // If data is available, find customer from it
-        const foundCustomer = data.find(cust => cust.customerId === customerId);
+        const foundCustomer = data?.data?.find((cust) => cust.customerId === customerId);
         if (foundCustomer) {
             setCustomer(foundCustomer);
         } else {
@@ -125,7 +125,8 @@ const CustomerDetails = () => {
 
     const handleRestore = () => {
         if (customerId !== 'create') {
-            dispatch(restoreCustomerAsync(customerId)); const handleSave = () => {
+            dispatch(restoreCustomerAsync(customerId));
+            const handleSave = () => {
                 if (customerId === 'create') {
                     // Thêm mới khách hàng
                     dispatch(addCustomerAsync(customer))
@@ -294,7 +295,6 @@ const CustomerDetails = () => {
                         }}
                     />
                 </Grid>
-
             </Grid>
 
             <Box display="flex" justifyContent="flex-end" marginTop={5}>
