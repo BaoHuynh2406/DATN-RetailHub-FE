@@ -7,8 +7,6 @@ const extractErrorMessage = (error) => {
     return error.response?.data?.message || error.message || 'An unknown error occurred';
 };
 
-// Các Thunks cho sản phẩm
-
 // Lấy tất cả sản phẩm chưa xóa
 export const fetchProductsAvailableAsync = createAsyncThunk(
     'products/fetchProductsAvailableAsync',
