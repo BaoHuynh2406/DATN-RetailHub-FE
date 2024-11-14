@@ -113,7 +113,7 @@ useEffect(() => {
                 });
             return;
         }
-        const foundProduct = data?.data.find((prod) => prod.productId == productId);
+        const foundProduct = data?.data.find((prodd) => prod.productId == productId);
         if (foundProduct) {
             setProduct(foundProduct);
             return;
