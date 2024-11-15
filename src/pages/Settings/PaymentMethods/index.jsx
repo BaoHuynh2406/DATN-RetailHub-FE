@@ -1,8 +1,10 @@
-// PaymentMethodList.js
 import React from 'react';
-import { List, ListItem, ListItemText, IconButton, Typography, Button } from '@mui/material';
+import { List, ListItem, ListItemText, IconButton, Typography, Button, Box } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+
+// Thay thế defaultImage bằng URL của ảnh mặc định nếu không có
+const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
 const PaymentMethodList = ({ paymentMethods, handleOpenModal, handleDelete }) => (
     <>
@@ -11,15 +13,26 @@ const PaymentMethodList = ({ paymentMethods, handleOpenModal, handleDelete }) =>
             {paymentMethods.map((method) => (
                 <ListItem key={method.paymentMethodId} alignItems="flex-start">
                     <ListItemText primary={method.paymentName} />
-                    <ListItemText
-                        primary={
-                            <img
-                                src={method.image} 
-                                alt={method.image} 
-                                style={{ width: '50px', height: '50px', borderRadius: '4px', marginTop: '5px' }}
-                            />
-                        }
-                    />
+                    <Box display="flex" flexDirection="column" alignItems="center" paddingTop="20px">
+                        <img
+                            src={method.image || defaultImage}
+                            style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '8px' }}
+                        />
+                        <Typography
+                            variant="caption"
+                            color="textSecondary"
+                            sx={{
+                                marginTop: 1,
+                                textOverflow: 'ellipsis',
+                                overflow: 'hidden',
+                                whiteSpace: 'nowrap',
+                                width: '100%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            {method.image ? 'Tên ảnh: ' + method.image.split('/').pop() : 'Chưa có ảnh'}
+                        </Typography>
+                    </Box>
                     <IconButton onClick={() => handleOpenModal('paymentMethod', method)}>
                         <EditIcon />
                     </IconButton>
