@@ -54,8 +54,8 @@ function Dashboard() {
     });
 
     return (
-        <Box p={3} bgcolor="#f4f6f8">
-            <Box display="flex" flexWrap="wrap" gap={3} mb={4}>
+        <Box p={3} className="bg-gray-200">
+            <Box display="flex" flexWrap="wrap" gap={2} mb={2}>
                 <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <ShoppingCartIcon color="primary" fontSize="large" sx={{ mr: 2 }} />
                     <Box display="flex" flexDirection="column" alignItems="center">
@@ -104,7 +104,7 @@ function Dashboard() {
                 </Paper>
             </Box>
 
-            <Box display="flex" flexWrap="wrap" gap={3}>
+            <Box display="flex" flexWrap="wrap" gap={2}>
                 <Paper sx={{ p: 3, flex: '1 1 65%', display: 'flex', flexDirection: 'column' }}>
                     <Typography variant="h6" mb={2} sx={{ color: '#34495E' }}>
                         Biểu đồ doanh thu và lợi nhuận theo tháng
