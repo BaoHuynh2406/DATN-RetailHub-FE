@@ -54,9 +54,9 @@ function Dashboard() {
     });
 
     return (
-        <Box p={3} bgcolor="#f4f6f8">
-            <Box p={1} bgcolor="#f4f6f8">
-                <Box display="flex" flexWrap="wrap" gap={3} mb={2}>
+        <Box p={3} className="bg-gray-200">
+            <Box p={1}>
+                <Box display="flex" flexWrap="wrap" gap={2} mb={2}>
                     <Paper
                         sx={{
                             p: 3,
@@ -64,10 +64,10 @@ function Dashboard() {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            borderRadius: 2,
+                            borderRadius: 0.5,
                             transition: 'transform 0.3s, box-shadow 0.3s',
                             '&:hover': {
-                                transform: 'scale(1.05)',
+                                transform: 'scale(1.01)',
                                 boxShadow: '0px 8px 20px rgba(0,0,0,0.2)',
                             },
                         }}
@@ -75,7 +75,7 @@ function Dashboard() {
                         <ShoppingCartIcon
                             color="primary"
                             sx={{
-                                fontSize: 64, 
+                                fontSize: 64,
                                 position: 'relative',
                                 left: '-50px',
                                 transition: 'transform 0.3s',
@@ -103,10 +103,10 @@ function Dashboard() {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            borderRadius: 2,
+                            borderRadius: 0.5,
                             transition: 'transform 0.3s, box-shadow 0.3s',
                             '&:hover': {
-                                transform: 'scale(1.05)',
+                                transform: 'scale(1.01)',
                                 boxShadow: '0px 8px 20px rgba(0,0,0,0.2)',
                             },
                         }}
@@ -114,9 +114,9 @@ function Dashboard() {
                         <PeopleIcon
                             color="secondary"
                             sx={{
-                                fontSize: 64, 
+                                fontSize: 64,
                                 position: 'relative',
-                                left: '-50px', 
+                                left: '-50px',
                                 transition: 'transform 0.3s',
                                 '&:hover': { transform: 'rotate(15deg)' },
                             }}
@@ -141,10 +141,10 @@ function Dashboard() {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            borderRadius: 2,
+                            borderRadius: 0.5,
                             transition: 'transform 0.3s, box-shadow 0.3s',
                             '&:hover': {
-                                transform: 'scale(1.05)',
+                                transform: 'scale(1.01)',
                                 boxShadow: '0px 8px 20px rgba(0,0,0,0.2)',
                             },
                         }}
@@ -152,7 +152,7 @@ function Dashboard() {
                         <AttachMoneyIcon
                             color="success"
                             sx={{
-                                fontSize: 64, 
+                                fontSize: 64,
                                 position: 'relative',
                                 left: '-50px',
                                 transition: 'transform 0.3s',
@@ -176,7 +176,7 @@ function Dashboard() {
             </Box>
 
             <Box display="flex" flexWrap="wrap" gap={2}>
-                <Paper sx={{ p: 3, flex: '1 1 65%', display: 'flex', flexDirection: 'column' }}>
+                <Paper sx={{ p: 3, flex: '1 1 64%', display: 'flex', flexDirection: 'column', borderRadius: 0.5 }}>
                     <Typography variant="h6" mb={2} sx={{ color: '#34495E' }}>
                         Biểu đồ doanh thu và lợi nhuận theo tháng
                     </Typography>
@@ -193,7 +193,7 @@ function Dashboard() {
                     </ResponsiveContainer>
                 </Paper>
 
-                <Paper sx={{ p: 3, flex: '1 1 30%' }}>
+                <Paper sx={{ p: 3, flex: '1 1 30%', borderRadius: 0.5 }}>
                     <Typography variant="h6" sx={{ color: '#34495E' }}>
                         Top mặt hàng bán chạy
                     </Typography>
