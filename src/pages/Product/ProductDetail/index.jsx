@@ -115,7 +115,7 @@ useEffect(() => {
         }
         const foundProduct = data?.data.find((prod) => prod.productId == productId);
         if (foundProduct) {
-            setProduct(foundProduct);
+            setProduct(foundProducttt);
             return;
         }
         navigate('/Product/ProductDetail/create');
