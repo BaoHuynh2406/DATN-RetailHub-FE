@@ -26,12 +26,13 @@ const notyf = new Notyf({
 });
 
 export default function EmployeeTable() {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+    const navigate = useNavigate(); // Hook để điều hướng chương trình
+    const dispatch = useDispatch(); // Hook để dispatch các hành động tới Redux store
 
-    const userLogged = useSelector((state) => state.userCurrent);
+    const userLogged = useSelector((state) => state.userCurrent); // Lấy thông tin người dùng hiện tại từ Redux store
 
-    const [showDeleted, setShowDeleted] = useState(false);
+    const [showDeleted, setShowDeleted] = useState(false); // State để chuyển đổi giữa hiển thị nhân viên đã xóa hoặc không
+
 
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
     const columns = useMemo(
