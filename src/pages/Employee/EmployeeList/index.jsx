@@ -29,9 +29,9 @@ export default function EmployeeTable() {
     const navigate = useNavigate(); 
     const dispatch = useDispatch(); 
 
-    const userLogged = useSelector((state) => state.userCurrent); // Lấy thông tin người dùng hiện tại từ Redux store
+    const userLogged = useSelector((state) => state.userCurrent); 
 
-    const [showDeleted, setShowDeleted] = useState(false); // State để chuyển đổi giữa hiển thị nhân viên đã xóa hoặc không
+    const [showDeleted, setShowDeleted] = useState(false); 
 
 
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
