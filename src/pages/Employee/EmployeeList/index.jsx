@@ -26,8 +26,8 @@ const notyf = new Notyf({
 });
 
 export default function EmployeeTable() {
-    const navigate = useNavigate(); // Hook để điều hướng chương trình
-    const dispatch = useDispatch(); // Hook để dispatch các hành động tới Redux store
+    const navigate = useNavigate(); 
+    const dispatch = useDispatch(); 
 
     const userLogged = useSelector((state) => state.userCurrent); // Lấy thông tin người dùng hiện tại từ Redux store
 
