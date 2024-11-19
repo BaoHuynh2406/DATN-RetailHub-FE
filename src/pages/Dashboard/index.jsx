@@ -54,58 +54,129 @@ function Dashboard() {
     });
 
     return (
-        <Box p={3} bgcolor="#f4f6f8">
-            <Box display="flex" flexWrap="wrap" gap={3} mb={4}>
-                <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <ShoppingCartIcon color="primary" fontSize="large" sx={{ mr: 2 }} />
-                    <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
-                            Đơn hàng hôm nay
-                        </Typography>
-                        <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                            {ordersToday}
-                        </Typography>
-                        <Typography color="textSecondary" display="flex" alignItems="center">
-                            {renderArrow(orderGrowth)}
-                            <Box sx={growthStyle(orderGrowth)}>{orderGrowth}%</Box>
-                        </Typography>
-                    </Box>
-                </Paper>
+        <Box p={3} className="bg-gray-200">
+            <Box p={1}>
+                <Box display="flex" flexWrap="wrap" gap={2} mb={2}>
+                    <Paper
+                        sx={{
+                            p: 3,
+                            flex: '1 1 30%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 0.5,
+                            transition: 'transform 0.3s, box-shadow 0.3s',
+                            '&:hover': {
+                                transform: 'scale(1.01)',
+                                boxShadow: '0px 8px 20px rgba(0,0,0,0.2)',
+                            },
+                        }}
+                    >
+                        <ShoppingCartIcon
+                            color="primary"
+                            sx={{
+                                fontSize: 64,
+                                position: 'relative',
+                                left: '-50px',
+                                transition: 'transform 0.3s',
+                                '&:hover': { transform: 'rotate(15deg)' },
+                            }}
+                        />
+                        <Box display="flex" flexDirection="column" alignItems="center">
+                            <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
+                                Đơn hàng hôm nay
+                            </Typography>
+                            <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
+                                {ordersToday}
+                            </Typography>
+                            <Typography color="textSecondary" display="flex" alignItems="center">
+                                {renderArrow(orderGrowth)}
+                                <Box sx={growthStyle(orderGrowth)}>{orderGrowth}%</Box>
+                            </Typography>
+                        </Box>
+                    </Paper>
 
-                <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <PeopleIcon color="secondary" fontSize="large" sx={{ mr: 2 }} />
-                    <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
-                            Khách hàng mới
-                        </Typography>
-                        <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                            {customersToday}
-                        </Typography>
-                        <Typography color="textSecondary">
-                            <Box sx={growthStyle(customerGrowth)}>+{customerGrowth}% so với hôm qua</Box>
-                        </Typography>
-                    </Box>
-                </Paper>
+                    <Paper
+                        sx={{
+                            p: 3,
+                            flex: '1 1 30%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 0.5,
+                            transition: 'transform 0.3s, box-shadow 0.3s',
+                            '&:hover': {
+                                transform: 'scale(1.01)',
+                                boxShadow: '0px 8px 20px rgba(0,0,0,0.2)',
+                            },
+                        }}
+                    >
+                        <PeopleIcon
+                            color="secondary"
+                            sx={{
+                                fontSize: 64,
+                                position: 'relative',
+                                left: '-50px',
+                                transition: 'transform 0.3s',
+                                '&:hover': { transform: 'rotate(15deg)' },
+                            }}
+                        />
+                        <Box display="flex" flexDirection="column" alignItems="center">
+                            <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
+                                Khách hàng mới
+                            </Typography>
+                            <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
+                                {customersToday}
+                            </Typography>
+                            <Typography color="textSecondary">
+                                <Box sx={growthStyle(customerGrowth)}>+{customerGrowth}% so với hôm qua</Box>
+                            </Typography>
+                        </Box>
+                    </Paper>
 
-                <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <AttachMoneyIcon color="success" fontSize="large" sx={{ mr: 2 }} />
-                    <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
-                            Doanh thu hôm nay
-                        </Typography>
-                        <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                            {revenueToday.toLocaleString()} VND
-                        </Typography>
-                        <Typography color="textSecondary" display="flex" alignItems="center">
-                            {renderArrow(revenueGrowth)}
-                            <Box sx={growthStyle(revenueGrowth)}>{revenueGrowth}%</Box>
-                        </Typography>
-                    </Box>
-                </Paper>
+                    <Paper
+                        sx={{
+                            p: 3,
+                            flex: '1 1 30%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 0.5,
+                            transition: 'transform 0.3s, box-shadow 0.3s',
+                            '&:hover': {
+                                transform: 'scale(1.01)',
+                                boxShadow: '0px 8px 20px rgba(0,0,0,0.2)',
+                            },
+                        }}
+                    >
+                        <AttachMoneyIcon
+                            color="success"
+                            sx={{
+                                fontSize: 64,
+                                position: 'relative',
+                                left: '-50px',
+                                transition: 'transform 0.3s',
+                                '&:hover': { transform: 'rotate(15deg)' },
+                            }}
+                        />
+                        <Box display="flex" flexDirection="column" alignItems="center">
+                            <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
+                                Doanh thu hôm nay
+                            </Typography>
+                            <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
+                                {revenueToday.toLocaleString()} VND
+                            </Typography>
+                            <Typography color="textSecondary" display="flex" alignItems="center">
+                                {renderArrow(revenueGrowth)}
+                                <Box sx={growthStyle(revenueGrowth)}>{revenueGrowth}%</Box>
+                            </Typography>
+                        </Box>
+                    </Paper>
+                </Box>
             </Box>
 
-            <Box display="flex" flexWrap="wrap" gap={3}>
-                <Paper sx={{ p: 3, flex: '1 1 65%', display: 'flex', flexDirection: 'column' }}>
+            <Box display="flex" flexWrap="wrap" gap={2}>
+                <Paper sx={{ p: 3, flex: '1 1 64%', display: 'flex', flexDirection: 'column', borderRadius: 0.5 }}>
                     <Typography variant="h6" mb={2} sx={{ color: '#34495E' }}>
                         Biểu đồ doanh thu và lợi nhuận theo tháng
                     </Typography>
@@ -122,7 +193,7 @@ function Dashboard() {
                     </ResponsiveContainer>
                 </Paper>
 
-                <Paper sx={{ p: 3, flex: '1 1 30%' }}>
+                <Paper sx={{ p: 3, flex: '1 1 30%', borderRadius: 0.5 }}>
                     <Typography variant="h6" sx={{ color: '#34495E' }}>
                         Top mặt hàng bán chạy
                     </Typography>
