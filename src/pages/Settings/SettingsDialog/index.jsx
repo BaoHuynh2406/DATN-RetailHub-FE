@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, Box, Typography  } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, Box, Typography } from '@mui/material';
 
 const SettingsDialog = ({ open, handleClose, modalData, setModalData, handleAddOrUpdate }) => {
     const handleChange = (field) => (e) => {
@@ -21,16 +21,15 @@ const SettingsDialog = ({ open, handleClose, modalData, setModalData, handleAddO
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setModalData(prevState => ({
+                setModalData((prevState) => ({
                     ...prevState,
                     image: reader.result, // Lưu URL của ảnh (base64)
-                    imageName: file.name,  // Lưu tên tệp
+                    imageName: file.name, // Lưu tên tệp
                 }));
             };
-            reader.readAsDataURL(file);  // Đọc file dưới dạng base64
+            reader.readAsDataURL(file); // Đọc file dưới dạng base64
         }
     };
-    
 
     return (
         <Dialog open={open} onClose={handleClose} maxWidth="xs" fullWidth>
