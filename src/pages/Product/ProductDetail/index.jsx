@@ -135,7 +135,18 @@ const ProductDetails = () => {
                     categoryId: value,
                 },
             }));
-        } else {
+        
+        } 
+        else if(name === 'taxId'){
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                tax: {
+                    ...prevProduct.tax,
+                    taxId: value,
+                },
+            }));
+        }
+        else {
             setProduct((prevProduct) => ({
                 ...prevProduct,
                 [name]: value,
@@ -179,7 +190,7 @@ const ProductDetails = () => {
         setIsLoading(true);
         let data = product;
         // Bổ sung thêm trường role
-        data = { ...data, categoryId: product.category?.categoryId || 1, taxId: 'THUE' };
+        data = { ...data, categoryId: product.category?.categoryId || 1, taxId: product.tax?.taxId || 'THUE' };
 
         // Nếu có file ảnh được chọn, tải ảnh lên trước khi lưu
         if (selectedFile) {
