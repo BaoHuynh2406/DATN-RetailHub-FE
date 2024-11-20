@@ -333,7 +333,7 @@ const ProductDetails = () => {
                         InputProps={{
                             readOnly: true,
                             endAdornment: (
-                                <InputAdornment position="end">
+                                <InputAdornment position="end"
                                     <StoreIcon />
                                 </InputAdornment>
                             ),
