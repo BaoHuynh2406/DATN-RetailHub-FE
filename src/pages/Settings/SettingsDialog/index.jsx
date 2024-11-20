@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, Box } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, Box, Typography } from '@mui/material';
 
 const SettingsDialog = ({ open, handleClose, modalData, setModalData, handleAddOrUpdate }) => {
     const handleChange = (field) => (e) => {
@@ -14,6 +14,21 @@ const SettingsDialog = ({ open, handleClose, modalData, setModalData, handleAddO
             paymentMethod: modalData.isEditMode ? 'Sửa phương thức thanh toán' : 'Thêm phương thức thanh toán',
         };
         return titles[modalData.modalType] || '';
+    };
+
+    const handleChoseImage = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setModalData((prevState) => ({
+                    ...prevState,
+                    image: reader.result, // Lưu URL của ảnh (base64)
+                    imageName: file.name, // Lưu tên tệp
+                }));
+            };
+            reader.readAsDataURL(file); // Đọc file dưới dạng base64
+        }
     };
 
     return (
@@ -77,14 +92,56 @@ const SettingsDialog = ({ open, handleClose, modalData, setModalData, handleAddO
                                 error={!!modalData.validationError}
                                 helperText={modalData.validationError}
                             />
-                            <TextField
-                                label="URL Hình ảnh"
-                                fullWidth
-                                value={modalData.image || ''}
-                                onChange={handleChange('image')}
-                                error={!!modalData.validationError}
-                                helperText={modalData.validationError}
-                            />
+
+                            {/* Ô chứa hình ảnh */}
+                            <Box sx={{ marginTop: 2, textAlign: 'center' }}>
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    hidden
+                                    onChange={handleChoseImage} // Hàm xử lý khi chọn ảnh
+                                    id="image-upload"
+                                />
+                                <label htmlFor="image-upload">
+                                    <Box
+                                        sx={{
+                                            width: 200,
+                                            height: 200,
+                                            border: '2px dashed #aaa',
+                                            borderRadius: '8px',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            cursor: 'pointer',
+                                            backgroundColor: modalData.image ? 'transparent' : '#f5f5f5',
+                                        }}
+                                    >
+                                        {modalData.image ? (
+                                            <img
+                                                src={modalData.image}
+                                                alt="Hình ảnh phương thức thanh toán"
+                                                style={{
+                                                    maxWidth: '100%',
+                                                    maxHeight: '100%',
+                                                    objectFit: 'contain',
+                                                    borderRadius: '8px',
+                                                }}
+                                            />
+                                        ) : (
+                                            <Typography variant="body2" color="textSecondary">
+                                                Chọn hình ảnh
+                                            </Typography>
+                                        )}
+                                    </Box>
+                                </label>
+                            </Box>
+
+                            {/* Hiển thị tên ảnh */}
+                            {modalData.imageName && (
+                                <Typography variant="body2" color="textSecondary" sx={{ marginTop: 1 }}>
+                                    Tên ảnh: {modalData.imageName}
+                                </Typography>
+                            )}
                         </>
                     )}
                 </Box>

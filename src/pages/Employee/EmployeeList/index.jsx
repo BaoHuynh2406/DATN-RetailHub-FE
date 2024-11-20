@@ -26,12 +26,13 @@ const notyf = new Notyf({
 });
 
 export default function EmployeeTable() {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+    const navigate = useNavigate(); 
+    const dispatch = useDispatch(); 
 
-    const userLogged = useSelector((state) => state.userCurrent);
+    const userLogged = useSelector((state) => state.userCurrent); 
 
-    const [showDeleted, setShowDeleted] = useState(false);
+    const [showDeleted, setShowDeleted] = useState(false); 
+
 
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
     const columns = useMemo(
