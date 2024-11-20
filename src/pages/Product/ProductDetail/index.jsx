@@ -125,8 +125,22 @@ const ProductDetails = () => {
     }, [error, dispatch, navigate]);
 
     const handleChange = (e) => {
-        const { name, categories, value } = e.target;
-        setProduct({ ...product, categories, [name]: value });
+        const { name, value } = e.target;
+
+        if (name === 'categoryId') {
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                category: {
+                    ...prevProduct.category,
+                    categoryId: value,
+                },
+            }));
+        } else {
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                [name]: value,
+            }));
+        }
     };
 
     const handleDelete = () => {
@@ -165,7 +179,7 @@ const ProductDetails = () => {
         setIsLoading(true);
         let data = product;
         // Bổ sung thêm trường role
-        data = { ...data, categoryId: 1, taxId: 'THUE' };
+        data = { ...data, categoryId: product.category?.categoryId || 1, taxId: 'THUE' };
 
         // Nếu có file ảnh được chọn, tải ảnh lên trước khi lưu
         if (selectedFile) {
