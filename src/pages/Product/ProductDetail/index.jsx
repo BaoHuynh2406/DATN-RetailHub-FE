@@ -294,6 +294,7 @@ const ProductDetails = () => {
             if (!barcode) throw new Error('Invalid barcode');
             setIsLoading(true);
             const result = await BarcodeLookup(barcode);
+            if (!result) throw new Error('Not found');
             notyf.success('Tự động điền sản phẩm thành công!');
             setProduct({
                 ...product,
