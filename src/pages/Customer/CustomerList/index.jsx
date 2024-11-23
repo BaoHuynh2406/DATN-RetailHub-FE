@@ -9,11 +9,7 @@ import { fetchAllDeletedCustomersAsync, fetchCustomersAsync } from '@/redux/Cust
 export default function CustomerTable() {
     const navigate = useNavigate(); // Hook để điều hướng chương trình
     const dispatch = useDispatch(); // Hook để dispatch các hành động tới Redux store
-    const { data } = useSelector((state) => state.customer); // Selector để lấy dữ liệu khách hàng từ Redux store
 
-    useEffect(() => {
-        console.log('Customer data:', data); // Log dữ liệu khách hàng mỗi khi nó thay đổi
-    }, [data]);
 
     const [showDeleted, setShowDeleted] = useState(false); // State để chuyển đổi giữa hiển thị khách hàng đã xóa hoặc không
 

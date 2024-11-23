@@ -14,6 +14,7 @@ import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
 import CardGiftcardRoundedIcon from '@mui/icons-material/CardGiftcardRounded';
 import BugReportRoundedIcon from '@mui/icons-material/BugReportRounded';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import HistoryEduRoundedIcon from '@mui/icons-material/HistoryEduRounded';
 
 export const sidebarItems = [
     {
@@ -42,6 +43,18 @@ export const sidebarItems = [
         sidebarProps: { displayText: 'Khách hàng', icon: <ContactsRoundedIcon /> },
         path: '/customer',
         state: 'customer',
+        child: [
+            {
+                sidebarProps: { displayText: 'Danh sách', icon: <BallotRoundedIcon /> },
+                path: '/customer/CustomerList',
+                state: '/customer/CustomerList',
+            },
+            {
+                sidebarProps: { displayText: 'Lịch sữ đổi điểm', icon: <HistoryEduRoundedIcon /> },
+                path: '/customer/HistoryPointList',
+                state: '/customer/HistoryPointList',
+            },
+        ],
     },
     {
         sidebarProps: { displayText: 'Nhà cung cấp đại lý', icon: <LocalShippingRoundedIcon /> },
@@ -100,6 +113,6 @@ export const sidebarItems = [
     {
         sidebarProps: { displayText: 'Test', icon: <BugReportRoundedIcon /> },
         path: '/test',
-        state:'test',
-    }
+        state: 'test',
+    },
 ];
