@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
     TextField,
     Button,
@@ -9,6 +10,7 @@ import {
     InputAdornment,
     Skeleton,
     CircularProgress,
+    IconButton,
 } from '@mui/material';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import BarcodeIcon from '@mui/icons-material/QrCode';
@@ -19,11 +21,14 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import StoreIcon from '@mui/icons-material/Store';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import QrCodeScannerTwoToneIcon from '@mui/icons-material/QrCodeScannerTwoTone';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useImgBB } from '@/hooks/useImgBB';
 import { fetchSettingsfillCategoryAsync, fetchSettingsfillTaxAsync } from '@/redux/Settings/SettingSlice';
+import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded';
+import BarcodeLookup from './BarcodeLookUp';
 
 import {
     fetchProductByIdAsync,
@@ -33,6 +38,9 @@ import {
     updateProductAsync,
     addProductAsync,
 } from '@/redux/Product/ProductSlice';
+
+import ScanDialog from './ScanDialog';
+
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
 
@@ -48,16 +56,8 @@ const ProductDetails = () => {
     const dispatch = useDispatch();
     const categories = useSelector((state) => state.settings.categories);
     const taxes = useSelector((state) => state.settings.taxes);
-    useEffect(() => {
-        dispatch(fetchSettingsfillCategoryAsync());
-        dispatch(fetchSettingsfillTaxAsync());
-    }, [dispatch]);
-
-    useEffect(() => {
-        console.log('Categories:', categories);
-        console.log('Taxes:', taxes);
-    }, [categories, taxes]);
-
+    const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
+    const [open, setOpen] = useState(false);
     const { data, currentData, loading, error } = useSelector((state) => state.ProductSlice);
     const [isLoading, setIsLoading] = useState(false);
     const { productId } = useParams();
@@ -86,8 +86,14 @@ const ProductDetails = () => {
         isDelete: false,
         image: null,
     };
-
     const [product, setProduct] = useState(productNull);
+
+    //----------------------------------------------------------------
+
+    useEffect(() => {
+        dispatch(fetchSettingsfillCategoryAsync());
+        dispatch(fetchSettingsfillTaxAsync());
+    }, []);
 
     useEffect(() => {
         if (productId === 'create') {
@@ -124,6 +130,20 @@ const ProductDetails = () => {
         }
     }, [error, dispatch, navigate]);
 
+    //----------------------------------------------------------------
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (barcode) => {
+        setOpen(false);
+        if (barcode) {
+            setProduct({ ...product, barcode: barcode });
+            notyf.success('Đã quét thành công!');
+        }
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -135,9 +155,7 @@ const ProductDetails = () => {
                     categoryId: value,
                 },
             }));
-        
-        } 
-        else if(name === 'taxId'){
+        } else if (name === 'taxId') {
             setProduct((prevProduct) => ({
                 ...prevProduct,
                 tax: {
@@ -145,8 +163,7 @@ const ProductDetails = () => {
                     taxId: value,
                 },
             }));
-        }
-        else {
+        } else {
             setProduct((prevProduct) => ({
                 ...prevProduct,
                 [name]: value,
@@ -272,6 +289,24 @@ const ProductDetails = () => {
 
     const handleBack = () => navigate(-1);
 
+    const handleLookUpBarcode = async (barcode) => {
+        try {
+            if (!barcode) throw new Error('Invalid barcode');
+            setIsLoading(true);
+            const result = await BarcodeLookup(barcode);
+            notyf.success('Tự động điền sản phẩm thành công!');
+            setProduct({
+                ...product,
+                productName: result.productName,
+                image: result.imageUrl,
+                price: result.price,
+            });
+            setIsLoading(false);
+        } catch (e) {
+            setIsLoading(false);
+        }
+    };
+
     if (loading) {
         return (
             <Box display="flex" alignItems="center" justifyContent="space-around" height="100%">
@@ -281,7 +316,6 @@ const ProductDetails = () => {
             </Box>
         );
     }
-    const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
 
     return (
         <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh', position: 'relative' }}>
@@ -368,7 +402,20 @@ const ProductDetails = () => {
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <BarcodeIcon />
+                                    <IconButton
+                                        onClick={() => {
+                                            handleClickOpen();
+                                        }}
+                                    >
+                                        <QrCodeScannerTwoToneIcon />
+                                    </IconButton>
+                                    <IconButton
+                                        onClick={() => {
+                                            handleLookUpBarcode(product.barcode || null);
+                                        }}
+                                    >
+                                        <TravelExploreRoundedIcon />
+                                    </IconButton>
                                 </InputAdornment>
                             ),
                         }}
@@ -588,6 +635,8 @@ const ProductDetails = () => {
                     Đặt Lại
                 </Button>
             </Box>
+
+            {open && <ScanDialog handleClose={handleClose} open={open} />}
         </Container>
     );
 };

@@ -1,39 +1,30 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Slide from '@mui/material/Slide';
+import React, { useRef } from 'react';
+import { Box, Button, TextField } from '@mui/material';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
-import ScanDialog from './ScanDialog';
+import BarcodeLookup from './BarcodeLookUp';
+import { Padding } from '@mui/icons-material';
 
 function Test() {
-    const [open, setOpen] = React.useState(false);
-    const [data, setData] = React.useState(null);
+    const textFieldRef = useRef(null);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = (data) => {
-        setOpen(false);
-        if (data) setData(data);
+    const handleButtonClick = () => {
+        const barcode = textFieldRef.current.value;
+        const data = BarcodeLookup(barcode);
+        console.log(data);
     };
 
     return (
         <>
-            <Button variant="outlined" onClick={handleClickOpen}>
-                Slide in alert dialog
-            </Button>
-
-            <h1>{data && data}</h1>
-
-            {open && <ScanDialog handleClose={handleClose} open={open} />}
+            <Box
+                sx={{
+                    padding: 10,
+                }}
+            >
+                <TextField inputRef={textFieldRef} label="Nhập nội dung" variant="outlined" fullWidth />
+                <Button className="mt-2" variant="contained" color="primary" onClick={handleButtonClick}>
+                    Test
+                </Button>
+            </Box>
         </>
     );
 }
