@@ -65,26 +65,6 @@ export const fetchSettingsfillPaymentAsync = createAsyncThunk('settings/fetchSet
     return response.data.data;
 });
 
-// Add a Payment
-export const addPaymentAsync = createAsyncThunk('settings/addPaymentAsync', async (newPayment) => {
-    const response = await axiosSecure.post('/api/paymentmethods/create', newPayment);
-    return response.data;
-});
-
-// Update a Payment
-export const updatePaymentAsync = createAsyncThunk('settings/updatePaymentAsync', async ({ updatedPaymentMethod }) => {
-    const response = await axiosSecure.put(`/api/paymentmethods/update`, updatedPaymentMethod);
-    return response.data;
-});
-
-// Delete a Payment
-export const deletePaymentAsync = createAsyncThunk('settings/deletePaymentAsync', async (paymentMethodId) => {
-    await axiosSecure.delete(`/api/paymentmethods/delete/${paymentMethodId}`);
-    return paymentMethodId;
-});
-
-
-
 const settingsSlice = createSlice({
     name: 'settings',
     initialState: {
@@ -144,7 +124,11 @@ const settingsSlice = createSlice({
             })
             .addCase(fetchSettingsfillTaxAsync.fulfilled, (state, action) => {
                 state.loading = false;
-                state.taxes = action.payload; // Gán dữ liệu trả về vào taxes
+                let taxes = action.payload;
+                taxes.forEach((tax) => {
+                    tax.taxRate = tax.taxRate * 100;
+                });
+                state.taxes = taxes; // Gán dữ liệu trả về vào taxes
             })
             .addCase(fetchSettingsfillTaxAsync.rejected, (state, action) => {
                 state.loading = false;
@@ -187,34 +171,6 @@ const settingsSlice = createSlice({
             .addCase(fetchSettingsfillPaymentAsync.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message; // Xử lý lỗi
-            })
-            // Add Payment
-            .addCase(addPaymentAsync.fulfilled, (state, action) => {
-                state.loading = false;
-                state.paymentMethods.push(action.payload); // Thêm phương thức thanh toán vào danh sách
-            })
-            .addCase(addPaymentAsync.rejected, (state, action) => {
-                state.loading = false;
-                state.error = action.error.message;
-            })
-            .addCase(updatePaymentAsync.fulfilled, (state, action) => {
-                state.loading = false;
-                const index = state.paymentMethods.findIndex(
-                    (payment) => payment.paymentMethodId === action.payload.paymentMethodId,
-                );
-                if (index !== -1) {
-                    state.paymentMethods[index] = action.payload; // Update payment method
-                }
-            })
-            .addCase(updatePaymentAsync.rejected, (state, action) => {
-                state.loading = false;
-                state.error = action.error.message;
-            })
-            // Delete payment method
-            .addCase(deletePaymentAsync.fulfilled, (state, action) => {
-                state.paymentMethods = state.paymentMethods.filter(
-                    (payment) => payment.paymentMethodId !== action.payload,
-                ); // Remove payment method
             });
     },
 });

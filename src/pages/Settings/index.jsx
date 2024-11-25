@@ -4,22 +4,17 @@ import { Container, Typography, Tabs, Tab, Paper } from '@mui/material';
 import {
     fetchSettingsfillTaxAsync,
     fetchSettingsfillCategoryAsync,
-    fetchSettingsfillPaymentAsync,
     addCategoryAsync,
     updateCategoryAsync,
     deleteCategoryAsync,
     addTaxAsync,
     updateTaxAsync,
     deleteTaxAsync,
-    addPaymentAsync,
-    updatePaymentAsync,
-    deletePaymentAsync,
     clearError,
-} from '../../redux/Settings/SettingSlice';
+} from '@/redux/Settings/SettingSlice';
 import TabPanel from '../Settings/Tab';
 import CategoryList from '../Settings/Category';
 import TaxList from '../Settings/Tax';
-import PaymentMethodList from '../Settings/PaymentMethods';
 import SettingsDialog from '../Settings/SettingsDialog';
 
 export default function Settings() {
@@ -40,13 +35,12 @@ export default function Settings() {
         isEditMode: false,
         editIndex: null,
         validationError: '',
-        paymentMethodId: '', 
+        paymentMethodId: '',
     });
 
     useEffect(() => {
         dispatch(fetchSettingsfillCategoryAsync());
         dispatch(fetchSettingsfillTaxAsync());
-        dispatch(fetchSettingsfillPaymentAsync());
     }, [dispatch]);
 
     const handleOpenModal = (type, item = null, index = null) => {
@@ -62,7 +56,6 @@ export default function Settings() {
         setModalData((prev) => ({ ...prev, ...newData }));
         setOpenModal(true);
     };
-    
 
     const handleCloseModal = () => {
         setOpenModal(false);
@@ -76,13 +69,14 @@ export default function Settings() {
             isEditMode: false,
             editIndex: null,
             validationError: '',
-            paymentMethodId: '', 
+            paymentMethodId: '',
         });
         dispatch(clearError());
     };
 
     const handleAddOrUpdate = async () => {
-        const { newItem, newTaxRate, taxId, paymentName, image, modalType, isEditMode, editIndex, paymentMethodId } = modalData;
+        const { newItem, newTaxRate, taxId, paymentName, image, modalType, isEditMode, editIndex, paymentMethodId } =
+            modalData;
         if (!newItem.trim() && modalType !== 'paymentMethod') {
             setModalData((prev) => ({
                 ...prev,
@@ -130,15 +124,17 @@ export default function Settings() {
             };
             await dispatch(
                 isEditMode
-                    ? updatePaymentAsync({ paymentMethodId: updatedPaymentMethod.paymentMethodId, updatedPaymentMethod })
+                    ? updatePaymentAsync({
+                          paymentMethodId: updatedPaymentMethod.paymentMethodId,
+                          updatedPaymentMethod,
+                      })
                     : addPaymentAsync({ paymentName, image }),
             );
         }
-        
+
         // Tải lại danh sách sau khi thêm hoặc cập nhật
         dispatch(fetchSettingsfillCategoryAsync());
         dispatch(fetchSettingsfillTaxAsync());
-        dispatch(fetchSettingsfillPaymentAsync());
         handleCloseModal();
     };
 
@@ -161,7 +157,6 @@ export default function Settings() {
                 <Tabs value={tabValue} onChange={(event, newValue) => setTabValue(newValue)} centered>
                     <Tab label="Loại hàng" />
                     <Tab label="Thuế" />
-                    <Tab label="Phương thức thanh toán" />
                 </Tabs>
                 <TabPanel value={tabValue} index={0}>
                     <CategoryList
@@ -172,13 +167,6 @@ export default function Settings() {
                 </TabPanel>
                 <TabPanel value={tabValue} index={1}>
                     <TaxList taxes={taxes} handleOpenModal={handleOpenModal} handleDelete={handleDelete} />
-                </TabPanel>
-                <TabPanel value={tabValue} index={2}>
-                    <PaymentMethodList
-                        paymentMethods={paymentMethods}
-                        handleOpenModal={handleOpenModal}
-                        handleDelete={handleDelete}
-                    />
                 </TabPanel>
             </Paper>
 
