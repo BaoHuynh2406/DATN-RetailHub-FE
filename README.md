@@ -9,6 +9,5 @@ npm i
 # chạy
 npm run dev
 <<<<<<< HEAD
-ccc
-=======
-
+===
+hahahahahahahaha
