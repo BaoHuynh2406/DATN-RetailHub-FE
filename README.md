@@ -10,5 +10,4 @@ npm i
 npm run dev
 <<<<<<< HEAD
 ===
-hahahahahahahaha
-mot hai ba bon
+i am supper man
