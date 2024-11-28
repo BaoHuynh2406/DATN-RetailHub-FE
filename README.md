@@ -10,4 +10,3 @@ npm i
 npm run dev
 <<<<<<< HEAD
 ===
-i am supper man
