@@ -1,30 +1,39 @@
-TPO - Chính phủ vừa có báo cáo gửi Quốc hội giải trình ý kiến đại biểu Quốc hội về chủ trương đầu tư dự án đường sắt tốc độ cao trên trục Bắc - Nam, trong đó có kiến nghị kéo dài dự án từ Lạng Sơn đến Cà Mau.
-Khi cho ý kiến về nội dung này, có đại biểu đề nghị xem xét kéo dài phạm vi dự án đến Cần Thơ. Có ý kiến đề nghị chiều dài của tuyến từ Lạng Sơn đến mũi Cà Mau, khoảng 2.110 km…
+TP - Đại diện nhiều hiệp hội, doanh nghiệp khẳng định việc tham gia các cấu phần của dự án đường sắt tốc độ cao Bắc - Nam là cơ hội lớn cho doanh nghiệp trong nước. Từ kinh nghiệm trong quá khứ, các doanh nghiệp tự tin sẽ làm được, chỉ cần Chính phủ và bộ ngành có cơ chế đặt hàng, dám giao việc cho doanh nghiệp.
+Cần luật hóa việc chuyển giao công nghệ, tỷ lệ nội địa hóa
+
+Về cơ hội tham gia các đại dự án lớn của đất nước, chia sẻ tại hội nghị do Bộ Công Thương tổ chức gần đây, ông Nguyễn Chỉ Sáng, Chủ tịch Hiệp hội Cơ khí Việt Nam (VAMI), thừa nhận thời gian qua, ngành cơ khí không phát triển một phần do doanh nghiệp chưa có thị trường và làm chủ được công nghệ.
+
+Căn cứ trên chiến lược, quy hoạch phát triển của các ngành, thị trường cơ khí cho đến năm 2044 ước tính trên 400 tỷ USD. Với đường sắt cao tốc, đường sắt nội đô Hà Nội và TPHCM có dự toán lên tới 30 tỷ USD. Đây là những thị trường rất lớn. Nếu doanh nghiệp trong nước đặt chân vào được, đó là thị trường mênh mông.
+
+Dự án đường sắt tốc độ cao Bắc - Nam: Cần cơ chế đặt hàng từ Chính phủ ảnh 1
+Doanh nghiệp cơ khí cần cơ chế để tham gia các dự án lớn. Ảnh: Nguyễn Bằng
+
+Dẫn ví dụ Iran bị cấm vận nhưng họ vẫn làm được hệ thống đường sắt riêng sau khi nhận chuyển giao công nghệ từ Siemen với tỷ lệ nội địa hoá từ 30-50%, ông Sáng cho rằng, nếu có cơ chế làm như cơ khí thuỷ công, thuỷ điện ở Việt Nam trước đây và có sự chuyển giao công nghệ thì chỉ 5 năm là Việt Nam làm chủ được công nghệ. Việc này sẽ mở ra thị trường rất lớn cho các doanh nghiệp trong nước.
+
+Theo Chủ tịch VAMI, hiện các doanh nghiệp trong nước vẫn còn yếu khi làm các sản phẩm cơ khí hoàn chỉnh, làm sản phẩm cơ khí lớn như điện gió, đường sắt cao tốc, đường sắt giao thông nội đô do thiếu hụt yếu tố quan trọng liên quan đến quy hoạch, chiến lược phát triển. Bộ Công Thương hiện chỉ quản lý ngành còn đường sắt cao tốc hay đường sắt nội đô thì thuộc Bộ GTVT quản lý.
+
+Vì vậy, để phối hợp, cần một “nhạc trưởng” ở tầm Chính phủ tạo sự kết nối. Như với các dự án của ngành giao thông, khi để doanh nghiệp trong nước tham gia và phát triển, chúng ta phải có một chiến lược về nội địa hóa thiết bị.
+
+Khẳng định các doanh nghiệp Việt Nam có khả năng làm chủ các hạng mục trong việc phát triển hệ thống đường sắt, đại diện VAMI kiến nghị Chính phủ và các Bộ, ngành cần ban hành những cơ chế, chính sách phù hợp để thúc đẩy kiến tạo thị trường, định hướng phát triển cho doanh nghiệp trong nước tham gia các dự án lớn.
+
+Cụ thể cần xây dựng và ban hành giải pháp doanh nghiệp Việt Nam có thể tham gia vào chương trình phát triển hệ thống đường sắt đi kèm với các quy định về việc chuyển giao, tiếp quản dần công nghệ. Những quy định này thậm chí cần được đưa cả vào luật.
 
 
 
-Đường sắt tốc độ cao Bắc - Nam: Lý do không kéo dài từ Lạng Sơn đến Cà Mau ảnh 1
-Tổng chiều dài tuyến đường sắt tốc độ cao Bắc - Nam khoảng 1.541 km.
+Ở khía cạnh khác, bản thân các doanh nghiệp cũng phải chủ động đề xuất những chính sách ưu đãi để hình thành và phát triển được một nền cơ khí công nghiệp, nền cơ khí công nghiệp của đường sắt.
 
-Chính phủ cho biết, quy hoạch mạng lưới đường sắt thời kỳ 2021 - 2030, tầm nhìn đến năm 2050 đã hoạch định phát triển các tuyến đường sắt mới trên hành lang Bắc - Nam, từ Lạng Sơn đến Cần Thơ, chiều dài khoảng 1.871 km. Trong đó bao gồm 3 tuyến: Lạng Sơn - Hà Nội, Hà Nội - TPHCM và TPHCM - Cần Thơ.
+Đáp ứng yêu cầu kỹ thuật đặc biệt của dự án
 
-Đối với tuyến Lạng Sơn - Hà Nội là loại hình đường sắt thường, đang lập quy hoạch chi tiết để huy động nguồn vốn đầu tư.
+Trao đổi với PV Tiền Phong, Tổng giám đốc một doanh nghiệp cơ khí hàng đầu Việt Nam khẳng định, doanh nghiệp Việt hoàn toàn đủ sức tham gia dự án đường sắt tốc độ cao, chỉ cần Chính phủ và các bộ ngành tạo cơ chế.
 
-Với tuyến Hà Nội - TPHCM là loại đường sắt tốc độ cao và tuyến TPHCM - Cần Thơ thuộc loại hình đường sắt thường.
+Theo lãnh đạo doanh nghiệp, bên cạnh các quy định cụ thể trong gói thầu, chương trình, dự án trọng điểm, Chính phủ cần có quy định đưa vào luật liên quan đến tỷ lệ nội địa hóa, sử dụng nguyên phụ liệu trong nước. Bên cạnh đó, cần tăng tỷ lệ đặt hàng của Nhà nước để thúc đẩy sự phát triển của doanh nghiệp. Việc này ở các nước đã thực hiện. Nếu có cơ chế, doanh nghiệp Việt sẽ làm được.
 
-Do vậy, Chính phủ kiến nghị giữ nguyên phạm vi dự án từ Hà Nội - TPHCM như dự thảo nghị quyết.
+“Nhìn vào quá khứ, các doanh nghiệp cơ khí trong nước đã tham gia nhiều dự án lớn của đất nước và đã làm rất thành công. Như các dự án cơ khí thủy công, khi chúng ta làm chủ được thiết kế và chế tạo, đơn giá so với nhập ngoại giảm được khoảng 60%. Như công trình thủy điện Sơn La, Lai Châu, khi đã làm chủ được, giúp về sớm tiến độ khoảng hai năm, giá trị tiết kiệm được từ 4 - 5 tỷ USD”. Chủ tịch VAMI Nguyễn Chỉ Sáng
 
-Về ý kiến đề nghị xem xét đoạn tuyến từ ga Phủ Lý đến ga Ninh Bình, Chính phủ cho biết, phương án hướng tuyến từ ga Phủ Lý đến Ninh Bình đã được Chính phủ chỉ đạo Bộ Giao thông vận tải nghiên cứu kỹ lưỡng trong quá trình hoàn thiện báo cáo nghiên cứu tiền khả thi. Trong quá trình nghiên cứu cũng đã đưa ra 3 phương án để phân tích so sánh lựa chọn.
+“Với ngành cơ khí, tôi đã đề nghị rất nhiều lần nhưng không được lắng nghe, tiền thuê đất của doanh nghiệp cơ khí phải thấp xuống. Thuế thu nhập doanh nghiệp ngành cơ khí hiện áp dụng như tất cả các ngành khác, cùng 20%/năm. Chúng ta cứ nói nhiều đến phát triển công nghiệp nền tảng, công nghiệp gốc, công nghiệp cơ bản nhưng không có bất cứ ưu đãi gì thì làm sao phát triển? Cùng đầu tư vào một khu công nghiệp nhưng doanh nghiệp cơ khí cũng giống như doanh nghiệp dệt may, xà phòng, giấy, hóa chất. Tất cả như nhau hết. Trong khi doanh nghiệp FDI trong lĩnh vực cơ khí hay là lĩnh vực công nghiệp hỗ trợ vào đầu tư ở các địa phương được hưởng đủ loại ưu đãi từ thuế kéo dài nhiều năm đến đất đai và cả vay vốn. Như vậy không thể cạnh tranh được”, vị này phân tích.
 
-Với vai trò là trung tâm phía Nam vùng duyên hải Bắc Bộ, thành phố Nam Định có quy mô dân số quy hoạch đến năm 2040 khoảng 600.000 dân, là đầu mối giao thông có nhu cầu vận tải lớn. Với vùng hấp dẫn các địa phương lân cận trong khu vực Đồng bằng sông Hồng như Thái Bình, Hưng Yên... lên đến khoảng 4 triệu người.
+Chia sẻ với báo chí, ông Trần Đình Long - Chủ tịch Tập đoàn Hòa Phát cho biết, ước tính dự án đường sắt cao tốc cần khoảng 6 triệu tấn thép các loại và đây là các loại thép Việt Nam sản xuất được.
 
-Cũng theo dự báo, đến năm 2050 nhu cầu đi và đến ga Nam Định khoảng gần 3 triệu khách/năm. Nếu tính chi phí đầu tư và vận hành khai thác trong 30 năm, đoạn tuyến qua Nam Định (12 km) sẽ có chi phí khoảng 1,66 tỷ USD, lợi ích thu được ước đạt 2,06 tỷ USD.
+Bản thân tập đoàn đã nghiên cứu về dòng sản phẩm thép ray nên việc sản xuất thép ray cho đường sắt cao tốc hoàn toàn nằm trong khả năng của doanh nghiệp, cả về số lượng cũng như chất lượng của các chủng loại thép, phù hợp với yêu cầu kỹ thuật của các gói thầu. Thép sản xuất ra sẽ được đảm bảo tiến độ giao hàng với giá cả cạnh tranh, thấp hơn giá thép nhập khẩu.
 
-
-Chính phủ dẫn kinh nghiệm thế giới cho thấy có nhiều trường hợp tuyến đường sắt tốc độ cao đi vòng để qua các trung tâm lớn, thu hút hành khách, thay vì đi thẳng. Do đó, Chính phủ kiến nghị giữ nguyên hướng tuyến trong báo cáo nghiên cứu tiền khả thi.
-
-Trong bước tiếp theo, Chính phủ khẳng định, sẽ chỉ đạo Bộ Giao thông vận tải tiếp tục rà soát hướng tuyến qua khu vực này bảo đảm kinh tế - kỹ thuật.
-
-Trên cơ sở đó, Chính phủ chỉnh lý dự án có tổng chiều dài tuyến khoảng 1.541 km; điểm đầu tại ga Ngọc Hồi (Hà Nội), điểm cuối tại ga Thủ Thiêm (TPHCM), đi qua địa phận 20 tỉnh, thành phố.
-
-Nội dung này đã được trình, cho ý kiến và Quốc hội sẽ biểu quyết thông qua chủ trương đầu tư vào ngày bế mạc kỳ họp Quốc hội, ngày 30/11.
+Theo Chủ tịch Hòa Phát, tập đoàn đang khảo sát, đề xuất phương án đầu tư một số dự án lớn tại tỉnh Phú Yên với tổng vốn đầu tư dự kiến 86.000 tỷ đồng, trong đó có dự án Khu liên hợp sản xuất gang thép. Nhà máy này có khả năng sản xuất các thanh ray dành cho tuyến đường sắt cao tốc Bắc - Nam, đáp ứng yêu cầu kỹ thuật đặc biệt của dự án.
