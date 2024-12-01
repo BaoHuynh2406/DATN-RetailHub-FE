@@ -4,14 +4,16 @@ import { axiosSecure } from '@/config/axiosInstance';
 // Hàm tiện ích để trích xuất thông báo lỗi
 const extractErrorMessage = (error) => {
     if (error.response) {
+        // Lỗi phản hồi từ máy chủ
         return error.response.data?.message || 'Lỗi máy chủ không xác định';
     } else if (error.request) {
+        // Yêu cầu được gửi nhưng không nhận được phản hồi
         return 'Không có phản hồi từ máy chủ';
     } else {
+        // Lỗi xảy ra trong quá trình thiết lập yêu cầu
         return error.message || 'Lỗi không xác định';
     }
 };
-
 // Thêm khách hàng
 export const addCustomerAsync = createAsyncThunk(
     'customers/addCustomerAsync',
@@ -20,6 +22,7 @@ export const addCustomerAsync = createAsyncThunk(
             const response = await axiosSecure.post('/api/customer/create', customer);
             return response.data.data;
         } catch (error) {
+            // Trích xuất thông điệp lỗi từ phản hồi của API
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -37,7 +40,6 @@ export const updateCustomerAsync = createAsyncThunk(
         }
     },
 );
-
 // Xóa khách hàng
 export const removeCustomerAsync = createAsyncThunk(
     'customers/removeCustomerAsync',
@@ -62,7 +64,7 @@ export const restoreCustomerAsync = createAsyncThunk(
     },
 );
 
-// Lấy tất cả khách hàng chưa bị xóa
+// Lấy tất cả khách hàng
 export const fetchCustomersAsync = createAsyncThunk(
     'customers/fetchCustomersAsync',
     async ({ page, size }, { rejectWithValue }) => {
@@ -73,7 +75,6 @@ export const fetchCustomersAsync = createAsyncThunk(
                     size: size,
                 },
             });
-
             return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
@@ -131,7 +132,7 @@ const customersSlice = createSlice({
     initialState: {
         data: [],
         currentData: null,
-        deletedCustomers: [],
+        deletedCustomers: [], // Thêm trường để lưu khách hàng đã xóa
         loading: false,
         error: null,
     },
@@ -158,27 +159,27 @@ const customersSlice = createSlice({
             state.error = action.payload;
         },
         setDeletedCustomers: (state, action) => {
-            state.deletedCustomers = action.payload;
+            state.deletedCustomers = action.payload; // Thêm khách hàng đã xóa vào state
         },
     },
     extraReducers: (builder) => {
         builder
-            // Xử lý khôi phục khách hàng trong extraReducers
-            .addCase(restoreCustomerAsync.pending, (state) => {
+            .addCase(fetchCustomersAsync.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(restoreCustomerAsync.fulfilled, (state, action) => {
-                state.data = state.data.map((customer) =>
-                    customer.customerId === action.payload.customerId ? { ...customer, isDelete: false } : customer,
-                );
+            .addCase(fetchCustomersAsync.fulfilled, (state, action) => {
+                state.data = action.payload;
                 state.loading = false;
             })
-            .addCase(restoreCustomerAsync.rejected, (state, action) => {
+            .addCase(fetchCustomersAsync.rejected, (state, action) => {
                 state.error = action.payload;
                 state.loading = false;
             })
-            //
+            .addCase(fetchCustomerByIdAsync.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
             .addCase(fetchCustomerByIdAsync.fulfilled, (state, action) => {
                 state.currentData = action.payload;
                 state.loading = false;
@@ -187,7 +188,6 @@ const customersSlice = createSlice({
                 state.error = action.payload;
                 state.loading = false;
             })
-            //
             .addCase(fetchCustomerByPhoneNumberAsync.pending, (state) => {
                 state.loading = true;
                 state.error = null;
@@ -200,36 +200,45 @@ const customersSlice = createSlice({
                 state.error = action.payload;
                 state.loading = false;
             })
-            //
-            .addCase(fetchCustomersAsync.rejected, (state, action) => {
-                state.error = action.payload;
-                state.loading = false;
-            })
-            .addCase(fetchCustomersAsync.fulfilled, (state, action) => {
-                state.data = action.payload;
-                state.loading = false;
-            })
-            .addCase(fetchCustomersAsync.pending, (state, action) => {
-                state.error = false;
-                state.loading = true;
-            })
-            //
             .addCase(fetchAllDeletedCustomersAsync.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
             .addCase(fetchAllDeletedCustomersAsync.fulfilled, (state, action) => {
-                state.data = action.payload;
+                state.deletedCustomers = action.payload; // Cập nhật khách hàng đã xóa
                 state.loading = false;
             })
             .addCase(fetchAllDeletedCustomersAsync.rejected, (state, action) => {
                 state.error = action.payload;
                 state.loading = false;
+            })
+            .addCase(addCustomerAsync.fulfilled, (state) => {
+                state.error = null;
+            })
+            .addCase(addCustomerAsync.rejected, (state, action) => {
+                state.error = action.payload;
+            })
+            .addCase(removeCustomerAsync.fulfilled, (state) => {
+                state.error = null;
+            })
+            .addCase(removeCustomerAsync.rejected, (state, action) => {
+                state.error = action.payload;
+            })
+            .addCase(updateCustomerAsync.fulfilled, (state) => {
+                state.error = null;
+            })
+            .addCase(updateCustomerAsync.rejected, (state, action) => {
+                state.error = action.payload;
+            })
+            .addCase(restoreCustomerAsync.fulfilled, (state) => {
+                state.error = null;
+            })
+            .addCase(restoreCustomerAsync.rejected, (state, action) => {
+                state.error = action.payload;
             });
     },
 });
 
-// Xuất các actions và reducer
 export const { addCustomer, removeCustomer, updateCustomer, restoreCustomer, setError, setDeletedCustomers } =
     customersSlice.actions;
 
