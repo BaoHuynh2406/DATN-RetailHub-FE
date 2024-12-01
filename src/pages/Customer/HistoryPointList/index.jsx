@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Box, Button, Container, Typography, Switch } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { fetchPointHistoryAsync } from '@/redux/Customer/pointHistorySlice';
+import { DataGrid } from '@mui/x-data-grid';
 
 export default function HistoryPointList() {
     const navigate = useNavigate();
@@ -20,6 +21,10 @@ export default function HistoryPointList() {
         dispatch(fetchPointHistoryAsync({ customerId, page, size }));
     }, [dispatch]);
 
+    useEffect(() => {
+        console.log("Dữ liệu lịch sử điểm:", pointHistory); // Log để kiểm tra dữ liệu
+    }, [pointHistory]);
+
     const columns = useMemo(
         () => [
             { field: 'transactionId', headerName: 'Mã giao dịch', width: 150 },
@@ -33,12 +38,16 @@ export default function HistoryPointList() {
             },
             { field: 'description', headerName: 'Mô tả', width: 300 },
         ],
-        [],
+        []
     );
 
     const handleToggleEarned = (event) => {
         setShowOnlyEarned(event.target.checked);
     };
+
+    const filteredPointHistory = showOnlyEarned
+        ? pointHistory.filter((item) => item.transactionType === 'earn')
+        : pointHistory;
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
@@ -51,21 +60,19 @@ export default function HistoryPointList() {
                 >
                     {showOnlyEarned ? 'LỊCH SỬ TÍCH ĐIỂM' : 'LỊCH SỬ ĐỔI ĐIỂM'}
                 </Typography>
-                <Button
-                    variant="contained"
-                    color="success"
-                    onClick={() => navigate('/customer')}
-                >
+                <Button variant="contained" color="success" onClick={() => navigate('/customer')}>
                     Quay lại
                 </Button>
             </Box>
 
-            <Box sx={{ height: 500, overflow: 'auto' }}>
+            <Box sx={{ height: 500, width: '100%' }}>
                 {loading && <Typography>Đang tải dữ liệu...</Typography>}
                 {error && <Typography>Có lỗi xảy ra: {error}</Typography>}
-                {!loading && !error && pointHistory.length > 0 && (
-                    // Thêm component lưới dữ liệu của bạn ở đây, sử dụng `pointHistory` làm nguồn dữ liệu
-                    <Typography>Dữ liệu đã tải xong!</Typography>
+                {!loading && !error && filteredPointHistory.length > 0 && (
+                    <DataGrid rows={filteredPointHistory} columns={columns} pageSize={10} rowsPerPageOptions={[10]} disableSelectionOnClick />
+                )}
+                {!loading && !error && filteredPointHistory.length === 0 && (
+                    <Typography>Không có dữ liệu lịch sử điểm!</Typography>
                 )}
             </Box>
 
