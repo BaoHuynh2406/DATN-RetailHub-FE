@@ -49,6 +49,11 @@ const privateRouter = [
                 element: lazy(() => import('@/pages/customer/customerDetail')),
                 layout: DefaultLayout,
             },
+            {
+                path: 'HistoryPointList',
+                element: lazy(() => import('@/pages/customer/HistoryPointList')),
+                layout: DefaultLayout,
+            },
         ],
     },
     {
