@@ -30,7 +30,6 @@ export const updateCustomerAsync = createAsyncThunk(
     'customers/updateCustomerAsync',
     async (customer, { dispatch, getState, rejectWithValue }) => {
         try {
-            dispatch(updateCustomer(customer));
             const response = await axiosSecure.put('/api/customer/update', customer);
             return response.data.data;
         } catch (error) {
@@ -43,11 +42,9 @@ export const updateCustomerAsync = createAsyncThunk(
 export const removeCustomerAsync = createAsyncThunk(
     'customers/removeCustomerAsync',
     async (customerId, { dispatch, rejectWithValue }) => {
-        dispatch(removeCustomer(customerId));
         try {
             await axiosSecure.delete(`/api/customer/Delete/${customerId}`);
         } catch (error) {
-            dispatch(restoreCustomer(customerId));
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -57,11 +54,9 @@ export const removeCustomerAsync = createAsyncThunk(
 export const restoreCustomerAsync = createAsyncThunk(
     'customers/restoreCustomerAsync',
     async (customerId, { dispatch, rejectWithValue }) => {
-        dispatch(restoreCustomer(customerId));
         try {
             await axiosSecure.post(`/api/customer/restore/${customerId}`);
         } catch (error) {
-            dispatch(removeCustomer(customerId));
             return rejectWithValue(extractErrorMessage(error));
         }
     },
@@ -72,13 +67,12 @@ export const fetchCustomersAsync = createAsyncThunk(
     'customers/fetchCustomersAsync',
     async ({ page, size }, { rejectWithValue }) => {
         try {
-            const response = await axiosSecure.get('/api/v2/customer/getAll', {
+            const response = await axiosSecure.get('/api/v2/customer/get-all-active', {
                 params: {
                     page: page,
                     size: size,
                 },
             });
-            console.log(response.data.data);
 
             return response.data.data;
         } catch (error) {
@@ -124,7 +118,7 @@ export const fetchAllDeletedCustomersAsync = createAsyncThunk(
                     size: size,
                 },
             });
-            return response.data.data?.data;
+            return response.data.data;
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error));
         }

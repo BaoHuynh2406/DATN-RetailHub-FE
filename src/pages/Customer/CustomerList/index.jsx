@@ -10,7 +10,6 @@ export default function CustomerTable() {
     const navigate = useNavigate(); // Hook để điều hướng chương trình
     const dispatch = useDispatch(); // Hook để dispatch các hành động tới Redux store
 
-
     const [showDeleted, setShowDeleted] = useState(false); // State để chuyển đổi giữa hiển thị khách hàng đã xóa hoặc không
 
     const columns = useMemo(
