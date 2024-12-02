@@ -1,1 +1,1 @@
-Update Index ngày 12/2/2024 Index/PoinHistory
+Update Index ngày 2/12/2024 Index/PoinHistory
