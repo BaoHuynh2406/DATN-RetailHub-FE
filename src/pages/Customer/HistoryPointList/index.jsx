@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchAllPointHistoriesAsync,
+    fetchPointHistoryAsync,
+    createPointHistoryAsync,
 } from '@/redux/Customer/pointHistorySlice';
 
 export default function PointHistoryTable() {

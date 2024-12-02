@@ -23,7 +23,7 @@ export const fetchAllPointHistoriesAsync = createAsyncThunk(
                     size: size,
                 },
             });
-            return response.data.data || []; // Trả về mảng rỗng nếu không có dữ liệu
+            return response.data.data; // Trả về mảng rỗng nếu không có dữ liệu
         } catch (error) {
             return rejectWithValue(extractErrorMessage(error)); // Trả về lỗi nếu có
         }
@@ -72,13 +72,12 @@ const pointHistorySlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchAllPointHistoriesAsync.pending, (state) => {
-                state.loading = true;
-                state.error = null;
+            .addCase(fetchAllPointHistoriesAsync.pending, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
             })
             .addCase(fetchAllPointHistoriesAsync.fulfilled, (state, action) => {
-                // Lấy dữ liệu từ trường 'content' nếu có, tránh lấy dữ liệu không hợp lệ
-                state.data = action.payload?.content || [];  // Đảm bảo lấy đúng trường dữ liệu
+                state.data = action.payload;
                 state.loading = false;
             })
             .addCase(fetchAllPointHistoriesAsync.rejected, (state, action) => {
@@ -88,8 +87,8 @@ const pointHistorySlice = createSlice({
                 state.loading = false;
             })
             .addCase(fetchPointHistoryAsync.pending, (state) => {
+                state.error = false;
                 state.loading = true;
-                state.error = null;
             })
             .addCase(fetchPointHistoryAsync.fulfilled, (state, action) => {
                 state.data = action.payload || []; // Xử lý khi không có dữ liệu
