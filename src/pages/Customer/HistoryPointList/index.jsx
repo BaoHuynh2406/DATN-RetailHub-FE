@@ -1,91 +1,100 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Box, Button, Container, Typography, Switch } from '@mui/material';
+import React, { useMemo, useEffect } from 'react';
+import { Box, Button, Container, Typography, IconButton } from '@mui/material';
+import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
+import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate } from 'react-router-dom';
-import { fetchPointHistoryAsync } from '@/redux/Customer/pointHistorySlice';
-import { DataGrid } from '@mui/x-data-grid';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    fetchAllPointHistoriesAsync,
+    fetchPointHistoryAsync,
+    createPointHistoryAsync,
+} from '@/redux/Customer/pointHistorySlice';
 
-export default function HistoryPointList() {
+export default function PointHistoryTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const pointHistory = useSelector((state) => state.pointHistory?.data || []);
-    const loading = useSelector((state) => state.pointHistory?.loading || false);
-    const error = useSelector((state) => state.pointHistory?.error || null);
 
-    const [showOnlyEarned, setShowOnlyEarned] = useState(false);
+    // Lấy dữ liệu từ Redux Store
+    const pointHistories = useSelector((state) => state.pointHistory.data); // Giả sử dữ liệu lưu trong 'data'
 
+    // Kiểm tra xem có dữ liệu không và fetch dữ liệu khi component mount
     useEffect(() => {
-        const customerId = 1; // Thay thế bằng ID khách hàng động
-        const page = 1;
-        const size = 10;
-        dispatch(fetchPointHistoryAsync({ customerId, page, size }));
+        dispatch(fetchAllPointHistoriesAsync()); // Gọi API khi component mount
     }, [dispatch]);
 
-    useEffect(() => {
-        console.log("Dữ liệu lịch sử điểm:", pointHistory); // Log để kiểm tra dữ liệu
-    }, [pointHistory]);
-
+    // Cấu hình các cột cho bảng
     const columns = useMemo(
         () => [
-            { field: 'transactionId', headerName: 'Mã giao dịch', width: 150 },
-            { field: 'transactionDate', headerName: 'Ngày giao dịch', width: 180 },
-            { field: 'points', headerName: 'Điểm', width: 120 },
-            {
-                field: 'transactionType',
-                headerName: 'Loại giao dịch',
-                width: 180,
-                renderCell: (params) => (params.value === 'earn' ? 'Tích điểm' : 'Đổi điểm'),
+            { field: 'historyId', headerName: 'ID Lịch Sử', width: 150 },
+            { field: 'customerId', headerName: 'Mã Khách Hàng', width: 150 },
+            { field: 'points', headerName: 'Điểm', width: 150 },
+            { field: 'description', headerName: 'Mô Tả', width: 200 },
+            { 
+                field: 'transactionDate', 
+                headerName: 'Ngày Giao Dịch', 
+                width: 200,
+                renderCell: (params) => {
+                    const date = new Date(params.row.transactionDate);
+                    return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+                }
             },
-            { field: 'description', headerName: 'Mô tả', width: 300 },
+            {
+                field: 'actions',
+                headerName: 'Hành Động',
+                width: 150,
+                renderCell: (params) => (
+                    <Box display="flex" justifyContent="center" alignItems="center">
+                        <IconButton color="primary" onClick={() => handleViewDetail(params.row.historyId)}>
+                            <EditIcon />
+                        </IconButton>
+                    </Box>
+                ),
+            },
         ],
-        []
+        [],
     );
 
-    const handleToggleEarned = (event) => {
-        setShowOnlyEarned(event.target.checked);
+    // Điều hướng đến trang chi tiết lịch sử
+    const handleViewDetail = (historyId) => {
+        dispatch(fetchPointHistoryAsync(historyId)).then(() => {
+            navigate(`/history/PointDetail/${historyId}`);
+        });
     };
 
-    const filteredPointHistory = showOnlyEarned
-        ? pointHistory.filter((item) => item.transactionType === 'earn')
-        : pointHistory;
+    // Chuyển hướng đến trang tạo mới lịch sử điểm
+    const handleAdd = () => {
+        dispatch(createPointHistoryAsync()).then((response) => {
+            if (response.payload) {
+                navigate(`/history/PointDetail/create`);
+            }
+        });
+    };
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
-                <Typography
-                    variant="h4"
-                    component="h2"
-                    fontWeight="bold"
-                    color={showOnlyEarned ? '#2e7d32' : '#ab003c'}
-                >
-                    {showOnlyEarned ? 'LỊCH SỬ TÍCH ĐIỂM' : 'LỊCH SỬ ĐỔI ĐIỂM'}
+                <Typography variant="h4" component="h2" fontWeight="bold">
+                    LỊCH SỬ ĐIỂM KHÁCH HÀNG
                 </Typography>
-                <Button variant="contained" color="success" onClick={() => navigate('/customer')}>
-                    Quay lại
+                <Button
+                    variant="contained"
+                    color="success"
+                    startIcon={<AddCircleIcon />}
+                    onClick={handleAdd}
+                >
+                    Thêm mới
                 </Button>
             </Box>
-
-            <Box sx={{ height: 500, width: '100%' }}>
-                {loading && <Typography>Đang tải dữ liệu...</Typography>}
-                {error && <Typography>Có lỗi xảy ra: {error}</Typography>}
-                {!loading && !error && filteredPointHistory.length > 0 && (
-                    <DataGrid rows={filteredPointHistory} columns={columns} pageSize={10} rowsPerPageOptions={[10]} disableSelectionOnClick />
-                )}
-                {!loading && !error && filteredPointHistory.length === 0 && (
-                    <Typography>Không có dữ liệu lịch sử điểm!</Typography>
-                )}
-            </Box>
-
-            <Box display="flex" justifyContent="space-between" alignItems="center" marginTop={2}>
-                <Box display="flex" alignItems="center">
-                    <Typography variant="body1" component="span" marginRight={1} color="secondary">
-                        Chỉ hiển thị giao dịch tích điểm
-                    </Typography>
-                    <Switch checked={showOnlyEarned} onChange={handleToggleEarned} color="primary" />
-                </Box>
-                <Button variant="contained" onClick={() => console.log('Export to Excel')}>
-                    Xuất Excel
-                </Button>
+            <Box sx={{ height: 500, overflow: 'auto' }}>
+                {/* Kiểm tra và truyền dữ liệu vào TablePagination */}
+                <TablePagination
+                    columns={columns} // Cấu hình cột
+                    stt={true} // Hiển thị số thứ tự hàng
+                    id="historyId" // Định danh hàng
+                    dispatchHandle={fetchAllPointHistoriesAsync} // API để lấy danh sách lịch sử
+                    sliceName="pointHistory" // Tên slice trong Redux
+                    rows={pointHistories || []} // Truyền dữ liệu từ Redux vào rows, đảm bảo luôn có giá trị mặc định nếu dữ liệu là undefined
+                />
             </Box>
         </Container>
     );
