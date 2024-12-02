@@ -42,36 +42,14 @@ export default function PointHistoryTable() {
         [],
     );
 
-    // Điều hướng đến trang chi tiết lịch sử
-    const handleViewDetail = (historyId) => {
-        dispatch(fetchPointHistoryAsync(historyId)).then(() => {
-            navigate(`/history/PointDetail/${historyId}`);
-        });
-    };
-
-    // Chuyển hướng đến trang tạo mới lịch sử điểm
-    const handleAdd = () => {
-        dispatch(createPointHistoryAsync()).then((response) => {
-            if (response.payload) {
-                navigate(`/history/PointDetail/create`);
-            }
-        });
-    };
-
+    
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
                 <Typography variant="h4" component="h2" fontWeight="bold">
                     LỊCH SỬ ĐIỂM KHÁCH HÀNG
                 </Typography>
-                <Button
-                    variant="contained"
-                    color="success"
-                    startIcon={<AddCircleIcon />}
-                    onClick={handleAdd}
-                >
-                    Thêm mới
-                </Button>
+              
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
                 {/* Kiểm tra và truyền dữ liệu vào TablePagination */}
