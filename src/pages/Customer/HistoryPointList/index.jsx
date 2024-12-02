@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchAllPointHistoriesAsync,
-    fetchPointHistoryAsync,
-    createPointHistoryAsync,
 } from '@/redux/Customer/pointHistorySlice';
 
 export default function PointHistoryTable() {
@@ -42,14 +40,14 @@ export default function PointHistoryTable() {
         [],
     );
 
-    
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
                 <Typography variant="h4" component="h2" fontWeight="bold">
                     LỊCH SỬ ĐIỂM KHÁCH HÀNG
                 </Typography>
-              
+                {/* Button để thêm lịch sử điểm nếu cần */}
+               
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
                 {/* Kiểm tra và truyền dữ liệu vào TablePagination */}

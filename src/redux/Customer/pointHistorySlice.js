@@ -73,12 +73,10 @@ const pointHistorySlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchAllPointHistoriesAsync.pending, (state) => {
-                console.log("Đang tải dữ liệu lịch sử điểm...");
                 state.loading = true;
                 state.error = null;
             })
             .addCase(fetchAllPointHistoriesAsync.fulfilled, (state, action) => {
-                console.log("Dữ liệu lịch sử điểm đã tải:", action.payload);
                 // Lấy dữ liệu từ trường 'content' nếu có, tránh lấy dữ liệu không hợp lệ
                 state.data = action.payload?.content || [];  // Đảm bảo lấy đúng trường dữ liệu
                 state.loading = false;
@@ -86,7 +84,6 @@ const pointHistorySlice = createSlice({
             .addCase(fetchAllPointHistoriesAsync.rejected, (state, action) => {
                 // Kiểm tra và log lỗi chi tiết hơn
                 const errorMessage = action.payload || action.error?.message || 'Lỗi không xác định';
-                console.log("Lỗi khi tải dữ liệu lịch sử điểm:", errorMessage);
                 state.error = errorMessage;  // Lưu thông báo lỗi vào state
                 state.loading = false;
             })
