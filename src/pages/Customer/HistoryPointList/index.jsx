@@ -38,18 +38,6 @@ export default function PointHistoryTable() {
                     return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
                 }
             },
-            {
-                field: 'actions',
-                headerName: 'Hành Động',
-                width: 150,
-                renderCell: (params) => (
-                    <Box display="flex" justifyContent="center" alignItems="center">
-                        <IconButton color="primary" onClick={() => handleViewDetail(params.row.historyId)}>
-                            <EditIcon />
-                        </IconButton>
-                    </Box>
-                ),
-            },
         ],
         [],
     );

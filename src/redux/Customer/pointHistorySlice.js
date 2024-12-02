@@ -79,12 +79,15 @@ const pointHistorySlice = createSlice({
             })
             .addCase(fetchAllPointHistoriesAsync.fulfilled, (state, action) => {
                 console.log("Dữ liệu lịch sử điểm đã tải:", action.payload);
-                state.data = action.payload || [];
+                // Lấy dữ liệu từ trường 'content' nếu có, tránh lấy dữ liệu không hợp lệ
+                state.data = action.payload?.content || [];  // Đảm bảo lấy đúng trường dữ liệu
                 state.loading = false;
             })
             .addCase(fetchAllPointHistoriesAsync.rejected, (state, action) => {
-                console.log("Lỗi khi tải dữ liệu lịch sử điểm:", action.payload);
-                state.error = action.payload;
+                // Kiểm tra và log lỗi chi tiết hơn
+                const errorMessage = action.payload || action.error?.message || 'Lỗi không xác định';
+                console.log("Lỗi khi tải dữ liệu lịch sử điểm:", errorMessage);
+                state.error = errorMessage;  // Lưu thông báo lỗi vào state
                 state.loading = false;
             })
             .addCase(fetchPointHistoryAsync.pending, (state) => {
