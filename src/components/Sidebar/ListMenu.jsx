@@ -50,7 +50,7 @@ export const sidebarItems = [
                 state: '/customer/CustomerList',
             },
             {
-                sidebarProps: { displayText: 'Lịch sữ đổi điểm', icon: <HistoryEduRoundedIcon /> },
+                sidebarProps: { displayText: 'Lịch sữ điểm', icon: <HistoryEduRoundedIcon /> },
                 path: '/customer/HistoryPointList',
                 state: '/customer/HistoryPointList',
             },

@@ -46,7 +46,7 @@ export default function PointHistoryTable() {
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
                 <Typography variant="h4" component="h2" fontWeight="bold">
-                    LỊCH SỬ ĐIỂM KHÁCH HÀNG
+                    LỊCH SỬ ĐỔI/TÍCH ĐIỂM
                 </Typography>
                 {/* Button để thêm lịch sử điểm nếu cần */}
                
