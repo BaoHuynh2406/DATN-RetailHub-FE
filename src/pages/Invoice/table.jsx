@@ -4,9 +4,15 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchInvoices } from '@/redux/Invoice/invoiceSlice';
 import dayjs from 'dayjs';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-function Table({ startDate, endDate, status }) {
+function convertCheckboxValuesToString(ck) {
+    return Object.keys(ck)
+        .filter((key) => ck[key])
+        .join(',');
+}
+
+function Table({ startDate, endDate, checkboxValues }) {
     const dispatch = useDispatch();
 
     const columns = [
@@ -16,7 +22,7 @@ function Table({ startDate, endDate, status }) {
         { field: 'phoneNumber', headerName: 'SĐT Khách hàng', width: 150 },
         { field: 'invoiceDate', headerName: 'Ngày lập hóa đơn', width: 150 },
         {
-            field: 'totalAmount',
+            field: 'finalTotal',
             headerName: 'Số tiền',
             width: 150,
             renderCell: (params) => {
@@ -52,10 +58,10 @@ function Table({ startDate, endDate, status }) {
                 size: 20,
                 startDate: formatDateForApi(startDate),
                 endDate: formatDateForApi(endDate),
-                status: 'PAID',
+                status: convertCheckboxValuesToString(checkboxValues),
             }),
         );
-    }, [startDate, endDate, status]);
+    }, [startDate, endDate, checkboxValues]);
 
     const formatDateForApi = (isoDate) => {
         return dayjs(isoDate).format('YYYY-MM-DD');
@@ -75,7 +81,7 @@ function Table({ startDate, endDate, status }) {
                 additionalParams={{
                     startDate: formatDateForApi(startDate),
                     endDate: formatDateForApi(endDate),
-                    status: status,
+                    status: convertCheckboxValuesToString(checkboxValues),
                 }}
             />
         </>

@@ -74,7 +74,7 @@ const invoiceSlice = createSlice({
             .addCase(fetchInvoices.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
-                state.data = null;
+                state.data = [];
             });
     },
 });

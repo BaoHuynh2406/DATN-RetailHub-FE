@@ -9,12 +9,15 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { useSelector, useDispatch } from 'react-redux';
 
 dayjs.extend(weekOfYear);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
 
 export default function Invoice() {
+    const dispatch = useDispatch();
+
     const [invoiceDays, setInvoiceDays] = useState(1);
     const [viewMode, setViewMode] = useState('quantity'); // Chế độ xem: quantity hoặc total
     const [startDate, setStartDate] = useState(dayjs());
@@ -90,7 +93,7 @@ export default function Invoice() {
 
             {/* Danh sách hóa đơn */}
             <Divider />
-            <TableOfContent startDate={startDate} endDate={endDate} status="PAID" />
+            <TableOfContent startDate={startDate} endDate={endDate} checkboxValues={checkboxValues} />
         </Container>
     );
 }
