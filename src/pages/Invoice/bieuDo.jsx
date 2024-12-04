@@ -6,12 +6,23 @@ import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import { LineChart } from '@mui/x-charts/LineChart';
 import { BarChart } from '@mui/x-charts/BarChart';
-import { useSelector } from 'react-redux';
+import { axiosSecure, axiosPublic } from '@/config/axiosInstance';
+import CircularProgress from '@mui/material/CircularProgress';
 
 // Extend Day.js
 dayjs.extend(weekOfYear);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
+
+function convertCheckboxValuesToString(ck) {
+    return Object.keys(ck)
+        .filter((key) => ck[key])
+        .join(',');
+}
+
+const formatDateForApi = (isoDate) => {
+    return dayjs(isoDate).format('YYYY-MM-DD');
+};
 
 // Format number utility
 const formatNumber = (value) => {
@@ -24,39 +35,101 @@ const formatNumber = (value) => {
 
 // Component
 function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
-    const { data, loading, error } = useSelector((state) => state.invoice);
     const [chartData, setChartData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-    // Process data for the chart
     useEffect(() => {
-        if (data?.data) {
-            const processedData = data.data.reduce((acc, item) => {
-                const date = dayjs(item.invoiceDate, 'HH:mm:ss DD/MM/YYYY').format('DD/MM/YYYY');
-                const status = item.status;
-                const finalTotal = item.finalTotal;
+        const fetchData = async () => {
+            setLoading(true);
+            setError(null);
+            try {
+                const response = await axiosSecure.get('/api/v2/invoice/chart-data', {
+                    params: {
+                        startDate: formatDateForApi(startDate),
+                        endDate: formatDateForApi(endDate),
+                        status: convertCheckboxValuesToString(checkboxValues),
+                    },
+                });
 
-                if (!acc[date]) {
-                    acc[date] = {
-                        date,
-                        PENDING: 0,
-                        PAID: 0,
-                        RETURN: 0,
-                        PENDING_TOTAL: 0,
-                        PAID_TOTAL: 0,
-                        RETURN_TOTAL: 0,
-                    };
+                // Đảm bảo `response.data` tồn tại và trích xuất `data`
+                const invoices = response.data?.data;
+
+                if (Array.isArray(invoices)) {
+                    const processedData = invoices.reduce((acc, item) => {
+                        const date = dayjs(item.invoiceDate).format('DD/MM/YYYY');
+                        const status = item.status;
+                        const finalTotal = item.finalTotal;
+
+                        if (!acc[date]) {
+                            acc[date] = {
+                                date,
+                                PENDING: 0,
+                                PAID: 0,
+                                RETURN: 0,
+                                PENDING_TOTAL: 0,
+                                PAID_TOTAL: 0,
+                                RETURN_TOTAL: 0,
+                            };
+                        }
+
+                        acc[date][status] += 1; // Tăng số lượng hóa đơn theo trạng thái
+                        acc[date][`${status}_TOTAL`] += finalTotal; // Tổng tiền theo trạng thái
+
+                        return acc;
+                    }, {});
+
+                    // Sắp xếp dữ liệu theo ngày
+                    const sortedData = Object.values(processedData).sort((a, b) =>
+                        dayjs(a.date, 'DD/MM/YYYY').diff(dayjs(b.date, 'DD/MM/YYYY')),
+                    );
+
+                    setChartData(sortedData);
+                } else {
+                    console.error('Expected an array in response.data.data but got:', typeof invoices);
+                    setError('Dữ liệu trả về không hợp lệ.');
                 }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setError('Lỗi khi tải dữ liệu.');
+            } finally {
+                setLoading(false);
+            }
+        };
 
-                acc[date][status] += 1; // Count number of invoices by status
-                acc[date][`${status}_TOTAL`] += finalTotal; // Calculate total amount by status
+        fetchData();
+    }, [startDate, endDate, checkboxValues]);
 
-                return acc;
-            }, {});
-
-            // Convert processed data object to an array
-            setChartData(Object.values(processedData));
-        }
-    }, [data]);
+    if (loading)
+        return (
+            <Box
+                flex={7}
+                sx={{
+                    minWidth: '300px',
+                    height: '300px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}
+            >
+                <CircularProgress />
+            </Box>
+        );
+    if (error)
+        return (
+            <Box
+                flex={7}
+                sx={{
+                    minWidth: '300px',
+                    height: '300px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}
+            >
+                {error}
+            </Box>
+        );
 
     return (
         <Box
@@ -78,6 +151,7 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
                                     ? chartData.map((item) => item.PENDING)
                                     : chartData.map((item) => item.PENDING_TOTAL),
                             label: 'Đang thanh toán',
+                            color: '#ffa500',
                         },
                         checkboxValues.PAID && {
                             data:
@@ -85,6 +159,7 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
                                     ? chartData.map((item) => item.PAID)
                                     : chartData.map((item) => item.PAID_TOTAL),
                             label: 'Đã thanh toán',
+                            color: '#008000',
                         },
                         checkboxValues.RETURN && {
                             data:
@@ -92,6 +167,7 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
                                     ? chartData.map((item) => item.RETURN)
                                     : chartData.map((item) => item.RETURN_TOTAL),
                             label: 'Đổi trả',
+                            color: '#d32f2f',
                         },
                     ].filter(Boolean)}
                     xAxis={[{ scaleType: 'band', data: chartData.map((item) => item.date) }]}
@@ -111,7 +187,7 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
                                     ? chartData.map((item) => item.PENDING)
                                     : chartData.map((item) => item.PENDING_TOTAL),
                             label: 'Đang thanh toán',
-                            color: '#bab0ab',
+                            color: '#ffa500',
                         },
                         checkboxValues.PAID && {
                             data:
@@ -119,6 +195,7 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
                                     ? chartData.map((item) => item.PAID)
                                     : chartData.map((item) => item.PAID_TOTAL),
                             label: 'Đã thanh toán',
+                            color: '#008000',
                         },
                         checkboxValues.RETURN && {
                             data:
@@ -126,7 +203,7 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
                                     ? chartData.map((item) => item.RETURN)
                                     : chartData.map((item) => item.RETURN_TOTAL),
                             label: 'Đổi trả',
-                            color: '#e15759',
+                            color: '#d32f2f',
                         },
                     ].filter(Boolean)}
                     xAxis={[{ scaleType: 'point', data: chartData.map((item) => item.date) }]}

@@ -19,11 +19,12 @@ export default function Invoice() {
     const dispatch = useDispatch();
 
     const [invoiceDays, setInvoiceDays] = useState(1);
-    const [viewMode, setViewMode] = useState('quantity'); // Chế độ xem: quantity hoặc total
+    const [viewMode, setViewMode] = useState('total');
+    const [sort, setSort] = useState('des');
     const [startDate, setStartDate] = useState(dayjs());
     const [endDate, setEndDate] = useState(dayjs());
     const [checkboxValues, setCheckboxValues] = useState({
-        PENDING: true,
+        PENDING: false,
         PAID: true,
         RETURN: false,
     });
@@ -80,6 +81,8 @@ export default function Invoice() {
                     viewMode={viewMode}
                     setViewMode={setViewMode}
                     invoiceDays={invoiceDays}
+                    sort={sort}
+                    setSort={setSort}
                 />
                 {/* Biểu đồ */}
                 <BieuDo
@@ -93,7 +96,7 @@ export default function Invoice() {
 
             {/* Danh sách hóa đơn */}
             <Divider />
-            <TableOfContent startDate={startDate} endDate={endDate} checkboxValues={checkboxValues} />
+            <TableOfContent startDate={startDate} endDate={endDate} checkboxValues={checkboxValues} sort={sort} />
         </Container>
     );
 }

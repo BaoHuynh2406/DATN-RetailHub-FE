@@ -1,10 +1,12 @@
 import { Box, IconButton, Typography } from '@mui/material';
 import TablePagination from '@/components/TableCustom/TablePagination';
 import EditIcon from '@mui/icons-material/Edit';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchInvoices } from '@/redux/Invoice/invoiceSlice';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
+import { Padding } from '@mui/icons-material';
 
 function convertCheckboxValuesToString(ck) {
     return Object.keys(ck)
@@ -12,15 +14,15 @@ function convertCheckboxValuesToString(ck) {
         .join(',');
 }
 
-function Table({ startDate, endDate, checkboxValues }) {
+function Table({ startDate, endDate, checkboxValues, sort }) {
     const dispatch = useDispatch();
 
     const columns = [
         { field: 'invoiceId', headerName: 'Mã hóa đơn', width: 150 },
-        { field: 'userId', headerName: 'Mã nhân viên', width: 210 },
-        { field: 'customerId', headerName: 'Mã khách hàng', width: 170 },
+        { field: 'userFullName', headerName: 'Nhân viên', width: 150 },
+        { field: 'fullName', headerName: 'Khách hàng', width: 170 },
         { field: 'phoneNumber', headerName: 'SĐT Khách hàng', width: 150 },
-        { field: 'invoiceDate', headerName: 'Ngày lập hóa đơn', width: 150 },
+        { field: 'invoiceDate', headerName: 'Ngày lập hóa đơn', width: 200 },
         {
             field: 'finalTotal',
             headerName: 'Số tiền',
@@ -36,15 +38,53 @@ function Table({ startDate, endDate, checkboxValues }) {
                 return '';
             },
         },
-        { field: 'status', headerName: 'Trạng thái', width: 150 },
+        {
+            field: 'status',
+            headerName: 'Trạng thái',
+            width: 150,
+            headerAlign: 'center',
+            align: 'center',
+            renderCell: (params) => {
+                const getStatusStyle = (status) => {
+                    switch (status) {
+                        case 'PENDING':
+                            return { backgroundColor: '#FFA500', color: 'white' };
+                        case 'PAID':
+                            return { backgroundColor: '#008000', color: 'white' };
+                        case 'RETURN':
+                            return { backgroundColor: '#FF0000', color: 'white' };
+                        default:
+                            return { backgroundColor: '#CCCCCC', color: 'black' }; // Mặc định
+                    }
+                };
+
+                const style = {
+                    ...getStatusStyle(params.row.status),
+                    borderRadius: '10px',
+                    padding: '4px 8px',
+                    fontWeight: 'bold',
+                };
+
+                return (
+                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <div>
+                            <label style={style}>{params.row.status}</label>
+                        </div>
+                    </Box>
+                );
+            },
+        },
         {
             field: 'actions',
             headerName: 'Xem chi tiết',
             width: 150,
+            headerAlign: 'center',
+            align: 'center',
+            sortable: false,
             renderCell: (params) => (
-                <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                <Box display="flex" justifyContent="center" alignItems="center" height="100%">
                     <IconButton color="primary" onClick={() => handleEdit(params.row)}>
-                        <EditIcon />
+                        <VisibilityIcon />
                     </IconButton>
                 </Box>
             ),
@@ -59,9 +99,10 @@ function Table({ startDate, endDate, checkboxValues }) {
                 startDate: formatDateForApi(startDate),
                 endDate: formatDateForApi(endDate),
                 status: convertCheckboxValuesToString(checkboxValues),
+                sort: sort,
             }),
         );
-    }, [startDate, endDate, checkboxValues]);
+    }, [startDate, endDate, checkboxValues, sort]);
 
     const formatDateForApi = (isoDate) => {
         return dayjs(isoDate).format('YYYY-MM-DD');

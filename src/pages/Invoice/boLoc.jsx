@@ -11,17 +11,19 @@ dayjs.extend(weekOfYear);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
 
-function BoLoc({ 
-    startDate, 
-    endDate, 
+function BoLoc({
+    startDate,
+    endDate,
     setStartDate,
     setEndDate,
-    checkboxValues, 
-    handleCheckboxChange, 
-    handleChange, 
-    viewMode, 
+    checkboxValues,
+    handleCheckboxChange,
+    handleChange,
+    viewMode,
     setViewMode,
-    invoiceDays
+    invoiceDays,
+    sort,
+    setSort,
 }) {
     return (
         <>
@@ -114,18 +116,37 @@ function BoLoc({
                 </Box>
 
                 <Box display="flex" alignItems="center" marginY={2}>
-                    <Typography
-                        sx={{
-                            marginRight: 2,
-                        }}
-                        fontWeight="bold"
-                    >
-                        Chế độ xem:{' '}
-                    </Typography>
-                    <Select value={viewMode} onChange={(e) => setViewMode(e.target.value)}>
-                        <MenuItem value="quantity">Số lượng hóa đơn</MenuItem>
-                        <MenuItem value="total">Tổng tiền</MenuItem>
-                    </Select>
+                    {/* Chế độ xem */}
+                    <Box display="flex" alignItems="center" sx={{ marginRight: '40px' }}>
+                        <Typography
+                            sx={{
+                                marginRight: 2,
+                            }}
+                            fontWeight="bold"
+                        >
+                            Chế độ xem:{' '}
+                        </Typography>
+                        <Select value={viewMode} onChange={(e) => setViewMode(e.target.value)}>
+                            <MenuItem value="quantity">Số lượng hóa đơn</MenuItem>
+                            <MenuItem value="total">Tổng tiền</MenuItem>
+                        </Select>
+                    </Box>
+
+                    {/* Sắp xếp */}
+                    <Box display="flex" alignItems="center">
+                        <Typography
+                            sx={{
+                                marginRight: 2,
+                            }}
+                            fontWeight="bold"
+                        >
+                            Sắp xếp:{' '}
+                        </Typography>
+                        <Select value={sort} onChange={(e) => setSort(e.target.value)}>
+                            <MenuItem value="asc">Cũ nhất</MenuItem>
+                            <MenuItem value="des">Mới nhất</MenuItem>
+                        </Select>
+                    </Box>
                 </Box>
             </Box>
         </>
