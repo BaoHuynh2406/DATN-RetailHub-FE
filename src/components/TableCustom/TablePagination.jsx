@@ -62,7 +62,15 @@ function CustomPagination(props) {
     );
 }
 
-function TablePagination({ columns, dispatchHandle, sliceName, id = 'id', rowHeight = 60, stt = false }) {
+function TablePagination({
+    columns,
+    dispatchHandle,
+    sliceName,
+    id = 'id',
+    rowHeight = 60,
+    stt = false,
+    additionalParams = {},
+}) {
     const dispatch = useDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
     const initialPage = parseInt(searchParams.get('page') || '1', 10);
@@ -85,7 +93,7 @@ function TablePagination({ columns, dispatchHandle, sliceName, id = 'id', rowHei
         const { page, pageSize } = paginationModel;
 
         try {
-            dispatch(dispatchHandle({ page: page + 1, size: pageSize }));
+            dispatch(dispatchHandle({ page: page + 1, size: pageSize, ...additionalParams }));
         } catch (error) {
             console.error('Error fetching data: ', error);
         }

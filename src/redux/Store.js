@@ -1,4 +1,4 @@
-import {thunk} from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import { configureStore } from '@reduxjs/toolkit';
 import menuReducer from './Menu/MenuSlice.js';
 import studentReducer from './Student/Reducer.js';
@@ -8,6 +8,7 @@ import CustomerSlice from './Customer/CustomerSlice.js';
 import ProductSlice from './Product/ProductSlice.js';
 import SettingSlice from './Settings/SettingSlice.js';
 import pointHistorySlice from './Customer/pointHistorySlice.js';
+import invoiceSlice from './Invoice/invoiceSlice.js';
 
 export const store = configureStore({
     reducer: {
@@ -18,9 +19,8 @@ export const store = configureStore({
         userCurrent: UserCurrent,
         customer: CustomerSlice,
         settings: SettingSlice,
-        pointHistory:pointHistorySlice
-        
-
+        pointHistory: pointHistorySlice,
+        invoice: invoiceSlice,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });

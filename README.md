@@ -8,6 +8,3 @@ npm i
 
 # chạy
 npm run dev
-<<<<<<< HEAD
-===
-hahahahahahahaha
