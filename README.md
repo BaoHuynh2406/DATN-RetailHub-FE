@@ -7,4 +7,5 @@
 npm i
 
 # chạy
-npm run dev
+npm run dev 
+không một hai ba bốn năm sau bảy tám chín mười
