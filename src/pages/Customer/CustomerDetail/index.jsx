@@ -22,7 +22,7 @@ import LockIcon from '@mui/icons-material/Lock';
 
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import PointHistoryTable from '../HistoryPointList';
 import {
     fetchCustomerByIdAsync,
     setError,
@@ -322,6 +322,12 @@ const CustomerDetails = () => {
                     Đặt Lại
                 </Button>
             </Box>
+             {/* Hiển thị lịch sử tích điểm nếu không phải thêm mới */}
+             {customerId !== 'create' && (
+                <Box marginTop={5}>
+                    <PointHistoryTable />
+                </Box>
+            )}
         </Container>
     );
 };
