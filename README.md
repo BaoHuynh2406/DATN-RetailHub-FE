@@ -8,3 +8,4 @@ npm i
 
 # chạy
 npm run dev
+comit
