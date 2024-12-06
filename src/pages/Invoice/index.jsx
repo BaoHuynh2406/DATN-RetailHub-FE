@@ -25,7 +25,7 @@ export default function Invoice() {
     const [endDate, setEndDate] = useState(dayjs());
     const [checkboxValues, setCheckboxValues] = useState({
         PENDING: false,
-        PAID: true,
+        PAID: true, //boolean
         RETURN: false,
     });
 
