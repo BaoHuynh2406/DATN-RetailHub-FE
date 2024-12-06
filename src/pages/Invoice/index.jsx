@@ -26,7 +26,7 @@ export default function Invoice() {
     const [checkboxValues, setCheckboxValues] = useState({
         PENDING: false,
         PAID: true, //boolean
-        RETURN: false,
+        RETURN: false, //boolean
     });
 
     const handleChange = (event) => {
