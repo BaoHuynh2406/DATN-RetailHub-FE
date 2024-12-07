@@ -1,350 +1,245 @@
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
 
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
-
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
-
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
-
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
-
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
-
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
-
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
-
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
-
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
-
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
-
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
-
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
-
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
-
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
-
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
-
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
-
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
-
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
-
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
-
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
-
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
-
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
-
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
-
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
-
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
-
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
-Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
-Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
-Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
-
-Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
-
-Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
-
-Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
-
-Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
-
-Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
-Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
-
-Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
-
-Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
-
-Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
-
-Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
-
-Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
-
-Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
-
-Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
-
-Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
-Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
-
-Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
-
-Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
-
-Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
-
-Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
-
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
-
-Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
-
-Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
-
-Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
-
-Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
