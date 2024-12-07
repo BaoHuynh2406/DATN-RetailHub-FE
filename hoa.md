@@ -1,350 +1,350 @@
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
-Steve Darby: 'Việt Nam nên mang đội U23 dự ASEAN Cup, U19 dự SEA Games'
-Theo cựu HLV tuyển nữ Việt Nam Steve Darby, chức vô địch ASEAN Cup 2024 vẫn là cuộc cạnh tranh của Việt Nam, Thái Lan, Malaysia và Indonesia, nhưng nên trao cơ hội cho cầu thủ trẻ thi đấu về sau.
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
+Pháp luậtThứ bảy, 7/12/2024, 18:10 (GMT+7)
+Sai phạm của 6 cán bộ trong vụ cháy chung cư mini 56 người chết
+Hà NộiChủ tịch phường, công an, thanh tra xây dựng bị cáo buộc "bỏ mặc" chung cư mini xây vượt 3 tầng, vi phạm PCCC, khi xảy ra hỏa hoạn đã khiến 56 người tử vong.
 
-Steve Darby ví những đội này như "BIG Four" (bốn ông lớn) của Đông Nam Á. "Việt Nam là ứng viên sáng giá nhất cho chức vô địch vì có đội hình mạnh", ông nói với trang tin Malaysia Twenty Two 13. "Bên cạnh đó, họ coi trọng giải đấu này".
+Ngày 7/12, hành vi của những người này được nêu trong cáo trạng VKSND Hà Nội vừa hoàn tất.
 
-Việt Nam vô địch hai lần (2008, 2018) và vào chung kết hai trong ba kỳ gần nhất. HLV Kim Sang-sik cũng được triệu tập lực lượng tốt nhất cho giải đấu. Trong khi đó, nhà vô địch hai kỳ gần nhất Thái Lan cũng có nhiều cầu thủ chất lượng trong đội, nhưng do Thai League 1 vẫn diễn ra nên HLV Masatada Ishii không thể đưa ra lựa chọn tối ưu nhất. Ngoài ra, nhóm cựu binh vẫn có thể đóng góp tốt như Chanathip Songkrasin, Theerathon Bunmathan hay Sarach Yooyen không lên tuyển để nhường cơ hội cho lớp trẻ.
+Theo đó, ông Nghiêm Quang Minh (44 tuổi, chủ chung cư mini ở phố Khương Hạ) bị truy tố về tội Vi phạm quy định về phòng cháy, chữa cháy theo quy định tại Điều 313 Bộ luật Hình sự; với tình tiết làm chết 3 người trở lên và gây thiệt hại trên 1,5 tỷ đồng.
 
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
-HLV Kim Sang-sik (giữa) vỗ tay mừng chiến thắng cùng các cầu thủ và khán giả Việt Nam, sau khi đánh bại Philippines 3-2, ở lượt năm bảng F vòng loại hai World Cup 2026, vào tháng 6/2024. Ảnh: Lâm Thỏa
+Ông Trần Trọng Khang (cựu đội trưởng Thanh tra Xây dựng quận Thanh Xuân, giai đoạn 2013-2016); Phạm Tần Anh (nguyên phó chủ tịch UBND phường từ năm 2018); Chu Xuân Sơn (nguyên phó chủ tịch UBND phường, giai đoạn 2015-2020); Nguyễn Thị Kim Trang (nguyên cán bộ địa chính - xây dựng phường, giai đoạn 2010-2018); Nguyễn Tuấn Anh (nguyên phó Công an phường Khương Đình); Nguyễn Đình Quân (nguyên tổ trưởng Thanh tra Xây dựng phường, giai đoạn 2014-2016) bị truy tố về tội Thiếu trách nhiệm gây hậu quả nghiêm trọng.
 
-Indonesia thì mang đội hình có 24 trong 26 cầu thủ ở lứa tuổi U21. HLV Shin Tae-yong chỉ đặt mục tiêu vào chung kết và coi đây là cơ hội chuẩn bị cho SEA Games 2025. Malaysia cũng không thể gọi những cầu thủ tốt nhất, chủ yếu từ CLB mạnh nhất nước Johor Darul Tazim, do giải nằm ngoài FIFA days. Trong khi đó, Singapore có bốn lần vô địch nhưng đã không còn là thế lực đáng sợ ở Đông Nam Á, sau khi kết thúc giai đoạn nhập tịch cầu thủ không mang gốc gác.
+Chung cư mini ở phố Khương Hạ xảy ra hỏa hoạn khiến 56 người chết, 44 người bị thương, hôm 12/9/2023. Trước đêm hỏa hoạn, có 147 cư dân đang sinh sống tại chung cư xây trái phép này.
 
-Steve Darby thừa nhận nếu được chọn, ông sẽ dẫn dắt Việt Nam dựa vào chất lượng đội hình và có cơ hội nhận tiền thưởng vô địch. Ông còn gợi nhắc lại chung kết AFF Cup, tiền thân của ASEAN Cup, vào năm 2008. Khi ấy ông làm trợ lý cho HLV Peter Reid ở Thái Lan, lần lượt thua Việt Nam 1-2 tại lượt đi và hòa 1-1 ở lượt về, với cú đánh đầu ngược kinh điển vào phút cuối của Lê Công Vinh.
+Nghiêm Quang Minh lúc bị bắt. Ảnh:Công an cung cấp
+Nghiêm Quang Minh lúc bị bắt. Ảnh: Công an cung cấp
 
-"Tôi vẫn nghĩ rằng trận chung kết ấy là một vụ cướp", Darby nói. "Nhưng như thế mới là vẻ đẹp riêng của giải đấu, tạo ra kỷ niệm và đam mê to lớn".
+Chung cư mini xây vượt 3 tầng nhưng không bị cưỡng chế
 
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
-Các cầu thủ Việt Nam thực hiện nghi lễ quốc ca trước trận gặp Uzbekistan ở vòng bảng U23 châu Á 2024. Ảnh: AFC
+Cáo trạng xác định, năm 2015, ông Minh, chủ sở hữu thửa đất 240 m2 ở phố Khương Hạ, được cấp phép xây dựng nhà ở riêng lẻ. Diện tích xây dựng tầng một là 167,4 m2 nhưng gia chủ đã tự ý thay đổi thiết kế, xây sàn tầng một tới 240 m2; giấy phép cho xây tổng 6 tầng, 33 phòng nhưng đã bị xây thành 9 tầng, 45 phòng - vượt 3 tầng và 12 phòng. Minh cũng không lập hồ sơ thiết kế, thẩm duyệt, nghiệm thu, quản lý về PCCC.
 
-Dù vậy, cựu HLV người Anh cho rằng Thái Lan, Malaysia, Việt Nam và Indonesia nên đưa đội trẻ dự các giải Đông Nam Á, như một cơ hội để phát triển cầu thủ trẻ. Bốn nước sẽ tập trung cho mục tiêu ở Asian Cup và vòng loại World Cup, đồng thời sẽ tạo ra sự cạnh tranh hấp dẫn hơn tại ASEAN Cup.
+Tháng 7/2015, khi đang xây dựng tại tầng 7, Tổ thanh tra xây dựng phường Khương Đình phát hiện vi phạm, lập biên bản yêu cầu Minh ngừng thi công. Chủ nhà sau đó bị quận Thanh Xuân phạt 15 triệu đồng, buộc phá dỡ phần xây dựng sai phép; cưỡng chế thi hành.
 
-Darby cho biết: "Bốn nước này nên mang đội U23 dự ASEAN Cup, đội U19 dự SEA Games. Cầu thủ trẻ sẽ có kinh nghiệm thi đấu quốc tế. Điều này cũng giúp các đội Đông Nam Á còn lại, với đội hình tốt nhất, có thể nếm trải chiến thắng trước những tên tuổi lớn".
+Tuy nhiên, khi nhận được quyết định cưỡng chế, Quân (Tổ trưởng Thanh tra xây dựng phường Khương Đình), Trang (cán bộ địa chính) và Tùng (nhân viên lĩnh vực môi trường đô thị của phường) lại lập biên bản và ký xác nhận Minh "tự tháo dỡ phần công trình xây dựng sai phép tại tầng 7", còn phần xây dựng sai mật độ so với giấy phép thì 3 cán bộ này không yêu cầu phá dỡ. Sau khi lập biên bản, họ cũng không báo cáo về đường lối tiếp tục xử lý công trình xây dựng sai phép của Minh.
 
-Lào – đối thủ của Việt Nam ở trận ra quân ASEAN Cup 2024, là "đội nhỏ" gây ấn tượng nhất với cựu HLV 69 tuổi, trong việc thu hẹp khoảng cách với "BIG Four". Chủ tịch LĐBĐ Lào Viphet Sihachakr được cho sử dụng nguồn tiền tài trợ từ FIFA một cách khôn ngoan vào xây dựng cơ sở vật chất và tuyển dụng đội ngũ HLV chất lượng ở mọi cấp độ. Theo Darby, ba chìa khóa để các nền bóng đá nhỏ hơn vươn mình là thiết lập cơ chế quản lý tốt, củng cố giải đấu trong nước không có tham nhũng và tuyển dụng những HLV hiểu biết văn hóa khu vực.
+Còn ông Sơn, Phó chủ tịch UBND phường Khương Đình, không kiểm tra đôn đốc 3 cấp dưới việc cưỡng chế, cáo trạng nêu.
 
-ASEAN Cup 2024 cũng thiếu vắng nhiều ngôi sao lớn, từ Chanathip, Theerathon của Thái Lan, đến Quế Ngọc Hải, Công Phượng của Việt Nam. Trong khi đó, những trụ cột đang thi đấu ở châu Âu của Indonesia không góp mặt.
+Bị can Khang, Đội trưởng Thanh tra xây dựng quận Thanh Xuân khi đó biết sự việc "cưỡng chế nửa vời" nhưng không tiếp tục yêu cầu Tổ thanh tra xây dựng và UBND phường Khương Đình phải thực hiện quyết định cưỡng chế.
 
-Tuy nhiên, Steve Darby vẫn nhìn thấy những cầu thủ đáng chú ý của từng nước. Ông thích Supachok Sarachat của Thái Lan nhờ tính cách tốt và sức mạnh tinh thần để tồn tại ở J-League 1 trong màu áo Consadole Sapporo. Malaysia có Syafiq Ahmad và Syamer Kutty Abba.
+Theo VKS, Quân, Trang, Tùng, Sơn và Khang đã thiếu trách nhiệm trong công tác quản lý, bỏ mặc công trình của Minh tiếp tục xây dựng từ tầng 7 lên đến tầng 9 mà không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý.
 
-"Việt Nam có tiền đạo thực thụ theo phong cách cổ điển là Nguyễn Tiến Linh", Darby cho hay. "Cậu ấy luôn nỗ lực hết mình vì đội tuyển và là một tay săn bàn hiếm có ở Đông Nam Á".
+Căn nhà xây vượt 3 tầng, 12 phòng song không bị bất kỳ một cơ quan, đơn vị nào của UBND phường Khương Đình và UBND quận Thanh Xuân kiểm tra, xử lý, theo VKSND Hà Nội. Ảnh: Ngọc Thành
+Căn nhà xây vượt 3 tầng, 12 phòng nhưng không bị kiểm tra, xử lý. Ảnh: Ngọc Thành
 
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
-Cựu HLV đội tuyển nữ Việt nam Steve Darby. Ảnh: FAS
+Nhiều lần bị cảnh báo nguy cơ cháy nổ nghiêm trọng
 
-Với Indonesia, Darby cảm thấy khó chọn ra một cái tên ấn tượng được đào tạo trong nước, sau khi làn sóng cầu thủ mang dòng máu lai tràn vào. Chính sách nhập tịch tạo nên nhiều tranh cãi từ Indonesia đến các nước Đông Nam Á, dù đội tuyển xứ vạn đảo đạt nhiều thành tích ấn tượng từ đầu năm 2024. Mới đây, sự chú ý chuyển sang Việt Nam, khi lần đầu đăng ký một cầu thủ không có gốc gác dự giải chính thức, là tiền đạo gốc Brazil Nguyễn Xuân Son.
+Tháng 4/2016, Minh bán xong 45 căn hộ cho các cá nhân và hộ gia đình. Đến cuối năm đó, toàn bộ 45 căn hộ đều đã có người ở.
 
-"Tôi phản đối con đường nhập tịch, vì nó mở đường cho lính đánh thuê và chặn đường lên tuyển của các cầu thủ sinh ra ở bản địa", Darby cho biết.
+Ông này bị cáo buộc "không có trách nhiệm đối với việc cư dân sinh sống và sự vận hành của tòa nhà". Toàn bộ 70-80 xe máy, xe máy điện, xe đạp điện của các cư dân đều để ở tầng một. Từ năm 2018 đến 2020, Công an quận Thanh Xuân phát hiện nhiều vi phạm về PCCC tại đây, nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy nổ và có thể gây hậu quả đặc biệt nghiêm trọng.
 
-Kinh nghiệm làm việc ở năm quốc gia Đông Nam Á cho HLV người Anh nhận thấy sự chân thành của các cầu thủ địa phương khi khoác lên áo ĐTQG. Ông thừa nhận có những cầu thủ thật sự yêu quốc gia thứ hai như cựu cầu thủ Daniel Bennett và Alexandra Duric của Singapore. Tuy nhiên, nhiều trường hợp chỉ coi việc nhập tịch là hoạt động kiếm tiền hoặc để có hộ chiếu.
+Ngày 24/6/2020, quận Thanh Xuân ra quyết định đình chỉ hoạt động đối với tầng một của tòa nhà. Minh và các hộ dân sinh sống tại đây, theo đó, phải thực hiện các yêu cầu về đảm bảo an toàn PCCC nhưng không thực hiện. Công an quận Thanh Xuân tiếp tục gửi công văn cho họ và cả Công an phường Khương Đình nhưng không có chuyển biến.
 
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
-Tiền đạo gốc Brazil Nguyễn Xuân Son tập chính thức buổi đầu tiên cùng Việt Nam vào chiều 6/12, tại Lào. Ảnh: VFF
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
+Đồ đạc tại một căn phòng tầng 3 bám lớp bụi đen dày sau trận hỏa hoạn. Ảnh: Giang Huy
 
-Theo Steve Darby, "chủ nghĩa dân tộc" là điều đem lại sức hấp dẫn nhất cho ASEAN Cup. Đây cũng là câu trả lời của ông cho việc giải đấu giảm sức hút từ người hâm mộ, còn các đội không thể có đủ cầu thủ tốt nhất. Ông cho rằng người hâm mộ Đông Nam Á biết rằng rất khó vô địch World Cup hay Asian Cup, vì vậy, chiến thắng ở ASEAN Cup là sự kiện hiếm hoi và thú vị.
+Phạm Tần Anh, Phó chủ tịch UBND phường và Nguyễn Tuấn Anh, Phó Công an phường Khương Đình khi đó phụ trách lĩnh vực PCCC nhưng không báo cáo, đề xuất tháo gỡ vấn đề khi Minh và cư dân không chấp hành quy định, VKS cáo buộc.
 
-"Giải đấu luôn có ý nghĩa, dù là bạn đang uống bia hơi tại Hà Nội hay nhâm nhi cà phê nóng ở Kelantan hay Johor (Malaysia)", Darby nói. "Người dân vẫn sẽ theo dõi giải đấu, rồi tranh luận rất lâu và gay gắt về mọi kết quả".
+Đêm 12/9/2023, mạch điện trên đường dây dẫn tại khu vực bình ắc quy đặt ở giáp tường bị chập, gây cháy. Lửa lan vào khu vực cáp điện, các hộp công tơ điện gắn trên tường tầng một rồi cháy lan ra xung quanh. Hỏa hoạn đã làm 56 người tử vong, 44 người bị thương ở các mức độ khác nhau và thiệt hại về tài sản là 3,2 tỷ đồng.
 
-ASEAN Cup 2024 tổ chức từ ngày 8/12/2024 đến 5/1/2025. 10 đội chia làm hai bảng, để thi đấu hai trận sân nhà và hai trận sân khách, chọn ra hai đội nhất và hai đội nhì vào bán kết. Từ vòng này, các cặp đấu diễn ra hai lượt theo thể thức lượt đi và về, nhưng không tính luật bàn thắng sân khách.
+Đại diện hợp pháp gia đình 56 nạn nhân yêu cầu bồi thường tổng cộng 19,7 tỷ đồng. Toàn bộ chi phí khám chữa bệnh của 44 người bị thương đã được nhà nước chi trả. Họ tiếp tục yêu cầu bồi thường tổng cộng 2,7 tỷ đồng.
 
-Sau 14 kỳ, Thái Lan dẫn đầu với bảy lần vô địch (1996, 2000, 2002, 2014, 2016, 2020, 2022). Xếp sau là Singapore (1998, 2004, 2007, 2012), Việt Nam (2008, 2018) và Malaysia (2010).
+Đối với thiệt hại về tài sản, các cư dân đã yêu cầu bồi thường tổng 56,7 tỷ đồng, gồm toàn bộ giá trị căn nhà, toàn bộ số tài sản có trong căn hộ, tiền, vàng...
