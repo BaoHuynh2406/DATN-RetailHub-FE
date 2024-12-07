@@ -1,4 +1,53 @@
-Thế giớiThứ bảy, 7/12/2024, 15:24 (GMT+7)
+Thế giớiQuân sựThứ năm, 5/12/2024, 01:00 (GMT+7)
+Tình thế ngặt nghèo của quân đội Ukraine ở tỉnh Donetsk
+Lực lượng Nga đang mở nhiều mũi tấn công ở tỉnh Donetsk, trong khi quân đội Ukraine không còn lựa chọn nào ngoài rút lui vì bị áp đảo.
+
+Bộ Quốc phòng Nga ngày 2/12 thông báo đã kiểm soát làng Ilyinka ở phía nam thành phố trọng yếu Kurakhovo và làng Petrovka, nằm giữa đô thị này và thành trì chiến lược Pokrovsk ở tỉnh Donetsk.
+
+DeepState, nhóm phân tích có liên hệ với Bộ Quốc phòng Ukraine, trước đó cho biết lực lượng Nga đã kiểm soát thêm hơn 10 ngôi làng và khu định cư trong vòng 10 ngày. Các đơn vị Nga tiếp tục tiến quân chậm rãi và đều đặn, gây thêm áp lực lên Ukraine trước khi có thể diễn ra những cuộc đàm phán hòa bình.
+
+Nhóm DeepState nhận định tình hình của quân đội Ukraine tại tỉnh Donetsk đặc biệt bấp bênh khi Nga đang áp sát các thành trì cuối cùng mà họ còn kiểm soát. Giới chuyên gia phương Tây nhận định Nga có thể rộng đường kiểm soát toàn bộ tỉnh Donetsk nếu cứ điểm Ukraine tại thành phố Kurakhovo và thị trấn Velyka Novosilka sụp đổ.
+
+Nga đã kiểm soát khoảng 2/3 diện tích Donetsk và đang tấn công theo nhiều hướng, tìm cách khai thác lỗ hổng trên phòng tuyến đối phương. Quân đội Ukraine hiện bị áp đảo về quân số lẫn vũ khí, không còn lựa chọn nào khác ngoài rút lui.
+
+"Tình hình hiện tại là khó khăn nhất trong gần ba năm chiến sự", Andrii Biletsky, chỉ huy Lữ đoàn Xung kích số 3, một trong những đơn vị thiện chiến nhất của quân đội Ukraine, đánh giá về tình hình chiến trường.
+
+Vị trí một số đô thị và khu dân cư tại tỉnh Donetsk. Đồ họa: RYV
+Vị trí một số đô thị và khu dân cư tại tỉnh Donetsk. Đồ họa: RYV
+
+Nga đang tiến quân với tốc độ chưa từng thấy từ sau khi rút khỏi miền bắc Ukraine hồi tháng 3/2022, kiểm soát thêm hàng trăm km2 lãnh thổ mỗi tháng. Một số chuyên gia nhận định tình hình hiện tại khó khăn nhưng chưa trở thành thảm họa đối với Ukraine, vì quân đội Nga chưa áp sát những thành phố lớn tại tỉnh Donetsk.
+
+Tuy nhiên, trước lo ngại về tổn thất, nhiều người Ukraine bắt đầu đề cập khả năng đàm phán hòa bình với Nga.
+
+Trong cuộc phỏng vấn được Sky News đăng ngày 29/11, Tổng thống Volodymyr Zelensky đề xuất khả năng cho Ukraine gia nhập NATO và đưa các khu vực nước này còn giữ được vào ô bảo hộ của liên minh. Kiev sau đó sẽ tìm cách lấy lại các khu vực mà Moskva đang kiểm soát bằng biện pháp ngoại giao.
+
+Một trong những nhượng bộ lớn nhất được ông Zelensky đưa ra là chấm dứt chiến sự mà không cần Nga lập tức rút khỏi những nơi họ đang kiểm soát.
+
+Các thành viên NATO tới nay vẫn phản đối kết nạp Ukraine vì lo ngại điều này khiến liên minh trở thành bên tham chiến trực tiếp. Triển vọng Ukraine gia nhập NATO còn trở nên ảm đạm hơn khi Tổng thống đắc cử Mỹ Donald Trump chuẩn bị nhậm chức, do các cố vấn của ông bày tỏ không muốn trao tư cách thành viên cho Ukraine trong tương lai gần.
+
+Binh sĩ Ukraine trên thao trường tại tỉnh Donetsk ngày 29/11. Ảnh: AP
+Binh sĩ Ukraine trên thao trường tại tỉnh Donetsk ngày 29/11. Ảnh: AP
+
+Đà tiến của quân đội Nga ở tỉnh Donetsk có thể gây thêm phức tạp cho những cuộc thảo luận liên quan đến đề xuất của ông Zelensky, đặc biệt là khu vực ông muốn NATO bảo hộ, do lực lượng Nga đang dần dần kiểm soát thêm lãnh thổ.
+
+Các đơn vị Nga đang tiếp tục khép chặt gọng kìm ở bắc và nam Kurakhovo, đồng thời kiểm soát khoảng một nửa diện tích nội thành. Theo DeepState, tuyến đường tiếp tế chính cho Kurakhovo đã nằm trong tầm tập kích của pháo binh và phương tiện bay không người lái (drone) Nga.
+
+"Đồng hồ đã điểm. 70% diện tích thành phố đang nằm trong vòng vây. Thời điểm lực lượng Ukraine rút khỏi Kurakhovo không phải vài tuần, mà có thể chỉ là vài ngày nữa", Ivan Stupak, chuyên gia quân sự Ukraine, thừa nhận.
+
+Các đơn vị Nga cũng tiến về thị trấn Velyka Novosilka, nằm cách Kurakhovo khoảng 30 km về phía nam. Trung tâm Chiến lược Quốc phòng có trụ sở tại Ukraine cho biết đây là trung tâm hậu cần quan trọng của Kiev, cũng là một trong những điểm xuất phát của mũi tiến công trong cuộc phản công thất bại năm 2023.
+
+Bước tiến tại tỉnh Donetsk giúp Nga củng cố các tuyến hậu cần trên hành lang trên bộ nối phía tây nước này với bán đảo Crimea. Theo các chuyên gia, việc Ukraine bị đẩy lùi và không thể pháo kích các tuyến đường sắt quan trọng giúp Nga có thể tận dụng những đầu mối đường sắt quan trọng như Volnovakha, thành phố cách Kurakhovo khoảng 45 km về phía nam.
+
+Lợi thế này có thể hỗ trợ chiến dịch của Nga tại những khu vực lân cận, trong đó có tỉnh Zaporizhzhia. Nhiều quan chức và chỉ huy Ukraine gần đây cảnh báo rằng Nga đang tập hợp lực lượng cho đợt tiến công mới tại Zaporizhzhia.
+
+Quân nhân Nga khai hỏa pháo tự hành 2S7M Malka tại tỉnh Donetsk ngày 26/11. Ảnh: BQP Nga
+Quân nhân Nga khai hỏa pháo tự hành 2S7M tại tỉnh Donetsk ngày 26/11. Ảnh: BQP Nga
+
+Tướng Oleksandr Syrsky, tư lệnh quân đội Ukraine, ngày 29/11 tới thăm mặt trận ở tỉnh Donetsk và cam kết sẽ điều thêm quân, chuyển thêm đạn dược và vũ khí cho các đơn vị tại khu vực.
+
+Trong khi đó, đà tiến của lực lượng Nga dường như đang chậm dần sau khi giành lại 40-50% diện tích Ukraine kiểm soát. Kiev coi khu vực chiếm được trong chiến dịch tỉnh Kursk là quân bài mặc cả trong các cuộc đàm phán tương lai.
+
+Oleksandr Musiienko, chuyên gia quân sự Ukraine, nhận định lực lượng nước này "đã ổn định sườn khu vực kiểm soát ở tỉnh Kursk và đảm bảo tuyến hậu cần qua biên giới". Tuy nhiên, ông cảnh báo Nga có thể điều thêm quân và sớm mở chiến dịch phản công để đánh bật lực lượng Ukraine về phía bên kia biên giới.
 Quốc hội Hàn Quốc thất bại trong nỗ lực luận tội Tổng thống
 Quốc hội Hàn Quốc bỏ phiếu về đề xuất luận tội Tổng thống Yoon Suk-yeol vì lệnh thiết quân luật, nhưng không hội đủ 200 phiếu cần thiết để thông qua.
 
