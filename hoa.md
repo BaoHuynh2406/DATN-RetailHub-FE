@@ -1,36 +1,118 @@
-Tổng Bí thư Tô Lâm: Nhanh chóng tháo gỡ điểm nghẽn để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Nhóm phóng viên
-Nhóm phóng viên
-Hoạt động của Lãnh đạo Đảng, Nhà nước 05/12/2024 14:41 Theo dõi Congthuong.vn trên
+Thế giớiThứ bảy, 7/12/2024, 15:24 (GMT+7)
+Quốc hội Hàn Quốc thất bại trong nỗ lực luận tội Tổng thống
+Quốc hội Hàn Quốc bỏ phiếu về đề xuất luận tội Tổng thống Yoon Suk-yeol vì lệnh thiết quân luật, nhưng không hội đủ 200 phiếu cần thiết để thông qua.
 
+Cuộc bỏ phiếu luận tội Tổng thống Yoon Suk-yeol bắt đầu lúc 17h (15h giờ Hà Nội) với sự tham gia của các nghị sĩ, trong đó có đảng Quyền lực Nhân dân cầm quyền. Đây là động thái có thể định đoạt tương lai chính trị của Tổng thống Yoon, người đã gây phản ứng dữ dội với lệnh thiết quân luật đêm 3/12.
 
-Tổng Bí thư đề nghị tháo gỡ các điểm nghẽn về cơ chế, chính sách... để thúc đẩy phát triển các dự án năng lượng trong đó có Nhà máy điện hạt nhân Ninh Thuận.
-Tổng Bí thư Tô Lâm làm việc với tỉnh Ninh Thuận, nhấn mạnh tái khởi động điện hạt nhânUBND tỉnh Ninh Thuận tham gia ý kiến về việc tái khởi động dự án điện hạt nhân
-Sáng 5/12, tại Ninh Thuận, Tổng Bí thư Tô Lâm và Đoàn công tác của Trung ương đã làm việc với Ban Thường vụ Tỉnh ủy Ninh Thuận, nghe báo cáo kết quả thực hiện Nghị quyết Đại hội XIII của Đảng, tình hình thực hiện Chỉ thị số 35-CT/TW của Bộ Chính trị, quá trình triển khai đầu tư Dự án điện hạt nhân Ninh Thuận.
+Sau khi các nghị sĩ tiến vào phòng họp, Chủ tịch Quốc hội Woo Won-shik kêu gọi mọi người giữ trật tự, khi một số nghị sĩ đảng Tiến bộ và đảng Quyền lực Nhân dân (PPP) cầm quyền đứng dậy la ó phản đối phiên luận tội.
 
-Dự buổi làm việc có đồng chí Nguyễn Duy Ngọc, Bí thư Trung ương Đảng, Chánh Văn phòng Trung ương Đảng; các đồng chí Ủy viên Trung ương Đảng: Nguyễn Đức Hải, Phó Chủ tịch Quốc hội; Hồ Đức Phớc, Phó Thủ tướng Chính phủ; đồng chí Nguyễn Hồng Diên, Ủy viên Trung ương Đảng, Bộ trưởng Bộ Công Thương, cùng các đồng chí Ủy viên Trung ương Đảng, lãnh đạo một số bộ, ngành Trung ương và địa phương.
+Tổng thống Hàn Quốc Yoon Suk-yeol phát biểu ngày 7/12. Ảnh: Reuters
+Tổng thống Hàn Quốc Yoon Suk-yeol phát biểu ngày 7/12. Ảnh: Reuters
 
-Tổng Bí thư Tô Lâm: Chuẩn bị tốt các điều kiện để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Tổng Bí thư Tô Lâm thăm và làm việc tại Ninh Thuận.
-Báo cáo về Dự án điện hạt nhân Ninh Thuận, đại diện lãnh đạo tỉnh cho biết, sau khi Quốc hội thông qua chủ trương đầu tư tại Nghị quyết 41/2009/QH12, ngày 25/11/2009, quy hoạch xây dựng Nhà máy điện hạt nhân Ninh Thuận 1 đặt tại xã Phước Dinh, huyện Thuận Nam và Nhà máy điện hạt nhân Ninh Thuận 2 đặt tại xã Vĩnh Hải, huyện Ninh Hải, tỉnh đã khảo sát, đo đạc xác định tổng diện tích quy hoạch xây dựng 2 Nhà máy là 1.642,22 ha, ảnh hưởng, tác động đến gần 4.000 người với 1.100 hộ. Ngày 26/11/2016, Quốc hội ban hành Nghị quyết dừng thực hiện chủ trương đầu tư Dự án điện hạt nhân Ninh Thuận, đã làm thay đổi các kịch bản tăng trưởng và phát triển của tỉnh đã được Thủ tướng Chính phủ phê duyệt. Cơ sở hạ tầng kinh tế - xã hội và các công trình phúc lợi công cộng trên địa bàn 2 xã Phước Dinh, Vĩnh Hải và vùng lân cận bị xuống cấp do không được đầu tư chờ bàn giao chuyển đi nơi ở mới. Nhân dân trong vùng dự án gặp khó khăn, trải qua thời gian dài chờ đợi, mong mỏi sớm được về nơi ở mới, ổn định đời sống - sản xuất.
+"Hỡi các nghị sĩ, cả đất nước đang dõi theo. Điều quan trọng là chúng ta phải giữ trật tự trong phiên họp này và Hàn Quốc là một nền dân chủ", ông Woo nói. Vài phút sau lời kêu gọi của Chủ tịch Quốc hội, các nghị sĩ ngừng la ó để phiên họp bắt đầu.
 
-Việc tái khởi động Nhà máy điện hạt nhân Ninh Thuận tạo động lực thúc đẩy kinh tế - xã hội của tỉnh phát triển nhanh, tháo gỡ những khó khăn hiện nay. Tỉnh đề nghị Trung ương sớm xác định lộ trình xây dựng các nhà máy Điện hạt nhân Ninh Thuận để làm cơ sở cho tỉnh tiến hành khảo sát, lấy ý kiến, xác định tâm tư, nguyện vọng nhân dân vùng dự án; tăng cường công tác tuyên truyền thông tin, vận động tạo sự đồng thuận khi dự án được triển khai. Tỉnh đề xuất tiếp tục được xây dựng cơ chế đặc thù phát triển kinh tế - xã hội của địa phương có Nhà máy điện hạt nhân, trong đó ưu tiên cơ chế phát triển nhân lực, hạ tầng trọng điểm.
+Bỏ phiếu hai kiến nghị
 
-Tổng Bí thư Tô Lâm: Chuẩn bị tốt các điều kiện để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Tổng Bí thư phát biểu chỉ đạo tại buổi làm việc với tỉnh Ninh Thuận
-Phát biểu kết luận hội nghị, Tổng Bí thư Tô Lâm ghi nhận, biểu dương những thành tựu mà Đảng bộ, chính quyền, quân và dân Ninh Thuận đạt được trong thời gian qua, nhất là phát triển kinh tế-xã hội. Về công tác xây dựng Đảng, tỉnh đã bám sát các văn bản của Trung ương, tập trung lãnh đạo quyết liệt, chủ động, phòng ngừa, ngăn chặn, đẩy lùi sự suy thoái về tư tưởng chính trị, đạo đức, lối sống, những biểu hiện “tự diễn biến”, “tự chuyển hóa” trong nội bộ; chủ động triển khai thực hiện kịp thời Chỉ thị 35-CT/TW của Bộ Chính trị về đại hội đảng bộ các cấp tiến tới Đại hội XIV của Đảng.
+Ông Woo cho biết sẽ có hai đề xuất được đưa ra bỏ phiếu trong cuộc họp, gồm kiến nghị về việc phục hồi cuộc điều tra đặc biệt đối với Đệ nhất phu nhân Kim Keon-hee.
 
-Tổng Bí thư cho biết vui mừng và xúc động khi thấy Ninh Thuận từ vùng đất khô hạn với lượng mưa ít ỏi, thấp nhất cả nước chỉ với khoảng 700-800mm một năm, nay đã vượt lên khó khăn, biết khai thác được những tiềm năng sẵn có từ năng lượng tái tạo như điện gió, điện mặt trời, du lịch xanh và nông nghiệp công nghệ cao. Trong vòng 10 năm, thu nhập bình quân đầu người tăng gấp 4 lần, tỷ lệ hộ nghèo giảm từ 9,34% xuống còn 2,69%. Đó là minh chứng cho sức mạnh vượt qua nghịch cảnh. Ninh Thuận ngày nay không chỉ là điểm đến hấp dẫn, mà còn là lời nhắc nhở rằng sự quyết tâm, bền bỉ và sáng tạo có thể biến những thách thức thành cơ hội, mở ra con đường phát triển bền vững và đầy hy vọng.
+Đảng Dân chủ (DP), đảng đối lập chiếm thế đa số tại quốc hội Hàn Quốc, hồi tháng 1 thông qua dự luật yêu cầu chỉ định công tố viên đặc biệt để điều tra cáo buộc Đệ nhất phu nhân Kim Keon-hee liên quan đến thao túng giá cổ phiếu công ty Deutsch Motors năm 2009-2012. Tổng thống Yoon Suk-yeol sau đó phủ quyết dự luật này và bác bỏ các cáo buộc nhắm vào bà Kim.
 
-Tổng Bí thư nhấn mạnh, điều kiện khí hậu và tự nhiên của Ninh Thuận không thuận lợi, đó là khi nhìn lợi thế so sánh trong ngành nông nghiệp, nếu nhìn ở ngành năng lượng, trong đó có năng lượng tái tạo, năng lượng sạch thì đây lại là một thế mạnh vượt trội. Ninh Thuận đang nổi lên như một trung tâm năng lượng quan trọng của cả nước, chiếm 18% tổng công suất toàn quốc, đóng góp lớn vào tăng trưởng của tỉnh trong thời gian qua. Nếu một số vướng mắc các dự án điện gió, điện mặt trời hiện nay được khơi thông, đồng thời việc triển khai Quy hoạch điện VIII được thúc đẩy, Ninh Thuận sẽ tiếp tục bứt phá mạnh mẽ hơn nữa. Chính phủ, các bộ ngành, nhất là Bộ Công thương phải nhanh chóng tháo gỡ các điểm nghẽn về cơ chế, chính sách, vướng mắc để thúc đẩy sự phát triển các dự án năng lượng của quốc gia nói chung, trong đó có các dự án năng lượng ở Ninh Thuận.
+Kiến nghị mở lại cuộc điều tra với bà Kim cần quá bán số phiếu ủng hộ để được thông qua.
 
-Về điện hạt nhân, Tổng Bí thư khẳng định, điện hạt nhân là nguồn điện nền, xanh và bền vững. Điện hạt nhân ngày càng được nhiều quốc gia quan tâm lựa chọn và tiếp tục phát triển. Trong lịch sử có một số sự cố về các nhà máy điện hạt nhân nhưng xét về xác suất là vô cùng thấp. Hơn nữa, những công nghệ hạt nhân hiện nay đã tiến bộ rất xa, trải qua rất nhiều thế hệ mới so với những công nghệ cũ trước đây. Vừa qua, Quốc hội đã quyết nghị tiếp tục thực hiện chủ trương đầu tư điện hạt nhân Ninh Thuận, sau 8 năm tạm dừng dự án này, nhằm đáp ứng nhu cầu tiêu thụ điện của Việt Nam hết sức cấp thiết và được dự báo vẫn tiếp tục tăng cao. Tổng công suất hệ thống điện hiện nay khoảng 85.000MW, cần có thêm khoảng 70.000MW vào năm 2030, tức khoảng 150.000MW. Đến năm 2050, tổng công suất cần đạt là 400.000 đến 500.000MW. Việc phát triển nguồn điện hạt nhân sẽ đa dạng nguồn cung, bảo đảm an ninh năng lượng và chuyển dịch năng lượng xanh, giúp Việt Nam đạt mục tiêu phát thải ròng bằng 0 vào 2050 theo cam kết tại COP26. Bên cạnh đó, làm dự án điện hạt nhân còn là cơ hội để nước ta phát triển nhân lực chất lượng cao, nâng cao tiềm lực khoa học công nghệ quốc gia, tham gia vào chuỗi cung ứng công nghiệp điện hạt nhân toàn cầu.
+Sau đó, quốc hội Hàn Quốc sẽ bỏ phiếu luận tội Tổng thống, với cáo buộc "chủ mưu hành động sai phạm trong quản lý nhà nước, có tính chất phản quốc" khi ban bố thiết quân luật vào đêm 3/12.
 
-Tổng Bí thư Tô Lâm: Nhanh chóng tháo gỡ điểm nghẽn để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Tổng Bí thư Tô Lâm chụp ảnh cùng các đại biểu dự hội nghị - Ảnh: Văn Nỷ
-Tổng Bí thư nêu rõ, người dân Ninh Thuận và các địa phương lân cận chia sẻ, dành nguồn lực (đất đai, tài nguyên) để phát triển dự án năng lượng phục vụ sự phát triển cho cả nước, chắc chắc sẽ phải được tái phân phối, thụ hưởng những thành quả xứng đáng của sự phát triển. Đảng và Nhà nước sẽ phải đảm bảo lựa chọn những công nghệ hạt nhân tốt nhất, chọn những đối tác tư vấn tốt nhất, đào tạo nhân lực quản lý tốt nhất để bảo đảm vận hành an toàn và hiệu quả dự án năng lượng này của quốc gia, không chỉ vì thế hệ hiện tại mà còn cho thế hệ con cháu mai sau.
+Hiến pháp Hàn Quốc cho phép quốc hội đề xuất luận tội nhằm vào tổng thống hoặc các quan chức cấp cao nếu cho rằng họ "vi hiến hoặc vi phạm bất kỳ luật nào trong quá trình làm việc".
 
-Về phát triển kinh tế-xã hội nói chung, Tổng Bí thư cho rằng, Ninh Thuận có rất nhiều tiềm năng để phát triển du lịch, phát triển kinh tế biển, cảng biển và trung tâm dịch vụ logistics. Ninh Thuận có lợi thế vượt trội để phát triển năng lượng điện mặt trời, điện gió nhờ tốc tốc độ gió và số giờ nắng trung bình trong ngày cao nhất cả nước. Vùng biển Ninh Thuận có lợi thế độ mặn lý tưởng để phát triển sản xuất công nghiệp muối và hóa chất sau muối; có nhiều sản phẩm đặc hữu mang tính bản địa cao đã trở thành thương hiệu nổi tiếng như nho, táo, hành, tỏi, tôm giống…Tất cả giá trị tiềm tàng của Ninh Thuận rất lớn, cần có cách nhìn mới mang tính thời đại, toàn cầu, mang hơi thở của kỷ nguyên vươn mình để đánh thức tiềm năng đang ẩn chứa trong đất và người Ninh Thuận.
+Kiến nghị luận tội cần ít nhất 200 phiếu ủng hộ để được thông qua. Trước thời điểm bỏ phiếu, PPP tuyên bố sẽ phản đối luận tội Tổng thống.
 
-Quán triệt quyết tâm phấn đấu đạt mức cao nhất các mục tiêu Đại hội Đảng bộ tỉnh nhiệm kỳ 2020-2025, Tổng Bí thư đề nghị Đảng bộ tỉnh tiếp tục làm tốt công tác xây dựng, chỉnh đốn Đảng và hệ thống chính trị trong sạch, vững mạnh toàn diện; phát huy sức mạnh văn hóa, con người, khối Đại đoàn kết toàn dân. Đề cao trách nhiệm người đứng đầu, trách nhiệm nêu gương; khuyến khích và bảo vệ cán bộ năng động, sáng tạo, dám nghĩ, dám làm vì lợi ích chung. Tập trung sắp xếp tổ chức bộ máy của hệ thống chính trị tinh, gọn, mạnh, hiệu năng, hiệu lực, hiệu quả. Chuẩn bị thật tốt các điều kiện và tổ chức thành công đại hội đảng bộ các cấp nhiệm kỳ 2025-2030; trọng tâm là xác định các mục tiêu tăng trưởng, làm tốt công tác nhân sự phục vụ Đại hội; văn kiện Đại hội phải khách quan, khoa học, lấy ý kiến rộng rãi, thể hiện ý chí khát vọng vươn lên, vững tin bước vào Kỷ nguyên mới của dân tộc. Tỉnh cần tận dụng thế mạnh của một trung tâm năng lượng lớn quốc gia, vùng ít mưa, ít bão, vùng cao, các lợi thế giao thông để phát triển vùng đất này trở thành tổ hợp công nghiệp chế tạo xanh, công nghiệp phụ trợ, Trung tâm công nghiệp xanh-Net Zero; Trung tâm sản xuất chip bán dẫn và công nghệ trí tuệ nhân tạo AI, trung tâm dữ liệu quốc gia vùng. Chuẩn bị tốt các điều kiện để khởi động lại Nhà máy điện hạt nhân Ninh Thuận theo chủ trương của Trung ương, nhất là công tác tuyên truyền, tạo sự đồng thuận cao trong cán bộ, đảng viên và các tầng lớp nhân dân.
+Chủ tịch Quốc hội Hàn Quốc Woo Won-shik (trái) chủ trì phiên bỏ phiếu luận tội Tổng thống ngày 7/12/2024. Ảnh: AFP
+Chủ tịch Quốc hội Hàn Quốc Woo Won-shik (trái) chủ trì phiên bỏ phiếu luận tội Tổng thống ngày 7/12/2024. Ảnh: AFP
 
+Các nghị sĩ bỏ phiếu bằng cách viết lựa chọn của họ vào một tờ phiếu. Những phiếu không có chữ viết tay của nghị sĩ sẽ bị coi là không hợp lệ. Trong lúc các nghị sĩ bỏ phiếu về đề xuất mở lại cuộc điều tra đặc biệt đối với Đệ nhất phu nhân Kim Keon-hee, nhiều tiếng la ó phản đối tiếp tục vang lên ở nghị trường, hai nghị sĩ thậm chí suýt xông vào ẩu đả.
+
+Sau khi bỏ phiếu kiến nghị thứ nhất, các nghị sĩ PPP đồng loạt rời khỏi phòng họp, bất chấp các thành viên phe đối lập kêu gọi họ ở lại. Nếu toàn bộ nghị sĩ PPP rời đi, phiên bỏ phiếu luận tội Tổng thống sẽ không thể diễn ra do không hội đủ số nghị sĩ cần thiết.
+
+Cuộc bỏ phiếu về kiến nghị thứ nhất diễn ra trong khoảng 20 phút và phiếu đang được kiểm đếm bằng tay. Một số nghị sĩ PPP vẫn ở lại phòng họp, nhưng hiện chưa rõ phiên bỏ phiếu luận tội Tổng thống có thể diễn ra hay không.
+
+Theo các nhà quan sát, trong phiên luận tội Tổng thống, các nghị sĩ có thể bỏ phiếu mà không phải tiết lộ danh tính, nên các nghị sĩ PPP có thể âm thầm bỏ phiếu chống lại ông Yoon. Để đề phòng kịch bản này, có vẻ như lãnh đạo PPP đã yêu cầu các nghị sĩ rời phòng họp, để phiên bỏ phiếu không thể diễn ra.
+
+Người Hàn Quốc biểu tình phản đối Tổng thống Yoon Suk-yeol bên ngoài nhà quốc hội ở Seoul ngày 7/12. Ảnh: AFP
+Người Hàn Quốc biểu tình phản đối Tổng thống Yoon Suk-yeol bên ngoài nhà quốc hội ở Seoul ngày 7/12. Ảnh: AFP
+
+Bộ trưởng Tư pháp Hàn Quốc cũng đã rời khỏi phòng họp, trái với truyền thống rằng một bộ trưởng đại diện cho chính phủ phải hiện diện trong phiên bỏ phiếu. Chủ tịch Quốc hội Woo khiển trách chính phủ, cho rằng họ thiếu tôn trọng công chúng.
+
+Kiến nghị mở lại điều tra Đệ nhất phu nhân không được thông qua
+
+Đến 17h44 (15h44 giờ Hà Nội), kết quả kiểm phiếu kiến nghị thứ nhất được công bố, cho thấy đề xuất mở lại cuộc điều tra đặc biệt đối với Đệ nhất phu nhân Kim Keon-hee không được thông qua do chỉ có 198 nghị sĩ ủng hộ, thấp hơn mức 200 cần thiết. Đây là lần thứ ba kiến nghị này bị bác bỏ và nó sẽ không được tiếp tục đưa ra bỏ phiếu.
+
+Ngay sau đó, ông Woo đọc kiến nghị luận tội Tổng thống Yoon, nhưng gần như toàn bộ nghị sĩ PPP đã rời đi, chỉ trừ nghị sĩ Ahn Cheol-soo. Nếu các nghị sĩ này không trở lại, ông Yoon sẽ không bị luận tội.
+
+Cảnh sát ước tính gần 150.000 người tham gia cuộc biểu tình bên ngoài tòa nhà quốc hội để yêu cầu Tổng thống từ chức.
+
+Người dân biểu tình bên ngoài tòa nhà quốc hội ở Hàn Quốc ngày 7/12  
+Người dân biểu tình bên ngoài tòa nhà quốc hội ở Seoul ngày 7/12. Video: Korea Joongang Daily
+
+Phe đối lập kêu gọi các nghị sĩ PPP quay lại nghị trường
+
+Ông Park Chan-dae, lãnh đạo đảng Dân chủ (DP) đối lập ở quốc hội, đăng đàn phát biểu trong khoảng 15 phút, chỉ trích quyết định ban bố thiết quân luật của Tổng thống Yoon, đồng thời kêu gọi các nghị sĩ PPP quay lại phòng họp để có thể bỏ phiếu luận tội ông.
+
+Toàn bộ nghị sĩ còn lại tại hội trường, trừ Ahn Cheol-soo, đều đồng loạt đứng lên hưởng ứng lời kêu gọi của ông Park. Những hình ảnh này được phát trực tiếp trên truyền hình Hàn Quốc cũng như qua màn hình lớn bên ngoài tòa nhà quốc hội.
+
+Sau khi các nghị sĩ đồng loạt bỏ ra ngoài, ông Choo Kyung-ho, lãnh đạo PPP tại quốc hội, đã thông báo từ chức.
+
+Các nghị sĩ PPP rời khỏi phòng họp trước phiên bỏ phiếu luận tội Tổng thống. Ảnh chụp màn hình
+Các nghị sĩ PPP rời khỏi phòng họp trước phiên bỏ phiếu luận tội Tổng thống. Ảnh chụp màn hình
+
+Bỏ phiếu luận tội Tổng thống bắt đầu
+
+Lúc 18h17 (16h17 giờ Hà Nội), ông Woo tuyên bố bắt đầu cuộc bỏ phiếu luận tội Tổng thống. Tuy nhiên, do số nghị sĩ có mặt trong phòng họp không đủ để thông qua đề xuất luận tội, đây có thể chỉ là động thái mang tính biểu tượng.
+
+Hiện chỉ có hai nghị sĩ PPP có mặt trong phòng họp. Phe đối lập cần thêm ít nhất 6 nghị sĩ PPP nữa quay lại để có thể thông qua đề xuất luận tội.
+
+"Thiết quân luật là sai trái, vì nó làm tổn hại tới giá trị của đất nước. Hàn Quốc ngày nay trở nên phát triển là nhờ người dân. Nền dân chủ của chúng ta được xây dựng trên máu và nước mắt của người dân", ông Woo phát biểu. "Chúng ta phải bảo vệ đất nước, bất chấp mình thuộc đảng phái nào. Lịch sử sẽ nhớ đến các ông thế nào nếu các ông không bỏ phiếu".
+
+"Một lần nữa, tôi kêu gọi các nghị sĩ, làm ơn hãy quay lại và bỏ phiếu", Chủ tịch Quốc hội Hàn Quốc gửi thông điệp tới các nghị sĩ PPP đã rời khỏi phòng họp. Cuộc bỏ phiếu luận tội Tổng thống về kỹ thuật vẫn tiếp tục, nhưng không có dấu hiệu nào cho thấy các nhà lập pháp PPP sẽ tham gia.
+
+Nghị sĩ PPP đầu tiên quay lại bỏ phiếu
+
+Đến 18h50, sau hơn 30 phút yên ắng, nghị trường bỗng vang lên tiếng vỗ tay, khi nghị sĩ PPP Kim Sang-wook quay lại để bỏ phiếu. Ông Kim uống cạn cốc nước trong sự động viên của các nghị sĩ, rồi bước vào buồng điền phiếu bầu, trước khi bắt tay các nghị sĩ trong phòng họp.
+
+Nghị sĩ PPP Kim Sang-wook (giữa) quay lại phòng họp để bỏ phiếu. Ảnh chụp màn hình
+Nghị sĩ PPP Kim Sang-wook (giữa) quay lại phòng họp để bỏ phiếu. Ảnh chụp màn hình
+
+Nghị sĩ đối lập Park Sung-joon cho biết PPP đã triệu tập một cuộc họp toàn thể nghị sĩ của đảng để ngăn họ quay trở lại phòng họp bỏ phiếu.
+
+"Chưa từng có một hội nghị toàn thể nào của đảng được tổ chức giữa phiên họp quốc hội. Tôi đã đề nghị Chủ tịch Quốc hội Woo xem xét xem điều này có vi phạm Đạo luật Quốc hội hay không", ông Park nói.
+
+Ông Woo đã đề nghị liên lạc với Choo Kyung-ho, lãnh đạo PPP tại quốc hội, để làm rõ thông tin đảng này tổ chức hội nghị toàn thể giữa kỳ họp quốc hội. Tuy nhiên, không ai có thể liên lạc được với ông Choo.
+
+Đến 19h11, tổng cộng 195 nghị sĩ đã bỏ phiếu. Phe đối lập cần thêm ít nhất 5 nghị sĩ nữa bỏ phiếu để đề xuất luận tội Tổng thống có hiệu lực. Cuộc bỏ phiếu dự kiến kéo dài đến quá nửa đêm.
+
+Kim Sang-wook, nghị sĩ PPP quay lại để bỏ phiếu, cho biết ông đã rời nhà quốc hội đến ga tàu điện ngầm Seoul với ý định rời khỏi thành phố, nhưng sau đó đổi ý và trở lại. "Là một nghị sĩ, tôi có nghĩa vụ bỏ phiếu, dù điều đó có thể khiến tôi mất tất cả", Kim nói.
+
+Tuy nhiên, Kim cho hay ông đã bỏ phiếu phản đối đề xuất luận tội Tổng thống Yoon. "Tôi làm điều đó theo chỉ đạo của đảng, nhưng nếu Tổng thống không có hành động đúng đắn sau đây, tôi sẽ ủng hộ luận tội trong lần bỏ phiếu tiếp theo", nghị sĩ PPP này nói.
+
+Dù vậy, Kim chỉ trích hành động thiết quân luật của Tổng thống. "Binh lính vũ trang đã tràn đến nhà quốc hội. Đó không phải là nền dân chủ đúng nghĩa nếu chúng ta cứ hành động như thể đất nước sẽ sụp đổ khi phe đối lập lên nắm quyền", ông nói.
+
+Ông kêu gọi người dân Hàn Quốc tin tưởng vào quốc hội, thay vì chỉ trích và công kích lẫn nhau, đồng thời hỗ trợ các nghị sĩ xây dựng một nền tảng chính trị "lành mạnh hơn".
+
+Với phiếu phản đối của Kim, phe đối lập cần ít nhất 6 nghị sĩ PPP ủng hộ nữa để thông qua đề xuất luận tội Tổng thống.
+
+Đám đông biểu tình bên ngoài nhà quốc hội không có dấu hiệu rời đi, dù nhiệt độ đã xuống mức -3 độ C cùng gió lạnh. Đám đông hô vang "hãy bỏ phiếu", phát đi thông điệp tới những nghị sĩ PPP được cho là vẫn ở trong tòa nhà.
+
+Người biểu tình mang biểu ngữ đòi luận tội Tổng thống Yoon bên ngoài nhà quốc hội đêm 7/12. Ảnh: AFP
+Người biểu tình mang biểu ngữ đòi luận tội Tổng thống Yoon bên ngoài nhà quốc hội đêm 7/12. Ảnh: AFP
+
+Nghị sĩ Shin Dong-wook, phát ngôn viên PPP, bác bỏ tin đồn cho rằng đảng này "nhốt các nghị sĩ lại để họ không thể bỏ phiếu".
+
+"Chúng tôi chỉ đang chờ đến khi thời gian bỏ phiếu kết thúc", ông Shin nói. "Các bạn đã thấy một số nghị sĩ quay lại để bỏ phiếu, dựa trên quan điểm riêng của họ. Điều đó tùy thuộc vào ý chí cá nhân của họ, chúng tôi không có các biện pháp ngăn cản về vật lý".
+
+Về lý thuyết, thời gian bỏ phiếu sẽ kéo dài đến 0h48 ngày 8/12 (22h48 ngày 7/12 giờ Hà Nội). Tuy nhiên, Chủ tịch Quốc hội Woo cho hay ông sẽ "chờ đến 21h20" để các nghị sĩ PPP quay lại bỏ phiếu.
+
+Luận tội thất bại
+
+Đúng 21h20, ông Woo thông báo kết thúc cuộc bỏ phiếu, khi không có thêm nghị sĩ PPP nào quay lại nghị trường. Sau 5 phút kiểm phiếu, kết quả chính thức được công bố.
+
+Theo đó, chỉ có 195 nghị sĩ ủng hộ luận tội Tổng thống Yoon, thấp hơn so với ngưỡng 200 phiếu cần thiết. "Kiến nghị luận tội Tổng thống Yoon Suk-yeol không được thông qua. Trong nền dân chủ, kết quả là quan trọng, nhưng tính chất của nó cũng ý nghĩa không kém. Tôi xin lỗi người dân Hàn Quốc và tuyên bố kết thúc phiên họp", Chủ tịch Quốc hội Woo thông báo trước khi gõ búa.
+
+Điều này đồng nghĩa ông Yoon vẫn duy trì được quyền lực. Sau khi kết quả được công bố, các nghị sĩ đối lập nhanh chóng ra về, chấm dứt nỗ lực phế truất Tổng thống mà họ từng tin là sẽ thành công.
