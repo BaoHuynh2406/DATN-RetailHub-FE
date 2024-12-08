@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
     TextField,
     Button,
@@ -31,6 +31,8 @@ import {
     updateCustomerAsync,
     addCustomerAsync,
 } from '@/redux/Customer/customerSlice';
+import { fetchPointHistoryAsync } from '@/redux/Customer/pointHistorySlice';
+import TablePagination from '@/components/TableCustom/TablePagination';
 
 const CustomerDetails = () => {
     const dispatch = useDispatch();
@@ -48,6 +50,26 @@ const CustomerDetails = () => {
     };
 
     const [customer, setCustomer] = useState(customerNull);
+
+    // Cấu hình các cột cho bảng
+    const columns = useMemo(
+        () => [
+            { field: 'historyId', headerName: 'ID Lịch Sử', width: 150 },
+            { field: 'customerId', headerName: 'Mã Khách Hàng', width: 150 },
+            { field: 'points', headerName: 'Điểm', width: 150 },
+            { field: 'description', headerName: 'Mô Tả', width: 300 },
+            {
+                field: 'transactionDate',
+                headerName: 'Ngày Giao Dịch',
+                width: 200,
+                renderCell: (params) => {
+                    const date = new Date(params.row.transactionDate);
+                    return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+                },
+            },
+        ],
+        [],
+    );
 
     useEffect(() => {
         if (customerId === 'create') {
@@ -329,7 +351,14 @@ const CustomerDetails = () => {
                     <Typography variant="h5" fontWeight="bold" gutterBottom>
                         Lịch Sử Tích Điểm
                     </Typography>
-                    <PointHistoryTable />
+                    <TablePagination
+                        columns={columns} // Cấu hình cột
+                        stt={true} // Hiển thị số thứ tự hàng
+                        id="historyId" // Định danh hàng
+                        dispatchHandle={fetchPointHistoryAsync} // API để lấy danh sách lịch sử
+                        additionalParams={{ customerId: customerId }}
+                        sliceName="pointHistory" // Tên slice trong Redux
+                    />
                 </Box>
             )}
         </Container>
