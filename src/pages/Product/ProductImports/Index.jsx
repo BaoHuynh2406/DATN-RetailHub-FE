@@ -5,7 +5,6 @@ import {
     Container,
     Typography,
     IconButton,
-    Switch,
     Dialog,
     DialogActions,
     DialogContent,
@@ -26,10 +25,10 @@ export default function ProductTable() {
         quantity: '',
         note: '',
     });
-    const mockData = 
-    [
-        { id: 1, ID: 'SP001', productName: 'Sản phẩm 1', quantity: 10, totalAmount: '150,000',Barcode:'73254822' },
-        { id: 2, ID: 'SP002', productName: 'Sản phẩm 2', quantity: 5, totalAmount: '125,000',Barcode:'894274247' },
+
+    const mockData = [
+        { id: 1, ID: 'SP001', productName: 'Sản phẩm 1', quantity: 10, totalAmount: '150,000', Barcode: '73254822' },
+        { id: 2, ID: 'SP002', productName: 'Sản phẩm 2', quantity: 5, totalAmount: '125,000', Barcode: '894274247' },
     ];
 
     const handleOpen = () => {
@@ -76,7 +75,6 @@ export default function ProductTable() {
             { field: 'productName', headerName: 'Tên sản phẩm', width: 200 },
             { field: 'quantity', headerName: 'Số lượng', width: 150 },
             { field: 'totalAmount', headerName: 'Thành tiền', width: 120 },
-            
             {
                 field: 'actions',
                 headerName: 'Công cụ',
@@ -101,6 +99,7 @@ export default function ProductTable() {
                     Tạo mới phiếu nhập hàng
                 </Typography>
             </Box>
+
             <Box sx={{ height: 300, overflow: 'auto', border: '1px solid #ddd', borderRadius: 2, padding: 2 }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <thead>
@@ -150,11 +149,11 @@ export default function ProductTable() {
 
             {/* Dialog chọn sản phẩm */}
             <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
-                <DialogTitle sx={{textAlign:'center', fontWeight:'bold'}}>Chọn sản phẩm cần nhập</DialogTitle>
+                <DialogTitle sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+                    Chọn sản phẩm cần nhập
+                </DialogTitle>
                 <DialogContent>
-                    <Box sx={{ height: 300, width: '100%',
-                                overflowY: 'auto', 
-                            }}>
+                    <Box sx={{ height: 300, width: '100%', overflowY: 'auto' }}>
                         <DataGrid
                             rows={mockData}
                             columns={[
@@ -164,15 +163,10 @@ export default function ProductTable() {
                             ]}
                             onRowClick={(params) => handleRowSelect(params.row)}
                             hideFooterPagination // Ẩn footer phân trang
-
                         />
                     </Box>
                 </DialogContent>
-                <DialogActions
-                sx={{
-                    justifyContent: 'center',
-                }}
-                >
+                <DialogActions sx={{ justifyContent: 'center' }}>
                     <Button
                         onClick={handleClose}
                         sx={{
@@ -194,69 +188,63 @@ export default function ProductTable() {
                         Hủy
                     </Button>
                 </DialogActions>
-
             </Dialog>
 
-          {/* Dialog nhập chi tiết sản phẩm */}
-<Dialog open={openSecondDialog} onClose={handleCloseImport}>
-    <DialogTitle sx={{ textAlign: 'center', fontWeight: 'bold' }}>Nhập Sản phẩm</DialogTitle>
-    <DialogContent>
-        <Box
-            sx={{
-                marginTop:'30px',
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)', // 2 cột chia đều
-                gap: 2, // Khoảng cách giữa các ô
-            }}
-        >
-            {[
-                { label: 'Mã Sản phẩm', name: 'productId' },
-                { label: 'Tên Sản phẩm', name: 'productName' },
-                { label: 'Barcode', name: 'Barcode' },
-                { label: 'Giá nhập', name: 'price' },
-                { label: 'Số lượng', name: 'quantity' },
-                { label: 'Ghi chú', name: 'note' },
-            ].map(({ label, name }) => (
-                <TextField
-                    key={name}
-                    label={label}
-                    fullWidth
-                    variant="outlined"
-                    name={name}
-                    value={productImportDetails[name]}
-                    onChange={handleInputChangeImport}
-                />
-            ))}
-        </Box>
-    </DialogContent>
-    <DialogActions
-        sx={{
-            justifyContent: 'center',
-        }}
-    >
-        <Button
-            onClick={handleSaveImport}
-            sx={{
-                fontSize: '20px',
-                color: 'green',
-                padding: '10px 20px',
-            }}
-        >
-            Lưu
-        </Button>
-        <Button
-            onClick={handleCloseImport}
-            sx={{
-                fontSize: '20px',
-                color: 'red',
-                padding: '10px 20px',
-            }}
-        >
-            Hủy
-        </Button>
-    </DialogActions>
-</Dialog>
-
+            {/* Dialog nhập chi tiết sản phẩm */}
+            <Dialog open={openSecondDialog} onClose={handleCloseImport}>
+                <DialogTitle sx={{ textAlign: 'center', fontWeight: 'bold' }}>Nhập Sản phẩm</DialogTitle>
+                <DialogContent>
+                    <Box
+                        sx={{
+                            marginTop: '30px',
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)', // 2 cột chia đều
+                            gap: 2, // Khoảng cách giữa các ô
+                        }}
+                    >
+                        {[
+                            { label: 'Mã Sản phẩm', name: 'productId' },
+                            { label: 'Tên Sản phẩm', name: 'productName' },
+                            { label: 'Barcode', name: 'barcode' },
+                            { label: 'Giá nhập', name: 'price' },
+                            { label: 'Số lượng', name: 'quantity' },
+                            { label: 'Ghi chú', name: 'note' },
+                        ].map(({ label, name }) => (
+                            <TextField
+                                key={name}
+                                label={label}
+                                fullWidth
+                                variant="outlined"
+                                name={name}
+                                value={productImportDetails[name]}
+                                onChange={handleInputChangeImport}
+                            />
+                        ))}
+                    </Box>
+                </DialogContent>
+                <DialogActions sx={{ justifyContent: 'center' }}>
+                    <Button
+                        onClick={handleSaveImport}
+                        sx={{
+                            fontSize: '20px',
+                            color: 'green',
+                            padding: '10px 20px',
+                        }}
+                    >
+                        Lưu
+                    </Button>
+                    <Button
+                        onClick={handleCloseImport}
+                        sx={{
+                            fontSize: '20px',
+                            color: 'red',
+                            padding: '10px 20px',
+                        }}
+                    >
+                        Hủy
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Container>
     );
 }
