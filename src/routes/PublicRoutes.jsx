@@ -13,6 +13,11 @@ const publicRouter = [
         layout: BlankLayout,
     },
     {
+        path: '/forgotpassword',
+        element: lazy(() => import('@/pages/ForgotPassword')),
+        layout: BlankLayout,
+    },
+    {
         path: '/error-code-500',
         element: lazy(() => import('@/pages/ErrorCode500')),
         layout: BlankLayout,
