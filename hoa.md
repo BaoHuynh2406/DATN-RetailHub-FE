@@ -1,36 +1,245 @@
-Tổng Bí thư Tô Lâm: Nhanh chóng tháo gỡ điểm nghẽn để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Nhóm phóng viên
-Nhóm phóng viên
-Hoạt động của Lãnh đạo Đảng, Nhà nước 05/12/2024 14:41 Theo dõi Congthuong.vn trên
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Tổng Bí thư đề nghị tháo gỡ các điểm nghẽn về cơ chế, chính sách... để thúc đẩy phát triển các dự án năng lượng trong đó có Nhà máy điện hạt nhân Ninh Thuận.
-Tổng Bí thư Tô Lâm làm việc với tỉnh Ninh Thuận, nhấn mạnh tái khởi động điện hạt nhânUBND tỉnh Ninh Thuận tham gia ý kiến về việc tái khởi động dự án điện hạt nhân
-Sáng 5/12, tại Ninh Thuận, Tổng Bí thư Tô Lâm và Đoàn công tác của Trung ương đã làm việc với Ban Thường vụ Tỉnh ủy Ninh Thuận, nghe báo cáo kết quả thực hiện Nghị quyết Đại hội XIII của Đảng, tình hình thực hiện Chỉ thị số 35-CT/TW của Bộ Chính trị, quá trình triển khai đầu tư Dự án điện hạt nhân Ninh Thuận.
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
 
-Dự buổi làm việc có đồng chí Nguyễn Duy Ngọc, Bí thư Trung ương Đảng, Chánh Văn phòng Trung ương Đảng; các đồng chí Ủy viên Trung ương Đảng: Nguyễn Đức Hải, Phó Chủ tịch Quốc hội; Hồ Đức Phớc, Phó Thủ tướng Chính phủ; đồng chí Nguyễn Hồng Diên, Ủy viên Trung ương Đảng, Bộ trưởng Bộ Công Thương, cùng các đồng chí Ủy viên Trung ương Đảng, lãnh đạo một số bộ, ngành Trung ương và địa phương.
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Tổng Bí thư Tô Lâm: Chuẩn bị tốt các điều kiện để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Tổng Bí thư Tô Lâm thăm và làm việc tại Ninh Thuận.
-Báo cáo về Dự án điện hạt nhân Ninh Thuận, đại diện lãnh đạo tỉnh cho biết, sau khi Quốc hội thông qua chủ trương đầu tư tại Nghị quyết 41/2009/QH12, ngày 25/11/2009, quy hoạch xây dựng Nhà máy điện hạt nhân Ninh Thuận 1 đặt tại xã Phước Dinh, huyện Thuận Nam và Nhà máy điện hạt nhân Ninh Thuận 2 đặt tại xã Vĩnh Hải, huyện Ninh Hải, tỉnh đã khảo sát, đo đạc xác định tổng diện tích quy hoạch xây dựng 2 Nhà máy là 1.642,22 ha, ảnh hưởng, tác động đến gần 4.000 người với 1.100 hộ. Ngày 26/11/2016, Quốc hội ban hành Nghị quyết dừng thực hiện chủ trương đầu tư Dự án điện hạt nhân Ninh Thuận, đã làm thay đổi các kịch bản tăng trưởng và phát triển của tỉnh đã được Thủ tướng Chính phủ phê duyệt. Cơ sở hạ tầng kinh tế - xã hội và các công trình phúc lợi công cộng trên địa bàn 2 xã Phước Dinh, Vĩnh Hải và vùng lân cận bị xuống cấp do không được đầu tư chờ bàn giao chuyển đi nơi ở mới. Nhân dân trong vùng dự án gặp khó khăn, trải qua thời gian dài chờ đợi, mong mỏi sớm được về nơi ở mới, ổn định đời sống - sản xuất.
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Việc tái khởi động Nhà máy điện hạt nhân Ninh Thuận tạo động lực thúc đẩy kinh tế - xã hội của tỉnh phát triển nhanh, tháo gỡ những khó khăn hiện nay. Tỉnh đề nghị Trung ương sớm xác định lộ trình xây dựng các nhà máy Điện hạt nhân Ninh Thuận để làm cơ sở cho tỉnh tiến hành khảo sát, lấy ý kiến, xác định tâm tư, nguyện vọng nhân dân vùng dự án; tăng cường công tác tuyên truyền thông tin, vận động tạo sự đồng thuận khi dự án được triển khai. Tỉnh đề xuất tiếp tục được xây dựng cơ chế đặc thù phát triển kinh tế - xã hội của địa phương có Nhà máy điện hạt nhân, trong đó ưu tiên cơ chế phát triển nhân lực, hạ tầng trọng điểm.
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Tổng Bí thư Tô Lâm: Chuẩn bị tốt các điều kiện để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Tổng Bí thư phát biểu chỉ đạo tại buổi làm việc với tỉnh Ninh Thuận
-Phát biểu kết luận hội nghị, Tổng Bí thư Tô Lâm ghi nhận, biểu dương những thành tựu mà Đảng bộ, chính quyền, quân và dân Ninh Thuận đạt được trong thời gian qua, nhất là phát triển kinh tế-xã hội. Về công tác xây dựng Đảng, tỉnh đã bám sát các văn bản của Trung ương, tập trung lãnh đạo quyết liệt, chủ động, phòng ngừa, ngăn chặn, đẩy lùi sự suy thoái về tư tưởng chính trị, đạo đức, lối sống, những biểu hiện “tự diễn biến”, “tự chuyển hóa” trong nội bộ; chủ động triển khai thực hiện kịp thời Chỉ thị 35-CT/TW của Bộ Chính trị về đại hội đảng bộ các cấp tiến tới Đại hội XIV của Đảng.
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-Tổng Bí thư cho biết vui mừng và xúc động khi thấy Ninh Thuận từ vùng đất khô hạn với lượng mưa ít ỏi, thấp nhất cả nước chỉ với khoảng 700-800mm một năm, nay đã vượt lên khó khăn, biết khai thác được những tiềm năng sẵn có từ năng lượng tái tạo như điện gió, điện mặt trời, du lịch xanh và nông nghiệp công nghệ cao. Trong vòng 10 năm, thu nhập bình quân đầu người tăng gấp 4 lần, tỷ lệ hộ nghèo giảm từ 9,34% xuống còn 2,69%. Đó là minh chứng cho sức mạnh vượt qua nghịch cảnh. Ninh Thuận ngày nay không chỉ là điểm đến hấp dẫn, mà còn là lời nhắc nhở rằng sự quyết tâm, bền bỉ và sáng tạo có thể biến những thách thức thành cơ hội, mở ra con đường phát triển bền vững và đầy hy vọng.
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Tổng Bí thư nhấn mạnh, điều kiện khí hậu và tự nhiên của Ninh Thuận không thuận lợi, đó là khi nhìn lợi thế so sánh trong ngành nông nghiệp, nếu nhìn ở ngành năng lượng, trong đó có năng lượng tái tạo, năng lượng sạch thì đây lại là một thế mạnh vượt trội. Ninh Thuận đang nổi lên như một trung tâm năng lượng quan trọng của cả nước, chiếm 18% tổng công suất toàn quốc, đóng góp lớn vào tăng trưởng của tỉnh trong thời gian qua. Nếu một số vướng mắc các dự án điện gió, điện mặt trời hiện nay được khơi thông, đồng thời việc triển khai Quy hoạch điện VIII được thúc đẩy, Ninh Thuận sẽ tiếp tục bứt phá mạnh mẽ hơn nữa. Chính phủ, các bộ ngành, nhất là Bộ Công thương phải nhanh chóng tháo gỡ các điểm nghẽn về cơ chế, chính sách, vướng mắc để thúc đẩy sự phát triển các dự án năng lượng của quốc gia nói chung, trong đó có các dự án năng lượng ở Ninh Thuận.
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Về điện hạt nhân, Tổng Bí thư khẳng định, điện hạt nhân là nguồn điện nền, xanh và bền vững. Điện hạt nhân ngày càng được nhiều quốc gia quan tâm lựa chọn và tiếp tục phát triển. Trong lịch sử có một số sự cố về các nhà máy điện hạt nhân nhưng xét về xác suất là vô cùng thấp. Hơn nữa, những công nghệ hạt nhân hiện nay đã tiến bộ rất xa, trải qua rất nhiều thế hệ mới so với những công nghệ cũ trước đây. Vừa qua, Quốc hội đã quyết nghị tiếp tục thực hiện chủ trương đầu tư điện hạt nhân Ninh Thuận, sau 8 năm tạm dừng dự án này, nhằm đáp ứng nhu cầu tiêu thụ điện của Việt Nam hết sức cấp thiết và được dự báo vẫn tiếp tục tăng cao. Tổng công suất hệ thống điện hiện nay khoảng 85.000MW, cần có thêm khoảng 70.000MW vào năm 2030, tức khoảng 150.000MW. Đến năm 2050, tổng công suất cần đạt là 400.000 đến 500.000MW. Việc phát triển nguồn điện hạt nhân sẽ đa dạng nguồn cung, bảo đảm an ninh năng lượng và chuyển dịch năng lượng xanh, giúp Việt Nam đạt mục tiêu phát thải ròng bằng 0 vào 2050 theo cam kết tại COP26. Bên cạnh đó, làm dự án điện hạt nhân còn là cơ hội để nước ta phát triển nhân lực chất lượng cao, nâng cao tiềm lực khoa học công nghệ quốc gia, tham gia vào chuỗi cung ứng công nghiệp điện hạt nhân toàn cầu.
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Tổng Bí thư Tô Lâm: Nhanh chóng tháo gỡ điểm nghẽn để khởi động lại Nhà máy điện hạt nhân Ninh Thuận
-Tổng Bí thư Tô Lâm chụp ảnh cùng các đại biểu dự hội nghị - Ảnh: Văn Nỷ
-Tổng Bí thư nêu rõ, người dân Ninh Thuận và các địa phương lân cận chia sẻ, dành nguồn lực (đất đai, tài nguyên) để phát triển dự án năng lượng phục vụ sự phát triển cho cả nước, chắc chắc sẽ phải được tái phân phối, thụ hưởng những thành quả xứng đáng của sự phát triển. Đảng và Nhà nước sẽ phải đảm bảo lựa chọn những công nghệ hạt nhân tốt nhất, chọn những đối tác tư vấn tốt nhất, đào tạo nhân lực quản lý tốt nhất để bảo đảm vận hành an toàn và hiệu quả dự án năng lượng này của quốc gia, không chỉ vì thế hệ hiện tại mà còn cho thế hệ con cháu mai sau.
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Về phát triển kinh tế-xã hội nói chung, Tổng Bí thư cho rằng, Ninh Thuận có rất nhiều tiềm năng để phát triển du lịch, phát triển kinh tế biển, cảng biển và trung tâm dịch vụ logistics. Ninh Thuận có lợi thế vượt trội để phát triển năng lượng điện mặt trời, điện gió nhờ tốc tốc độ gió và số giờ nắng trung bình trong ngày cao nhất cả nước. Vùng biển Ninh Thuận có lợi thế độ mặn lý tưởng để phát triển sản xuất công nghiệp muối và hóa chất sau muối; có nhiều sản phẩm đặc hữu mang tính bản địa cao đã trở thành thương hiệu nổi tiếng như nho, táo, hành, tỏi, tôm giống…Tất cả giá trị tiềm tàng của Ninh Thuận rất lớn, cần có cách nhìn mới mang tính thời đại, toàn cầu, mang hơi thở của kỷ nguyên vươn mình để đánh thức tiềm năng đang ẩn chứa trong đất và người Ninh Thuận.
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Quán triệt quyết tâm phấn đấu đạt mức cao nhất các mục tiêu Đại hội Đảng bộ tỉnh nhiệm kỳ 2020-2025, Tổng Bí thư đề nghị Đảng bộ tỉnh tiếp tục làm tốt công tác xây dựng, chỉnh đốn Đảng và hệ thống chính trị trong sạch, vững mạnh toàn diện; phát huy sức mạnh văn hóa, con người, khối Đại đoàn kết toàn dân. Đề cao trách nhiệm người đứng đầu, trách nhiệm nêu gương; khuyến khích và bảo vệ cán bộ năng động, sáng tạo, dám nghĩ, dám làm vì lợi ích chung. Tập trung sắp xếp tổ chức bộ máy của hệ thống chính trị tinh, gọn, mạnh, hiệu năng, hiệu lực, hiệu quả. Chuẩn bị thật tốt các điều kiện và tổ chức thành công đại hội đảng bộ các cấp nhiệm kỳ 2025-2030; trọng tâm là xác định các mục tiêu tăng trưởng, làm tốt công tác nhân sự phục vụ Đại hội; văn kiện Đại hội phải khách quan, khoa học, lấy ý kiến rộng rãi, thể hiện ý chí khát vọng vươn lên, vững tin bước vào Kỷ nguyên mới của dân tộc. Tỉnh cần tận dụng thế mạnh của một trung tâm năng lượng lớn quốc gia, vùng ít mưa, ít bão, vùng cao, các lợi thế giao thông để phát triển vùng đất này trở thành tổ hợp công nghiệp chế tạo xanh, công nghiệp phụ trợ, Trung tâm công nghiệp xanh-Net Zero; Trung tâm sản xuất chip bán dẫn và công nghệ trí tuệ nhân tạo AI, trung tâm dữ liệu quốc gia vùng. Chuẩn bị tốt các điều kiện để khởi động lại Nhà máy điện hạt nhân Ninh Thuận theo chủ trương của Trung ương, nhất là công tác tuyên truyền, tạo sự đồng thuận cao trong cán bộ, đảng viên và các tầng lớp nhân dân.
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
 
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
+Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
+MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+
+Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
+Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+
+Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+
+Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+
+Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+
+Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+
+2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+
+Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+
+Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+
+Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+
+Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+
+Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+
+Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+
+Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
