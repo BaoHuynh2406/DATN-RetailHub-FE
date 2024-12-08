@@ -32,8 +32,18 @@ export default function ProductTable() {
     ];
 
     const handleOpen = () => {
-        setOpen(true);
+        // Mở form thêm sản phẩm
+        setProductImportDetails({
+            productId: '',
+            productName: '',
+            barcode: '',
+            price: '',
+            quantity: '',
+            note: '',
+        });
+        setOpenSecondDialog(true); // Mở Dialog nhập sản phẩm (Dialog thứ hai)
     };
+    
 
     const handleClose = () => {
         setOpen(false);
@@ -202,7 +212,7 @@ export default function ProductTable() {
                             gap: 2, // Khoảng cách giữa các ô
                         }}
                     >
-                        {[
+                        {[ 
                             { label: 'Mã Sản phẩm', name: 'productId' },
                             { label: 'Tên Sản phẩm', name: 'productName' },
                             { label: 'Barcode', name: 'barcode' },
@@ -245,6 +255,7 @@ export default function ProductTable() {
                     </Button>
                 </DialogActions>
             </Dialog>
+
         </Container>
     );
 }
