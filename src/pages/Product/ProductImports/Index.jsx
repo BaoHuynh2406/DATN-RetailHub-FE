@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function ProductTable() {
     const [open, setOpen] = useState(false);
@@ -79,6 +80,36 @@ export default function ProductTable() {
         setOpenSecondDialog(false);
     };
 
+    const handleEdit = (row) => {
+        // Mở Dialog và truyền dữ liệu sản phẩm vào state (ví dụ: state cho sản phẩm đang được chỉnh sửa)
+        setOpen(true); // Mở Dialog
+        setProductEditDetails({
+            productId: row.ID,
+            productName: row.productName,
+            barcode: row.Barcode,
+            // ... các trường khác mà bạn cần
+        });
+    };
+
+    const handleSave = () => {
+        // Kiểm tra xem các thông tin có hợp lệ không
+        if (productEditDetails.productId && productEditDetails.productName) {
+            // Giả sử bạn đang dùng Redux hoặc Local State để lưu danh sách sản phẩm
+            // Cập nhật sản phẩm trong danh sách
+            dispatch(updateProduct(productEditDetails)); // Action Redux (nếu có)
+            setOpen(false); // Đóng Dialog
+        } else {
+            alert('Vui lòng điền đầy đủ thông tin sản phẩm');
+        }
+    };
+    
+    const handleDelete = (productId) => {
+        // Cập nhật lại danh sách sản phẩm sau khi xóa
+        const updatedData = mockData.filter(product => product.ID !== productId);
+        setMockData(updatedData); // Nếu bạn đang sử dụng state cho mockData
+    };
+    
+
     const columns = useMemo(
         () => [
             { field: 'ID', headerName: 'Mã', width: 150 },
@@ -92,7 +123,11 @@ export default function ProductTable() {
                 align: 'center',
                 renderCell: (params) => (
                     <Box display="flex" justifyContent="left" alignItems="center">
-                        <IconButton color="primary" onClick={() => handleEdit(params.row)}>
+                                {/* Nút Xóa */}
+                                <IconButton color="error" onClick={() => handleDelete(params.row.ID)}>
+                                    <DeleteIcon />
+                                </IconButton>
+                                <IconButton color="primary" onClick={() => handleEdit(params.row)}>
                             <EditIcon />
                         </IconButton>
                     </Box>
@@ -157,7 +192,6 @@ export default function ProductTable() {
                 </Box>
             </Box>
 
-            {/* Dialog chọn sản phẩm */}
             <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
                 <DialogTitle sx={{ textAlign: 'center', fontWeight: 'bold' }}>
                     Chọn sản phẩm cần nhập
@@ -165,30 +199,31 @@ export default function ProductTable() {
                 <DialogContent>
                     <Box sx={{ height: 300, width: '100%', overflowY: 'auto' }}>
                         <DataGrid
-                            rows={mockData}
+                            rows={mockData} // Dữ liệu bảng sản phẩm
                             columns={[
                                 { field: 'ID', headerName: 'Mã Sản phẩm', width: 150 },
                                 { field: 'productName', headerName: 'Tên Sản phẩm', width: 200 },
                                 { field: 'Barcode', headerName: 'Barcode', width: 150 },
+                                
                             ]}
-                            onRowClick={(params) => handleRowSelect(params.row)}
+                            onRowClick={(params) => handleRowSelect(params.row)} // Xử lý khi chọn dòng
                             hideFooterPagination // Ẩn footer phân trang
                         />
                     </Box>
                 </DialogContent>
                 <DialogActions sx={{ justifyContent: 'center' }}>
                     <Button
-                        onClick={handleClose}
+                        onClick={handleSave} // Lưu dữ liệu khi nhấn nút Lưu
                         sx={{
                             fontSize: '20px',
                             color: 'green',
                             padding: '10px 20px',
                         }}
                     >
-                        OK
+                        Lưu
                     </Button>
                     <Button
-                        onClick={handleClose}
+                        onClick={handleClose} // Đóng form khi nhấn Hủy
                         sx={{
                             fontSize: '20px',
                             color: 'red',
@@ -199,6 +234,7 @@ export default function ProductTable() {
                     </Button>
                 </DialogActions>
             </Dialog>
+
 
             {/* Dialog nhập chi tiết sản phẩm */}
             <Dialog open={openSecondDialog} onClose={handleCloseImport}>
