@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, InputAdornment, IconButton } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, InputAdornment, IconButton, Box  } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 export default function ProductDialog({
