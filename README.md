@@ -8,3 +8,5 @@ npm i
 
 # chạy
 npm run dev 
+api run dev
+C D E F G A B 
