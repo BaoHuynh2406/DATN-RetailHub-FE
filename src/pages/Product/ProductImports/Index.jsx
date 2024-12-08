@@ -10,18 +10,14 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
-    TextField
+    TextField,
 } from '@mui/material';
+import { DataGrid } from '@mui/x-data-grid';
 import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-material';
 
 export default function ProductTable() {
     const [open, setOpen] = useState(false);
     const [openSecondDialog, setOpenSecondDialog] = useState(false);
-    const [productDetails, setProductDetails] = useState({
-        productId: '',
-        productName: '',
-        category: '',
-    });
     const [productImportDetails, setProductImportDetails] = useState({
         productId: '',
         productName: '',
@@ -30,21 +26,57 @@ export default function ProductTable() {
         quantity: '',
         note: '',
     });
+    const mockData = 
+    [
+        { id: 1, ID: 'SP001', productName: 'Sản phẩm 1', quantity: 10, totalAmount: '150,000',Barcode:'73254822' },
+        { id: 2, ID: 'SP002', productName: 'Sản phẩm 2', quantity: 5, totalAmount: '125,000',Barcode:'894274247' },
+    ];
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleCloseImport = () => {
+        setOpenSecondDialog(false);
+    };
+
+    const handleRowSelect = (row) => {
+        setProductImportDetails({
+            productId: row.ID,
+            productName: row.productName,
+            barcode: row.Barcode, // Cập nhật barcode từ dòng dữ liệu
+            price: '',  // Có thể thêm giá trị mặc định nếu cần
+            quantity: '',
+            note: '',
+        });
+        setOpen(false); // Đóng dialog chọn sản phẩm
+        setOpenSecondDialog(true); // Mở dialog nhập chi tiết
+    };
+
+    const handleInputChangeImport = (e) => {
+        const { name, value } = e.target;
+        setProductImportDetails((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSaveImport = () => {
+        console.log('Import product details saved:', productImportDetails);
+        setOpenSecondDialog(false);
+    };
 
     const columns = useMemo(
         () => [
             { field: 'ID', headerName: 'Mã', width: 150 },
-            { field: 'productName', headerName: 'Tên sản phẩm', width: 120 },
-            { field: 'category', headerName: 'Số lượng', width: 120 },
-            { field: 'price', headerName: 'Thành tiền', width: 120 },
-            {
-                field: 'isActive',
-                headerName: 'Trạng thái',
-                width: 120,
-                renderCell: (row) => (
-                    <Switch checked={row.isActive} color="secondary" />
-                ),
-            },
+            { field: 'productName', headerName: 'Tên sản phẩm', width: 200 },
+            { field: 'quantity', headerName: 'Số lượng', width: 150 },
+            { field: 'totalAmount', headerName: 'Thành tiền', width: 120 },
+            
             {
                 field: 'actions',
                 headerName: 'Công cụ',
@@ -59,64 +91,8 @@ export default function ProductTable() {
                 ),
             },
         ],
-        [],
+        []
     );
-
-    const mockData = [
-        {
-            ID: 'SP001',
-            productName: 'Sản phẩm 1',
-            category: '2',
-            price: '15,000',
-            isActive: true,
-        },
-        {
-            ID: 'SP002',
-            productName: 'Sản phẩm 2',
-            category: '4',
-            price: '25,000',
-            isActive: false,
-        },
-    ];
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setProductDetails({
-            ...productDetails,
-            [name]: value,
-        });
-    };
-
-    const handleInputChangeImport = (e) => {
-        const { name, value } = e.target;
-        setProductImportDetails({
-            ...productImportDetails,
-            [name]: value,
-        });
-    };
-
-    const handleSave = () => {
-        console.log('Product details saved:', productDetails);
-        setOpen(false);
-        setOpenSecondDialog(true); // Mở form nhập sản phẩm sau khi lưu thông tin sản phẩm
-    };
-
-    const handleSaveImport = () => {
-        console.log('Import product details saved:', productImportDetails);
-        setOpenSecondDialog(false);
-    };
-
-    const handleCloseImport = () => {
-        setOpenSecondDialog(false);
-    };
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
@@ -172,116 +148,115 @@ export default function ProductTable() {
                 </Box>
             </Box>
 
-            {/* Dialog for product details */}
-            <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Chọn sản phẩm cần nhập</DialogTitle>
+            {/* Dialog chọn sản phẩm */}
+            <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
+                <DialogTitle sx={{textAlign:'center', fontWeight:'bold'}}>Chọn sản phẩm cần nhập</DialogTitle>
                 <DialogContent>
-                    <TextField
-                        label="Mã Sản phẩm"
-                        fullWidth
-                        variant="outlined"
-                        name="productId"
-                        value={productDetails.productId}
-                        onChange={handleInputChange}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Tên Sản phẩm"
-                        fullWidth
-                        variant="outlined"
-                        name="productName"
-                        value={productDetails.productName}
-                        onChange={handleInputChange}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Danh mục"
-                        fullWidth
-                        variant="outlined"
-                        name="category"
-                        value={productDetails.category}
-                        onChange={handleInputChange}
-                        sx={{ marginBottom: 2 }}
-                    />
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose} color="secondary">
-                        Hủy
-                    </Button>
-                    <Button onClick={handleSave} color="primary">
-                        Lưu
-                    </Button>
-                </DialogActions>
-            </Dialog>
+                    <Box sx={{ height: 300, width: '100%',
+                                overflowY: 'auto', 
+                            }}>
+                        <DataGrid
+                            rows={mockData}
+                            columns={[
+                                { field: 'ID', headerName: 'Mã Sản phẩm', width: 150 },
+                                { field: 'productName', headerName: 'Tên Sản phẩm', width: 200 },
+                                { field: 'Barcode', headerName: 'Barcode', width: 150 },
+                            ]}
+                            onRowClick={(params) => handleRowSelect(params.row)}
+                            hideFooterPagination // Ẩn footer phân trang
 
-            {/* Dialog for product import details */}
-            <Dialog open={openSecondDialog} onClose={handleCloseImport}>
-                <DialogTitle>Nhập Sản phẩm</DialogTitle>
-                <DialogContent>
-                    <TextField
-                        label="Mã Sản phẩm"
-                        fullWidth
-                        variant="outlined"
-                        name="productId"
-                        value={productImportDetails.productId}
-                        onChange={handleInputChangeImport}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Tên Sản phẩm"
-                        fullWidth
-                        variant="outlined"
-                        name="productName"
-                        value={productImportDetails.productName}
-                        onChange={handleInputChangeImport}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Barcode"
-                        fullWidth
-                        variant="outlined"
-                        name="barcode"
-                        value={productImportDetails.barcode}
-                        onChange={handleInputChangeImport}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Giá nhập"
-                        fullWidth
-                        variant="outlined"
-                        name="price"
-                        value={productImportDetails.price}
-                        onChange={handleInputChangeImport}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Số lượng"
-                        fullWidth
-                        variant="outlined"
-                        name="quantity"
-                        value={productImportDetails.quantity}
-                        onChange={handleInputChangeImport}
-                        sx={{ marginBottom: 2 }}
-                    />
-                    <TextField
-                        label="Ghi chú"
-                        fullWidth
-                        variant="outlined"
-                        name="note"
-                        value={productImportDetails.note}
-                        onChange={handleInputChangeImport}
-                        sx={{ marginBottom: 2 }}
-                    />
+                        />
+                    </Box>
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleCloseImport} color="secondary">
-                        Thoát
-                    </Button>
-                    <Button onClick={handleSaveImport} color="primary">
+                <DialogActions
+                sx={{
+                    justifyContent: 'center',
+                }}
+                >
+                    <Button
+                        onClick={handleClose}
+                        sx={{
+                            fontSize: '20px',
+                            color: 'green',
+                            padding: '10px 20px',
+                        }}
+                    >
                         OK
                     </Button>
+                    <Button
+                        onClick={handleClose}
+                        sx={{
+                            fontSize: '20px',
+                            color: 'red',
+                            padding: '10px 20px',
+                        }}
+                    >
+                        Hủy
+                    </Button>
                 </DialogActions>
+
             </Dialog>
+
+          {/* Dialog nhập chi tiết sản phẩm */}
+<Dialog open={openSecondDialog} onClose={handleCloseImport}>
+    <DialogTitle sx={{ textAlign: 'center', fontWeight: 'bold' }}>Nhập Sản phẩm</DialogTitle>
+    <DialogContent>
+        <Box
+            sx={{
+                marginTop:'30px',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)', // 2 cột chia đều
+                gap: 2, // Khoảng cách giữa các ô
+            }}
+        >
+            {[
+                { label: 'Mã Sản phẩm', name: 'productId' },
+                { label: 'Tên Sản phẩm', name: 'productName' },
+                { label: 'Barcode', name: 'Barcode' },
+                { label: 'Giá nhập', name: 'price' },
+                { label: 'Số lượng', name: 'quantity' },
+                { label: 'Ghi chú', name: 'note' },
+            ].map(({ label, name }) => (
+                <TextField
+                    key={name}
+                    label={label}
+                    fullWidth
+                    variant="outlined"
+                    name={name}
+                    value={productImportDetails[name]}
+                    onChange={handleInputChangeImport}
+                />
+            ))}
+        </Box>
+    </DialogContent>
+    <DialogActions
+        sx={{
+            justifyContent: 'center',
+        }}
+    >
+        <Button
+            onClick={handleSaveImport}
+            sx={{
+                fontSize: '20px',
+                color: 'green',
+                padding: '10px 20px',
+            }}
+        >
+            Lưu
+        </Button>
+        <Button
+            onClick={handleCloseImport}
+            sx={{
+                fontSize: '20px',
+                color: 'red',
+                padding: '10px 20px',
+            }}
+        >
+            Hủy
+        </Button>
+    </DialogActions>
+</Dialog>
+
         </Container>
     );
 }
