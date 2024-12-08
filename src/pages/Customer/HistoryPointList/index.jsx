@@ -28,7 +28,7 @@ export default function PointHistoryTable() {
             { field: 'historyId', headerName: 'ID Lịch Sử', width: 150 },
             { field: 'customerId', headerName: 'Mã Khách Hàng', width: 150 },
             { field: 'points', headerName: 'Điểm', width: 150 },
-            { field: 'description', headerName: 'Mô Tả', width: 200 },
+            { field: 'description', headerName: 'Mô Tả', width: 300 },
             { 
                 field: 'transactionDate', 
                 headerName: 'Ngày Giao Dịch', 

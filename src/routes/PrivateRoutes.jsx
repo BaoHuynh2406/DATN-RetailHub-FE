@@ -90,6 +90,11 @@ const privateRouter = [
                 element: lazy(() => import('@/pages/Product/ProductDetail')), // Lazy load trang chi tiết sản phẩm
                 layout: DefaultLayout,
             },
+            {
+                path: 'ImportProducts',
+                element: lazy(() => import('@/pages/ImportProducts')),
+                layout: DefaultLayout,
+            },
         ],
     },
     {

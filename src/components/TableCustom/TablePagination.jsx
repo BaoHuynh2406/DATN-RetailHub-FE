@@ -7,18 +7,6 @@ import MenuItem from '@mui/material/MenuItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
-function CustomToolbar({ onSearchChange }) {
-    return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 20px' }}>
-            <GridToolbarQuickFilter
-                quickFilterParser={(searchInput) => searchInput.split(' ')}
-                inputProps={{ placeholder: 'Tìm kiếm...' }}
-                onChange={(event) => onSearchChange(event.target.value)}
-            />
-        </div>
-    );
-}
-
 function CustomPagination(props) {
     const { paginationModel, setPaginationModel, rowCount } = props;
     const pageCount = Math.ceil(rowCount / paginationModel.pageSize);
@@ -147,7 +135,6 @@ function TablePagination({
             rowHeight={rowHeight}
             getRowId={(row) => row[id]}
             slots={{
-                toolbar: CustomToolbar,
                 pagination: CustomPagination,
             }}
             slotProps={{

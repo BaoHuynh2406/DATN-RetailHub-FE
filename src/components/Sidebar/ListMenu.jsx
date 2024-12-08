@@ -24,20 +24,8 @@ export const sidebarItems = [
     },
     {
         sidebarProps: { displayText: 'Nhân viên', icon: <PeopleRoundedIcon /> },
-        path: '/employee',
+        path: '/employee/EmployeeList',
         state: 'employee',
-        child: [
-            {
-                sidebarProps: { displayText: 'Danh sách nhân viên', icon: <TableChartRoundedIcon /> },
-                path: '/employee/EmployeeList',
-                state: 'employee/EmployeeList',
-            },
-            {
-                sidebarProps: { displayText: 'Chấm công', icon: <DomainVerificationRoundedIcon /> },
-                path: '/u/employee',
-                state: 'employee/check',
-            },
-        ],
     },
     {
         sidebarProps: { displayText: 'Khách hàng', icon: <ContactsRoundedIcon /> },
@@ -57,11 +45,6 @@ export const sidebarItems = [
         ],
     },
     {
-        sidebarProps: { displayText: 'Nhà cung cấp đại lý', icon: <LocalShippingRoundedIcon /> },
-        path: '/u/supplier',
-        state: 'supplier',
-    },
-    {
         sidebarProps: { displayText: 'Quản lý kho', icon: <Inventory2RoundedIcon /> },
         path: '/product',
         state: 'product',
@@ -72,22 +55,17 @@ export const sidebarItems = [
                 state: '/product/ProductList',
             },
             {
-                sidebarProps: { displayText: 'Chi tiết hàng hóa', icon: <ManageAccountsIcon /> },
-                path: '/product/ProductDetail/create',
-                state: 'product/ProductDetail',
-            },
-            {
                 sidebarProps: { displayText: 'QL Nhập hàng', icon: <InputRoundedIcon /> },
-                path: '/u/inventory',
+                path: '/product/ImportProducts',
                 state: 'inventory/import',
             },
             {
-                sidebarProps: { displayText: 'QL Xuất hàng', icon: <ReplyAllRoundedIcon /> },
+                sidebarProps: { displayText: 'QL Xuất hàng (PT Sau)', icon: <ReplyAllRoundedIcon /> },
                 path: '/u/inventory',
                 state: 'inventory/out',
             },
             {
-                sidebarProps: { displayText: 'QL Kiểm kê', icon: <DoneAllRoundedIcon /> },
+                sidebarProps: { displayText: 'QL Kiểm kê (PT Sau)', icon: <DoneAllRoundedIcon /> },
                 path: '/u/inventory',
                 state: 'inventory/check',
             },

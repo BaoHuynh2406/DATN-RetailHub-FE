@@ -524,7 +524,7 @@ const EmployeeDetails = () => {
                     </Grid>
                 </Grid>
 
-                <Box display="flex" justifyContent="flex-start" marginTop={5}>
+                <Box display="flex" justifyContent="flex-start" marginTop={5} marginBottom={5}>
                     {userId === 'create' ? (
                         <>
                             <Button variant="contained" color="primary" onClick={handleSave} sx={{ marginRight: 2 }}>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Button, CircularProgress, TextField } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchInvoices } from '@/redux/Invoice/invoiceSlice';
+import TableCustom from '@/components/TableCustom';
 
 function Test() {
     const { data, loading, error } = useSelector((state) => state.invoice);
@@ -87,13 +88,46 @@ function Test() {
                 </Box>
             )}
 
-            {/* Hiển thị dữ liệu */}
-            {data && (
-                <Box>
-                    <h2>Invoices Data:</h2>
-                    <pre>{JSON.stringify(data, null, 2)}</pre>
-                </Box>
-            )}
+            <TableCustom
+                stt={true}
+                columns={[
+                    {
+                        field: 'id',
+                        headerName: 'ID',
+                        width: 150,
+                    },
+                    {
+                        field: 'name',
+                        headerName: 'tên sản phẩm',
+                        width: 150,
+                    },
+                    {
+                        field: 'idP',
+                        headerName: 'mã sản phẩm',
+                        width: 150,
+                    },
+                    {
+                        field: 'idP',
+                        headerName: 'Giá nhập',
+                        width: 150,
+                    },
+                    {
+                        field: 'idP',
+                        headerName: 'số lượng',
+                        width: 150,
+                    },
+                    {
+                        field: 't',
+                        headerName: 'thành tiền',
+                        width: 150,
+                    },
+                    {
+                        field: 'công cụ',
+                        headerName: 'công cụ',
+                        width: 150,
+                    },
+                ]}
+            />
         </Box>
     );
 }

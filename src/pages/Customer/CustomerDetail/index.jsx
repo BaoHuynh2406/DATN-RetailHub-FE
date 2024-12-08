@@ -281,9 +281,10 @@ const CustomerDetails = () => {
                     <TextField
                         label="Điểm"
                         name="points"
-                        value={customer.points || ''}
+                        value={customer.points.toLocaleString() || ''}
                         onChange={handleChange}
                         fullWidth
+                        disabled
                         variant="outlined"
                         margin="normal"
                         InputProps={{
@@ -322,9 +323,12 @@ const CustomerDetails = () => {
                     Đặt Lại
                 </Button>
             </Box>
-             {/* Hiển thị lịch sử tích điểm nếu không phải thêm mới */}
-             {customerId !== 'create' && (
+            {/* Hiển thị lịch sử tích điểm nếu không phải thêm mới */}
+            {customerId !== 'create' && (
                 <Box marginTop={5}>
+                    <Typography variant="h5" fontWeight="bold" gutterBottom>
+                        Lịch Sử Tích Điểm
+                    </Typography>
                     <PointHistoryTable />
                 </Box>
             )}

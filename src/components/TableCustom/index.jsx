@@ -12,16 +12,7 @@ import PaginationItem from '@mui/material/PaginationItem';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
-function CustomToolbar() {
-    return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 20px' }}>
-            <GridToolbarQuickFilter
-                quickFilterParser={(searchInput) => searchInput.split(' ')}
-                inputProps={{ placeholder: 'Tìm kiếm...' }}
-            />
-        </div>
-    );
-}
+
 
 function CustomPagination() {
     const apiRef = useGridApiContext();
@@ -97,7 +88,6 @@ function TableCustom({ columns, rows, id = 'id', rowHeight = 60, stt = false , l
                 },
             }}
             slots={{
-                toolbar: CustomToolbar,
                 pagination: CustomPagination,
             }}
             slotProps={{
