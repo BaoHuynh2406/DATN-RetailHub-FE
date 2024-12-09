@@ -12,6 +12,8 @@ import {
     CircularProgress,
     IconButton,
 } from '@mui/material';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import BarcodeIcon from '@mui/icons-material/QrCode';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -144,32 +146,7 @@ const ProductDetails = () => {
         }
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
 
-        if (name === 'categoryId') {
-            setProduct((prevProduct) => ({
-                ...prevProduct,
-                category: {
-                    ...prevProduct.category,
-                    categoryId: value,
-                },
-            }));
-        } else if (name === 'taxId') {
-            setProduct((prevProduct) => ({
-                ...prevProduct,
-                tax: {
-                    ...prevProduct.tax,
-                    taxId: value,
-                },
-            }));
-        } else {
-            setProduct((prevProduct) => ({
-                ...prevProduct,
-                [name]: value,
-            }));
-        }
-    };
 
     const handleDelete = () => {
         if (productId !== '0') {
@@ -204,29 +181,32 @@ const ProductDetails = () => {
     };
 
     const handleSave = async () => {
+        const isValid = validateFields();
+        if (!isValid) {
+            notyf.error('Vui lòng kiểm tra lại thông tin sản phẩm!');
+            return;
+        }
+        
         setIsLoading(true);
-        let data = product;
-        // Bổ sung thêm trường role
-        data = { ...data, categoryId: product.category?.categoryId || 1, taxId: product.tax?.taxId || 'THUE' };
-
-        // Nếu có file ảnh được chọn, tải ảnh lên trước khi lưu
+        let data = { ...product, categoryId: product.category?.categoryId || 1, taxId: product.tax?.taxId || 'THUE' };
+    
         if (selectedFile) {
             try {
-                const url = await handleUploadImage(); // Đợi tải ảnh
-                data = { ...data, image: url }; // Bổ sung URL ảnh vào dữ liệu
+                const url = await handleUploadImage();
+                data = { ...data, image: url };
             } catch (error) {
                 notyf.error('Không thể tải ảnh lên');
+                setIsLoading(false);
                 return;
             }
         }
-
-        // Sau khi đã có URL ảnh hoặc nếu không có ảnh thì tiếp tục lưu
+    
         if (productId === 'create') {
             dispatch(addProductAsync(data))
                 .unwrap()
                 .then(() => {
-                    setIsLoading(false);
                     notyf.success('Thêm mới thành công!');
+                    setIsLoading(false);
                     handleBack();
                 })
                 .catch(() => {
@@ -246,6 +226,7 @@ const ProductDetails = () => {
                 });
         }
     };
+    
 
     const handleChoseImage = (e) => {
         const file = e.target.files[0];
@@ -318,6 +299,104 @@ const ProductDetails = () => {
         );
     }
 
+    const [errors, setErrors] = useState({
+        productName: '',
+        barcode: '',
+        unit: '',
+        inventoryCount: '',
+        cost: '',
+        price: '',
+    });
+    
+    const validateFields = () => {
+        const newErrors = {};
+    
+        if (!product.productName || product.productName.trim() === '') {
+            newErrors.productName = 'Tên sản phẩm không được để trống';
+        }
+    
+        if (!product.barcode || product.barcode.trim() === '') {
+            newErrors.barcode = 'Barcode không được để trống';
+        }
+    
+        if (!product.unit || product.unit.trim() === '') {
+            newErrors.unit = 'Đơn vị tính không được để trống';
+        }
+    
+        if (product.inventoryCount < 0) {
+            newErrors.inventoryCount = 'Số tồn kho phải lớn hơn hoặc bằng 0';
+        }
+    
+        if (product.cost < 0) {
+            newErrors.cost = 'Giá vốn phải lớn hơn hoặc bằng 0';
+        }
+    
+        if (product.price < 0) {
+            newErrors.price = 'Giá bán phải lớn hơn hoặc bằng 0';
+        }
+        if (!product.expiryDate || new Date(product.expiryDate) < new Date()) {
+            newErrors.expiryDate = 'Ngày hết hạn phải lớn hơn hoặc bằng ngày hiện tại';
+        }
+    
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0; // Trả về `true` nếu không có lỗi
+    };
+    
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+    
+        if (name === 'categoryId') {
+            // Cập nhật thông tin loại sản phẩm
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                category: {
+                    ...prevProduct.category,
+                    categoryId: value,
+                },
+            }));
+        } else if (name === 'taxId') {
+            // Cập nhật thông tin thuế suất
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                tax: {
+                    ...prevProduct.tax,
+                    taxId: value,
+                },
+            }));
+        } else if (name === 'expiryDate') {
+            // Cập nhật ngày hết hạn
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                expiryDate: value,
+            }));
+        } else if (name === 'productId' || name === 'productName' || name === 'barcode' || name === 'unit' || name === 'inventoryCount') {
+            // Cập nhật các thông tin khác của sản phẩm (Mã, Tên, Bar code, Đơn vị, Số tồn kho)
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                [name]: value,
+            }));
+        } else if (name === 'price' || name === 'cost') {
+            // Cập nhật giá bán và giá vốn
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                [name]: parseFloat(value) || 0, // Đảm bảo giá trị nhập vào là số
+            }));
+        } else if (name === 'expiryDate') {
+            // Đảm bảo ngày tháng nhập vào hợp lệ
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                expiryDate: value,
+            }));
+        } else {
+            // Xử lý các trường hợp khác
+            setProduct((prevProduct) => ({
+                ...prevProduct,
+                [name]: value,
+            }));
+        }
+    };
+    
+
     return (
         <Container maxWidth="lg" sx={{ overflow: 'auto', height: '100vh', position: 'relative' }}>
             {isLoading && (
@@ -354,6 +433,7 @@ const ProductDetails = () => {
             </Box>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={4}>
+                    {/* Ô nhập Mã sản phẩm, Tên sản phẩm, Bar code, Đơn vị tính, Số tồn kho */}
                     <TextField
                         label={
                             <>
@@ -375,7 +455,7 @@ const ProductDetails = () => {
                         }}
                         margin="normal"
                     />
-
+                    
                     <TextField
                         label="Tên sản phẩm"
                         name="productName"
@@ -384,6 +464,8 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        error={!!errors.productName}
+                        helperText={errors.productName || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
@@ -392,6 +474,7 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
+
                     <TextField
                         label="Bar Code"
                         name="barcode"
@@ -400,6 +483,8 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        error={!!errors.barcode}
+                        helperText={errors.barcode || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
@@ -421,6 +506,7 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
+
                     <TextField
                         label="Đơn vị tính"
                         name="unit"
@@ -429,6 +515,8 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        error={!!errors.unit}
+                        helperText={errors.unit || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
@@ -437,6 +525,7 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
+
                     <TextField
                         label="Số tồn kho"
                         type="number"
@@ -446,6 +535,8 @@ const ProductDetails = () => {
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        error={!!errors.inventoryCount}
+                        helperText={errors.inventoryCount || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
@@ -454,52 +545,64 @@ const ProductDetails = () => {
                             ),
                         }}
                     />
-                    <TextField
-                        label="Ngày hết hạn"
-                        type="date"
-                        name="expiryDate"
-                        value={product.expiryDate || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                        InputLabelProps={{ shrink: true }}
-                    />
+                  <TextField
+                    label="Ngày hết hạn"
+                    type="date"
+                    name="expiryDate"
+                    value={product.expiryDate || ''}
+                    onChange={handleChange}
+                    fullWidth
+                    variant="outlined"
+                    margin="normal"
+                    InputLabelProps={{ shrink: true }}
+                    error={!!errors.expiryDate}
+                    helperText={errors.expiryDate || ''}
+                />
+
                 </Grid>
 
                 <Grid item xs={12} md={4}>
+                    {/* Ô nhập Giá vốn, Giá bán, Loại, Thuế suất, Vị trí, Mô tả */}
                     <TextField
-                        label="Giá nhập"
+                        label="Giá vốn"
+                        type="number"
                         name="cost"
                         value={product.cost || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        error={!!errors.cost}
+                        helperText={errors.cost || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <AttachMoneyIcon />
+                                    <MonetizationOnIcon />
                                 </InputAdornment>
                             ),
                         }}
                     />
+
                     <TextField
                         label="Giá bán"
+                        type="number"
                         name="price"
                         value={product.price || ''}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
                         margin="normal"
+                        error={!!errors.price}
+                        helperText={errors.price || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <AttachMoneyIcon />
+                                    <PriceChangeIcon />
                                 </InputAdornment>
                             ),
                         }}
                     />
+
                     <TextField
                         select
                         label="Loại"
@@ -540,6 +643,7 @@ const ProductDetails = () => {
                             </MenuItem>
                         ))}
                     </TextField>
+
                     <TextField
                         label="Vị trí"
                         name="location"
@@ -578,6 +682,7 @@ const ProductDetails = () => {
                 </Grid>
 
                 <Grid item xs={12} md={4}>
+                    {/* Ảnh sản phẩm */}
                     <Box display="flex" flexDirection="column" alignItems="center" paddingTop="20px">
                         <img
                             src={product.image || defaultImage}
@@ -610,6 +715,7 @@ const ProductDetails = () => {
                     </Box>
                 </Grid>
             </Grid>
+
 
             <Box display="flex" justifyContent="flex-end" marginTop={5}>
                 {productId === 'create' ? (
