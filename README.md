@@ -9,4 +9,4 @@ npm i
 # chạy
 npm run dev 
 # test
-githbub desktop
+npm run dev
