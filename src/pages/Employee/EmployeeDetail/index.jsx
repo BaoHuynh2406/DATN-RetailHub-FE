@@ -82,6 +82,7 @@ const EmployeeDetails = () => {
         },
     };
     const [employee, setEmployee] = useState(employeeNull);
+    const [errors, setErrors] = useState({});
 
     // hook này có chức năng lấy dữ liệu từ kho lưu trữ,
     //hoặc nếu kho lưu trữ ko có sẳn thì lấy từ DB
@@ -127,6 +128,7 @@ const EmployeeDetails = () => {
             navigate(0);
         }
     }, [error]);
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -177,22 +179,14 @@ const EmployeeDetails = () => {
     };
 
     const handleSave = async () => {
-        setIsLoading(true);
-        let data = employee;
-        //bổ sung thêm trường role
-        data = { ...data, roleId: 'ADMIN' };
-
-        // Nếu có file ảnh được chọn, tải ảnh lên trước khi lưu
-        if (selectedFile) {
-            try {
-                const url = await handleUploadImage(); // Đợi tải ảnh
-                data = { ...data, image: url }; // Bổ sung URL ảnh vào dữ liệu
-            } catch (error) {
-                notyf.error('Lỗi khi tải ảnh lên');
-                return; // Dừng quá trình nếu tải ảnh lỗi
-            }
+        if (!validateForm()) {
+            notyf.error('Vui lòng kiểm tra các trường bắt buộc');
+            return;
         }
-
+    
+        setIsLoading(true);
+        let data = { ...employee, roleId: 'ADMIN' };
+    
         try {
             if (userId === 'create') {
                 await dispatch(addEmployeeAsync(data)).unwrap();
@@ -210,6 +204,7 @@ const EmployeeDetails = () => {
             console.log(error);
         }
     };
+    
 
     const handleDelete = () => {
         if (userId !== 'create') {
@@ -244,6 +239,64 @@ const EmployeeDetails = () => {
         setEmployee({ ...employee, isActive: !employee.isActive });
         if (userId !== 'create') dispatch(toggleActiveEmployeeAsync(employee.userId));
     };
+
+    const validateForm = () => {
+        const errors = {};
+    
+        // Kiểm tra Họ và tên
+        if (!employee.fullName) {
+            errors.fullName = 'Họ và tên là bắt buộc';
+        }
+    
+        // Kiểm tra Email
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!employee.email || !emailRegex.test(employee.email)) {
+            errors.email = 'Email không hợp lệ';
+        }
+    
+        // Kiểm tra số điện thoại (phải là số và đúng độ dài)
+        const phoneRegex = /^[0-9]{10,11}$/;
+        if (!employee.phoneNumber || !phoneRegex.test(employee.phoneNumber)) {
+            errors.phoneNumber = 'Số điện thoại không hợp lệ';
+        }
+    
+        // Kiểm tra Mật khẩu (tối thiểu 6 ký tự)
+        if (employee.password && employee.password.length < 6) {
+            errors.password = 'Mật khẩu phải có ít nhất 6 ký tự';
+        }
+    
+        // Kiểm tra Ngày bắt đầu và Ngày kết thúc
+        if (employee.startDate && employee.endDate) {
+            if (new Date(employee.startDate) > new Date(employee.endDate)) {
+                errors.endDate = 'Ngày kết thúc phải sau ngày bắt đầu';
+            }
+        }
+    
+       // Kiểm tra Ngày sinh (Nhân viên phải từ 18 tuổi trở lên và trường này là bắt buộc)
+            if (!employee.birthday) {
+                errors.birthday = 'Ngày sinh là bắt buộc';
+            } else {
+                const age = new Date().getFullYear() - new Date(employee.birthday).getFullYear();
+                if (age < 18) {
+                    errors.birthday = 'Nhân viên phải từ 18 tuổi trở lên';
+                }
+            }
+
+         // Kiểm tra Ngày bắt đầu (Ngày bắt đầu phải không để trống và phải trong tương lai)
+        if (!employee.startDate) {
+            errors.startDate = 'Ngày bắt đầu là bắt buộc';
+        } else if (new Date(employee.startDate) < new Date()) {
+            errors.startDate = 'Ngày bắt đầu phải là ngày hôm nay hoặc sau này';
+        }
+        // Kiểm tra Địa chỉ
+        if (!employee.address) {
+            errors.address = 'Địa chỉ là bắt buộc';
+        }
+
+        setErrors(errors);
+        return Object.keys(errors).length === 0; // Trả về true nếu không có lỗi
+    };
+    
 
     return (
         <Container maxWidth="xl">
@@ -311,14 +364,10 @@ const EmployeeDetails = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <PersonIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.fullName}
+                            helperText={errors.fullName}
                         />
+
                         <TextField
                             label="Email"
                             name="email"
@@ -327,14 +376,10 @@ const EmployeeDetails = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <EmailIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.email}
+                            helperText={errors.email}
                         />
+
                         <TextField
                             label="Số điện thoại"
                             name="phoneNumber"
@@ -344,14 +389,10 @@ const EmployeeDetails = () => {
                             type="number"
                             variant="outlined"
                             margin="normal"
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <PhoneIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.phoneNumber}
+                            helperText={errors.phoneNumber}
                         />
+
                         <TextField
                             label="Địa chỉ"
                             name="address"
@@ -360,32 +401,23 @@ const EmployeeDetails = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <HomeIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.address}
+                            helperText={errors.address}
                         />
+
                         <TextField
-                            label="Ngày sinh"
-                            name="birthday"
-                            type="date"
-                            value={employee.birthday || ''}
-                            onChange={handleChange}
-                            fullWidth
-                            variant="outlined"
-                            margin="normal"
-                            InputLabelProps={{ shrink: true }}
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <CakeIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
-                        />
+                        label="Ngày sinh"
+                        name="birthday"
+                        type="date"
+                        value={employee.birthday || ''}
+                        onChange={handleChange}
+                        fullWidth
+                        variant="outlined"
+                        margin="normal"
+                        InputLabelProps={{ shrink: true }}
+                        error={!!errors.birthday}
+                        helperText={errors.birthday}
+                     />
                     </Grid>
 
                     <Grid item xs={12} md={4}>
@@ -405,7 +437,7 @@ const EmployeeDetails = () => {
                                 ),
                             }}
                         />
-                        <TextField
+                       <TextField
                             label="Mật khẩu"
                             name="password"
                             type="password"
@@ -414,13 +446,8 @@ const EmployeeDetails = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <LockIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.password}
+                            helperText={errors.password}
                         />
                         <TextField
                             label="Vai trò"
@@ -438,7 +465,7 @@ const EmployeeDetails = () => {
                                 ),
                             }}
                         />
-                        <TextField
+                       <TextField
                             label="Ngày bắt đầu"
                             name="startDate"
                             type="date"
@@ -448,13 +475,8 @@ const EmployeeDetails = () => {
                             variant="outlined"
                             margin="normal"
                             InputLabelProps={{ shrink: true }}
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <DateRangeIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.startDate}
+                            helperText={errors.startDate}
                         />
                         <TextField
                             label="Ngày kết thúc"
@@ -466,13 +488,8 @@ const EmployeeDetails = () => {
                             variant="outlined"
                             margin="normal"
                             InputLabelProps={{ shrink: true }}
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <DateRangeIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
+                            error={!!errors.endDate}
+                            helperText={errors.endDate}
                         />
                         <Box className="mt-2 ms-1" display="flex" alignItems="center">
                             <Typography sx={{ marginRight: 2, fontWeight: 'bold' }}>Trạng thái hoạt động:</Typography>
