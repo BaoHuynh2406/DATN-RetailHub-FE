@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { sendResetPasswordCode, resetPassword } from '@/redux/ForgotPassword';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -10,27 +11,38 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 
 export default function ResetPassword() {
+    const dispatch = useDispatch();
+    const { loading, error, data } = useSelector((state) => state.userCurrent);
+
     const emailRef = useRef(null);
     const newPasswordRef = useRef(null);
+    const otpCodeRef = useRef(null);
     const confirmPasswordRef = useRef(null);
-    const [step, setStep] = useState(1); // Step 1: Nhập email, Step 2: Nhập mật khẩu mới
+    
+    const [step, setStep] = useState(1); // Bước hiện tại
+    const [userEmail, setUserEmail] = useState(""); // Lưu email sau khi gửi mã OTP
 
-    const handleSendCode = () => {
+    const handleSendCode = async () => {
         const email = emailRef.current.value;
-
         if (!email) {
             alert("Vui lòng nhập email!");
             return;
         }
 
-        // Giả lập gửi mã khôi phục (thay bằng logic thực tế khi tích hợp API)
-        alert(`Mã khôi phục đã được gửi tới email: ${email}`);
-        setStep(2); // Chuyển sang bước 2: Nhập mật khẩu mới
+        try {
+            await dispatch(sendResetPasswordCode(email)).unwrap();
+            alert("Mã xác nhận đã được gửi!");
+            setUserEmail(email); // Lưu email vào state
+            setStep(2); // Chuyển sang bước 2
+        } catch (err) {
+            alert(err);
+        }
     };
 
-    const handleResetPassword = () => {
-        const newPassword = newPasswordRef.current.value;
-        const confirmPassword = confirmPasswordRef.current.value;
+    const handleResetPassword = async () => {
+        const otp = otpCodeRef.current?.value;
+        const newPassword = newPasswordRef.current?.value;
+        const confirmPassword = confirmPasswordRef.current?.value;
 
         if (!newPassword || !confirmPassword) {
             alert("Vui lòng nhập đầy đủ thông tin!");
@@ -42,10 +54,20 @@ export default function ResetPassword() {
             return;
         }
 
-        // Giả lập đặt lại mật khẩu (thay bằng logic thực tế khi tích hợp API)
-        alert("Mật khẩu đã được đặt lại thành công!");
-        // Điều hướng người dùng về trang đăng nhập (nếu cần)
-        window.location.href = "/login";
+        try {
+            const payload = {
+                otp,
+                newPassword,
+                email: userEmail, // Lấy email từ state
+            };
+
+            console.log("Payload gửi đi:", payload);
+            await dispatch(resetPassword(payload)).unwrap();
+            alert("Mật khẩu đã được đặt lại thành công!");
+            window.location.href = "/login";
+        } catch (err) {
+            alert(err);
+        }
     };
 
     return (
@@ -96,13 +118,23 @@ export default function ResetPassword() {
                                     fullWidth
                                     variant="contained"
                                     sx={{ mt: 3, mb: 2 }}
+                                    disabled={loading}
                                 >
-                                    Gửi mã
+                                    {loading ? "Đang gửi..." : "Gửi mã"}
                                 </Button>
                             </>
                         )}
                         {step === 2 && (
                             <>
+                                <TextField
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="otp"
+                                    label="Mã xác nhận"
+                                    type="otp"
+                                    inputRef={otpCodeRef}
+                                />
                                 <TextField
                                     margin="normal"
                                     required
@@ -126,11 +158,13 @@ export default function ResetPassword() {
                                     fullWidth
                                     variant="contained"
                                     sx={{ mt: 3, mb: 2 }}
+                                    disabled={loading}
                                 >
-                                    Đặt lại mật khẩu
+                                    {loading ? "Đang xử lý..." : "Đặt lại mật khẩu"}
                                 </Button>
                             </>
                         )}
+                        {error && <Typography color="error">{error}</Typography>}
                     </Box>
                 </Box>
             </Grid>
