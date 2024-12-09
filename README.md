@@ -9,4 +9,4 @@ npm i
 # chạy
 npm run dev 
 # test
-one tơw three four five six seven 
+npm run dev
