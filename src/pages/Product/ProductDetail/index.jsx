@@ -538,7 +538,7 @@ const ProductDetails = () => {
                         variant="outlined"
                         margin="normal"
                         error={!!errors.inventoryCount}
-                        helperText={errors.inventoryCount || 0}
+                        helperText={errors.inventoryCount || ''}
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
