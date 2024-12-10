@@ -9,10 +9,13 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
 
 export default function ResetPassword() {
     const dispatch = useDispatch();
     const { loading, error, data } = useSelector((state) => state.userCurrent);
+    const navigate = useNavigate();
+
 
     const emailRef = useRef(null);
     const newPasswordRef = useRef(null);
@@ -64,7 +67,7 @@ export default function ResetPassword() {
             console.log("Payload gửi đi:", payload);
             await dispatch(resetPassword(payload)).unwrap();
             alert("Mật khẩu đã được đặt lại thành công!");
-            window.location.href = "/login";
+            navigate('/login');
         } catch (err) {
             alert(err);
         }
