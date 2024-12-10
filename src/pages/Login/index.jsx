@@ -66,6 +66,10 @@ export default function SignInSide() {
         handleLogin();
     };
 
+    const handleForgotPassword = () => {
+        navigate('/forgotpassword');
+    };
+
     return (
         <Grid container component="main" sx={{ height: '100vh' }}>
             <Grid
@@ -138,13 +142,25 @@ export default function SignInSide() {
                         >
                             Đăng nhập
                         </Button>
-                        <Grid container>
-                            <Grid item xs>
-                                <Link href="forgotpassword" variant="body2">
-                                    Quên mật khẩu?
-                                </Link>
-                            </Grid>
-                        </Grid>
+                        <Button
+                            fullWidth
+                            variant="outlined"
+                            onClick={handleForgotPassword}
+                            sx={{
+                                mt: 1,
+                                mb: 2,
+                                color: 'secondary.main',
+                                borderColor: 'secondary.main',
+                                '&:hover': {
+                                    borderColor: 'secondary.dark',
+                                    backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                                },
+                                borderRadius: 2,
+                                height: '32px',
+                            }}
+                        >
+                            Quên mật khẩu?
+                        </Button>
                     </Box>
                 </Box>
             </Grid>
