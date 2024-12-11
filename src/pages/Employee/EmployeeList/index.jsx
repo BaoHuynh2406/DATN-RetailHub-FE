@@ -4,7 +4,7 @@ import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-materia
 import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
 import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-
+import * as XLSX from 'xlsx';
 import { useSelector, useDispatch } from 'react-redux';
 import {
     fetchEmployeesDeletedAsync,
@@ -26,13 +26,12 @@ const notyf = new Notyf({
 });
 
 export default function EmployeeTable() {
-    const navigate = useNavigate(); 
-    const dispatch = useDispatch(); 
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const userLogged = useSelector((state) => state.userCurrent); 
+    const userLogged = useSelector((state) => state.userCurrent);
 
-    const [showDeleted, setShowDeleted] = useState(false); 
-
+    const [showDeleted, setShowDeleted] = useState(false);
 
     // Định nghĩa các cột bằng useMemo để cải thiện hiệu suất
     const columns = useMemo(
@@ -142,6 +141,37 @@ export default function EmployeeTable() {
         setSearchParams(newParams);
     };
 
+    const employees = useSelector((state) => state.employeeNew?.data.data || []);
+
+    const handleExportExcel = () => {
+        if (!Array.isArray(employees) || employees.length === 0) {
+            notyf.error('Không có dữ liệu để xuất Excel.');
+            return;
+        }
+    
+        // Tiêu đề cột
+        const headers = columns.map((col) => col.headerName);
+    
+        // Chuẩn bị dữ liệu cho Excel
+        const excelData = employees.map((employee) => {
+            const rowData = {};
+            columns.forEach((col) => {
+                rowData[col.headerName] = employee[col.field]; // Lấy dữ liệu từ field
+            });
+            return rowData;
+        });
+    
+        // Tạo worksheet và workbook
+        const worksheet = XLSX.utils.json_to_sheet(excelData);
+        XLSX.utils.sheet_add_aoa(worksheet, [headers], { origin: 'A1' });
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Employees');
+    
+        // Xuất file Excel
+        XLSX.writeFile(workbook, 'DanhSachNhanVien.xlsx');
+    };
+    
+
     const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
@@ -175,7 +205,12 @@ export default function EmployeeTable() {
                     </Typography>
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
-                <Button variant="contained" startIcon={<ExplicitIcon />} onClick={handleAdd} sx={{ fontSize: 10 }}>
+                <Button
+                    variant="contained"
+                    startIcon={<ExplicitIcon />}
+                    onClick={handleExportExcel}
+                    sx={{ fontSize: 10 }}
+                >
                     Xuất Excel
                 </Button>
             </Box>

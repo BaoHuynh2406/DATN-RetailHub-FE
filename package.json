@@ -31,7 +31,9 @@
         "redux": "^5.0.1",
         "redux-thunk": "^3.1.0",
         "sass": "^1.77.8",
-        "styled-components": "^6.1.12"
+        "styled-components": "^6.1.12",
+        "xlsx": "^0.18.5",
+        "xlsx-style": "^0.8.13"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.7",
