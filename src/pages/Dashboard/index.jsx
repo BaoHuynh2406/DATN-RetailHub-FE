@@ -8,6 +8,8 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 //
 import InvoiceCard from './InvoiceCard';
+import CustomerCard from './Customer';
+import RevenueCard from './RevenueCard';
 
 // Dữ liệu giả lập cho biểu đồ
 const salesData = [
@@ -60,36 +62,9 @@ function Dashboard() {
             <Box display="flex" flexWrap="wrap" gap={3} mb={4}>
                 <InvoiceCard />
 
-                <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <PeopleIcon color="secondary" fontSize="large" sx={{ mr: 2 }} />
-                    <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
-                            Khách hàng mới
-                        </Typography>
-                        <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                            {customersToday}
-                        </Typography>
-                        <Typography color="textSecondary">
-                            <Box sx={growthStyle(customerGrowth)}>+{customerGrowth}% so với hôm qua</Box>
-                        </Typography>
-                    </Box>
-                </Paper>
+                <CustomerCard/>
 
-                <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <AttachMoneyIcon color="success" fontSize="large" sx={{ mr: 2 }} />
-                    <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
-                            Doanh thu hôm nay
-                        </Typography>
-                        <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                            {revenueToday.toLocaleString()} VND
-                        </Typography>
-                        <Typography color="textSecondary" display="flex" alignItems="center">
-                            {renderArrow(revenueGrowth)}
-                            <Box sx={growthStyle(revenueGrowth)}>{revenueGrowth}%</Box>
-                        </Typography>
-                    </Box>
-                </Paper>
+                <RevenueCard/>
             </Box>
 
             <Box display="flex" flexWrap="wrap" gap={3}>
