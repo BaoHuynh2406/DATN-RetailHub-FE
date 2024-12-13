@@ -1,245 +1,210 @@
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+November 2024 (version 1.96)
 
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+Show release notes after an update
 
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+Welcome to the November 2024 release of Visual Studio Code. There are many updates in this version that we hope you'll like, some of the key highlights include:
 
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+Overtype mode - Switch between overwrite or insert mode in the editor
+Add imports on paste - Automatically add missing TS/JS imports when pasting code
+Test coverage - Quickly filter which code is covered by a specific test
+Move views - Easily move views between the Primary and Secondary Side Bar
+Terminal ligatures - Use ligatures in the terminal
+Extension allow list - Configure which extensions can be installed in your organization
+Debug with Copilot - Use copilot-debug terminal command to start a debugging session
+Chat context - Add symbols and folders as context Chat and Edits
+Move from chat to Copilot Edits - Switch to Copilot Edits to apply code suggestions from Chat
+If you'd like to read these release notes online, go to Updates on code.visualstudio.com. Insiders: Want to try new features as soon as possible? You can download the nightly Insiders build and try the latest updates as soon as they are available.
 
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+GitHub Copilot
+Copilot Edits
+Last milestone, we introduced Copilot Edits (currently in preview), which allows you to quickly edit multiple files at once using natural language. Since then, we've continued to iterate on the experience. You can try out Copilot Edits by opening the Copilot menu in the Command Center, and then selecting Open Copilot Edits, or by triggering Ctrl+Shift+I.
 
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+Progress and editor controls
+Copilot Edits can make multiple changes across different files. You can now more clearly see its progress as edits stream in. And with the editor overlay controls, you can easily cycle through all changes and accept or discard them.
 
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+Move chat session to Copilot Edits
+You might use the Chat view to explore some ideas for making changes to your code. Instead of applying individual code blocks, you can now move the chat session to Copilot Edits to apply all code suggestions from the session.
 
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Edit with Copilot showing for a chat exchange.
 
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+Working set suggested files
+In Copilot Edits, the working set determines the files that Copilot Edits can suggest changes for. To help you add relevant files to the working set, for a Git repo, Copilot Edits can now suggest additional files based on the files you've already added. For example, Copilot Edits will suggest files that are often changed together with the files you've already added.
 
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+Copilot shows suggested files alongside the Add Files button in the working set. You can also select Add Files and then select Related Files to choose from a list of suggested files.
 
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+Restore Edit sessions after restart
+Edit sessions are now fully restored after restarting VS Code. This includes the working set, acceptance state, as well as the file state of all past edit steps.
 
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+Add to working set from Explorer, Search, and editor
+You can add files to your Copilot Edits working set with the new Add File to Copilot Edits context menu action for search results in the Search view and for files in the Explorer view. Additionally, you can also attach a text selection to Copilot Edits from the editor context menu.
 
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+Add a file from the explorer view to Copilot Edits
 
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+Debugging with Copilot
+Configuring debugging can be tricky, especially when you're working with a new project or language. This milestone, we're introducing a new copilot-debug terminal command to help you debug your programs using VS Code. You can use it by prefixing the command that you would normally run with copilot-debug. For example, if you normally run your program using the command python foo.py, you can now run copilot-debug python foo.py to start a debugging session.
 
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+After your program exits, you are given options to rerun your program or to view, save, or regenerate the VS Code launch configuration that was used to debug your program.
 
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+The terminal shows options to rerun, regenerate, save, or the launch config after a debugging session. Theme: Codesong (preview on vscode.dev)
 
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+Tasks Support
+Copilot's debugging features, including copilot-debug and the /startDebugging intent, now generate preLaunchTasks as needed for code that needs a compilation step before debugging. This is often the case for compiled languages, such as Rust and C++.
 
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+Add Context
+We’ve added new ways to include symbols and folders as context in Copilot Chat and Copilot Edits, making it easier to reference relevant information during your workflow.
 
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+Symbols
+Symbols can now easily be added to Copilot Chat and Copilot Edits by dragging and dropping them from the Outline View or Breadcrumbs into the Chat view.
 
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
 
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+We’ve also introduced symbol completion in the chat input. By typing # followed by the symbol name, you’ll see suggestions for symbols from files you've recently worked on.
 
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
 
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+To reference symbols across your entire project, you can use #sym to open a global symbols picker.
 
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
 
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+Folders
+Folders can now be added as context by dragging them from the Explorer, Breadcrumbs, or other views into Copilot Chat.
+November 2024 (version 1.96)
 
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+Show release notes after an update
 
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+Welcome to the November 2024 release of Visual Studio Code. There are many updates in this version that we hope you'll like, some of the key highlights include:
 
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+Overtype mode - Switch between overwrite or insert mode in the editor
+Add imports on paste - Automatically add missing TS/JS imports when pasting code
+Test coverage - Quickly filter which code is covered by a specific test
+Move views - Easily move views between the Primary and Secondary Side Bar
+Terminal ligatures - Use ligatures in the terminal
+Extension allow list - Configure which extensions can be installed in your organization
+Debug with Copilot - Use copilot-debug terminal command to start a debugging session
+Chat context - Add symbols and folders as context Chat and Edits
+Move from chat to Copilot Edits - Switch to Copilot Edits to apply code suggestions from Chat
+If you'd like to read these release notes online, go to Updates on code.visualstudio.com. Insiders: Want to try new features as soon as possible? You can download the nightly Insiders build and try the latest updates as soon as they are available.
 
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+GitHub Copilot
+Copilot Edits
+Last milestone, we introduced Copilot Edits (currently in preview), which allows you to quickly edit multiple files at once using natural language. Since then, we've continued to iterate on the experience. You can try out Copilot Edits by opening the Copilot menu in the Command Center, and then selecting Open Copilot Edits, or by triggering Ctrl+Shift+I.
 
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+Progress and editor controls
+Copilot Edits can make multiple changes across different files. You can now more clearly see its progress as edits stream in. And with the editor overlay controls, you can easily cycle through all changes and accept or discard them.
 
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+Move chat session to Copilot Edits
+You might use the Chat view to explore some ideas for making changes to your code. Instead of applying individual code blocks, you can now move the chat session to Copilot Edits to apply all code suggestions from the session.
 
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+Edit with Copilot showing for a chat exchange.
 
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+Working set suggested files
+In Copilot Edits, the working set determines the files that Copilot Edits can suggest changes for. To help you add relevant files to the working set, for a Git repo, Copilot Edits can now suggest additional files based on the files you've already added. For example, Copilot Edits will suggest files that are often changed together with the files you've already added.
 
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+Copilot shows suggested files alongside the Add Files button in the working set. You can also select Add Files and then select Related Files to choose from a list of suggested files.
 
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+Restore Edit sessions after restart
+Edit sessions are now fully restored after restarting VS Code. This includes the working set, acceptance state, as well as the file state of all past edit steps.
 
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+Add to working set from Explorer, Search, and editor
+You can add files to your Copilot Edits working set with the new Add File to Copilot Edits context menu action for search results in the Search view and for files in the Explorer view. Additionally, you can also attach a text selection to Copilot Edits from the editor context menu.
 
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+Add a file from the explorer view to Copilot Edits
 
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+Debugging with Copilot
+Configuring debugging can be tricky, especially when you're working with a new project or language. This milestone, we're introducing a new copilot-debug terminal command to help you debug your programs using VS Code. You can use it by prefixing the command that you would normally run with copilot-debug. For example, if you normally run your program using the command python foo.py, you can now run copilot-debug python foo.py to start a debugging session.
 
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
 
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+After your program exits, you are given options to rerun your program or to view, save, or regenerate the VS Code launch configuration that was used to debug your program.
 
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+The terminal shows options to rerun, regenerate, save, or the launch config after a debugging session. Theme: Codesong (preview on vscode.dev)
 
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+Tasks Support
+Copilot's debugging features, including copilot-debug and the /startDebugging intent, now generate preLaunchTasks as needed for code that needs a compilation step before debugging. This is often the case for compiled languages, such as Rust and C++.
 
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+Add Context
+We’ve added new ways to include symbols and folders as context in Copilot Chat and Copilot Edits, making it easier to reference relevant information during your workflow.
 
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+Symbols
+Symbols can now easily be added to Copilot Chat and Copilot Edits by dragging and dropping them from the Outline View or Breadcrumbs into the Chat view.
 
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
 
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
+We’ve also introduced symbol completion in the chat input. By typing # followed by the symbol name, you’ll see suggestions for symbols from files you've recently worked on.
 
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
 
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+To reference symbols across your entire project, you can use #sym to open a global symbols picker.
 
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
 
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+Folders
+Folders can now be added as context by dragging them from the Explorer, Breadcrumbs, or other views into Copilot Chat.
+November 2024 (version 1.96)
 
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
+Show release notes after an update
 
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+Welcome to the November 2024 release of Visual Studio Code. There are many updates in this version that we hope you'll like, some of the key highlights include:
 
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+Overtype mode - Switch between overwrite or insert mode in the editor
+Add imports on paste - Automatically add missing TS/JS imports when pasting code
+Test coverage - Quickly filter which code is covered by a specific test
+Move views - Easily move views between the Primary and Secondary Side Bar
+Terminal ligatures - Use ligatures in the terminal
+Extension allow list - Configure which extensions can be installed in your organization
+Debug with Copilot - Use copilot-debug terminal command to start a debugging session
+Chat context - Add symbols and folders as context Chat and Edits
+Move from chat to Copilot Edits - Switch to Copilot Edits to apply code suggestions from Chat
+If you'd like to read these release notes online, go to Updates on code.visualstudio.com. Insiders: Want to try new features as soon as possible? You can download the nightly Insiders build and try the latest updates as soon as they are available.
 
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+GitHub Copilot
+Copilot Edits
+Last milestone, we introduced Copilot Edits (currently in preview), which allows you to quickly edit multiple files at once using natural language. Since then, we've continued to iterate on the experience. You can try out Copilot Edits by opening the Copilot menu in the Command Center, and then selecting Open Copilot Edits, or by triggering Ctrl+Shift+I.
 
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+Progress and editor controls
+Copilot Edits can make multiple changes across different files. You can now more clearly see its progress as edits stream in. And with the editor overlay controls, you can easily cycle through all changes and accept or discard them.
 
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
 
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
+Move chat session to Copilot Edits
+You might use the Chat view to explore some ideas for making changes to your code. Instead of applying individual code blocks, you can now move the chat session to Copilot Edits to apply all code suggestions from the session.
 
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+Edit with Copilot showing for a chat exchange.
 
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
+Working set suggested files
+In Copilot Edits, the working set determines the files that Copilot Edits can suggest changes for. To help you add relevant files to the working set, for a Git repo, Copilot Edits can now suggest additional files based on the files you've already added. For example, Copilot Edits will suggest files that are often changed together with the files you've already added.
 
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+Copilot shows suggested files alongside the Add Files button in the working set. You can also select Add Files and then select Related Files to choose from a list of suggested files.
 
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
+Restore Edit sessions after restart
+Edit sessions are now fully restored after restarting VS Code. This includes the working set, acceptance state, as well as the file state of all past edit steps.
 
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
+Add to working set from Explorer, Search, and editor
+You can add files to your Copilot Edits working set with the new Add File to Copilot Edits context menu action for search results in the Search view and for files in the Explorer view. Additionally, you can also attach a text selection to Copilot Edits from the editor context menu.
 
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
+Add a file from the explorer view to Copilot Edits
 
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
+Debugging with Copilot
+Configuring debugging can be tricky, especially when you're working with a new project or language. This milestone, we're introducing a new copilot-debug terminal command to help you debug your programs using VS Code. You can use it by prefixing the command that you would normally run with copilot-debug. For example, if you normally run your program using the command python foo.py, you can now run copilot-debug python foo.py to start a debugging session.
 
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
 
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
+After your program exits, you are given options to rerun your program or to view, save, or regenerate the VS Code launch configuration that was used to debug your program.
 
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
+The terminal shows options to rerun, regenerate, save, or the launch config after a debugging session. Theme: Codesong (preview on vscode.dev)
 
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
+Tasks Support
+Copilot's debugging features, including copilot-debug and the /startDebugging intent, now generate preLaunchTasks as needed for code that needs a compilation step before debugging. This is often the case for compiled languages, such as Rust and C++.
 
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
+Add Context
+We’ve added new ways to include symbols and folders as context in Copilot Chat and Copilot Edits, making it easier to reference relevant information during your workflow.
 
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
+Symbols
+Symbols can now easily be added to Copilot Chat and Copilot Edits by dragging and dropping them from the Outline View or Breadcrumbs into the Chat view.
 
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
 
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
+We’ve also introduced symbol completion in the chat input. By typing # followed by the symbol name, you’ll see suggestions for symbols from files you've recently worked on.
 
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
 
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
+To reference symbols across your entire project, you can use #sym to open a global symbols picker.
 
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
 
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
-
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
-
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
-
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
-
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
-
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
-
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
-
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
-
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
-Khoa họcThứ bảy, 7/12/2024, 09:00 (GMT+7)
-Kristi Anseth nhà khoa học khiến xương, da, sụn tự lành
-MỹTừ một mảnh da nhỏ chỉ vài centimet GS Kristi Anseth có thể khiến nó phát triển bằng 50 sân bóng đá, cứu sống người dù bị bỏng nặng trên diện tích lớn.
-
-Kristi Anseth, 55 tuổi, dành hơn 30 năm theo đuổi lĩnh vực hóa học, thành công trong việc truyền tín hiệu đến các tế bào để chúng nhân lên nhanh, tái tạo da, sụn, xương khi bị thương. Bà được vinh danh giải đặc biệt dành cho nhà khoa học nữ trị giá 500.000 USD Giải thưởng VinFuture 2024 vì những tiến bộ trong thiết kế vật liệu polymer và các phương pháp cho ứng dụng y sinh.
-
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Sir Richard Henry Friend. Ảnh: Ngọc Thành
-Giáo sư Kristi S. Anseth nhận giải thưởng từ Chủ tịch Hội đồng Giải thưởng Giáo sư Richard Henry Friend. Ảnh: Ngọc Thành
-
-Anseth lớn lên tại Williston, một thị trấn có 13.000 cư dân thuộc bang Bắc Dakota, Mỹ. Tại đây những nghề được kính trọng thường là bác sĩ và luật sư. Nhưng may mắn là một cố vấn hướng nghiệp ở trường trung học đã chỉ ra rằng năng khiếu toán và hóa học của bà vô cùng thích hợp với ngành kỹ thuật hóa học. "Tôi không biết kỹ sư hóa học sẽ làm gì. Tôi đã nghĩ đến trường y, nhưng kỹ thuật hóa học thu hút tôi ở điểm là có thể thực hiện những nghiên cứu liên quan đến y khoa", Anseth chia sẻ.
-
-Anseth tốt nghiệp Đại học Bắc Dakota-Williston, sau đó tiếp tục theo học tại Đại học Purdue. Tại đây, sự nghiệp của bà có bước ngoặt quan trọng khi bà gõ cửa văn phòng của Nicholas Peppas. Peppas, nhà cố vấn đại học kiêm nhà nghiên cứu kỹ thuật sinh học, nhìn thấy ở Anseth sự nghiêm túc và tập trung - mẫu sinh viên ông cần trong phòng thí nghiệm.
-
-Peppas ngày càng ấn tượng với khả năng của Anseth và khuyến khích bà kết hợp công việc kỹ thuật hóa học với lĩnh vực y sinh. Sau đó, khi tham dự một buổi thuyết giảng của giáo sư Robert Langer từ Viện Công nghệ Massachusetts (MIT), bà đã say mê với những mô tả về giai đoạn đầu của kỹ thuật mô.
-
-Anseth nhận bằng cử nhân kỹ thuật hóa học tại Đại học Purdue năm 1992. Sau đó, bà tới Đại học Colorado Boulder để học tiến sĩ. "Anseth là sinh viên xuất sắc mà chúng tôi từng thấy", Robert Davis, trưởng khoa Kỹ thuật và Khoa học ứng dụng tại Đại học Colorado Boulder, cho biết. Peppas cũng nhận ra tiềm năng vô hạn của bà. "Anseth cố gắng tìm ra những giải pháp giúp cuộc sống của mọi người trở nên tốt hơn", ông nói.
-
-2008 là một năm thành công rực rỡ của Anseth. Bà được phong là giáo sư xuất sắc, người trẻ nhất nhận danh hiệu này trong lịch sử Đại học Purdue. Tạp chí Popular Science đã vinh danh bà là một trong "10 nhà khoa học xuất sắc" và Viện Kỹ sư Hóa học Mỹ đưa tên bà vào danh sách "100 Kỹ sư Hóa học của Kỷ nguyên Hiện đại".
-
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-Kristi Anseth nổi tiếng với những nghiên cứu về vật liệu sinh học. Ảnh: El Pais
-
-Anseth cùng nhóm nghiên cứu của mình tiên phong phát triển các vật liệu sinh học để làm chất nền ngoại bào (ECM) tổng hợp, nắm bắt những đặc điểm chính về sinh hóa và sinh lý của hốc tế bào - môi trường đặc trưng của mô, mang tính hỗn tạp và năng động. Điểm độc đáo trong phương pháp của bà là khả năng tạo ra các chất nền chứa tế bào trong không gian ba chiều, trong đó đặc tính của chất nền có thể thay đổi theo yêu cầu - gọi là sinh học 4D.
-
-Anseth cùng đồng nghiệp cũng tìm hiểu cách tế bào cảm nhận, lưu trữ và trao đổi thông tin với ECM, sau đó dùng thông tin này để chỉnh sửa hốc vật liệu sinh học thành phương tiện vận chuyển tế bào để tái tạo mô trong các mẫu bệnh ống nghiệm và mẫu sinh lý để khám phá và sàng lọc thuốc. Phương pháp chú trọng vật liệu của bà cung cấp công cụ để thực hiện nhiều thí nghiệm sinh học tế bào độc đáo và giải quyết những rào cản lớn trong y học tái tạo.
-
-Công trình nghiên cứu về chỉnh sửa mô của Anseth đã giúp cải tiến các phương pháp điều trị y tế cho nhiều phần cơ thể, từ giúp xương gãy lành nhanh hơn đến thay thế van tim bị bệnh. Nghiên cứu quan trọng của Anseth về cách tín hiệu ngoại bào truyền qua tế bào và bằng chứng của bà về cơ chế mới để vận chuyển phân tử sinh học đã giúp cách mạng hóa lĩnh vực này.
-
-Bà được công nhận rộng rãi vì kết hợp sinh học phân tử và tế bào hiện đại với kỹ thuật và toán học để tạo ra thế hệ vật liệu sinh học tiếp theo là chất thay thế mô có khả năng phục hồi, duy trì hoặc cải thiện chức năng mô. Những phát hiện của bà đến nay đã mang về khoảng 18 bằng sáng chế.
-
-Vẫn cần nhiều nghiên cứu hơn nữa để làm sáng tỏ mọi bí ẩn của cơ thể người. "Chúng ta đã tái tạo da, sụn, mạch máu, và cũng đã giúp xương lành nhanh hơn. Nhưng chúng ta vẫn cần nghiên cứu thêm. Ví dụ, tại sao tim không tái tạo sau cơn đau tim theo cách giống như cơ xương mà chúng ta dùng để đi bộ và tập thể dục?", Anseth đặt câu hỏi.
-
-Bà cũng đưa ra dự đoán về những tiến bộ y học nổi bật trong khoảng 10 năm tới. "Chúng ta sẽ tìm ra cách can thiệp sớm hơn để khiến cơ bắp phát triển, chữa lành sụn hoặc dây thần kinh... những điều chưa thể thực hiện lúc này". Một trong những mục tiêu tham vọng nhất của bà là chống lại những vấn đề sức khỏe liên quan đến tuổi tác.
-
-Đến Hà Nội những ngày đầu tháng 12, bà cho biết "thấy rất nhiều cơ hội hợp tác trong lĩnh vực nghiên cứu". Bà cho biết những đột phá trong lĩnh vực này sẽ mang lại lợi ích cho mọi người trên khắp thế giới. "Tôi rất hào hứng trong việc chia sẻ với các sinh viên, trao đổi với các đại sứ và sẵn sàng hợp tác với phía Việt Nam", bà nói.
+Folders
+Folders can now be added as context by dragging them from the Explorer, Breadcrumbs, or other views into Copilot Chat.
