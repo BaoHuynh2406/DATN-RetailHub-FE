@@ -15,6 +15,12 @@ import {
     Divider,
     Grid,
 } from '@mui/material';
+import dayjs from 'dayjs';
+
+// Hàm format ngày giờ
+const formatDateTime = (dateString) => {
+    return dayjs(dateString).format('DD/MM/YYYY HH:mm:ss');
+};
 
 function InvoiceDetailDialog({ open, onClose, invoiceData }) {
     const handlePrint = () => {
@@ -23,6 +29,28 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
+            {/* CSS cho chế độ in */}
+            <style>
+                {`
+                    @media print {
+                        .no-print {
+                            display: none;
+                        }
+                        .print-header {
+                            content: 'RETAILHUB - HÓA ĐƠN';
+                        }
+                        .print-footer {
+                            display: block;
+                            text-align: center;
+                            margin-top: 50px;
+                            font-size: 0.9rem;
+                            color: #555;
+                        }
+                    }
+                `}
+            </style>
+
+            {/* Tiêu đề */}
             <DialogTitle
                 sx={{
                     backgroundColor: '#f5f5f5',
@@ -30,9 +58,12 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                     fontWeight: 'bold',
                     fontSize: '1.5rem',
                 }}
+                className="print-header"
             >
-                Hóa đơn: {invoiceData.invoiceId}
+                THÔNG TIN HÓA ĐƠN
             </DialogTitle>
+
+            {/* Nội dung */}
             <DialogContent
                 sx={{
                     backgroundColor: '#fafafa',
@@ -40,6 +71,11 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                 }}
             >
                 <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <Typography variant="subtitle1">
+                            <strong>Hóa đơn:</strong> {invoiceData.invoiceId}
+                        </Typography>
+                    </Grid>
                     <Grid item xs={6}>
                         <Typography variant="subtitle1">
                             <strong>Khách hàng:</strong> {invoiceData.customerId} - {invoiceData.customerName}
@@ -52,7 +88,7 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                     </Grid>
                     <Grid item xs={6}>
                         <Typography variant="subtitle1">
-                            <strong>Thời gian:</strong> {invoiceData.invoiceDate}
+                            <strong>Thời gian:</strong> {formatDateTime(invoiceData.invoiceDate)}
                         </Typography>
                     </Grid>
                 </Grid>
@@ -78,6 +114,9 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                             <TableCell>
                                 <strong>Thuế suất</strong>
                             </TableCell>
+                            <TableCell>
+                                <strong>Thành tiền</strong>
+                            </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -86,34 +125,38 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                                 <TableCell>{item.productId}</TableCell>
                                 <TableCell>{item.productName}</TableCell>
                                 <TableCell>{item.quantity}</TableCell>
-                                <TableCell>{item.unitPrice.toLocaleString()} VND</TableCell>
+                                <TableCell>{item.unitPrice.toLocaleString()}đ</TableCell>
                                 <TableCell>{item.taxRate * 100}%</TableCell>
+                                <TableCell>
+                                    {(item.quantity * item.unitPrice * (1 + item.taxRate)).toLocaleString()}đ
+                                </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
                 <Box sx={{ marginTop: 2 }}>
                     <Typography variant="subtitle1">
-                        <strong>Tổng tiền hàng:</strong> {invoiceData.totalAmount.toLocaleString()} VNĐ
+                        <strong>Tổng tiền hàng:</strong> {invoiceData.totalAmount.toLocaleString()}đ
                     </Typography>
                     <Typography variant="subtitle1">
-                        <strong>Tổng thuế:</strong> {invoiceData.totalTax.toLocaleString()} VNĐ
+                        <strong>Tổng thuế:</strong> {invoiceData.totalTax.toLocaleString()}đ
                     </Typography>
                     <Typography variant="subtitle1">
-                        <strong>Giảm giá:</strong> {invoiceData.discountAmount.toLocaleString()} VNĐ
+                        <strong>Giảm giá:</strong> {invoiceData.discountAmount.toLocaleString()}đ
                     </Typography>
                     <Divider sx={{ marginY: 1 }} />
                     <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 'bold', fontSize: '1.1rem' }}>
-                        <strong>Tổng thanh toán:</strong> {invoiceData.finalTotal.toLocaleString()} VNĐ
+                        <strong>Tổng thanh toán:</strong> {invoiceData.finalTotal.toLocaleString()}đ
                     </Typography>
                     <Divider sx={{ marginY: 1 }} />
                     <Typography variant="subtitle1">
-                        <strong>Đã thanh toán:</strong> {invoiceData.totalPayment.toLocaleString()} VNĐ
+                        <strong>Đã thanh toán:</strong> {invoiceData.totalPayment.toLocaleString()}đ
                     </Typography>
                     <Typography variant="subtitle1">
                         <strong>Tiền thừa:</strong>{' '}
-                        {(invoiceData.totalPayment - invoiceData.finalTotal).toLocaleString()} VNĐ
+                        {Math.max(invoiceData.totalPayment - invoiceData.finalTotal, 0).toLocaleString()}đ
                     </Typography>
+
                     <Typography
                         variant="subtitle1"
                         sx={{
@@ -125,8 +168,30 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                         <strong>Trạng thái:</strong> {invoiceData.status}
                     </Typography>
                 </Box>
+
+                {/* Thông tin liên hệ cho chế độ in */}
+                <Box
+                    className="print-footer"
+                    sx={{
+                        display: 'none',
+                    }}
+                >
+                    <Divider sx={{ marginY: 2 }} />
+
+                    <Typography>
+                        <strong>Email:</strong> mts.studio.2019@gmail.com
+                    </Typography>
+                    <Typography>
+                        <strong>SĐT:</strong> 0388319013
+                    </Typography>
+                    <Typography>
+                        <strong>Địa chỉ:</strong> Quận 12, TP Hồ Chí Minh
+                    </Typography>
+                </Box>
             </DialogContent>
-            <DialogActions sx={{ padding: 2, backgroundColor: '#f5f5f5' }}>
+
+            {/* Nút không in */}
+            <DialogActions className="no-print" sx={{ padding: 2, backgroundColor: '#f5f5f5' }}>
                 <Button variant="outlined" onClick={onClose}>
                     Đóng
                 </Button>
