@@ -125,10 +125,34 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                                 <TableCell>{item.productId}</TableCell>
                                 <TableCell>{item.productName}</TableCell>
                                 <TableCell>{item.quantity}</TableCell>
-                                <TableCell>{item.unitPrice.toLocaleString()}đ</TableCell>
+                                <TableCell>
+                                    {' '}
+                                    {item.discountRate > 0 && (
+                                        <Typography
+                                            variant="body2"
+                                            sx={{
+                                                fontSize: '14px',
+                                                fontStyle: 'italic',
+                                                color: 'red',
+                                                textDecoration: 'line-through',
+                                                marginRight: '10px',
+                                            }}
+                                        >
+                                            {item.unitPrice.toLocaleString()}đ
+                                        </Typography>
+                                    )}
+                                    <Typography variant="body2">
+                                        {(item.unitPrice * (1 - (item.discountRate || 0))).toLocaleString()}đ
+                                    </Typography>
+                                </TableCell>
                                 <TableCell>{item.taxRate * 100}%</TableCell>
                                 <TableCell>
-                                    {(item.quantity * item.unitPrice * (1 + item.taxRate)).toLocaleString()}đ
+                                    {(
+                                        item.quantity *
+                                        (item.unitPrice * (1 - (item.discountRate || 0))) *
+                                        (1 + (item.taxRate || 0))
+                                    ).toLocaleString()}
+                                    đ
                                 </TableCell>
                             </TableRow>
                         ))}

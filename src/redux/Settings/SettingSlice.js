@@ -1,5 +1,15 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { axiosSecure } from '../../config/axiosInstance';
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
+const notyf = new Notyf({
+    position: {
+        x: 'right',
+        y: 'top',
+    },
+    dismissible: true,
+});
 
 // Fetch categories
 export const fetchSettingsfillCategoryAsync = createAsyncThunk('settings/fetchSettingsfillCategoryAsync', async () => {
@@ -26,8 +36,12 @@ export const updateCategoryAsync = createAsyncThunk('settings/updateCategoryAsyn
 
 // Delete a category
 export const deleteCategoryAsync = createAsyncThunk('settings/deleteCategoryAsync', async (categoryId) => {
-    await axiosSecure.delete(`/api/category/delete/${categoryId}`);
-    return categoryId; // Trả về ID đã xóa
+    try {
+        await axiosSecure.delete(`/api/category/delete/${categoryId}`);
+        return categoryId; // Trả về ID đã xóa
+    } catch (error) {
+        notyf.error('Không thể xóa');
+    }
 });
 
 // Fetch taxes
@@ -55,8 +69,12 @@ export const updateTaxAsync = createAsyncThunk('settings/updateTaxAsync', async 
 
 // Delete a tax
 export const deleteTaxAsync = createAsyncThunk('settings/deleteTaxAsync', async (taxId) => {
-    await axiosSecure.delete(`/api/tax/delete/${taxId}`);
-    return taxId; // Trả về ID đã xóa
+    try {
+        await axiosSecure.delete(`/api/tax/delete/${taxId}`);
+        return taxId; // Trả về ID đã xóa
+    } catch (error) {
+        notyf.error('Không thể xóa');
+    }
 });
 
 // Fetch a Payment
