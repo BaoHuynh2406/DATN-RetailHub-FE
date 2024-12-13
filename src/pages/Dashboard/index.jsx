@@ -6,6 +6,8 @@ import PeopleIcon from '@mui/icons-material/People';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
+//
+import InvoiceCard from './InvoiceCard';
 
 // Dữ liệu giả lập cho biểu đồ
 const salesData = [
@@ -56,21 +58,7 @@ function Dashboard() {
     return (
         <Box p={3} bgcolor="#f4f6f8">
             <Box display="flex" flexWrap="wrap" gap={3} mb={4}>
-                <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <ShoppingCartIcon color="primary" fontSize="large" sx={{ mr: 2 }} />
-                    <Box display="flex" flexDirection="column" alignItems="center">
-                        <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold' }}>
-                            Đơn hàng hôm nay
-                        </Typography>
-                        <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                            {ordersToday}
-                        </Typography>
-                        <Typography color="textSecondary" display="flex" alignItems="center">
-                            {renderArrow(orderGrowth)}
-                            <Box sx={growthStyle(orderGrowth)}>{orderGrowth}%</Box>
-                        </Typography>
-                    </Box>
-                </Paper>
+                <InvoiceCard />
 
                 <Paper sx={{ p: 3, flex: '1 1 30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <PeopleIcon color="secondary" fontSize="large" sx={{ mr: 2 }} />

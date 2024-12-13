@@ -181,6 +181,7 @@ function TablePagination({
                 columnMenuManageColumns: 'Quản lý cột',
             }}
             sx={{
+                height: '500px',
                 '& .MuiDataGrid-columnHeaders': {
                     backgroundColor: '#f5f5f5',
                     fontWeight: 'bold',

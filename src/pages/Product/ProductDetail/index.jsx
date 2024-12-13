@@ -60,12 +60,11 @@ const ProductDetails = () => {
     const taxes = useSelector((state) => state.settings.taxes);
     const defaultImage = 'https://via.placeholder.com/400x300?text=No+Image';
     const [open, setOpen] = useState(false);
-    const { data, currentData, loading, error } = useSelector((state) => state.ProductSlice);
-    const [isLoading, setIsLoading] = useState(false);
     const { productId } = useParams();
     const navigate = useNavigate();
     const { handleUpload } = useImgBB();
     const [selectedFile, setSelectedFile] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
     const productNull = {
         productId: '',
         productName: '',
@@ -103,34 +102,16 @@ const ProductDetails = () => {
             return;
         }
 
-        if (!data.data) {
-            dispatch(fetchProductByIdAsync(productId))
-                .unwrap()
-                .then((result) => {
-                    setProduct(result);
-                    return;
-                })
-                .catch((error) => {
-                    console.error('Failed to fetch product: ', error);
-                    return;
-                });
-            return;
-        }
-        const foundProduct = data?.data.find((prod) => prod.productId == productId);
-        if (foundProduct) {
-            setProduct(foundProduct);
-            return;
-        }
-        navigate('/Product/ProductDetail/create');
-    }, [productId, data, dispatch]);
-
-    useEffect(() => {
-        if (error) {
-            notyf.error('Lỗi khi tải sản phẩm: ', error.message);
-            dispatch(setError(null));
-            navigate('/Product/ProductList');
-        }
-    }, [error, dispatch, navigate]);
+        dispatch(fetchProductByIdAsync(productId))
+            .then((result) => {
+                setProduct(result.payload);
+                return;
+            })
+            .catch((error) => {
+                console.error('Failed to fetch product: ', error);
+                return;
+            });
+    }, [productId]);
 
     //----------------------------------------------------------------
 
@@ -286,16 +267,6 @@ const ProductDetails = () => {
         }
     };
 
-    if (loading) {
-        return (
-            <Box display="flex" alignItems="center" justifyContent="space-around" height="100%">
-                <Skeleton animation="wave" height={700} width="30%" />
-                <Skeleton animation="wave" height={700} width="30%" />
-                <Skeleton animation="wave" height={700} width="30%" />
-            </Box>
-        );
-    }
-
     const [errors, setErrors] = useState({
         productName: '',
         barcode: '',
@@ -330,9 +301,6 @@ const ProductDetails = () => {
 
         if (product.price < 0) {
             newErrors.price = 'Giá bán phải lớn hơn hoặc bằng 0';
-        }
-        if (!product.expiryDate || new Date(product.expiryDate) < new Date()) {
-            newErrors.expiryDate = 'Ngày hết hạn phải lớn hơn hoặc bằng ngày hiện tại';
         }
 
         setErrors(newErrors);
@@ -608,7 +576,7 @@ const ProductDetails = () => {
                         select
                         label="Loại"
                         name="categoryId"
-                        value={product.category.categoryId || ''}
+                        value={product.category?.categoryId || 1}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"
@@ -625,7 +593,7 @@ const ProductDetails = () => {
                         select
                         label="Thuế suất"
                         name="taxId"
-                        value={product.tax.taxId || ''}
+                        value={product.tax?.taxId || 'NO-THUE'}
                         onChange={handleChange}
                         fullWidth
                         variant="outlined"

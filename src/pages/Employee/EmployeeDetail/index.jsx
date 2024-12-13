@@ -128,7 +128,6 @@ const EmployeeDetails = () => {
             navigate(0);
         }
     }, [error]);
-    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -183,10 +182,21 @@ const EmployeeDetails = () => {
             notyf.error('Vui lòng kiểm tra các trường bắt buộc');
             return;
         }
-    
+
         setIsLoading(true);
         let data = { ...employee, roleId: 'ADMIN' };
-    
+
+        if (selectedFile) {
+            try {
+                const url = await handleUploadImage();
+                data = { ...data, image: url };
+            } catch (error) {
+                notyf.error('Không thể tải ảnh lên');
+                setIsLoading(false);
+                return;
+            }
+        }
+
         try {
             if (userId === 'create') {
                 await dispatch(addEmployeeAsync(data)).unwrap();
@@ -204,7 +214,6 @@ const EmployeeDetails = () => {
             console.log(error);
         }
     };
-    
 
     const handleDelete = () => {
         if (userId !== 'create') {
@@ -242,52 +251,42 @@ const EmployeeDetails = () => {
 
     const validateForm = () => {
         const errors = {};
-    
+
         // Kiểm tra Họ và tên
         if (!employee.fullName) {
             errors.fullName = 'Họ và tên là bắt buộc';
         }
-    
+
         // Kiểm tra Email
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!employee.email || !emailRegex.test(employee.email)) {
             errors.email = 'Email không hợp lệ';
         }
-    
+
         // Kiểm tra số điện thoại (phải là số và đúng độ dài)
         const phoneRegex = /^[0-9]{10,11}$/;
         if (!employee.phoneNumber || !phoneRegex.test(employee.phoneNumber)) {
             errors.phoneNumber = 'Số điện thoại không hợp lệ';
         }
-    
+
         // Kiểm tra Mật khẩu (tối thiểu 6 ký tự)
         if (employee.password && employee.password.length < 6) {
             errors.password = 'Mật khẩu phải có ít nhất 6 ký tự';
         }
-    
-        // Kiểm tra Ngày bắt đầu và Ngày kết thúc
-        if (employee.startDate && employee.endDate) {
-            if (new Date(employee.startDate) > new Date(employee.endDate)) {
-                errors.endDate = 'Ngày kết thúc phải sau ngày bắt đầu';
-            }
-        }
-    
-       // Kiểm tra Ngày sinh (Nhân viên phải từ 18 tuổi trở lên và trường này là bắt buộc)
-            if (!employee.birthday) {
-                errors.birthday = 'Ngày sinh là bắt buộc';
-            } else {
-                const age = new Date().getFullYear() - new Date(employee.birthday).getFullYear();
-                if (age < 18) {
-                    errors.birthday = 'Nhân viên phải từ 18 tuổi trở lên';
-                }
-            }
 
-         // Kiểm tra Ngày bắt đầu (Ngày bắt đầu phải không để trống và phải trong tương lai)
-        if (!employee.startDate) {
-            errors.startDate = 'Ngày bắt đầu là bắt buộc';
-        } else if (new Date(employee.startDate) < new Date()) {
-            errors.startDate = 'Ngày bắt đầu phải là ngày hôm nay hoặc sau này';
+       
+
+        // Kiểm tra Ngày sinh (Nhân viên phải từ 18 tuổi trở lên và trường này là bắt buộc)
+        if (!employee.birthday) {
+            errors.birthday = 'Ngày sinh là bắt buộc';
+        } else {
+            const age = new Date().getFullYear() - new Date(employee.birthday).getFullYear();
+            if (age < 18) {
+                errors.birthday = 'Nhân viên phải từ 18 tuổi trở lên';
+            }
         }
+
+      
         // Kiểm tra Địa chỉ
         if (!employee.address) {
             errors.address = 'Địa chỉ là bắt buộc';
@@ -296,7 +295,6 @@ const EmployeeDetails = () => {
         setErrors(errors);
         return Object.keys(errors).length === 0; // Trả về true nếu không có lỗi
     };
-    
 
     return (
         <Container maxWidth="xl">
@@ -406,18 +404,18 @@ const EmployeeDetails = () => {
                         />
 
                         <TextField
-                        label="Ngày sinh"
-                        name="birthday"
-                        type="date"
-                        value={employee.birthday || ''}
-                        onChange={handleChange}
-                        fullWidth
-                        variant="outlined"
-                        margin="normal"
-                        InputLabelProps={{ shrink: true }}
-                        error={!!errors.birthday}
-                        helperText={errors.birthday}
-                     />
+                            label="Ngày sinh"
+                            name="birthday"
+                            type="date"
+                            value={employee.birthday || ''}
+                            onChange={handleChange}
+                            fullWidth
+                            variant="outlined"
+                            margin="normal"
+                            InputLabelProps={{ shrink: true }}
+                            error={!!errors.birthday}
+                            helperText={errors.birthday}
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={4}>
@@ -437,7 +435,7 @@ const EmployeeDetails = () => {
                                 ),
                             }}
                         />
-                       <TextField
+                        <TextField
                             label="Mật khẩu"
                             name="password"
                             type="password"
@@ -465,7 +463,7 @@ const EmployeeDetails = () => {
                                 ),
                             }}
                         />
-                       <TextField
+                        <TextField
                             label="Ngày bắt đầu"
                             name="startDate"
                             type="date"
