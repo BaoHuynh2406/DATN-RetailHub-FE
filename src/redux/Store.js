@@ -9,6 +9,7 @@ import ProductSlice from './Product/ProductSlice.js';
 import SettingSlice from './Settings/SettingSlice.js';
 import pointHistorySlice from './Customer/pointHistorySlice.js';
 import invoiceSlice from './Invoice/invoiceSlice.js';
+import receivingSlice from './Receiving/ReceivingSlice.js';
 
 export const store = configureStore({
     reducer: {
@@ -21,6 +22,7 @@ export const store = configureStore({
         settings: SettingSlice,
         pointHistory: pointHistorySlice,
         invoice: invoiceSlice,
+        receiving: receivingSlice,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });

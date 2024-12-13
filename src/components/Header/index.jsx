@@ -126,7 +126,7 @@ export default function Header() {
             <AppBar position="static" className="bg-slate-50">
                 <Toolbar>
                     <p className="hidden md:block text-nowrap font-bold text-lg me-3 uppercase text-slate-800">
-                        {menuSelected ? menuSelected.sidebarProps.displayText : 'Xin chào'}
+                        {menuSelected ? menuSelected.sidebarProps.displayText : ''}
                     </p>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { md: 'flex' } }}>

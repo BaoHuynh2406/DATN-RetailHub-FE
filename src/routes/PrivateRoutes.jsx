@@ -92,13 +92,18 @@ const privateRouter = [
             },
             {
                 path: 'ImportProducts',
-                element: lazy(() => import('@/pages/ImportProducts')),
-                layout: DefaultLayout,
-            },
-            {
-                path: 'ProductImports',
-                element: lazy(() => import('@/pages/Product/ProductImports')), // Lazy load trang chi tiết sản phẩm
-                layout: DefaultLayout,
+                children: [
+                    {
+                        path: '',
+                        element: lazy(() => import('@/pages/ImportProducts')),
+                        layout: DefaultLayout,
+                    },
+                    {
+                        path: 'ImportDetail/:id',
+                        element: lazy(() => import('@/pages/ImportProducts/Detail')), // Lazy load trang chi tiết sản phẩm
+                        layout: DefaultLayout,
+                    },
+                ],
             },
         ],
     },
