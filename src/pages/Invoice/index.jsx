@@ -3,21 +3,18 @@ import { Box, Container, Divider } from '@mui/material';
 import BoLoc from './boLoc';
 import BieuDo from './bieuDo';
 import TableOfContent from './table';
+import Dashboard from './Dashboard';
 
 import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { useSelector, useDispatch } from 'react-redux';
 
 dayjs.extend(weekOfYear);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
 
 export default function Invoice() {
-    const dispatch = useDispatch();
-
     const [invoiceDays, setInvoiceDays] = useState(1);
     const [viewMode, setViewMode] = useState('total');
     const [sort, setSort] = useState('des');
@@ -28,6 +25,8 @@ export default function Invoice() {
         PAID: true, //boolean
         RETURN: false, //boolean`
     });
+
+    const [invoiceDataMini, setInvoiceDataMini] = useState([]);
 
     const handleChange = (event) => {
         setInvoiceDays(event.target.value);
@@ -91,8 +90,12 @@ export default function Invoice() {
                     startDate={startDate}
                     endDate={endDate}
                     viewMode={viewMode}
+                    setInvoiceDataMini={setInvoiceDataMini}
                 />
             </Box>
+
+            {/* Dashboard */}
+            <Dashboard invoiceDataMini={invoiceDataMini} />
 
             {/* Danh sách hóa đơn */}
             <Divider />

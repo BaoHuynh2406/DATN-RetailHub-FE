@@ -34,17 +34,18 @@ const formatNumber = (value) => {
 };
 
 // Component
-function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
-    const [chartData, setChartData] = useState([]);
+function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode, setInvoiceDataMini }) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
             setError(null);
             try {
-                const response = await axiosSecure.get('/api/v2/invoice/chart-data', {
+                const response = await axiosSecure.get('/api/thong-ke/invoice-data-start-to-end', {
                     params: {
                         startDate: formatDateForApi(startDate),
                         endDate: formatDateForApi(endDate),
@@ -54,6 +55,8 @@ function BieuDo({ invoiceDays, checkboxValues, startDate, endDate, viewMode }) {
 
                 // Đảm bảo `response.data` tồn tại và trích xuất `data`
                 const invoices = response.data?.data;
+
+                setInvoiceDataMini(invoices);
 
                 if (Array.isArray(invoices)) {
                     const processedData = invoices.reduce((acc, item) => {

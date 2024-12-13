@@ -1,0 +1,141 @@
+import React from 'react';
+import {
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+    Button,
+    Typography,
+    Box,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+    Divider,
+    Grid,
+} from '@mui/material';
+
+function InvoiceDetailDialog({ open, onClose, invoiceData }) {
+    const handlePrint = () => {
+        window.print();
+    };
+
+    return (
+        <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
+            <DialogTitle
+                sx={{
+                    backgroundColor: '#f5f5f5',
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                }}
+            >
+                Hóa đơn: {invoiceData.invoiceId}
+            </DialogTitle>
+            <DialogContent
+                sx={{
+                    backgroundColor: '#fafafa',
+                    padding: 3,
+                }}
+            >
+                <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <Typography variant="subtitle1">
+                            <strong>Khách hàng:</strong> {invoiceData.customerId} - {invoiceData.customerName}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Typography variant="subtitle1">
+                            <strong>Nhân viên:</strong> {invoiceData.userId} - {invoiceData.userFullName}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Typography variant="subtitle1">
+                            <strong>Thời gian:</strong> {invoiceData.invoiceDate}
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Divider sx={{ marginY: 2 }} />
+                <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: 1 }}>
+                    Danh sách sản phẩm
+                </Typography>
+                <Table>
+                    <TableHead sx={{ backgroundColor: '#f0f0f0' }}>
+                        <TableRow>
+                            <TableCell>
+                                <strong>Mã sản phẩm</strong>
+                            </TableCell>
+                            <TableCell>
+                                <strong>Tên sản phẩm</strong>
+                            </TableCell>
+                            <TableCell>
+                                <strong>Số lượng</strong>
+                            </TableCell>
+                            <TableCell>
+                                <strong>Đơn giá</strong>
+                            </TableCell>
+                            <TableCell>
+                                <strong>Thuế suất</strong>
+                            </TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {invoiceData.listItem.map((item) => (
+                            <TableRow key={item.invoiceItemId}>
+                                <TableCell>{item.productId}</TableCell>
+                                <TableCell>{item.productName}</TableCell>
+                                <TableCell>{item.quantity}</TableCell>
+                                <TableCell>{item.unitPrice.toLocaleString()} VND</TableCell>
+                                <TableCell>{item.taxRate * 100}%</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+                <Box sx={{ marginTop: 2 }}>
+                    <Typography variant="subtitle1">
+                        <strong>Tổng tiền hàng:</strong> {invoiceData.totalAmount.toLocaleString()} VNĐ
+                    </Typography>
+                    <Typography variant="subtitle1">
+                        <strong>Tổng thuế:</strong> {invoiceData.totalTax.toLocaleString()} VNĐ
+                    </Typography>
+                    <Typography variant="subtitle1">
+                        <strong>Giảm giá:</strong> {invoiceData.discountAmount.toLocaleString()} VNĐ
+                    </Typography>
+                    <Divider sx={{ marginY: 1 }} />
+                    <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 'bold', fontSize: '1.1rem' }}>
+                        <strong>Tổng thanh toán:</strong> {invoiceData.finalTotal.toLocaleString()} VNĐ
+                    </Typography>
+                    <Divider sx={{ marginY: 1 }} />
+                    <Typography variant="subtitle1">
+                        <strong>Đã thanh toán:</strong> {invoiceData.totalPayment.toLocaleString()} VNĐ
+                    </Typography>
+                    <Typography variant="subtitle1">
+                        <strong>Tiền thừa:</strong>{' '}
+                        {(invoiceData.totalPayment - invoiceData.finalTotal).toLocaleString()} VNĐ
+                    </Typography>
+                    <Typography
+                        variant="subtitle1"
+                        sx={{
+                            marginTop: 1,
+                            color: invoiceData.status === 'PAID' ? 'green' : 'orange',
+                            fontWeight: 'bold',
+                        }}
+                    >
+                        <strong>Trạng thái:</strong> {invoiceData.status}
+                    </Typography>
+                </Box>
+            </DialogContent>
+            <DialogActions sx={{ padding: 2, backgroundColor: '#f5f5f5' }}>
+                <Button variant="outlined" onClick={onClose}>
+                    Đóng
+                </Button>
+                <Button variant="contained" color="primary" onClick={handlePrint}>
+                    In hóa đơn
+                </Button>
+            </DialogActions>
+        </Dialog>
+    );
+}
+
+export default InvoiceDetailDialog;

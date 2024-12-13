@@ -6,8 +6,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchInvoices } from '@/redux/Invoice/invoiceSlice';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
-import { Padding } from '@mui/icons-material';
-
+import { axiosSecure, axiosPublic } from '@/config/axiosInstance';
+import InvoiceDetailDialog from './InvoiceDetailDialog';
 function convertCheckboxValuesToString(ck) {
     return Object.keys(ck)
         .filter((key) => ck[key])
@@ -16,12 +16,13 @@ function convertCheckboxValuesToString(ck) {
 
 function Table({ startDate, endDate, checkboxValues, sort }) {
     const dispatch = useDispatch();
+    const [openDialog, setOpenDialog] = useState(false);
+    const [selectedInvoice, setSelectedInvoice] = useState(null);
 
     const columns = [
         { field: 'invoiceId', headerName: 'Mã hóa đơn', width: 150 },
         { field: 'userFullName', headerName: 'Nhân viên', width: 150 },
         { field: 'fullName', headerName: 'Khách hàng', width: 170 },
-        { field: 'phoneNumber', headerName: 'SĐT Khách hàng', width: 150 },
         { field: 'invoiceDate', headerName: 'Ngày lập hóa đơn', width: 200 },
         {
             field: 'finalTotal',
@@ -108,6 +109,21 @@ function Table({ startDate, endDate, checkboxValues, sort }) {
         return dayjs(isoDate).format('YYYY-MM-DD');
     };
 
+    const handleEdit = async (row) => {
+        try {
+            const response = await axiosSecure.get(`/api/v1/invoice/get/${row.invoiceId}`);
+            setSelectedInvoice(response.data.data);
+            setOpenDialog(true);
+        } catch (error) {
+            console.error('Lỗi khi tải dữ liệu hóa đơn:', error);
+        }
+    };
+
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+        setSelectedInvoice(null);
+    };
+
     return (
         <>
             <Typography marginTop={4} marginBottom={2} variant="h6">
@@ -125,6 +141,10 @@ function Table({ startDate, endDate, checkboxValues, sort }) {
                     status: convertCheckboxValuesToString(checkboxValues),
                 }}
             />
+
+            {selectedInvoice && (
+                <InvoiceDetailDialog open={openDialog} onClose={handleCloseDialog} invoiceData={selectedInvoice} />
+            )}
         </>
     );
 }
