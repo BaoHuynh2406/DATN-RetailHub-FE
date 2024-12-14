@@ -14,9 +14,8 @@ function TopSellingProducts() {
                 params: {
                     startDate: '2024-01-01',
                     endDate: '2024-12-31',
-                    sort: 'productName',
-                    Page:'1',
-                    Size:'6'
+                    page:'1',
+                    size:'6'
                 },
             });
 
