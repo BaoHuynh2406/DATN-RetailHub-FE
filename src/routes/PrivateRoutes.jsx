@@ -105,6 +105,16 @@ const privateRouter = [
                     },
                 ],
             },
+            {
+                path: 'OutProducts',
+                children: [
+                    {
+                        path: '',
+                        element: lazy(() => import('@/pages/OutProducts')),
+                        layout: DefaultLayout,
+                    },
+                ],
+            },
         ],
     },
     {
@@ -112,18 +122,14 @@ const privateRouter = [
         children: [
             {
                 path: '',
-                loader: () => redirect('/sales/invoice'), // Chuyển hướng đến trang danh sách sản phẩm
+                loader: () => redirect('/sales/sales'), // Chuyển hướng đến trang danh sách sản phẩm
             },
             {
-                path: 'invoice',
-                element: lazy(() => import('@/pages/Invoice')), // Lazy load trang danh sách sản phẩm
+                path: 'sales',
+                element: lazy(() => import('@/pages/sales')), // Lazy load trang danh sách sản phẩm
                 layout: DefaultLayout,
-            },
-            {
-                path: 'ProductDetail/:productId',
-                element: lazy(() => import('@/pages/Product/ProductDetail')), // Lazy load trang chi tiết sản phẩm
-                layout: DefaultLayout,
-            },
+            }
+         
         ],
     },
 

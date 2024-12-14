@@ -60,8 +60,8 @@ export const sidebarItems = [
                 state: 'inventory/import',
             },
             {
-                sidebarProps: { displayText: 'QL Xuất hàng (PT Sau)', icon: <ReplyAllRoundedIcon /> },
-                path: '/u/inventory',
+                sidebarProps: { displayText: 'QL Xuất hàng', icon: <ReplyAllRoundedIcon /> },
+                path: '/product/outProducts',
                 state: 'inventory/out',
             },
             {
@@ -83,8 +83,8 @@ export const sidebarItems = [
             },
             {
                 sidebarProps: { displayText: 'Tạo mã voucher', icon: <CardGiftcardRoundedIcon /> },
-                path: '/u/inventory',
-                state: 'sell/voucher',
+                path: '/sales',
+                state: 'sales',
             },
         ],
     },

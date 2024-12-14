@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Container, Divider } from '@mui/material';
-import BoLoc from '../Invoice/boLoc';
-import BieuDo from '../Invoice/bieuDo';
 import TableOfContent from '../Invoice/table';
-import Dashboard from '../Invoice/Dashboard';
-
+import BoLoc from './boloc'
 import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
@@ -83,19 +80,8 @@ export default function Invoice() {
                     sort={sort}
                     setSort={setSort}
                 />
-                {/* Biểu đồ */}
-                <BieuDo
-                    invoiceDays={invoiceDays}
-                    checkboxValues={checkboxValues}
-                    startDate={startDate}
-                    endDate={endDate}
-                    viewMode={viewMode}
-                    setInvoiceDataMini={setInvoiceDataMini}
-                />
+           
             </Box>
-
-            {/* Dashboard */}
-            <Dashboard invoiceDataMini={invoiceDataMini} />
 
             {/* Danh sách hóa đơn */}
             <Divider />
