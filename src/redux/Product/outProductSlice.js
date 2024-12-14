@@ -1,27 +1,26 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { axiosSecure } from '@/config/axiosInstance';  // Giả sử axiosSecure đã được cấu hình đúng
+import { axiosSecure } from '@/config/axiosInstance'; // Giả sử axiosSecure đã được cấu hình đúng
 
 // Initial state
 const initialState = {
     loading: false,
-    data: [],  // Khởi tạo là mảng rỗng thay vì null
+    data: [], // Khởi tạo là mảng rỗng thay vì null
     error: null,
 };
-
 
 // Fetch sales volume statistics
 export const fetchSalesVolumeStatistics = createAsyncThunk(
     'outProduct/fetchSalesVolumeStatistics',
-    async ({ startDate, endDate, sort }, { rejectWithValue }) => {
+    async ({ page, size, startDate, endDate, sort }, { rejectWithValue }) => {
         try {
             const response = await axiosSecure.get('/api/thong-ke/invoice-SalesVolumeStatistics', {
-                params: { startDate, endDate, sort },
+                params: { startDate, endDate, sort, page: page, pageSize: size },
             });
-            return response.data.data;  // Giả sử dữ liệu trả về có trường `data`
+            return response.data.data; // Giả sử dữ liệu trả về có trường `data`
         } catch (error) {
             return rejectWithValue(error.message);
         }
-    }
+    },
 );
 
 // Create slice
@@ -37,10 +36,10 @@ const outProductSlice = createSlice({
         };
 
         const handleFulfilled = (state, action) => {
-    state.loading = false;
-    // Kiểm tra nếu payload là null hoặc không có dữ liệu
-    state.data = action.payload || [];  // Trả về mảng rỗng nếu không có dữ liệu
-};
+            state.loading = false;
+            // Kiểm tra nếu payload là null hoặc không có dữ liệu
+            state.data = action.payload || []; // Trả về mảng rỗng nếu không có dữ liệu
+        };
 
         const handleRejected = (state, action) => {
             state.loading = false;
@@ -53,8 +52,6 @@ const outProductSlice = createSlice({
             .addCase(fetchSalesVolumeStatistics.fulfilled, handleFulfilled)
             .addCase(fetchSalesVolumeStatistics.rejected, handleRejected);
     },
-    
-
 });
 
 export default outProductSlice.reducer;

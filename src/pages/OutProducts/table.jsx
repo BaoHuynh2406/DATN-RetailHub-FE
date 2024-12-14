@@ -12,7 +12,7 @@ function convertCheckboxValuesToString(ck) {
         .join(',');
 }
 
-function Table({ startDate, endDate}) {
+function Table({ startDate, endDate }) {
     const dispatch = useDispatch();
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedOutProduct, setSelectedOutProduct] = useState(null);
@@ -38,17 +38,16 @@ function Table({ startDate, endDate}) {
         { field: 'quantitySold', headerName: 'Số lượng', width: 150 },
     ];
 
-       useEffect(() => {
-           dispatch(
-               fetchSalesVolumeStatistics({
-                   page: 1,
-                   size: 20,
-                   startDate: formatDateForApi(startDate),
-                   endDate: formatDateForApi(endDate),
-
-               }),
-           );
-       }, [startDate, endDate]);
+    useEffect(() => {
+        dispatch(
+            fetchSalesVolumeStatistics({
+                page: 1,
+                pageSize: 10,
+                startDate: formatDateForApi(startDate),
+                endDate: formatDateForApi(endDate),
+            }),
+        );
+    }, [startDate, endDate]);
 
     const formatDateForApi = (isoDate) => {
         return dayjs(isoDate).format('YYYY-MM-DD');
