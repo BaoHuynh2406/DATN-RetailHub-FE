@@ -29,9 +29,7 @@ function CustomerCard() {
                 <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
                     {totalCustomers}
                 </Typography>
-                <Typography sx={{ color: 'transparent', fontWeight: 'bold' }}>
-                    Đây là dòng chữ màu trong suốt
-                </Typography>
+                <Typography sx={{ color: 'transparent', fontWeight: 'bold' }}>.</Typography>
             </Box>
         </Paper>
     );

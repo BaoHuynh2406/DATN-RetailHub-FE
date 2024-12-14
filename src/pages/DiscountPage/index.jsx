@@ -7,12 +7,16 @@ import { fetchAllDiscounts } from '@/redux/Discount/discountSlice';
 import SearchProductDialog from '@/components/SearchProductDialog'; // Import SearchProductDialog
 import DiscountDialog from './DiscountDialog'; // Import DiscountDialog
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import { axiosSecure } from '@/config/axiosInstance';
+import { useDispatch } from 'react-redux';
 
 function DiscountPage() {
     const [openSearchDialog, setOpenSearchDialog] = useState(false); // Trạng thái mở SearchProductDialog
     const [openDiscountDialog, setOpenDiscountDialog] = useState(false); // Trạng thái mở DiscountDialog
     const [selectedProductId, setSelectedProductId] = useState(null); // Lưu id của sản phẩm đã chọn
+    const [selectedDiscount, setSelectedDiscount] = useState(null);
     const [isCreate, setIsCreate] = useState(false);
+    const dispatch = useDispatch();
 
     const handleOpenSearchDialog = () => {
         setOpenSearchDialog(true);
@@ -36,6 +40,16 @@ function DiscountPage() {
         console.log('Selected product ID:', productId);
         handleCloseSearchDialog(); // Đóng SearchProductDialog
         handleOpenDiscountDialog(true); // Mở DiscountDialog khi đã chọn sản phẩm
+    };
+
+    const handleEdit = (row) => {
+        setSelectedDiscount(row.id);
+        handleOpenDiscountDialog(false);
+    };
+
+    const handleDelete = async (row) => {
+        await axiosSecure.delete(`/api/discount/delete/${row.id}`);
+        dispatch(fetchAllDiscounts({ page: 1, size: 10 }));
     };
 
     const formatDateTime = (isoString) => {
@@ -124,9 +138,6 @@ function DiscountPage() {
                 renderCell: (params) => {
                     const now = new Date();
                     const endDate = new Date(params.row.endDate);
-
-                    console.log('now: ' + now + ' | endDate: ' + endDate);
-
                     // Kiểm tra ngày kết thúc
                     const isExpired = endDate < now;
 
@@ -216,6 +227,7 @@ function DiscountPage() {
                 open={openDiscountDialog}
                 onClose={handleCloseDiscountDialog}
                 productId={selectedProductId}
+                discountId={selectedDiscount}
                 isCreate={isCreate}
             />
         </Box>

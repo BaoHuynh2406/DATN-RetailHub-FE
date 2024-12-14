@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useDebugValue } from 'react';
+import React, { useState, useEffect } from 'react';
 import { axiosSecure } from '@/config/axiosInstance';
 import {
     Dialog,
@@ -12,7 +12,6 @@ import {
     Grid,
     Box,
     Typography,
-    Divider,
 } from '@mui/material';
 import { fetchAllDiscounts } from '@/redux/Discount/discountSlice';
 import { useDispatch } from 'react-redux';
@@ -28,132 +27,150 @@ const notyf = new Notyf({
     dismissible: true,
 });
 
-const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
+// Hàm để chuyển đổi từ ISO 8601 thành datetime-local format
+const formatDateTimeForInput = (dateTimeString) => {
+    if (!dateTimeString) return '';
+    const date = new Date(dateTimeString);
+    return date.toISOString().slice(0, 16); // Chuyển thành yyyy-MM-ddTHH:mm
+};
+
+const DiscountDialog = ({ open, onClose, productId, discountId, isCreate = false }) => {
     const dispatch = useDispatch();
 
-    const productDefault = {
+    const defaultProduct = {
         productName: 'Loading...',
         image: 'https://via.placeholder.com/150',
         price: 0,
     };
-    // Giả lập dữ liệu sản phẩm (sẽ thay thế bằng API sau)
-    const [product, setProduct] = useState(productDefault);
 
-    const [discountRate, setDiscountRate] = useState('');
-    const [startDate, setStartDate] = useState('');
-    const [endDate, setEndDate] = useState('');
-    const [active, setActive] = useState(true);
-    const [discountedPrice, setDiscountedPrice] = useState(0);
-
-    // Tính giá sau khi giảm khi giá gốc hoặc tỷ lệ giảm thay đổi
-    useEffect(() => {
-        if (product.price && discountRate) {
-            const discountAmount = (product.price * discountRate) / 100;
-            setDiscountedPrice(product.price - discountAmount); // Tính giá sau giảm
-        } else {
-            setDiscountedPrice(0); // Không có tỷ lệ giảm thì không tính giá giảm
-        }
-    }, [product.price, discountRate]);
+    // Sử dụng useState để lưu trữ tất cả các giá trị trong discountData
+    const [discountData, setDiscountData] = useState({
+        product: defaultProduct,
+        discountRate: 0,
+        startDate: '',
+        endDate: '',
+        active: true,
+    });
 
     useEffect(() => {
-        if (isCreate) {
-            //Thêm mới
-            //Lấy giữ liệu
+        if (isCreate && open) {
+            // Thêm mới
             axiosSecure.get(`/api/product/${productId}`).then((r) => {
-                setProduct(r.data.data);
+                setDiscountData({
+                    ...discountData,
+                    product: r.data.data,
+                    startDate: '',
+                    endDate: '',
+                    discountRate: 0,
+                    active: true,
+                });
             });
-            setStartDate('');
-            setEndDate('');
-            setActive(true);
-            setDiscountedPrice(0);
-
             return;
         }
-        setProduct(productDefault);
 
-        //Cập nhật
-    }, [isCreate, productId, open]);
+        if (open) {
+            axiosSecure.get(`/api/discount/${discountId}`).then((r) => {
+                const response = r.data.data;
+                setDiscountData({
+                    product: {
+                        productName: response.productName,
+                        image: response.image,
+                        price: response.price,
+                        productId: response.productId,
+                    },
+                    discountRate: response.discountRate * 100,
+                    startDate: formatDateTimeForInput(response.startDate),
+                    endDate: formatDateTimeForInput(response.endDate),
+                    active: response.active,
+                    id: response.id,
+                });
+            });
+        }
+    }, [open, discountId, productId, isCreate]);
 
     const handleSubmit = async () => {
-        // Kiểm tra tính hợp lệ của dữ liệu
+        const { discountRate, startDate, endDate, discountedPrice, active } = discountData;
+
         if (!discountRate || !startDate || !endDate) {
             alert('Vui lòng điền đầy đủ thông tin!');
             return;
         }
 
-        const discountData = {
+        let discountDataPayload = {
+            id: discountId,
             productId,
-            originalPrice: parseFloat(product.price),
-            discountedPrice,
             discountRate: parseFloat(discountRate) / 100,
             startDate,
             endDate,
-            active: true,
+            active,
         };
 
-        if (isCreate) {
-            //Lưu
-            await axiosSecure
-                .post('/api/discount/create', discountData)
-                .then(() => {
-                    notyf.success('Thêm khuyến mãi thành công!');
-                })
-                .catch((e) => {
-                    notyf.error(e.response.data.message);
-                });
+        try {
+            if (isCreate) {
+                await axiosSecure.post('/api/discount/create', discountDataPayload);
+                notyf.success('Thêm khuyến mãi thành công!');
+            } else {
+                discountDataPayload = {
+                    ...discountDataPayload,
+                    productId: discountData.product.productId,
+                    id: discountData.id,
+                };
+                await axiosSecure.put('/api/discount/update', discountDataPayload);
+                notyf.success('Cập nhật khuyến mãi thành công!');
+            }
 
-            await dispatch(fetchAllDiscounts({ page: 1, size: 10 })).then((r) => {
-                console.log(r);
-            });
+            await dispatch(fetchAllDiscounts({ page: 1, size: 10 }));
+            onClose(); // Đóng dialog sau khi submit
+        } catch (e) {
+            notyf.error(e.response.data.message);
         }
-        onClose(); // Đóng dialog sau khi submit
     };
 
     return (
         <Dialog open={open} onClose={onClose}>
-            <DialogTitle>Thêm khuyến mãi cho sản phẩm</DialogTitle>
+            <DialogTitle>{isCreate ? 'THÊM KHUYẾN MÃI CHO SẢN PHẨM' : 'CẬP NHẬT KHUYẾN MÃI'}</DialogTitle>
             <DialogContent>
                 <Grid container spacing={2}>
-                    {/* Hiển thị hình ảnh, tên sản phẩm, và giá gốc */}
                     <Grid item xs={12} display="flex" alignItems="center">
                         <Box
                             component="img"
-                            src={product.image}
-                            alt={product.productName}
+                            src={discountData.product.image}
+                            alt={discountData.product.productName}
                             sx={{ width: '100px', height: '80px', marginRight: 2 }}
                         />
                         <Box>
-                            <Typography variant="h6">{product.productName}</Typography>
+                            <Typography variant="h6">{discountData.product.productName}</Typography>
                             <Box display="flex" alignItems="center">
-                                {/* Hiển thị giá gốc và giá đã giảm */}
                                 <Typography
                                     variant="body1"
                                     color="textSecondary"
                                     sx={{
-                                        textDecoration: discountRate ? 'line-through' : 'none',
-                                        color: discountRate ? 'red' : 'black',
-                                        fontStyle: discountRate ? 'italic' : 'normal',
+                                        textDecoration: discountData.discountRate ? 'line-through' : 'none',
+                                        color: discountData.discountRate ? 'red' : 'black',
+                                        fontStyle: discountData.discountRate ? 'italic' : 'normal',
                                         marginRight: 2,
                                     }}
                                 >
-                                    {product.price.toLocaleString()} VNĐ
+                                    {discountData.product.price.toLocaleString()} VNĐ
                                 </Typography>
-                                {discountedPrice > 0 && (
+                                {discountData.discountRate > 0 && (
                                     <Typography variant="body1" color="primary">
-                                        {discountedPrice.toLocaleString()} VNĐ
+                                        {(
+                                            discountData.product.price * (1 - discountData.discountRate / 100 || 0)
+                                        ).toLocaleString()}{' '}
+                                        VNĐ
                                     </Typography>
                                 )}
                             </Box>
                         </Box>
                     </Grid>
 
-                    {/* Tỷ lệ giảm giá */}
                     <Grid item xs={12}>
                         <TextField
                             label="Tỷ lệ giảm giá (%)"
                             fullWidth
-                            value={discountRate}
-                            onChange={(e) => setDiscountRate(e.target.value)}
+                            value={discountData.discountRate}
+                            onChange={(e) => setDiscountData({ ...discountData, discountRate: e.target.value })}
                             variant="outlined"
                             type="number"
                             InputProps={{
@@ -165,13 +182,12 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
                         />
                     </Grid>
 
-                    {/* Ngày bắt đầu */}
                     <Grid item xs={12}>
                         <TextField
                             label="Ngày bắt đầu"
                             fullWidth
-                            value={startDate}
-                            onChange={(e) => setStartDate(e.target.value)}
+                            value={discountData.startDate}
+                            onChange={(e) => setDiscountData({ ...discountData, startDate: e.target.value })}
                             variant="outlined"
                             type="datetime-local"
                             InputLabelProps={{
@@ -180,13 +196,12 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
                         />
                     </Grid>
 
-                    {/* Ngày kết thúc */}
                     <Grid item xs={12}>
                         <TextField
                             label="Ngày kết thúc"
                             fullWidth
-                            value={endDate}
-                            onChange={(e) => setEndDate(e.target.value)}
+                            value={discountData.endDate}
+                            onChange={(e) => setDiscountData({ ...discountData, endDate: e.target.value })}
                             variant="outlined"
                             type="datetime-local"
                             InputLabelProps={{
@@ -195,11 +210,14 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
                         />
                     </Grid>
 
-                    {/* Trạng thái */}
                     <Grid item xs={12}>
                         <FormControlLabel
                             control={
-                                <Switch checked={active} onChange={(e) => setActive(e.target.checked)} name="active" />
+                                <Switch
+                                    checked={discountData.active}
+                                    onChange={(e) => setDiscountData({ ...discountData, active: e.target.checked })}
+                                    name="active"
+                                />
                             }
                             label="Active"
                         />
