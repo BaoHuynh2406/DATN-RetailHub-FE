@@ -82,9 +82,9 @@ export const sidebarItems = [
                 state: 'sales/invoice',
             },
             {
-                sidebarProps: { displayText: 'Tạo mã voucher', icon: <CardGiftcardRoundedIcon /> },
-                path: '/sales',
-                state: 'sales',
+                sidebarProps: { displayText: 'QL giảm giá', icon: <CardGiftcardRoundedIcon /> },
+                path: '/sales/discount',
+                state: 'sales/discount',
             },
         ],
     },

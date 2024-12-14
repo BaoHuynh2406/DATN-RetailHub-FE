@@ -77,7 +77,7 @@ function Dashboard({ invoiceDataMini }) {
                     <Typography
                         variant="h3"
                         sx={{
-                            color: '#008000',
+                            color: totalProfit >= 0 ? '#008000' : '#d32f2f',
                             fontWeight: 'bold',
                             lineHeight: '32px',
                             letterSpacing: '-0.02em',
