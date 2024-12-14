@@ -78,20 +78,21 @@ function Dashboard() {
                         Biểu đồ doanh thu và lợi nhuận theo tháng
                     </Typography>
                     <ResponsiveContainer width="100%" height={350}>
-                    <BarChart data={salesData}>
+                    <BarChart data={salesData} barCategoryGap="10%">
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
                         <YAxis
                             interval="preserveStartEnd"
                             tickFormatter={(value) => value.toLocaleString()}
-                            tick={{ fontSize: 10.5 }}
                         />
                         <Tooltip />
                         <Legend />
                         <Bar dataKey="doanhThu" fill="#8884d8" name="Doanh thu" />
-                        <Bar dataKey="lợiNhuận" fill="#82ca9d" name="Lợi nhuận" />
+                        <Bar dataKey="loiNhuan" fill="#82ca9d" name="Lợi nhuận" />
                     </BarChart>
                 </ResponsiveContainer>
+
+
 
                 </Paper>
 
