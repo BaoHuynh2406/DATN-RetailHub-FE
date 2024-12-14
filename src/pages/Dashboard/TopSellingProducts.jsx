@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Box, Paper, Typography } from "@mui/material";
-import { axiosSecure } from "@/config/axiosInstance";
+import React, { useEffect, useState } from 'react';
+import { Box, Paper, Typography } from '@mui/material';
+import { axiosSecure } from '@/config/axiosInstance';
 
 function TopSellingProducts() {
     const [topSellingProducts, setTopSellingProducts] = useState([]);
@@ -14,14 +14,13 @@ function TopSellingProducts() {
                 params: {
                     startDate: '2024-01-01',
                     endDate: '2024-12-31',
-                    sort: 'productName',
-                    Page:'1',
-                    Size:'6'
+                    page: '1',
+                    size: '6',
                 },
             });
 
             const products = response?.data?.data.data || [];
-            
+
             // Tính tổng số lượng bán được
             const totalQuantitySold = products.reduce((total, product) => total + product.quantitySold, 0);
 
@@ -30,8 +29,8 @@ function TopSellingProducts() {
                 products[i].percent = (products[i].quantitySold / totalQuantitySold) * 100;
             }
 
-                // Sắp xếp sản phẩm theo số lượng bán được (từ cao đến thấp)
-                products.sort((a, b) => b.quantitySold - a.quantitySold);
+            // Sắp xếp sản phẩm theo số lượng bán được (từ cao đến thấp)
+            products.sort((a, b) => b.quantitySold - a.quantitySold);
 
             setTopSellingProducts(products);
         } catch (error) {
@@ -52,7 +51,11 @@ function TopSellingProducts() {
     }
 
     if (error) {
-        return <Typography variant="body1" color="error">{error}</Typography>;
+        return (
+            <Typography variant="body1" color="error">
+                {error}
+            </Typography>
+        );
     }
 
     return (
