@@ -9,6 +9,7 @@ import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
+import Search from './search';
 
 dayjs.extend(weekOfYear);
 dayjs.extend(isSameOrAfter);
@@ -98,7 +99,12 @@ export default function Invoice() {
             <Dashboard invoiceDataMini={invoiceDataMini} />
 
             {/* Danh sách hóa đơn */}
-            <Divider />
+            <Divider
+                sx={{
+                    marginY: 2,
+                }}
+            />
+            <Search />
             <TableOfContent startDate={startDate} endDate={endDate} checkboxValues={checkboxValues} sort={sort} />
         </Container>
     );

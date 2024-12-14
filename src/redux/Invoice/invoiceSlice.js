@@ -30,6 +30,22 @@ export const fetchInvoices = createAsyncThunk(
     },
 );
 
+// END POINT GET INVOICES
+export const search = createAsyncThunk('invoice/search', async ({ page, size, keyword }, { rejectWithValue }) => {
+    try {
+        const response = await axiosSecure.get('/api/v2/invoice/search', {
+            params: {
+                page: page,
+                size: size,
+                keyword: keyword,
+            },
+        });
+        return response.data.data;
+    } catch (error) {
+        return rejectWithValue(error.message);
+    }
+});
+
 const formatDateTime = (isoString) => {
     const options = {
         year: 'numeric',
@@ -72,6 +88,34 @@ const invoiceSlice = createSlice({
                 }
             })
             .addCase(fetchInvoices.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
+                state.data = [];
+            })
+
+            // Search
+            .addCase(search.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(search.fulfilled, (state, action) => {
+                state.loading = false;
+                const res = action.payload;
+
+                // Giữ nguyên các thuộc tính của res, chỉ thay đổi mảng `data`
+                if (res && Array.isArray(res.data)) {
+                    state.data = {
+                        ...res,
+                        data: res.data.map((item) => ({
+                            ...item,
+                            invoiceDate: formatDateTime(item.invoiceDate), // Chuyển đổi định dạng ngày tháng
+                        })),
+                    };
+                } else {
+                    state.data = []; // Gán null nếu dữ liệu không hợp lệ
+                }
+            })
+            .addCase(search.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
                 state.data = [];
