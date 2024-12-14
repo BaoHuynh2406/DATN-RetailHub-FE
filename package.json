@@ -23,6 +23,8 @@
         "chart.js": "^4.4.7",
         "datejs": "^1.0.0-rc3",
         "dayjs": "^1.11.13",
+        "exceljs": "^4.4.0",
+        "file-saver": "^2.0.5",
         "normalize.css": "^8.0.1",
         "notyf": "^3.10.0",
         "react": "^18.3.1",

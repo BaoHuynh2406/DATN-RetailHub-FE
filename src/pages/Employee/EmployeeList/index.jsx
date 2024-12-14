@@ -4,7 +4,8 @@ import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-materia
 import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
 import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
+import { saveAs } from 'file-saver';
 import { useSelector, useDispatch } from 'react-redux';
 import {
     fetchEmployeesDeletedAsync,
@@ -133,7 +134,7 @@ export default function EmployeeTable() {
             notyf.success('Khôi phục tài khoản thành công!');
         }
     };
-
+    const employees = useSelector((state) => state.employeeNew?.data.data || []);
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
         const newParams = new URLSearchParams(searchParams);
@@ -141,36 +142,83 @@ export default function EmployeeTable() {
         setSearchParams(newParams);
     };
 
-    const employees = useSelector((state) => state.employeeNew?.data.data || []);
-
-    const handleExportExcel = () => {
+    const handleExportExcel = async () => {
         if (!Array.isArray(employees) || employees.length === 0) {
             notyf.error('Không có dữ liệu để xuất Excel.');
             return;
         }
-    
-        // Tiêu đề cột
-        const headers = columns.map((col) => col.headerName);
-    
-        // Chuẩn bị dữ liệu cho Excel
-        const excelData = employees.map((employee) => {
-            const rowData = {};
-            columns.forEach((col) => {
-                rowData[col.headerName] = employee[col.field]; // Lấy dữ liệu từ field
-            });
-            return rowData;
+
+        // Tạo workbook và worksheet
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('Danh sách nhân viên');
+
+        // Định nghĩa tiêu đề cột (thêm STT vào đầu)
+        const headers = [
+            { header: 'STT', key: 'stt', width: 10 }, // Thêm cột STT
+            ...columns.map((col) => ({
+                header: col.headerName,
+                key: col.field,
+                width: col.width ? col.width / 10 : 15, // Tùy chỉnh độ rộng cột
+            })),
+        ];
+        worksheet.columns = headers;
+
+        // Styling cho tiêu đề cột từ A -> G
+        const headerRow = worksheet.getRow(1);
+        headerRow.eachCell((cell, colNumber) => {
+            if (colNumber >= 1 && colNumber <= headers.length) {
+                // Áp dụng styling cho tất cả cột
+                cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+                cell.alignment = { vertical: 'middle', horizontal: 'center' };
+                cell.fill = {
+                    type: 'pattern',
+                    pattern: 'solid',
+                    fgColor: { argb: 'FF007BFF' }, // Màu nền xanh dương
+                };
+                cell.border = {
+                    bottom: { style: 'thin', color: { argb: 'FF000000' } },
+                };
+            }
         });
-    
-        // Tạo worksheet và workbook
-        const worksheet = XLSX.utils.json_to_sheet(excelData);
-        XLSX.utils.sheet_add_aoa(worksheet, [headers], { origin: 'A1' });
-        const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'Employees');
-    
+
+        // Thêm dữ liệu vào bảng (bao gồm STT và trạng thái)
+        employees.forEach((employee, index) => {
+            const rowData = {
+                stt: index + 1, // STT bắt đầu từ 1
+            };
+            columns.forEach((col) => {
+                // Kiểm tra và thay đổi trạng thái nếu là cột trạng thái
+                if (col.field === 'isActive') {
+                    rowData[col.field] = employee[col.field] ? 'Hoạt động' : 'Không hoạt động';
+                } else {
+                    rowData[col.field] = employee[col.field] || ''; // Lấy dữ liệu từ field
+                }
+            });
+            worksheet.addRow(rowData);
+        });
+
+        // Tùy chỉnh viền và căn giữa
+        worksheet.eachRow((row, rowNumber) => {
+            row.eachCell((cell) => {
+                cell.border = {
+                    top: { style: 'thin' },
+                    left: { style: 'thin' },
+                    bottom: { style: 'thin' },
+                    right: { style: 'thin' },
+                };
+                cell.alignment = { vertical: 'middle', horizontal: 'left' };
+                if (rowNumber === 1) {
+                    cell.alignment = { vertical: 'middle', horizontal: 'center' };
+                }
+            });
+            row.height = 20; // Đặt chiều cao hàng
+        });
+
         // Xuất file Excel
-        XLSX.writeFile(workbook, 'DanhSachNhanVien.xlsx');
+        const buffer = await workbook.xlsx.writeBuffer();
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        saveAs(blob, 'DanhSachNhanVien.xlsx');
     };
-    
 
     const [searchParams, setSearchParams] = useSearchParams();
 
