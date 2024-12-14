@@ -4,12 +4,15 @@ import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon 
 import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import ExcelJS from 'exceljs';
+import { saveAs } from 'file-saver';
 import {
     fetchProductsAvailableAsync,
     fetchProductsDeletedAsync,
     updateProductAsync,
     removeProductAsync,
 } from '@/redux/Product/ProductSlice';
+import handleExport from '@/hooks/useExportExcel';
 
 export default function ProductTable() {
     const navigate = useNavigate();
@@ -104,6 +107,25 @@ export default function ProductTable() {
         setShowDeleted(check);
     }, []);
 
+    const response = useSelector((state) => state.ProductSlice?.data.data || []);
+
+    const handleExportExcel = async () => {
+        const columns = [
+            { header: 'STT', key: 'STT', width: 10 },
+            { header: 'Mã sản phẩm', key: 'productId', width: 20 },
+            { header: 'Tên sản phẩm', key: 'productName', width: 30 },
+            { header: 'Mã vạch', key: 'barcode', width: 20 },
+            { header: 'Đơn vị tính', key: 'unit', width: 15 },
+            { header: 'Tồn kho', key: 'inventoryCount', width: 15 },
+            { header: 'Giá gốc', key: 'cost', width: 15 },
+            { header: 'Giá bán', key: 'price', width: 15 },
+            { header: 'Ngày hết hạn', key: 'expiryDate', width: 20 },
+        ];
+        
+        if(!response) return;
+        handleExport(columns, response, "DanhSachSanPham");
+    };
+
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
@@ -130,8 +152,8 @@ export default function ProductTable() {
                     </Typography>
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
-                <Button variant="contained" startIcon={<ExplicitIcon />} sx={{ fontSize: 10 }}>
-                    Xuất Excel
+                <Button variant="contained" startIcon={<ExplicitIcon />} onClick={handleExportExcel}>
+                    Excel
                 </Button>
             </Box>
         </Container>

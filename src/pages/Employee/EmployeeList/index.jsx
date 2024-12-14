@@ -4,7 +4,8 @@ import { AddCircle as AddCircleIcon, Edit as EditIcon } from '@mui/icons-materia
 import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
 import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
+import { saveAs } from 'file-saver';
 import { useSelector, useDispatch } from 'react-redux';
 import {
     fetchEmployeesDeletedAsync,
@@ -13,6 +14,7 @@ import {
     toggleActiveEmployeeAsync,
 } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
+import handleExport from '@/hooks/useExportExcel';
 
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
@@ -133,7 +135,7 @@ export default function EmployeeTable() {
             notyf.success('Khôi phục tài khoản thành công!');
         }
     };
-
+    const employees = useSelector((state) => state.employeeNew?.data.data || []);
     const handleShowDeletedToggle = (event) => {
         setShowDeleted(event.target.checked);
         const newParams = new URLSearchParams(searchParams);
@@ -141,36 +143,21 @@ export default function EmployeeTable() {
         setSearchParams(newParams);
     };
 
-    const employees = useSelector((state) => state.employeeNew?.data.data || []);
+    const handleExportExcel = async () => {
+        const columns = [
+            { header: 'STT', key: 'STT', width: 10 },
+            { header: 'Mã nhân viên', key: 'userId', width: 15 },
+            { header: 'Họ và tên', key: 'fullName', width: 25 },
+            { header: 'Số điện thoại', key: 'phoneNumber', width: 20 },
+            { header: 'Chức vụ', key: 'role', width: 15 },
+            { header: 'Ngày vào làm', key: 'startDate', width: 18 },
+            { header: 'Trạng thái', key: 'isActive', width: 20 },
+            ,
+        ];
 
-    const handleExportExcel = () => {
-        if (!Array.isArray(employees) || employees.length === 0) {
-            notyf.error('Không có dữ liệu để xuất Excel.');
-            return;
-        }
-    
-        // Tiêu đề cột
-        const headers = columns.map((col) => col.headerName);
-    
-        // Chuẩn bị dữ liệu cho Excel
-        const excelData = employees.map((employee) => {
-            const rowData = {};
-            columns.forEach((col) => {
-                rowData[col.headerName] = employee[col.field]; // Lấy dữ liệu từ field
-            });
-            return rowData;
-        });
-    
-        // Tạo worksheet và workbook
-        const worksheet = XLSX.utils.json_to_sheet(excelData);
-        XLSX.utils.sheet_add_aoa(worksheet, [headers], { origin: 'A1' });
-        const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'Employees');
-    
-        // Xuất file Excel
-        XLSX.writeFile(workbook, 'DanhSachNhanVien.xlsx');
+        if (!employees) return;
+        handleExport(columns, employees, 'DanhSachNhanVien');
     };
-    
 
     const [searchParams, setSearchParams] = useSearchParams();
 

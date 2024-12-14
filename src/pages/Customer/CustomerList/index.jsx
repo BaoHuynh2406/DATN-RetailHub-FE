@@ -4,7 +4,10 @@ import { AddCircle as AddCircleIcon, Edit as EditIcon, Explicit as ExplicitIcon 
 import TablePagination from '@/components/TableCustom/TablePagination';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import ExcelJS from 'exceljs';
+import { saveAs } from 'file-saver';
 import { fetchAllDeletedCustomersAsync, fetchCustomersAsync } from '@/redux/Customer/customerSlice';
+import handleExport from '@/hooks/useExportExcel';
 
 export default function CustomerTable() {
     const navigate = useNavigate(); // Hook để điều hướng chương trình
@@ -58,6 +61,24 @@ export default function CustomerTable() {
         setShowDeleted(event.target.checked); // Chuyển đổi state để hiển thị/ẩn khách hàng đã xóa
     };
 
+    // Lấy dữ liệu từ Redux
+    const response = useSelector((state) => state.customer.data?.data || []); 
+
+    const handleExportExcel = async () => {
+        
+        const columns = [
+            { header: 'STT', key: 'STT', width: 10 },
+            { header: 'Mã khách hàng', key: 'customerId', width: 15 },
+            { header: 'Họ và tên', key: 'fullName', width: 25 },
+            { header: 'Số điện thoại', key: 'phoneNumber', width: 20 },
+            { header: 'Điểm', key: 'points', width: 10 },
+            { header: 'Trạng thái', key: 'isActive', width: 15 },
+        ];
+        
+        if(!response) return;
+        handleExport(columns, response, "DanhSachKhachHang");
+    };
+
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 3 }}>
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
@@ -84,7 +105,7 @@ export default function CustomerTable() {
                     </Typography>
                     <Switch checked={showDeleted} onChange={handleShowDeletedToggle} color="secondary" />
                 </Box>
-                <Button variant="contained" startIcon={<ExplicitIcon />} onClick={() => handleDelete(customerId)}>
+                <Button variant="contained" startIcon={<ExplicitIcon />} onClick={handleExportExcel}>
                     Excel
                 </Button>
             </Box>
