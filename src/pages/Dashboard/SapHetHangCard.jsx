@@ -28,14 +28,14 @@ function HetHang() {
     }, []);
 
     return (
-        <Paper sx={{ p: 3, flex: '1 1 30%' }}>
+        <Paper sx={{ p: 3, flex: '1 1 35%' }}>
             <Box display="flex" flexDirection="column" alignItems="center">
                 <Typography variant="h6" sx={{ color: '#34495E', fontWeight: 'bold', mb: 2 }}>
                     Sản phẩm sắp hết hàng
                 </Typography>
                 <Box
                     sx={{
-                        height: '300px',
+                        height: '400px',
                         overflow: 'auto',
                     }}
                 >
