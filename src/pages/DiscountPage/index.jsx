@@ -6,6 +6,7 @@ import { useState, useMemo } from 'react';
 import { fetchAllDiscounts } from '@/redux/Discount/discountSlice';
 import SearchProductDialog from '@/components/SearchProductDialog'; // Import SearchProductDialog
 import DiscountDialog from './DiscountDialog'; // Import DiscountDialog
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 
 function DiscountPage() {
     const [openSearchDialog, setOpenSearchDialog] = useState(false); // Trạng thái mở SearchProductDialog
@@ -37,14 +38,130 @@ function DiscountPage() {
         handleOpenDiscountDialog(true); // Mở DiscountDialog khi đã chọn sản phẩm
     };
 
+    const formatDateTime = (isoString) => {
+        const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        };
+        return new Date(isoString).toLocaleString('vi-VN', options);
+    };
+
     const columns = useMemo(
         () => [
-            { field: 'id', headerName: 'ID', width: 150 },
-            { field: 'productId', headerName: 'Sản phẩm', width: 150 },
-            { field: 'discountRate', headerName: 'Tỉ lệ giảm', width: 210 },
-            { field: 'startDate', headerName: 'Ngày bắt đầu', width: 170 },
-            { field: 'endDate', headerName: 'Ngày kết thúc', width: 150 },
-            { field: 'active', headerName: 'Trạng thái', width: 150 },
+            { field: 'id', headerName: 'ID', width: 10 },
+            { field: 'productId', headerName: 'ID Sản phẩm', width: 100 },
+            { field: 'productName', headerName: 'Tên sản phẩm', width: 150 },
+            {
+                field: 'image',
+                headerName: 'Ảnh',
+                headerAlign: 'center',
+                width: 150,
+                renderCell: (params) => (
+                    <Box display="flex" justifyContent="center" alignItems="center" height="100%">
+                        <img
+                            src={params.row.image}
+                            alt="Product"
+                            style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+                        />
+                    </Box>
+                ),
+            },
+            {
+                field: 'price',
+                headerName: 'Giá gốc (VNĐ)',
+                width: 150,
+                renderCell: (params) => (
+                    <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                        <Typography>{params.row.price.toLocaleString('vi-VN')} đ</Typography>
+                    </Box>
+                ),
+            },
+            {
+                field: 'discountRate',
+                headerName: 'Tỉ lệ giảm',
+                width: 100,
+                renderCell: (params) => (
+                    <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                        <Typography>{(params.row.discountRate * 100).toFixed(2)}%</Typography>,
+                    </Box>
+                ),
+            },
+            {
+                field: 'priceAfter',
+                headerName: 'Giá đã giảm (VNĐ)',
+                width: 150,
+                renderCell: (params) => {
+                    const discountedPrice = params.row.price - params.row.price * params.row.discountRate;
+                    return (
+                        <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                            <Typography sx={{ color: '#c4943c', fontWeight: 'bold' }}>
+                                {discountedPrice.toLocaleString('vi-VN')} đ
+                            </Typography>
+                        </Box>
+                    );
+                },
+            },
+            {
+                field: 'startDate',
+                headerName: 'Bắt đầu',
+                width: 170,
+                headerAlign: 'center',
+                renderCell: (params) => (
+                    <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                        <Typography textAlign="center">{formatDateTime(params.row.startDate)}</Typography>
+                    </Box>
+                ),
+            },
+            {
+                field: 'endDate',
+                headerName: 'Kết thúc',
+                width: 170,
+                headerAlign: 'center',
+                renderCell: (params) => {
+                    const now = new Date();
+                    const endDate = new Date(params.row.endDate);
+
+                    console.log('now: ' + now + ' | endDate: ' + endDate);
+
+                    // Kiểm tra ngày kết thúc
+                    const isExpired = endDate < now;
+
+                    return (
+                        <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                            <Typography
+                                textAlign="center"
+                                sx={{
+                                    color: isExpired ? 'red' : 'green',
+                                    fontWeight: 'bold',
+                                }}
+                            >
+                                {formatDateTime(params.row.endDate)}
+                            </Typography>
+                        </Box>
+                    );
+                },
+            },
+            {
+                field: 'active',
+                headerName: 'Trạng thái',
+                width: 150,
+                renderCell: (params) => (
+                    <Box display="flex" justifyContent="left" alignItems="center" height="100%">
+                        <Typography
+                            sx={{
+                                color: params.row.active ? 'green' : 'red',
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            {params.row.active ? 'Đang hoạt động' : 'Đã dừng'}
+                        </Typography>
+                    </Box>
+                ),
+            },
             {
                 field: 'actions',
                 headerName: 'Công cụ',
@@ -53,6 +170,9 @@ function DiscountPage() {
                     <Box display="flex" justifyContent="left" alignItems="center" height="100%">
                         <IconButton color="primary" onClick={() => handleEdit(params.row)}>
                             <EditIcon />
+                        </IconButton>
+                        <IconButton color="primary" onClick={() => handleDelete(params.row)}>
+                            <DeleteRoundedIcon />
                         </IconButton>
                     </Box>
                 ),

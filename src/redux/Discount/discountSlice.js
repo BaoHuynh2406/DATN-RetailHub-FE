@@ -26,17 +26,7 @@ export const fetchAllDiscounts = createAsyncThunk(
     },
 );
 
-const formatDateTime = (isoString) => {
-    const options = {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-    };
-    return new Date(isoString).toLocaleString('vi-VN', options);
-};
+
 
 // Create the slice
 const discountSlice = createSlice({
@@ -52,21 +42,7 @@ const discountSlice = createSlice({
             })
             .addCase(fetchAllDiscounts.fulfilled, (state, action) => {
                 state.loading = false;
-                const res = action.payload;
-
-                // Giữ nguyên các thuộc tính của res, chỉ thay đổi mảng `data`
-                if (res && Array.isArray(res.data)) {
-                    state.data = {
-                        ...res,
-                        data: res.data.map((item) => ({
-                            ...item,
-                            startDate: formatDateTime(item.startDate),
-                            endDate: formatDateTime(item.endDate),
-                        })),
-                    };
-                } else {
-                    state.data = []; // Gán null nếu dữ liệu không hợp lệ
-                }
+                state.data = action.payload;
             })
             .addCase(fetchAllDiscounts.rejected, (state, action) => {
                 state.loading = false;

@@ -42,7 +42,7 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
     const [discountRate, setDiscountRate] = useState('');
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(true);
     const [discountedPrice, setDiscountedPrice] = useState(0);
 
     // Tính giá sau khi giảm khi giá gốc hoặc tỷ lệ giảm thay đổi
@@ -62,13 +62,17 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
             axiosSecure.get(`/api/product/${productId}`).then((r) => {
                 setProduct(r.data.data);
             });
+            setStartDate('');
+            setEndDate('');
+            setActive(true);
+            setDiscountedPrice(0);
+
             return;
         }
-
         setProduct(productDefault);
 
         //Cập nhật
-    }, [isCreate, productId]);
+    }, [isCreate, productId, open]);
 
     const handleSubmit = async () => {
         // Kiểm tra tính hợp lệ của dữ liệu
@@ -89,7 +93,7 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
 
         if (isCreate) {
             //Lưu
-            axiosSecure
+            await axiosSecure
                 .post('/api/discount/create', discountData)
                 .then(() => {
                     notyf.success('Thêm khuyến mãi thành công!');
@@ -98,7 +102,9 @@ const DiscountDialog = ({ open, onClose, productId, isCreate = false }) => {
                     notyf.error(e.response.data.message);
                 });
 
-            await dispatch(fetchAllDiscounts({ page: 1, size: 10 }));
+            await dispatch(fetchAllDiscounts({ page: 1, size: 10 })).then((r) => {
+                console.log(r);
+            });
         }
         onClose(); // Đóng dialog sau khi submit
     };
