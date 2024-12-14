@@ -14,11 +14,13 @@ function TopSellingProducts() {
                 params: {
                     startDate: '2024-01-01',
                     endDate: '2024-12-31',
-                    sort: 'productName', // Hoặc 'desc' tùy theo yêu cầu
+                    sort: 'productName',
+                    Page:'1',
+                    Size:'6'
                 },
             });
 
-            const products = response?.data?.data || [];
+            const products = response?.data?.data.data || [];
             
             // Tính tổng số lượng bán được
             const totalQuantitySold = products.reduce((total, product) => total + product.quantitySold, 0);
@@ -28,8 +30,8 @@ function TopSellingProducts() {
                 products[i].percent = (products[i].quantitySold / totalQuantitySold) * 100;
             }
 
-            // Sắp xếp sản phẩm theo số lượng bán được (từ cao đến thấp)
-            products.sort((a, b) => b.quantitySold - a.quantitySold);
+                // Sắp xếp sản phẩm theo số lượng bán được (từ cao đến thấp)
+                products.sort((a, b) => b.quantitySold - a.quantitySold);
 
             setTopSellingProducts(products);
         } catch (error) {
