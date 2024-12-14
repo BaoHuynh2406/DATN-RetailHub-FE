@@ -59,7 +59,7 @@ function RevenueCard() {
                     Doanh thu hôm nay
                 </Typography>
                 <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold' }}>
-                    {revenueToday.toLocaleString()} VND
+                    {revenueToday.toLocaleString() || 0} VND
                 </Typography>
                 <Typography color="textSecondary" display="flex" alignItems="center">
                     {renderArrow(revenueGrowth)}
