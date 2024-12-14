@@ -12,6 +12,7 @@ import {
     updateProductAsync,
     removeProductAsync,
 } from '@/redux/Product/ProductSlice';
+import handleExport from '@/hooks/useExportExcel';
 
 export default function ProductTable() {
     const navigate = useNavigate();
@@ -109,18 +110,8 @@ export default function ProductTable() {
     const response = useSelector((state) => state.ProductSlice?.data.data || []);
 
     const handleExportExcel = async () => {
-        console.log('Dữ liệu lấy từ Redux:', response);
-
-        if (!response || !Array.isArray(response) || response.length === 0) {
-            alert('Không có dữ liệu để xuất Excel.');
-            return;
-        }
-
-        const workbook = new ExcelJS.Workbook();
-        const worksheet = workbook.addWorksheet('Danh sách sản phẩm');
-
-        const headers = [
-            { header: 'STT', key: 'stt', width: 10 },
+        const columns = [
+            { header: 'STT', key: 'STT', width: 10 },
             { header: 'Mã sản phẩm', key: 'productId', width: 20 },
             { header: 'Tên sản phẩm', key: 'productName', width: 30 },
             { header: 'Mã vạch', key: 'barcode', width: 20 },
@@ -130,57 +121,9 @@ export default function ProductTable() {
             { header: 'Giá bán', key: 'price', width: 15 },
             { header: 'Ngày hết hạn', key: 'expiryDate', width: 20 },
         ];
-        worksheet.columns = headers;
-
-        const headerRow = worksheet.getRow(1);
-        headerRow.eachCell((cell) => {
-            cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
-            cell.alignment = { vertical: 'middle', horizontal: 'center' };
-            cell.fill = {
-                type: 'pattern',
-                pattern: 'solid',
-                fgColor: { argb: 'FF4CAF50' },
-            };
-            cell.border = {
-                top: { style: 'thin' },
-                left: { style: 'thin' },
-                bottom: { style: 'thin' },
-                right: { style: 'thin' },
-            };
-        });
-
-        response.forEach((product, index) => {
-            worksheet.addRow({
-                stt: index + 1,
-                productId: product.productId,
-                productName: product.productName,
-                barcode: product.barcode,
-                unit: product.unit,
-                inventoryCount: product.inventoryCount,
-                cost: product.cost,
-                price: product.price,
-                expiryDate: product.expiryDate,
-            });
-        });
-
-        worksheet.eachRow((row, rowNumber) => {
-            if (rowNumber > 1) {
-                row.eachCell((cell) => {
-                    cell.border = {
-                        top: { style: 'thin' },
-                        left: { style: 'thin' },
-                        bottom: { style: 'thin' },
-                        right: { style: 'thin' },
-                    };
-                    cell.alignment = { vertical: 'middle', horizontal: 'left' };
-                });
-                row.height = 20;
-            }
-        });
-
-        const buffer = await workbook.xlsx.writeBuffer();
-        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        saveAs(blob, 'DanhSachSanPham.xlsx');
+        
+        if(!response) return;
+        handleExport(columns, response, "DanhSachSanPham");
     };
 
     return (

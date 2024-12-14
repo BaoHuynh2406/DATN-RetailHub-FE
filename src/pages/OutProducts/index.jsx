@@ -1,15 +1,12 @@
-import { useState, useEffect } from 'react';
-import { Box, Button, Container, Divider} from '@mui/material';
+import { Box, Button, Container, Divider } from '@mui/material';
 import TableOfContent from './table';
-import BoLoc from './bolocc'
+import BoLoc from './bolocc';
 import dayjs from 'dayjs';
-import weekOfYear from 'dayjs/plugin/weekOfYear';
-import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
-import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
 import ExplicitIcon from '@mui/icons-material/Explicit';
-dayjs.extend(weekOfYear);
-dayjs.extend(isSameOrAfter);
-dayjs.extend(isSameOrBefore);
+import ExcelJS from 'exceljs'; // Import thư viện exceljs
+import { useSelector } from 'react-redux'; // Để lấy dữ liệu từ Redux
+import { useState } from 'react';
+import handleExport from '@/hooks/useExportExcel';
 
 export default function Invoice() {
     const [invoiceDays, setInvoiceDays] = useState(1);
@@ -17,8 +14,9 @@ export default function Invoice() {
     const [sort, setSort] = useState('des');
     const [startDate, setStartDate] = useState(dayjs());
     const [endDate, setEndDate] = useState(dayjs());
-  
-    const [invoiceDataMini, setInvoiceDataMini] = useState([]);
+
+    // Lấy dữ liệu từ Redux
+    const invoiceData = useSelector((state) => state.outProduct?.data?.data || []);
 
     const handleChange = (event) => {
         setInvoiceDays(event.target.value);
@@ -42,6 +40,20 @@ export default function Invoice() {
         setEndDate(end);
     };
 
+    // Hàm xuất Excel sử dụng ExcelJS
+    const handleExportExcel = async () => {
+        // Định nghĩa các cột
+        const columns = [
+            { header: 'STT', key: 'STT', width: 10 },
+            { header: 'Mã sản phẩm', key: 'productId', width: 15 },
+            { header: 'Tên sản phẩm', key: 'productName', width: 25 },
+            { header: 'Ảnh', key: 'image', width: 20 },
+            { header: 'Số lượng', key: 'quantitySold', width: 15 }
+        ];
+
+        if(!invoiceData) return;
+        handleExport(columns, invoiceData, "DanhSachSanPhamXuatKho");
+    };
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 2 }}>
@@ -63,9 +75,15 @@ export default function Invoice() {
 
             {/* Danh sách hóa đơn */}
             <Divider />
-            <TableOfContent  startDate={startDate} endDate={endDate} />
+            <TableOfContent startDate={startDate} endDate={endDate} />
 
-            <Button sx={{ marginY: "20px", fontSize: 10 }} variant="contained" startIcon={<ExplicitIcon />} >
+            {/* Nút xuất Excel */}
+            <Button
+                sx={{ marginY: "20px", fontSize: 10 }}
+                variant="contained"
+                startIcon={<ExplicitIcon />}
+                onClick={handleExportExcel}
+            >
                 Xuất Excel
             </Button>
         </Container>

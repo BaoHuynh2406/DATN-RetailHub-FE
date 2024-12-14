@@ -14,6 +14,7 @@ import {
     toggleActiveEmployeeAsync,
 } from '@/redux/Employee/employeeSlice';
 import ExplicitIcon from '@mui/icons-material/Explicit';
+import handleExport from '@/hooks/useExportExcel';
 
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
@@ -143,81 +144,19 @@ export default function EmployeeTable() {
     };
 
     const handleExportExcel = async () => {
-        if (!Array.isArray(employees) || employees.length === 0) {
-            notyf.error('Không có dữ liệu để xuất Excel.');
-            return;
-        }
-
-        // Tạo workbook và worksheet
-        const workbook = new ExcelJS.Workbook();
-        const worksheet = workbook.addWorksheet('Danh sách nhân viên');
-
-        // Định nghĩa tiêu đề cột (thêm STT vào đầu)
-        const headers = [
-            { header: 'STT', key: 'stt', width: 10 }, // Thêm cột STT
-            ...columns.map((col) => ({
-                header: col.headerName,
-                key: col.field,
-                width: col.width ? col.width / 10 : 15, // Tùy chỉnh độ rộng cột
-            })),
+        const columns = [
+            { header: 'STT', key: 'STT', width: 10 },
+            { header: 'Mã nhân viên', key: 'userId', width: 15 },
+            { header: 'Họ và tên', key: 'fullName', width: 25 },
+            { header: 'Số điện thoại', key: 'phoneNumber', width: 20 },
+            { header: 'Chức vụ', key: 'role', width: 15 },
+            { header: 'Ngày vào làm', key: 'startDate', width: 18 },
+            { header: 'Trạng thái', key: 'isActive', width: 20 },
+            ,
         ];
-        worksheet.columns = headers;
 
-        // Styling cho tiêu đề cột từ A -> G
-        const headerRow = worksheet.getRow(1);
-        headerRow.eachCell((cell, colNumber) => {
-            if (colNumber >= 1 && colNumber <= headers.length) {
-                // Áp dụng styling cho tất cả cột
-                cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
-                cell.alignment = { vertical: 'middle', horizontal: 'center' };
-                cell.fill = {
-                    type: 'pattern',
-                    pattern: 'solid',
-                    fgColor: { argb: 'FF007BFF' }, // Màu nền xanh dương
-                };
-                cell.border = {
-                    bottom: { style: 'thin', color: { argb: 'FF000000' } },
-                };
-            }
-        });
-
-        // Thêm dữ liệu vào bảng (bao gồm STT và trạng thái)
-        employees.forEach((employee, index) => {
-            const rowData = {
-                stt: index + 1, // STT bắt đầu từ 1
-            };
-            columns.forEach((col) => {
-                // Kiểm tra và thay đổi trạng thái nếu là cột trạng thái
-                if (col.field === 'isActive') {
-                    rowData[col.field] = employee[col.field] ? 'Hoạt động' : 'Không hoạt động';
-                } else {
-                    rowData[col.field] = employee[col.field] || ''; // Lấy dữ liệu từ field
-                }
-            });
-            worksheet.addRow(rowData);
-        });
-
-        // Tùy chỉnh viền và căn giữa
-        worksheet.eachRow((row, rowNumber) => {
-            row.eachCell((cell) => {
-                cell.border = {
-                    top: { style: 'thin' },
-                    left: { style: 'thin' },
-                    bottom: { style: 'thin' },
-                    right: { style: 'thin' },
-                };
-                cell.alignment = { vertical: 'middle', horizontal: 'left' };
-                if (rowNumber === 1) {
-                    cell.alignment = { vertical: 'middle', horizontal: 'center' };
-                }
-            });
-            row.height = 20; // Đặt chiều cao hàng
-        });
-
-        // Xuất file Excel
-        const buffer = await workbook.xlsx.writeBuffer();
-        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        saveAs(blob, 'DanhSachNhanVien.xlsx');
+        if (!employees) return;
+        handleExport(columns, employees, 'DanhSachNhanVien');
     };
 
     const [searchParams, setSearchParams] = useSearchParams();
