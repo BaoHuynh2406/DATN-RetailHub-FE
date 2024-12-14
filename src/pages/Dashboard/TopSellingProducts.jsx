@@ -18,7 +18,20 @@ function TopSellingProducts() {
                 },
             });
 
-            setTopSellingProducts(response?.data?.data || []);
+            const products = response?.data?.data || [];
+            
+            // Tính tổng số lượng bán được
+            const totalQuantitySold = products.reduce((total, product) => total + product.quantitySold, 0);
+
+            // Tính phần trăm cho từng sản phẩm và cập nhật
+            for (let i = 0; i < products.length; i++) {
+                products[i].percent = (products[i].quantitySold / totalQuantitySold) * 100;
+            }
+
+            // Sắp xếp sản phẩm theo số lượng bán được (từ cao đến thấp)
+            products.sort((a, b) => b.quantitySold - a.quantitySold);
+
+            setTopSellingProducts(products);
         } catch (error) {
             setError('Không thể tải dữ liệu sản phẩm');
         } finally {
@@ -42,7 +55,7 @@ function TopSellingProducts() {
 
     return (
         <Paper sx={{ p: 3, flex: '1 1 30%' }}>
-            <Typography variant="h6" sx={{ color: '#34495E', paddingBottom:'20px' }}>
+            <Typography variant="h6" sx={{ color: '#34495E', paddingBottom: '20px' }}>
                 Top mặt hàng bán chạy
             </Typography>
 
@@ -57,15 +70,15 @@ function TopSellingProducts() {
                         <Box flexGrow={1} height={8} bgcolor="#e0e0e0" borderRadius={4}>
                             <Box
                                 sx={{
-                                    width: `${(product.quantitySold / 1000) * 100}%`, // Tính tỷ lệ phần trăm dựa trên số lượng bán được
+                                    width: `${product.percent}%`, // Tính tỷ lệ phần trăm
                                     height: '100%',
-                                    bgcolor: `hsl(${(product.quantitySold / 1000) * 120}, 100%, 50%)`, // Tạo màu thanh dựa trên tỷ lệ phần trăm
+                                    bgcolor: `hsl(${(product.percent * 120) / 100}, 100%, 50%)`, // Tạo màu thanh dựa trên tỷ lệ phần trăm
                                     borderRadius: 4,
                                 }}
                             />
                         </Box>
                         <Typography variant="body2" sx={{ ml: 1 }}>
-                            {product.quantitySold} sản phẩm
+                            {product.percent.toFixed(2)}%
                         </Typography>
                     </Box>
                 </Box>
