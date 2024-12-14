@@ -12,6 +12,7 @@ import invoiceSlice from './Invoice/invoiceSlice.js';
 import receivingSlice from './Receiving/ReceivingSlice.js';
 import discountSlice from './Discount/discountSlice.js';
 
+import outProductSlice from './Product/outProductSlice.js'
 export const store = configureStore({
     reducer: {
         menu: menuReducer,
@@ -25,6 +26,7 @@ export const store = configureStore({
         invoice: invoiceSlice,
         receiving: receivingSlice,
         discount: discountSlice,
+        outProduct:outProductSlice
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });

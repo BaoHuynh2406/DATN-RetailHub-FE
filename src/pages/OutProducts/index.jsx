@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Container, Divider } from '@mui/material';
-import TableOfContent from '../Invoice/table';
-import BoLoc from './boloc'
+import TableOfContent from './table';
+import BoLoc from './bolocc'
 import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
@@ -17,12 +17,7 @@ export default function Invoice() {
     const [sort, setSort] = useState('des');
     const [startDate, setStartDate] = useState(dayjs());
     const [endDate, setEndDate] = useState(dayjs());
-    const [checkboxValues, setCheckboxValues] = useState({
-        PENDING: false,
-        PAID: true, //boolean
-        RETURN: false, //boolean`
-    });
-
+  
     const [invoiceDataMini, setInvoiceDataMini] = useState([]);
 
     const handleChange = (event) => {
@@ -47,20 +42,6 @@ export default function Invoice() {
         setEndDate(end);
     };
 
-    const handleCheckboxChange = (event) => {
-        const { name, checked } = event.target;
-
-        const isAtLeastOneChecked = Object.values(checkboxValues).filter((val) => val).length > 1;
-
-        if (!isAtLeastOneChecked && !checked) {
-            return;
-        }
-
-        setCheckboxValues((prevValues) => ({
-            ...prevValues,
-            [name]: checked,
-        }));
-    };
 
     return (
         <Container maxWidth="xl" sx={{ paddingTop: 2 }}>
@@ -71,8 +52,6 @@ export default function Invoice() {
                     setStartDate={setStartDate}
                     endDate={endDate}
                     setEndDate={setEndDate}
-                    checkboxValues={checkboxValues}
-                    handleCheckboxChange={handleCheckboxChange}
                     handleChange={handleChange}
                     viewMode={viewMode}
                     setViewMode={setViewMode}
@@ -85,7 +64,7 @@ export default function Invoice() {
 
             {/* Danh sách hóa đơn */}
             <Divider />
-            <TableOfContent startDate={startDate} endDate={endDate} checkboxValues={checkboxValues} sort={sort} />
+            <TableOfContent startDate={startDate} endDate={endDate}/>
         </Container>
     );
 }
