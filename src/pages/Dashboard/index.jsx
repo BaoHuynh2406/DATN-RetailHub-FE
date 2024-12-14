@@ -74,8 +74,27 @@ function Dashboard() {
                         </BarChart>
                     </ResponsiveContainer>
                 </Paper>
-
                 <TopSellingProducts /> {/* Sử dụng component TopSellingProducts */}
+            </Box>
+
+            <Box marginY={4} display="flex" flexWrap="wrap" gap={3}>
+                <TopSellingProducts /> {/* Sử dụng component TopSellingProducts */}
+                <Paper sx={{ p: 3, flex: '1 1 65%', display: 'flex', flexDirection: 'column' }}>
+                    <Typography variant="h6" mb={2} sx={{ color: '#34495E' }}>
+                        Sản phẩm sắp hết hàng
+                    </Typography>
+                    <ResponsiveContainer width="100%" height={300}>
+                        <BarChart data={salesData}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <Bar dataKey="doanhThu" fill="#8884d8" name="Doanh thu" />
+                            <Bar dataKey="lợiNhuận" fill="#82ca9d" name="Lợi nhuận" />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </Paper>
             </Box>
         </Box>
     );
