@@ -64,6 +64,11 @@ function Dashboard() {
         fontSize: '1.2rem',
     });
 
+    // Hàm định dạng tiền tệ
+    const formatCurrency = (amount) => {
+        return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+    };
+
     return (
         <Box p={3} bgcolor="#f4f6f8">
             <Box display="flex" flexWrap="wrap" gap={3} mb={4}>
@@ -78,22 +83,23 @@ function Dashboard() {
                         Biểu đồ doanh thu và lợi nhuận theo tháng
                     </Typography>
                     <ResponsiveContainer width="100%" height={350}>
-                    <BarChart data={salesData} barCategoryGap="10%">
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis
-                            interval="preserveStartEnd"
-                            tickFormatter={(value) => value.toLocaleString()}
-                        />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="doanhThu" fill="#8884d8" name="Doanh thu" />
-                        <Bar dataKey="loiNhuan" fill="#82ca9d" name="Lợi nhuận" />
-                    </BarChart>
-                </ResponsiveContainer>
-
-
-
+                        <BarChart data={salesData} barCategoryGap="10%"
+                        margin={{ left: 50, right: 30, top: 20, bottom: 20 }}  // Thêm margin cho toàn bộ biểu đồ
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis
+                               interval="preserveStartEnd"
+                               tickFormatter={(value) => formatCurrency(value)}
+                               style={{ paddingLeft: '10px' }}  // Thêm khoảng cách cho trục Y
+                               tick={{ fontSize: 12 }}  // Điều chỉnh kích thước font
+                           />
+                            <Tooltip formatter={(value) => formatCurrency(value)} /> {/* Định dạng tiền tệ trong Tooltip */}
+                            <Legend />
+                            <Bar dataKey="doanhThu" fill="#8884d8" name="Doanh thu" />
+                            <Bar dataKey="loiNhuan" fill="#82ca9d" name="Lợi nhuận" />
+                        </BarChart>
+                    </ResponsiveContainer>
                 </Paper>
 
                 <TopSellingProducts /> {/* Sử dụng component TopSellingProducts */}
