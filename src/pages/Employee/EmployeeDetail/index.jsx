@@ -11,18 +11,13 @@ import {
     Switch,
     Tooltip,
     CircularProgress,
+    MenuItem,
 } from '@mui/material';
 
 //Icons
-import EmailIcon from '@mui/icons-material/Email';
-import PersonIcon from '@mui/icons-material/Person';
-import PhoneIcon from '@mui/icons-material/Phone';
-import HomeIcon from '@mui/icons-material/Home';
+
 import BadgeIcon from '@mui/icons-material/Badge';
-import DateRangeIcon from '@mui/icons-material/DateRange';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
-import LockIcon from '@mui/icons-material/Lock';
-import CakeIcon from '@mui/icons-material/Cake';
 //End Icon
 
 import { useNavigate, useParams } from 'react-router-dom';
@@ -38,6 +33,7 @@ import {
     addEmployeeAsync,
     toggleActiveEmployeeAsync,
 } from '@/redux/Employee/employeeSlice';
+import { fetchAllRole } from '@/redux/Settings/SettingSlice';
 
 import { useImgBB } from '@/hooks/useImgBB';
 import { Notyf } from 'notyf';
@@ -58,6 +54,7 @@ const EmployeeDetails = () => {
     const dispatch = useDispatch();
     const { data, currentData, loading, error } = useSelector((state) => state.employeeNew);
     const userLogged = useSelector((state) => state.userCurrent);
+    const roles = useSelector((state) => state.settings.roles);
     const { handleUpload } = useImgBB();
     const [isLoading, setIsLoading] = useState(false);
     let { userId } = useParams();
@@ -129,9 +126,22 @@ const EmployeeDetails = () => {
         }
     }, [error]);
 
+    useEffect(() => {
+        dispatch(fetchAllRole());
+    }, []);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEmployee({ ...employee, [name]: value });
+
+        // Nếu tên trường là roleId, cập nhật vào role.roleId
+        if (name === 'roleId') {
+            setEmployee({
+                ...employee,
+                role: { ...employee.role, roleId: value },
+            });
+        } else {
+            setEmployee({ ...employee, [name]: value });
+        }
     };
 
     const handleImageUpload = (e) => {
@@ -184,7 +194,7 @@ const EmployeeDetails = () => {
         }
 
         setIsLoading(true);
-        let data = { ...employee, roleId: 'ADMIN' };
+        let data = { ...employee, roleId: employee.role.roleId };
 
         if (selectedFile) {
             try {
@@ -274,8 +284,6 @@ const EmployeeDetails = () => {
             errors.password = 'Mật khẩu phải có ít nhất 6 ký tự';
         }
 
-       
-
         // Kiểm tra Ngày sinh (Nhân viên phải từ 18 tuổi trở lên và trường này là bắt buộc)
         if (!employee.birthday) {
             errors.birthday = 'Ngày sinh là bắt buộc';
@@ -286,7 +294,6 @@ const EmployeeDetails = () => {
             }
         }
 
-      
         // Kiểm tra Địa chỉ
         if (!employee.address) {
             errors.address = 'Địa chỉ là bắt buộc';
@@ -447,7 +454,9 @@ const EmployeeDetails = () => {
                             error={!!errors.password}
                             helperText={errors.password}
                         />
+
                         <TextField
+                            select
                             label="Vai trò"
                             name="roleId"
                             value={employee.role.roleId || ''}
@@ -455,14 +464,14 @@ const EmployeeDetails = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <BadgeIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
-                        />
+                        >
+                            {roles.map((i) => (
+                                <MenuItem key={i.roleId} value={i.roleId}>
+                                    {i.roleDescription}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+
                         <TextField
                             label="Ngày bắt đầu"
                             name="startDate"

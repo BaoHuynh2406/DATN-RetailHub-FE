@@ -75,6 +75,15 @@ axiosSecure.interceptors.response.use(
             }
         }
 
+        // Xử lý mã lỗi 403 (Forbidden)
+        if (error.response && error.response.status === 403) {
+            const errorMessage = error.response.data.message || 'Bạn không có quyền truy cập';
+            console.log(errorMessage);
+            // Chuyển hướng đến trang đăng nhập
+            window.location.href = '/403';
+            return Promise.reject('Không có quyền truy cập');
+        }
+
         return Promise.reject(error);
     },
 );

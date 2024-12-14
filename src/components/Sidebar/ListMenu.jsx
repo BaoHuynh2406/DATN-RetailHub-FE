@@ -21,16 +21,19 @@ export const sidebarItems = [
         sidebarProps: { displayText: 'Trang tổng quan', icon: <SpaceDashboardRoundedIcon /> },
         path: '/dashboard',
         state: 'dashboard',
+        role: 'ALL',
     },
     {
         sidebarProps: { displayText: 'Nhân viên', icon: <PeopleRoundedIcon /> },
         path: '/employee/EmployeeList',
         state: 'employee',
+        role: 'ADMIN',
     },
     {
         sidebarProps: { displayText: 'Khách hàng', icon: <ContactsRoundedIcon /> },
         path: '/customer',
         state: 'customer',
+        role: 'ADMIN',
         child: [
             {
                 sidebarProps: { displayText: 'Danh sách', icon: <BallotRoundedIcon /> },
@@ -48,6 +51,7 @@ export const sidebarItems = [
         sidebarProps: { displayText: 'Quản lý kho', icon: <Inventory2RoundedIcon /> },
         path: '/product',
         state: 'product',
+        role: 'ALL',
         child: [
             {
                 sidebarProps: { displayText: 'Danh sách hàng hóa', icon: <BallotRoundedIcon /> },
@@ -75,6 +79,7 @@ export const sidebarItems = [
         sidebarProps: { displayText: 'Bán hàng', icon: <ShoppingCartRoundedIcon /> },
         path: '/sales',
         state: 'sales',
+        role: 'ADMIN',
         child: [
             {
                 sidebarProps: { displayText: 'Đơn hàng', icon: <ReceiptLongRoundedIcon /> },

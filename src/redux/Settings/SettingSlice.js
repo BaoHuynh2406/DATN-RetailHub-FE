@@ -83,11 +83,18 @@ export const fetchSettingsfillPaymentAsync = createAsyncThunk('settings/fetchSet
     return response.data.data;
 });
 
+// Fetch taxes
+export const fetchAllRole = createAsyncThunk('settings/fetchAllRole', async () => {
+    const response = await axiosSecure.get('/api/role/getAll');
+    return response.data.data;
+});
+
 const settingsSlice = createSlice({
     name: 'settings',
     initialState: {
         categories: [],
         taxes: [],
+        roles: [],
         paymentMethods: [],
         loading: false,
         error: null,
@@ -178,15 +185,15 @@ const settingsSlice = createSlice({
                 state.taxes = state.taxes.filter((tax) => tax.taxId !== action.payload); // Xóa thuế
             })
             // Fetch Payment
-            .addCase(fetchSettingsfillPaymentAsync.pending, (state) => {
+            .addCase(fetchAllRole.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchSettingsfillPaymentAsync.fulfilled, (state, action) => {
+            .addCase(fetchAllRole.fulfilled, (state, action) => {
                 state.loading = false;
-                state.paymentMethods = action.payload; // Gán dữ liệu trả về vào paymentMethods
+                state.roles = action.payload;
             })
-            .addCase(fetchSettingsfillPaymentAsync.rejected, (state, action) => {
+            .addCase(fetchAllRole.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message; // Xử lý lỗi
             });

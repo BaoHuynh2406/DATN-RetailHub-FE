@@ -23,6 +23,11 @@ const publicRouter = [
         layout: BlankLayout,
     },
     {
+        path: '/403',
+        element: lazy(() => import('@/pages/ErrorCode500/ErrorCode403.jsx')),
+        layout: BlankLayout,
+    },
+    {
         path: '*',
         element: lazy(() => import('@/pages/PageNotFound')),
         layout: BlankLayout,

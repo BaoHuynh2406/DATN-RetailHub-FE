@@ -13,6 +13,7 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import { useSelector } from 'react-redux';
 
 import { sidebarItems } from './ListMenu.jsx';
 
@@ -68,6 +69,22 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 }));
 
 const Sidebar = () => {
+    const { data } = useSelector((state) => state.userCurrent);
+    const [listItem, setListItem] = React.useState(sidebarItems);
+
+    React.useEffect(() => {
+        if (data) {
+            if (data.role.roleId === 'SC') {
+                // Nếu là 'SC', chỉ giữ lại những mục có role là 'ALL'
+                const filteredItems = sidebarItems.filter((item) => item.role === 'ALL');
+                setListItem(filteredItems);
+            } else {
+                // Nếu không phải 'SC', lấy toàn bộ các mục
+                setListItem(sidebarItems);
+            }
+        }
+    }, [data]);
+
     const [open, setOpen] = React.useState(() => {
         const savedOpen = localStorage.getItem('sidebarOpen');
         return savedOpen !== null ? JSON.parse(savedOpen) : true;
@@ -141,7 +158,7 @@ const Sidebar = () => {
 
                 <Divider sx={{ backgroundColor: 'gray' }} />
                 <List>
-                    {sidebarItems.map((item) =>
+                    {listItem.map((item) =>
                         item.child ? (
                             <SidebarItemCollapse
                                 item={item}
