@@ -10,6 +10,7 @@ import InvoiceCard from './InvoiceCard';
 import CustomerCard from './Customer';
 import RevenueCard from './RevenueCard';
 import TopSellingProducts from './TopSellingProducts'; // Import component TopSellingProducts
+import SapHetHangCard from './SapHetHangCard.jsx';
 import { Margin, Padding } from '@mui/icons-material';
 
 function Dashboard() {
@@ -28,18 +29,18 @@ function Dashboard() {
             try {
                 const year = 2024; // Ví dụ bạn muốn lấy dữ liệu cho năm 2024
                 const response = await axiosSecure.get(`/api/thong-ke/revenue-by-year?year=${year}`);
-                
+
                 if (response?.data?.data) {
                     // Chuyển đổi dữ liệu trả về thành định dạng phù hợp với biểu đồ
-                    const formattedData = response.data.data.map(item => ({
+                    const formattedData = response.data.data.map((item) => ({
                         name: `Tháng ${item.month}`,
                         doanhThu: item.revenue,
-                        loiNhuan: item.profit
+                        loiNhuan: item.profit,
                     }));
                     setSalesData(formattedData);
                 }
             } catch (error) {
-                console.error("Lỗi khi gọi API:", error);
+                console.error('Lỗi khi gọi API:', error);
             }
         };
 
@@ -77,32 +78,39 @@ function Dashboard() {
                 <RevenueCard />
             </Box>
 
-            <Box display="flex" flexWrap="wrap" gap={3}>
+            <Box display="flex" flexWrap="wrap" marginBottom={3} gap={3}>
                 <Paper sx={{ p: 3, flex: '1 1 65%', display: 'flex', flexDirection: 'column' }}>
                     <Typography variant="h6" mb={2} sx={{ color: '#34495E' }}>
                         Biểu đồ doanh thu và lợi nhuận theo tháng
                     </Typography>
                     <ResponsiveContainer width="100%" height={350}>
-                        <BarChart data={salesData} barCategoryGap="10%"
-                        margin={{ left: 50, right: 30, top: 20, bottom: 20 }}  // Thêm margin cho toàn bộ biểu đồ
+                        <BarChart
+                            data={salesData}
+                            barCategoryGap="10%"
+                            margin={{ left: 50, right: 30, top: 20, bottom: 20 }} // Thêm margin cho toàn bộ biểu đồ
                         >
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis
-                               interval="preserveStartEnd"
-                               tickFormatter={(value) => formatCurrency(value)}
-                               style={{ paddingLeft: '10px' }}  // Thêm khoảng cách cho trục Y
-                               tick={{ fontSize: 12 }}  // Điều chỉnh kích thước font
-                           />
-                            <Tooltip formatter={(value) => formatCurrency(value)} /> {/* Định dạng tiền tệ trong Tooltip */}
+                                interval="preserveStartEnd"
+                                tickFormatter={(value) => formatCurrency(value)}
+                                style={{ paddingLeft: '10px' }} // Thêm khoảng cách cho trục Y
+                                tick={{ fontSize: 12 }} // Điều chỉnh kích thước font
+                            />
+                            <Tooltip formatter={(value) => formatCurrency(value)} />{' '}
+                            {/* Định dạng tiền tệ trong Tooltip */}
                             <Legend />
                             <Bar dataKey="doanhThu" fill="#8884d8" name="Doanh thu" />
                             <Bar dataKey="loiNhuan" fill="#82ca9d" name="Lợi nhuận" />
                         </BarChart>
                     </ResponsiveContainer>
                 </Paper>
-
                 <TopSellingProducts /> {/* Sử dụng component TopSellingProducts */}
+            </Box>
+
+            <Box display="flex" flexWrap="wrap" gap={3}>
+                <SapHetHangCard />
+                <Paper sx={{ p: 3, flex: '1 1 65%', display: 'flex', flexDirection: 'column' }}></Paper>
             </Box>
         </Box>
     );
