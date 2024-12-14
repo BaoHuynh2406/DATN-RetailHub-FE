@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Box, Container, Divider } from '@mui/material';
+import { Box, Button, Container, Divider} from '@mui/material';
 import TableOfContent from './table';
 import BoLoc from './bolocc'
 import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
-
+import ExplicitIcon from '@mui/icons-material/Explicit';
 dayjs.extend(weekOfYear);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
@@ -59,12 +59,15 @@ export default function Invoice() {
                     sort={sort}
                     setSort={setSort}
                 />
-           
             </Box>
 
             {/* Danh sách hóa đơn */}
             <Divider />
-            <TableOfContent startDate={startDate} endDate={endDate}/>
+            <TableOfContent  startDate={startDate} endDate={endDate} />
+
+            <Button sx={{ marginY: "20px", fontSize: 10 }} variant="contained" startIcon={<ExplicitIcon />} >
+                Xuất Excel
+            </Button>
         </Container>
     );
 }

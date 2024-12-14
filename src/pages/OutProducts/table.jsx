@@ -17,9 +17,25 @@ function Table({ startDate, endDate}) {
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedOutProduct, setSelectedOutProduct] = useState(null);
     const columns = [
-        { field: 'productId', headerName: 'Mã sản phẩm', width: 150 },
-        { field: 'productName', headerName: 'Tên sản phẩm', width: 200 },
-        { field: 'quantitySold', headerName: 'Số lượng', width: 150 }
+        { field: 'productId', headerName: 'Mã sản phẩm', width: 200 },
+        {
+            field: 'image',
+            headerName: 'Ảnh',
+            headerAlign: 'center',
+            width: 250,
+            renderCell: (params) => (
+                <Box display="flex" justifyContent="center" alignItems="center" height="100%">
+                    <img
+                        src={params.row.image}
+                        alt="Product"
+                        style={{ width: '100px', height: '50px', objectFit: 'cover' }}
+                    />
+                </Box>
+            ),
+        },
+        { field: 'productName', headerName: 'Tên sản phẩm', width: 300 },
+
+        { field: 'quantitySold', headerName: 'Số lượng', width: 150 },
     ];
 
        useEffect(() => {
