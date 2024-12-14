@@ -125,8 +125,8 @@ const privateRouter = [
                 loader: () => redirect('/sales/sales'), // Chuyển hướng đến trang danh sách sản phẩm
             },
             {
-                path: 'sales',
-                element: lazy(() => import('@/pages/sales')), // Lazy load trang danh sách sản phẩm
+                path: 'Invoice',
+                element: lazy(() => import('@/pages/Invoice')), // Lazy load trang danh sách sản phẩm
                 layout: DefaultLayout,
             },
             {
