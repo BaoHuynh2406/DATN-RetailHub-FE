@@ -48,11 +48,12 @@ export default function Invoice() {
             { header: 'Mã sản phẩm', key: 'productId', width: 15 },
             { header: 'Tên sản phẩm', key: 'productName', width: 25 },
             { header: 'Ảnh', key: 'image', width: 20 },
-            { header: 'Số lượng', key: 'quantitySold', width: 15 }
+            { header: 'Đơn vị tính', key: 'unit', width: 15 },
+            { header: 'Số lượng', key: 'quantitySold', width: 15 },
         ];
 
-        if(!invoiceData) return;
-        handleExport(columns, invoiceData, "DanhSachSanPhamXuatKho");
+        if (!invoiceData) return;
+        handleExport(columns, invoiceData, 'DanhSachSanPhamXuatKho');
     };
 
     return (
@@ -79,7 +80,7 @@ export default function Invoice() {
 
             {/* Nút xuất Excel */}
             <Button
-                sx={{ marginY: "20px", fontSize: 10 }}
+                sx={{ marginY: '20px', fontSize: 10 }}
                 variant="contained"
                 startIcon={<ExplicitIcon />}
                 onClick={handleExportExcel}

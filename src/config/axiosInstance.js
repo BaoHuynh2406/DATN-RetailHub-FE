@@ -2,6 +2,17 @@ import axios from 'axios';
 
 const baseURL = import.meta.env.VITE_API_URL;
 
+import 'notyf/notyf.min.css';
+import { Notyf } from 'notyf';
+
+const notyf = new Notyf({
+    position: {
+        x: 'right',
+        y: 'top',
+    },
+    dismissible: true,
+});
+
 export const axiosSecure = axios.create({
     baseURL: baseURL,
     timeout: 10000,
@@ -34,16 +45,9 @@ axiosSecure.interceptors.response.use(
         const originalRequest = error.config;
 
         if (!error.response) {
-            // Hiển thị hộp thoại xác nhận
-            const userConfirmed = confirm('Có lỗi khi kết nối đến server!\nBạn có muốn thử lại không?');
-
-            if (userConfirmed) {
-                // Thử lại request
-                return axiosSecure(originalRequest); // Gọi lại request
-            } else {
-                // Chuyển đến trang lỗi
-                window.location.href = '/error-code-500';
-            }
+            // Chuyển đến trang lỗi
+            window.location.href = '/error-code-500';
+            notyf.error('Lỗi kết nối đến server');
 
             return Promise.reject('Lỗi mạng');
         }
@@ -68,7 +72,7 @@ axiosSecure.interceptors.response.use(
             } catch (err) {
                 // Nếu không thể làm mới token, yêu cầu người dùng đăng nhập lại
                 localStorage.removeItem('token');
-                alert('Phiên đăng nhập hết hạn. Vui lòng đăng nhập lại.');
+                notyf.error('Hết hạn đăng nhập!');
                 // Chuyển hướng người dùng đến trang đăng nhập
                 window.location.href = '/login';
                 return Promise.reject('Hết hạn đăng nhập');

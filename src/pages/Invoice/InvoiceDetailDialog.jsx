@@ -201,7 +201,9 @@ function InvoiceDetailDialog({ open, onClose, invoiceData }) {
                     }}
                 >
                     <Divider sx={{ marginY: 2 }} />
-
+                    <Typography>
+                        <strong>RetailHub</strong>
+                    </Typography>
                     <Typography>
                         <strong>Email:</strong> mts.studio.2019@gmail.com
                     </Typography>

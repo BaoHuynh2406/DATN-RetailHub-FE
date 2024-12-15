@@ -34,8 +34,8 @@ function Table({ startDate, endDate }) {
             ),
         },
         { field: 'productName', headerName: 'Tên sản phẩm', width: 300 },
-
-        { field: 'quantitySold', headerName: 'Số lượng', width: 150 },
+        { field: 'unit', headerName: 'Đơn vị tính', width: 150 },
+        { field: 'quantitySold', headerName: 'Số lượng bán', width: 150 },
     ];
 
     useEffect(() => {

@@ -37,6 +37,7 @@ function HetHang() {
                     sx={{
                         height: '400px',
                         overflow: 'auto',
+                        width: '-webkit-fill-available',
                     }}
                 >
                     {loading ? (
