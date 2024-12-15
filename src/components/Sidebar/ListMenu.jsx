@@ -93,9 +93,4 @@ export const sidebarItems = [
             },
         ],
     },
-    {
-        sidebarProps: { displayText: 'Test', icon: <BugReportRoundedIcon /> },
-        path: '/test',
-        state: 'test',
-    },
 ];
