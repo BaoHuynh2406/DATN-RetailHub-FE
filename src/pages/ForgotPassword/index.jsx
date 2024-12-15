@@ -52,6 +52,11 @@ export default function ResetPassword() {
             return;
         }
 
+        if(!otp) {
+            alert("Mã OTP không chính xác vui lòng nhập lại !");
+            return;
+        }
+
         if (newPassword !== confirmPassword) {
             alert("Mật khẩu xác nhận không khớp!");
             return;
