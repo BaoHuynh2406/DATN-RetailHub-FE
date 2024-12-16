@@ -1,0 +1,1 @@
+import{r,i as t,j as a}from"./index-fCbYz-6P.js";var e={},l=t;Object.defineProperty(e,"__esModule",{value:!0});var u=e.default=void 0,o=l(r()),i=a;u=e.default=(0,o.default)((0,i.jsx)("path",{d:"M7 8V5l-7 7 7 7v-3l-4-4zm6 1V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11"}),"ReplyAll");export{u as d};

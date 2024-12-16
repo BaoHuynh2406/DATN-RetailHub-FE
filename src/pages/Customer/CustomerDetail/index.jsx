@@ -54,9 +54,50 @@ const CustomerDetails = () => {
     // Cấu hình các cột cho bảng
     const columns = useMemo(
         () => [
-            { field: 'historyId', headerName: 'ID Lịch Sử', width: 150 },
-            { field: 'customerId', headerName: 'Mã Khách Hàng', width: 150 },
-            { field: 'points', headerName: 'Điểm', width: 150 },
+            {
+                field: 'user',
+                headerName: 'Nhân viên',
+                width: 150,
+                renderCell: (params) => {
+                    const userId = params.row.userId;
+                    const userName = params.row.userName;
+                    return (
+                        <span>
+                            {userName} ({userId})
+                        </span>
+                    );
+                },
+            },
+            {
+                field: 'points',
+                headerName: 'Điểm',
+                width: 150,
+                renderCell: (params) => {
+                    const points = params.row.points;
+                    const color = points >= 0 ? 'green' : 'red';
+                    const prefix = points >= 0 ? '+' : ''; // Thêm dấu "+" nếu điểm >= 0
+                    return (
+                        <span style={{ color }}>
+                            {prefix}
+                            {points.toLocaleString() || 0}
+                        </span>
+                    );
+                },
+            },
+            {
+                field: 'transactionType',
+                headerName: 'Loại Giao Dịch',
+                width: 200,
+                renderCell: (params) => {
+                    const points = params.row.points;
+                    const isAccumulate = points >= 0;
+                    return (
+                        <span style={{ color: isAccumulate ? 'green' : 'red' }}>
+                            {isAccumulate ? 'Tích điểm' : 'Đổi điểm'}
+                        </span>
+                    );
+                },
+            },
             { field: 'description', headerName: 'Mô Tả', width: 300 },
             {
                 field: 'transactionDate',
@@ -349,7 +390,7 @@ const CustomerDetails = () => {
             {customerId !== 'create' && (
                 <Box marginTop={5}>
                     <Typography variant="h5" fontWeight="bold" gutterBottom>
-                        Lịch Sử Tích Điểm
+                        Lịch Sử Đổi/Tích Điểm
                     </Typography>
                     <TablePagination
                         columns={columns} // Cấu hình cột

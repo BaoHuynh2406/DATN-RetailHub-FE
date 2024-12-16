@@ -21,14 +21,7 @@ export default function CustomerTable() {
             { field: 'fullName', headerName: 'Họ và tên', width: 210 },
             { field: 'phoneNumber', headerName: 'Số điện thoại', width: 170 },
             { field: 'points', headerName: 'Điểm', width: 150 },
-            // {
-            //     field: 'isActive',
-            //     headerName: 'Trạng thái',
-            //     width: 120,
-            //     renderCell: (params) => (
-            //         <Switch checked={params.value} onChange={() => handleToggleActive(params.row)} color="secondary" />
-            //     ),
-            // },
+            
             {
                 field: 'actions',
                 headerName: 'Công cụ',

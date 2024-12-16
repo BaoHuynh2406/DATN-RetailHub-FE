@@ -112,6 +112,25 @@ export const restoreProductAsync = createAsyncThunk(
     },
 );
 
+// Tìm kiếm
+export const seachProduct = createAsyncThunk(
+    'products/seachProduct',
+    async ({ keyword, page, size }, { rejectWithValue }) => {
+        try {
+            const response = await axiosSecure.get('/api/v2/product/search', {
+                params: {
+                    keyword: keyword,
+                    page: page,
+                    size: size,
+                },
+            });
+            return response.data.data;
+        } catch (error) {
+            return rejectWithValue(extractErrorMessage(error));
+        }
+    },
+);
+
 // Định nghĩa slice
 const productSlice = createSlice({
     name: 'products',
@@ -216,6 +235,18 @@ const productSlice = createSlice({
             })
             .addCase(restoreProductAsync.rejected, (state, action) => {
                 state.error = action.payload;
+            }) //Tìm kiếm sản phẩm
+            .addCase(seachProduct.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(seachProduct.fulfilled, (state, action) => {
+                state.data = action.payload;
+                state.loading = false;
+            })
+            .addCase(seachProduct.rejected, (state, action) => {
+                state.data = [];
+                state.loading = false;
             });
     },
 });

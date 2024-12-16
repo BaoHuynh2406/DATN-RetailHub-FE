@@ -64,7 +64,6 @@ axiosSecure.interceptors.response.use(
             // Chuyển đến trang lỗi
             window.location.href = '/error-code-500';
             notyf.error('Lỗi kết nối đến server');
-
             return Promise.reject('Lỗi mạng');
         }
         if (error.response && error.response.status === 401 && !originalRequest._retry) {
@@ -88,8 +87,7 @@ axiosSecure.interceptors.response.use(
             } catch (err) {
                 // Nếu không thể làm mới token, yêu cầu người dùng đăng nhập lại
                 localStorage.removeItem('token');
-                notyf.error('Hết hạn đăng nhập!');
-                // Chuyển hướng người dùng đến trang đăng nhập
+                notyf.error('Hết hạn đăng nhập');
                 window.location.href = '/login';
                 return Promise.reject('Hết hạn đăng nhập');
             }

@@ -256,7 +256,7 @@ export default function SignInSide() {
                         }}
                         color="secondary"
                     >
-                        Khôi phục mặc định
+                        Chạy local
                     </Button>
                     <Button onClick={handleSaveIp} color="primary">
                         Lưu

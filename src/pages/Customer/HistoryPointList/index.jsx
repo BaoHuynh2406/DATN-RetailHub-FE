@@ -25,18 +25,74 @@ export default function PointHistoryTable() {
     // Cấu hình các cột cho bảng
     const columns = useMemo(
         () => [
-            { field: 'historyId', headerName: 'ID Lịch Sử', width: 150 },
-            { field: 'customerId', headerName: 'Mã Khách Hàng', width: 150 },
-            { field: 'points', headerName: 'Điểm', width: 150 },
+            {
+                field: 'user',
+                headerName: 'Nhân viên',
+                width: 200,
+                renderCell: (params) => {
+                    const userId = params.row.userId;
+                    const userName = params.row.userName;
+                    return (
+                        <span>
+                            {userName} ({userId})
+                        </span>
+                    );
+                },
+            },
+            {
+                field: 'customer',
+                headerName: 'Khách hàng',
+                width: 200,
+                renderCell: (params) => {
+                    const customerId = params.row.customerId;
+                    const customerName = params.row.customerName;
+                    return (
+                        <span>
+                            {customerName} ({customerId})
+                        </span>
+                    );
+                },
+            },
+            {
+                field: 'transactionType',
+                headerName: 'Loại Giao Dịch',
+                width: 200,
+                renderCell: (params) => {
+                    const points = params.row.points;
+                    const isAccumulate = points >= 0;
+                    return (
+                        <span style={{ color: isAccumulate ? 'green' : 'red' }}>
+                            {isAccumulate ? 'Tích điểm' : 'Đổi điểm'}
+                        </span>
+                    );
+                },
+            },
+            {
+                field: 'points',
+                headerName: 'Điểm',
+                width: 150,
+                renderCell: (params) => {
+                    const points = params.row.points;
+                    const color = points >= 0 ? 'green' : 'red';
+                    const prefix = points >= 0 ? '+' : ''; // Thêm dấu "+" nếu điểm >= 0
+                    return (
+                        <span style={{ color }}>
+                            {prefix}
+                            {points.toLocaleString() || 0}
+                        </span>
+                    );
+                },
+            },
+
             { field: 'description', headerName: 'Mô Tả', width: 300 },
-            { 
-                field: 'transactionDate', 
-                headerName: 'Ngày Giao Dịch', 
+            {
+                field: 'transactionDate',
+                headerName: 'Ngày Giao Dịch',
                 width: 200,
                 renderCell: (params) => {
                     const date = new Date(params.row.transactionDate);
                     return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
-                }
+                },
             },
         ],
         [],
@@ -45,9 +101,7 @@ export default function PointHistoryTable() {
     return (
         <Container maxWidth="xl">
             <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom={3}>
-                
                 {/* Button để thêm lịch sử điểm nếu cần */}
-               
             </Box>
             <Box sx={{ height: 500, overflow: 'auto' }}>
                 {/* Kiểm tra và truyền dữ liệu vào TablePagination */}

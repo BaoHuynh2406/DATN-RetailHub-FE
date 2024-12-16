@@ -14,6 +14,8 @@ import {
 } from '@/redux/Product/ProductSlice';
 import handleExport from '@/hooks/useExportExcel';
 
+import Search from './search';
+
 export default function ProductTable() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -22,11 +24,29 @@ export default function ProductTable() {
     const [searchParams, setSearchParams] = useSearchParams();
     const columns = useMemo(
         () => [
-            { field: 'productId', headerName: 'Mã Sản phẩm', width: 150 },
+            { field: 'productId', headerName: 'ID', width: 100 },
             {
                 field: 'productName',
                 headerName: 'Tên sản phẩm',
-                width: 120,
+                width: 200,
+            },
+            {
+                field: 'image',
+                headerName: 'Hình ảnh',
+                width: 100,
+                renderCell: (params) => (
+                    <img
+                        src={params.row.image || 'https://via.placeholder.com/100'}
+                        alt={params.row.productName}
+                        style={{
+                            width: '50px',
+                            height: '50px',
+                            objectFit: 'cover',
+                            borderRadius: '4px',
+                            border: '1px solid #ddd',
+                        }}
+                    />
+                ),
             },
             {
                 field: 'category',
@@ -40,7 +60,37 @@ export default function ProductTable() {
             { field: 'inventoryCount', headerName: 'Tồn kho', width: 120 },
             { field: 'cost', headerName: 'Giá gốc', width: 120 },
             { field: 'price', headerName: 'Giá bán', width: 120 },
-            { field: 'expiryDate', headerName: 'Ngày hết hạn', width: 150 },
+            {
+                field: 'expiryDate',
+                headerName: 'Ngày Hết Hạn',
+                width: 200,
+                renderCell: (params) => {
+                    const expirationDate = new Date(params.row.expiryDate);
+                    const today = new Date();
+                    const diffTime = expirationDate - today;
+                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // Tính số ngày còn lại
+
+                    let color = 'green'; // Mặc định màu xanh (còn dài hạn)
+                    let fontWeight = 'normal'; // Mặc định chữ bình thường
+
+                    if (diffDays < 0) {
+                        // Đã hết hạn
+                        color = 'red';
+                        fontWeight = 'bold';
+                    } else if (diffDays <= 30) {
+                        // Dưới 30 ngày
+                        color = 'orange';
+                        fontWeight = 'bold';
+                    }
+
+                    return (
+                        <span style={{ color, fontWeight }}>
+                            {expirationDate.toLocaleDateString()} (
+                            {diffDays < 0 ? 'Đã hết hạn' : `Còn ${diffDays} ngày`})
+                        </span>
+                    );
+                },
+            },
             {
                 field: 'isActive',
                 headerName: 'Trạng thái',
@@ -121,10 +171,10 @@ export default function ProductTable() {
             { header: 'Giá bán', key: 'price', width: 15 },
             { header: 'Ngày hết hạn', key: 'expiryDate', width: 20 },
         ];
-        
-        if(!response) return;
-        
-        handleExport(columns, response, "DanhSachSanPham");
+
+        if (!response) return;
+
+        handleExport(columns, response, 'DanhSachSanPham');
     };
 
     return (
@@ -137,6 +187,7 @@ export default function ProductTable() {
                     Thêm mới
                 </Button>
             </Box>
+            <Search />
             <Box sx={{ height: 500, overflow: 'auto' }}>
                 <TablePagination
                     columns={columns}
