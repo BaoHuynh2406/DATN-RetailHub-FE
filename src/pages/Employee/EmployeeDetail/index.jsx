@@ -391,7 +391,7 @@ const EmployeeDetails = () => {
                             value={employee.phoneNumber || ''}
                             onChange={handleChange}
                             fullWidth
-                            type="number"
+                            type="text"
                             variant="outlined"
                             margin="normal"
                             error={!!errors.phoneNumber}
