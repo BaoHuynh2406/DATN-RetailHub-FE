@@ -26,7 +26,7 @@ function Dashboard() {
     useEffect(() => {
         const fetchSalesData = async () => {
             try {
-                const year = 2024;
+                const year = new Date().getFullYear();
                 const response = await axiosSecure.get(`/api/thong-ke/revenue-by-year?year=${year}`);
                 const formattedData =
                     response?.data?.data?.map((item) => ({

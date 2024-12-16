@@ -7,13 +7,17 @@ function TopSellingProducts() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Lấy ngày hôm nay
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0]; // Định dạng YYYY-MM-DD
+
     // Hàm gọi API để lấy sản phẩm bán chạy
     const fetchTopSellingProducts = async () => {
         try {
             const response = await axiosSecure.get('/api/thong-ke/invoice-SalesVolumeStatistics', {
                 params: {
-                    startDate: '2024-01-01',
-                    endDate: '2024-12-31',
+                    startDate: formattedDate,
+                    endDate: formattedDate,
                     page: '1',
                     pageSize: '5',
                 },
