@@ -1,6 +1,22 @@
 import axios from 'axios';
 
-const baseURL = localStorage.getItem('ip') || import.meta.env.VITE_API_URL;
+const getBaseURL = () => {
+    let ip = localStorage.getItem('ip') || import.meta.env.VITE_API_URL;
+
+    // Kiểm tra và thêm "http://" nếu thiếu
+    if (ip && !ip.startsWith('http://') && !ip.startsWith('https://')) {
+        ip = `http://${ip}`;
+    }
+
+    // Đảm bảo kết thúc bằng dấu "/"
+    if (ip && !ip.endsWith('/')) {
+        ip = `${ip}/`;
+    }
+
+    return ip;
+};
+
+const baseURL = getBaseURL();
 
 import 'notyf/notyf.min.css';
 import { Notyf } from 'notyf';
