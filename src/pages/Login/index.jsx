@@ -89,7 +89,7 @@ export default function SignInSide() {
             }
             navigate('/dashboard');
         } catch (error) {
-            alert('Sai thông tin! ' + error.message);
+            notyf.error('Sai thông tin! ' + error.message);
         }
     };
 
