@@ -76,7 +76,17 @@ export default function CustomerTable() {
         ];
         
         if(!response) return;
-        handleExport(columns, response, "DanhSachKhachHang");
+        
+        // formart data
+        const formattedData = response.map((item, index) => ({
+            customerId: item.customerId,
+            fullName: item.fullName, 
+            phoneNumber: item.phoneNumber, 
+            points: item.points !== undefined ? item.points : 0, 
+            isActive: item.isActive ? 'Hoạt động' : 'Không hoạt động',
+        }));
+
+        handleExport(columns, formattedData, "DanhSachKhachHang");
     };
 
     return (

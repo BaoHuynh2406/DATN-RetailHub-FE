@@ -123,6 +123,7 @@ export default function ProductTable() {
         ];
         
         if(!response) return;
+        
         handleExport(columns, response, "DanhSachSanPham");
     };
 

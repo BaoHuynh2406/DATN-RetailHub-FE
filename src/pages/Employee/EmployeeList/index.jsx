@@ -149,14 +149,27 @@ export default function EmployeeTable() {
             { header: 'Mã nhân viên', key: 'userId', width: 15 },
             { header: 'Họ và tên', key: 'fullName', width: 25 },
             { header: 'Số điện thoại', key: 'phoneNumber', width: 20 },
-            { header: 'Chức vụ', key: 'role', width: 15 },
+            { header: 'Chức vụ', key: 'roleDescription', width: 15 },
             { header: 'Ngày vào làm', key: 'startDate', width: 18 },
             { header: 'Trạng thái', key: 'isActive', width: 20 },
             ,
         ];
 
         if (!employees) return;
-        handleExport(columns, employees, 'DanhSachNhanVien');
+        // Lọc lại mảng và xử lý dữ liệu
+        const rows = employees.map((employee, index) => {
+            const roleDescription = employee.role?.roleDescription || 'Không xác định'; 
+            return {
+                userId: employee.userId,
+                fullName: employee.fullName,
+                phoneNumber: employee.phoneNumber,
+                roleDescription: roleDescription,
+                startDate: employee.startDate,
+                isActive: employee.isActive ? 'Hoạt động' : 'Không hoạt động',
+            };
+        });
+
+        handleExport(columns, rows, 'DanhSachNhanVien');
     };
 
     const [searchParams, setSearchParams] = useSearchParams();

@@ -11,34 +11,47 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
 export default function ResetPassword() {
+
+    const notyf = new Notyf({
+        position: {
+            x: 'right',
+            y: 'top',
+        },
+        dismissible: true,
+    });
+
     const dispatch = useDispatch();
     const { loading, error, data } = useSelector((state) => state.userCurrent);
     const navigate = useNavigate();
-
 
     const emailRef = useRef(null);
     const newPasswordRef = useRef(null);
     const otpCodeRef = useRef(null);
     const confirmPasswordRef = useRef(null);
-    
+
     const [step, setStep] = useState(1); // Bước hiện tại
-    const [userEmail, setUserEmail] = useState(""); // Lưu email sau khi gửi mã OTP
+    const [userEmail, setUserEmail] = useState(''); // Lưu email sau khi gửi mã OTP
 
     const handleSendCode = async () => {
+
         const email = emailRef.current.value;
+
         if (!email) {
-            alert("Vui lòng nhập email!");
+            notyf.error('Vui lòng nhập email!');
             return;
         }
 
         try {
             await dispatch(sendResetPasswordCode(email)).unwrap();
-            alert("Mã xác nhận đã được gửi!");
+            notyf.success('Mã xác nhận đã được gửi!');
             setUserEmail(email); // Lưu email vào state
             setStep(2); // Chuyển sang bước 2
         } catch (err) {
-            alert(err);
+            notyf.error(err);
         }
     };
 
@@ -48,17 +61,17 @@ export default function ResetPassword() {
         const confirmPassword = confirmPasswordRef.current?.value;
 
         if (!newPassword || !confirmPassword) {
-            alert("Vui lòng nhập đầy đủ thông tin!");
+            notyf.error('Vui lòng nhập đầy đủ thông tin!');
             return;
         }
 
-        if(!otp) {
-            alert("Mã OTP không chính xác vui lòng nhập lại !");
+        if (!otp) {
+            notyf.error('Mã OTP không chính xác vui lòng nhập lại !');
             return;
         }
 
         if (newPassword !== confirmPassword) {
-            alert("Mật khẩu xác nhận không khớp!");
+            notyf.error('Mật khẩu xác nhận không khớp!');
             return;
         }
 
@@ -69,12 +82,12 @@ export default function ResetPassword() {
                 email: userEmail, // Lấy email từ state
             };
 
-            console.log("Payload gửi đi:", payload);
+            console.log('Payload gửi đi:', payload);
             await dispatch(resetPassword(payload)).unwrap();
-            alert("Mật khẩu đã được đặt lại thành công!");
+            notyf.success('Mật khẩu đã được đặt lại thành công!');
             navigate('/login');
         } catch (err) {
-            alert(err);
+            notyf.error(err);
         }
     };
 
@@ -105,7 +118,7 @@ export default function ResetPassword() {
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        {step === 1 ? "Khôi phục mật khẩu" : "Đặt mật khẩu mới"}
+                        {step === 1 ? 'Khôi phục mật khẩu' : 'Đặt mật khẩu mới'}
                     </Typography>
                     <Box component="form" noValidate sx={{ mt: 1 }}>
                         {step === 1 && (
@@ -128,7 +141,7 @@ export default function ResetPassword() {
                                     sx={{ mt: 3, mb: 2 }}
                                     disabled={loading}
                                 >
-                                    {loading ? "Đang gửi..." : "Gửi mã"}
+                                    {loading ? 'Đang gửi...' : 'Gửi mã'}
                                 </Button>
                             </>
                         )}
@@ -168,7 +181,7 @@ export default function ResetPassword() {
                                     sx={{ mt: 3, mb: 2 }}
                                     disabled={loading}
                                 >
-                                    {loading ? "Đang xử lý..." : "Đặt lại mật khẩu"}
+                                    {loading ? 'Đang xử lý...' : 'Đặt lại mật khẩu'}
                                 </Button>
                             </>
                         )}
